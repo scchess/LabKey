@@ -1,0 +1,5 @@
+"id"	"date"	"testDate"	"target"	"virus"	"method"	"sampleType"	"purpose"	"result"	"titration"	"lab"	"location"	"remark"	"QCStateLabel"	"objectId"
+"TEST3804589"	"2016-06-01 13:29:02.0"	"2016-06-29 00:00"	"AB"	"CMV"	"EL"	"SER"	"CS"	"-"	""	"XYZ"	""	""	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ae"
+"TEST2312318"	"2016-06-02 13:29:02.0"	"2016-06-29 00:00"	"AB"	"SRV1"	"EL"	"SER"	"CS"	"+"	""	""	""	""	"Completed"	"dbee90d4-b9ba-102d-8c2a-9926f351b9ae"
+"TEST2"	"2016-06-03 17:56:53.0"	"2016-06-29 00:00"	"VI"	"SRV1"	"RJ"	"SAL"	"CS"	"-"	""	""	""	""	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"
+"TEST6390238"	"2016-06-04 17:56:53.0"	"2016-06-29 00:00"	"VI"	"SRV1"	"RJ"	"PBL"	"CS"	"-"	""	""	""	""	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"

@@ -1,0 +1,144 @@
+<folderType xmlns="http://labkey.org/data/xml/folderType">
+    <name>mGAP</name>
+    <description>The default folder layout for mGAP</description>
+    <folderTabs>
+        <folderTab>
+            <name>overview</name>
+            <caption>Overview</caption>
+            <selectors>
+                <selector>
+                    <regex>overview</regex>
+                </selector>
+            </selectors>
+            <requiredWebParts>
+
+            </requiredWebParts>
+            <preferredWebParts>
+                <webPart>
+                    <name>mGAP Overview</name>
+                    <location>body</location>
+                </webPart>
+                <webPart>
+                    <name>mGAP Gene Search</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>Quick Links</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>About mGAP</name>
+                    <location>right</location>
+                </webPart>
+            </preferredWebParts>
+        </folderTab>
+        <folderTab>
+            <name>variants</name>
+            <caption>Variant Catalog</caption>
+            <selectors>
+                <selector>
+                    <view>mgap-variants</view>
+                </selector>
+                <selector>
+                    <view>variants</view>
+                </selector>
+            </selectors>
+            <requiredWebParts>
+            </requiredWebParts>
+            <preferredWebParts>
+                <webPart>
+                    <name>mGAP Variant Releases</name>
+                    <location>body</location>
+                </webPart>
+                <webPart>
+                    <name>mGAP Gene Search</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>Quick Links</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>About mGAP</name>
+                    <location>right</location>
+                </webPart>
+            </preferredWebParts>
+        </folderTab>
+        <folderTab>
+            <name>datasets</name>
+            <caption>Sequence Data</caption>
+            <selectors>
+                <selector>
+                    <view>data</view>
+                </selector>
+            </selectors>
+            <requiredWebParts>
+            </requiredWebParts>
+            <preferredWebParts>
+                <webPart>
+                    <name>mGAP Sequence Data</name>
+                    <location>body</location>
+                </webPart>
+                <webPart>
+                    <name>mGAP Gene Search</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>Quick Links</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>mGAP Help</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>About mGAP</name>
+                    <location>right</location>
+                </webPart>
+            </preferredWebParts>
+        </folderTab>
+        <folderTab>
+            <name>admin</name>
+            <caption>Admin</caption>
+            <selectors>
+
+            </selectors>
+            <requiredWebParts>
+
+            </requiredWebParts>
+            <preferredWebParts>
+                <webPart>
+                    <name>mGAP Admin</name>
+                    <location>body</location>
+                </webPart>
+                <webPart>
+                    <name>mGAP Gene Search</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>Quick Links</name>
+                    <location>right</location>
+                </webPart>
+                <webPart>
+                    <name>About mGAP</name>
+                    <location>right</location>
+                </webPart>
+            </preferredWebParts>
+            <permissions>
+                <permission name="org.labkey.api.security.permissions.AdminPermission"/>
+            </permissions>
+        </folderTab>
+    </folderTabs>
+    <modules>
+        <moduleName>mGAP</moduleName>
+        <moduleName>JBrowse</moduleName>
+        <moduleName>SequenceAnalysis</moduleName>
+        <moduleName>Laboratory</moduleName>
+        <moduleName>Query</moduleName>
+        <moduleName>Pipeline</moduleName>
+        <moduleName>Core</moduleName>
+    </modules>
+    <defaultModule>Core</defaultModule>
+    <forceAssayUploadIntoWorkbooks>true</forceAssayUploadIntoWorkbooks>
+    <folderIconPath>/sequenceanalysis/icons/dna_folder.png</folderIconPath>
+</folderType>

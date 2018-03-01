@@ -1,0 +1,31 @@
+<templateSchema xmlns="http://labkey.org/data/xml/externalSchema"
+        xmlns:dat="http://labkey.org/data/xml"
+        xmlns:cv="http://labkey.org/data/xml/queryCustomView"
+        sourceSchemaName="lists">
+    <tables>
+        <tableName>LinkedSchemaTestPeople</tableName>
+    </tables>
+    <metadata>
+        <dat:tables>
+
+            <dat:filters name="b-filter">
+                <cv:filter column="Name" operator="startswith" value="b"/>
+            </dat:filters>
+
+            <dat:table tableName="LinkedSchemaTestPeople" tableDbType="NOT_IN_DB">
+                <dat:tableUrl>/linkedschematest/other.view</dat:tableUrl>
+                <dat:javaCustomizer class="org.labkey.linkedschematest.TestTableCustomizer">
+                    <dat:properties>
+                        <dat:property name="testPropName">true</dat:property>
+                    </dat:properties>
+                </dat:javaCustomizer>
+                <dat:filters ref="b-filter"/>
+                <dat:columns>
+                    <dat:column columnName="Name">
+                        <dat:columnTitle>BPeopleTemplate List Name</dat:columnTitle>
+                    </dat:column>
+                </dat:columns>
+            </dat:table>
+        </dat:tables>
+    </metadata>
+</templateSchema>

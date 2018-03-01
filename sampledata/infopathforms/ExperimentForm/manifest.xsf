@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is automatically created and modified by Microsoft Office InfoPath.
+Changes made to the file outside of InfoPath might be lost if the form template is modified in InfoPath.
+-->
+<xsf:xDocumentClass trustSetting="automatic" solutionVersion="1.0.0.48" productVersion="11.0.6357" solutionFormatVersion="1.100.0.0" publishUrl="C:\cpas\trunk\sampledata\infopathforms\ExperimentForm\manifest.xsf" name="urn:schemas-microsoft-com:office:infopath:ExperimentForm:http---cpas-fhcrc-org-exp-xml" xmlns:xsf="http://schemas.microsoft.com/office/infopath/2003/solutionDefinition" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xmlns:xdUtil="http://schemas.microsoft.com/office/infopath/2003/xslt/Util" xmlns:xdXDocument="http://schemas.microsoft.com/office/infopath/2003/xslt/xDocument" xmlns:xdMath="http://schemas.microsoft.com/office/infopath/2003/xslt/Math" xmlns:xdDate="http://schemas.microsoft.com/office/infopath/2003/xslt/Date" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:exp="http://cpas.fhcrc.org/exp/xml" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2005-10-13T17:36:32">
+	<xsf:package>
+		<xsf:files>
+			<xsf:file name="expTypes.xsd">
+				<xsf:fileProperties>
+					<xsf:property name="editability" type="string" value="none"></xsf:property>
+					<xsf:property name="namespace" type="string" value="http://cpas.fhcrc.org/exp/xml"></xsf:property>
+					<xsf:property name="rootElement" type="string" value="ExperimentArchive"></xsf:property>
+					<xsf:property name="useOnDemandAlgorithm" type="string" value="yes"></xsf:property>
+				</xsf:fileProperties>
+			</xsf:file>
+			<xsf:file name="rdfTypes.xsd">
+				<xsf:fileProperties>
+					<xsf:property name="namespace" type="string" value="http://www.w3.org/1999/02/22-rdf-syntax-ns#"></xsf:property>
+					<xsf:property name="editability" type="string" value="none"></xsf:property>
+				</xsf:fileProperties>
+			</xsf:file>
+			<xsf:file name="template.xml"></xsf:file>
+			<xsf:file name="sampledata.xml">
+				<xsf:fileProperties>
+					<xsf:property name="fileType" type="string" value="sampleData"></xsf:property>
+				</xsf:fileProperties>
+			</xsf:file>
+			<xsf:file name="view1.xsl">
+				<xsf:fileProperties>
+					<xsf:property name="lang" type="string" value="1033"></xsf:property>
+					<xsf:property name="mode" type="string" value="117"></xsf:property>
+					<xsf:property name="componentId" type="string" value="602"></xsf:property>
+					<xsf:property name="xmlToEditName" type="string" value="128"></xsf:property>
+				</xsf:fileProperties>
+			</xsf:file>
+			<xsf:file name="upgrade.xsl"></xsf:file>
+			<xsf:file name="script.js">
+				<xsf:fileProperties>
+					<xsf:property name="scriptType" type="string" value="userEvents"></xsf:property>
+				</xsf:fileProperties>
+			</xsf:file>
+			<xsf:file name="ExportFormat.xsl">
+				<xsf:fileProperties>
+					<xsf:property name="lang" type="string" value="1033"></xsf:property>
+					<xsf:property name="mode" type="string" value="40"></xsf:property>
+					<xsf:property name="componentId" type="string" value="30"></xsf:property>
+					<xsf:property name="xmlToEditName" type="string" value="39"></xsf:property>
+				</xsf:fileProperties>
+			</xsf:file>
+			<xsf:file name="ProtocolDefs.xsl">
+				<xsf:fileProperties>
+					<xsf:property name="lang" type="string" value="1033"></xsf:property>
+					<xsf:property name="mode" type="string" value="6"></xsf:property>
+					<xsf:property name="componentId" type="string" value="10"></xsf:property>
+					<xsf:property name="xmlToEditName" type="string" value="10"></xsf:property>
+				</xsf:fileProperties>
+			</xsf:file>
+		</xsf:files>
+	</xsf:package>
+	<xsf:importParameters enabled="yes"></xsf:importParameters>
+	<xsf:documentVersionUpgrade>
+		<xsf:useTransform transform="upgrade.xsl" minVersionToUpgrade="0.0.0.0" maxVersionToUpgrade="1.0.0.15"></xsf:useTransform>
+	</xsf:documentVersionUpgrade>
+	<xsf:views default="Experiment">
+		<xsf:view name="Experiment" caption="Experiment" showMenuItem="yes">
+			<xsf:editing>
+				<xsf:xmlToEdit name="Material_35" item="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Material" container="/exp:ExperimentArchive/exp:StartingInputDefinitions">
+					<xsf:editWith caption="Material" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Material">
+								<exp:Material rdf:about="">
+									<exp:Name></exp:Name>
+									<exp:CpasType>Material</exp:CpasType>
+									<exp:SourceProtocolLSID></exp:SourceProtocolLSID>
+								</exp:Material>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_38" item="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Material/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Material/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Data_44" item="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Data" container="/exp:ExperimentArchive/exp:StartingInputDefinitions">
+					<xsf:editWith caption="Data" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Data">
+								<exp:Data rdf:about="">
+									<exp:Name></exp:Name>
+									<exp:CpasType>Data</exp:CpasType>
+									<exp:SourceProtocolLSID></exp:SourceProtocolLSID>
+									<exp:DataFileUrl></exp:DataFileUrl>
+								</exp:Data>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_48" item="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Data/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Data/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Properties_45" item="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Data/exp:Properties" container="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Data">
+					<xsf:editWith caption="Properties" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Properties">
+								<exp:Properties rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									<exp:PropertyObject>
+										<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+										<exp:ChildProperties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											<exp:PropertyObject>
+												<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+												<exp:ChildProperties rdf:parseType="Collection">
+													<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												</exp:ChildProperties>
+											</exp:PropertyObject>
+										</exp:ChildProperties>
+									</exp:PropertyObject>
+								</exp:Properties>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_60" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Properties_58" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:Properties" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun">
+					<xsf:editWith caption="Properties" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Properties">
+								<exp:Properties rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									<exp:PropertyObject>
+										<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+										<exp:ChildProperties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											<exp:PropertyObject>
+												<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+												<exp:ChildProperties rdf:parseType="Collection">
+													<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												</exp:ChildProperties>
+											</exp:PropertyObject>
+										</exp:ChildProperties>
+									</exp:PropertyObject>
+								</exp:Properties>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ExperimentRun_59" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun" container="/exp:ExperimentArchive/exp:ExperimentRuns">
+					<xsf:editWith caption="ExperimentRun" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:ExperimentRun">
+								<exp:ExperimentRun rdf:about="" CreateNewIfDuplicate="false" GenerateDataFromStepRecord="false">
+									<exp:Name></exp:Name>
+									<exp:ProtocolLSID></exp:ProtocolLSID>
+									<exp:Comments></exp:Comments>
+									<exp:ExperimentLog rdf:parseType="Collection">
+										<exp:ExperimentLogEntry ActionSequenceRef=""></exp:ExperimentLogEntry>
+									</exp:ExperimentLog>
+									<exp:ProtocolApplications rdf:parseType="Collection"></exp:ProtocolApplications>
+								</exp:ExperimentRun>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_79" item="/exp:ExperimentArchive/exp:Experiment/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:Experiment/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ExperimentLogEntry_80" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog">
+					<xsf:editWith caption="ExperimentLogEntry" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:ExperimentLogEntry">
+								<exp:ExperimentLogEntry ActionSequenceRef=""></exp:ExperimentLogEntry>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_93" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:CommonParametersApplied/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:CommonParametersApplied">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="InstanceDetails_99" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection">
+					<xsf:editWith caption="InstanceDetails" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:InstanceDetails">
+								<exp:InstanceDetails>
+									<exp:InstanceInputs rdf:parseType="Collection">
+										<exp:MaterialLSID CpasType="Material"></exp:MaterialLSID>
+										<exp:DataLSID CpasType="" DataFileUrl=""></exp:DataLSID>
+									</exp:InstanceInputs>
+									<exp:Comments></exp:Comments>
+								</exp:InstanceDetails>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_102" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails/exp:InstanceParametersApplied/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails/exp:InstanceParametersApplied">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Comments_117" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:Comments">
+					<xsf:editWith type="plainMultiline" component="xField"></xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Properties_112" item="/exp:ExperimentArchive/exp:Experiment/exp:Properties" container="/exp:ExperimentArchive">
+					<xsf:editWith caption="Properties" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment parent="exp:Experiment" innerFragment="exp:Properties">
+								<exp:Properties rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									<exp:PropertyObject>
+										<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+										<exp:ChildProperties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											<exp:PropertyObject>
+												<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+												<exp:ChildProperties rdf:parseType="Collection">
+													<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												</exp:ChildProperties>
+											</exp:PropertyObject>
+										</exp:ChildProperties>
+									</exp:PropertyObject>
+								</exp:Properties>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Properties_113" item="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Material/exp:Properties" container="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Material">
+					<xsf:editWith caption="Properties" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Properties">
+								<exp:Properties rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									<exp:PropertyObject>
+										<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+										<exp:ChildProperties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											<exp:PropertyObject>
+												<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+												<exp:ChildProperties rdf:parseType="Collection">
+													<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												</exp:ChildProperties>
+											</exp:PropertyObject>
+										</exp:ChildProperties>
+									</exp:PropertyObject>
+								</exp:Properties>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ApplicationInstanceCollection_115" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry">
+					<xsf:editWith caption="ApplicationInstanceCollection" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:ApplicationInstanceCollection">
+								<exp:ApplicationInstanceCollection rdf:parseType="Collection">
+									<exp:InstanceDetails>
+										<exp:InstanceInputs rdf:parseType="Collection">
+											<exp:MaterialLSID CpasType="Material"></exp:MaterialLSID>
+											<exp:DataLSID CpasType="" DataFileUrl=""></exp:DataLSID>
+										</exp:InstanceInputs>
+										<exp:Comments></exp:Comments>
+									</exp:InstanceDetails>
+								</exp:ApplicationInstanceCollection>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="CommonParametersApplied_114" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:CommonParametersApplied" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry">
+					<xsf:editWith caption="CommonParametersApplied" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:CommonParametersApplied">
+								<exp:CommonParametersApplied rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+								</exp:CommonParametersApplied>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="InstanceParametersApplied_116" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails/exp:InstanceParametersApplied" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails">
+					<xsf:editWith caption="InstanceParametersApplied" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:InstanceParametersApplied">
+								<exp:InstanceParametersApplied rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+								</exp:InstanceParametersApplied>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="MaterialLSID_121" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails/exp:InstanceInputs/exp:MaterialLSID" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails">
+					<xsf:editWith caption="MaterialLSID" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:InstanceInputs/exp:MaterialLSID">
+								<exp:InstanceInputs rdf:parseType="Collection">
+									<exp:MaterialLSID CpasType="Material"></exp:MaterialLSID>
+									<exp:DataLSID CpasType="" DataFileUrl=""></exp:DataLSID>
+								</exp:InstanceInputs>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="DataLSID_125" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails/exp:InstanceInputs/exp:DataLSID" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ExperimentLog/exp:ExperimentLogEntry/exp:ApplicationInstanceCollection/exp:InstanceDetails">
+					<xsf:editWith caption="DataLSID" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:InstanceInputs/exp:DataLSID">
+								<exp:InstanceInputs rdf:parseType="Collection">
+									<exp:MaterialLSID CpasType="Material"></exp:MaterialLSID>
+									<exp:DataLSID CpasType="" DataFileUrl=""></exp:DataLSID>
+								</exp:InstanceInputs>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Hypothesis_126" item="/exp:ExperimentArchive/exp:Experiment/exp:Hypothesis">
+					<xsf:editWith type="plainMultiline" component="xField"></xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Comments_127" item="/exp:ExperimentArchive/exp:Experiment/exp:Comments">
+					<xsf:editWith type="plainMultiline" component="xField"></xsf:editWith>
+				</xsf:xmlToEdit>
+			</xsf:editing>
+			<xsf:menuArea name="msoInsertMenu">
+				<xsf:menu caption="&amp;Section">
+					<xsf:button action="xCollection::insert" xmlToEdit="Material_35" caption="Material"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_38" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="Data_44" caption="Data"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_48" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="ExperimentRun_59" caption="ExperimentRun"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_60" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_79" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="ExperimentLogEntry_80" caption="ExperimentLogEntry"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_93" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="InstanceDetails_99" caption="InstanceDetails"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_102" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="MaterialLSID_121" caption="MaterialLSID"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="DataLSID_125" caption="DataLSID"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="Properties_45" caption="Properties"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="Properties_58" caption="Properties"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="Properties_113" caption="Properties"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="Properties_112" caption="Custom Properties"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="CommonParametersApplied_114" caption="CommonParametersApplied"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="ApplicationInstanceCollection_115" caption="ApplicationInstanceCollection"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="InstanceParametersApplied_116" caption="InstanceParametersApplied"></xsf:button>
+				</xsf:menu>
+			</xsf:menuArea>
+			<xsf:menuArea name="msoStructuralEditingContextMenu">
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="Material_35" caption="Insert Material above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_38" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="Data_44" caption="Insert Data above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_48" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="ExperimentRun_59" caption="Insert ExperimentRun above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_60" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_79" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="ExperimentLogEntry_80" caption="Insert ExperimentLogEntry above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_93" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="InstanceDetails_99" caption="Insert InstanceDetails above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_102" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="MaterialLSID_121" caption="Insert MaterialLSID above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="DataLSID_125" caption="Insert DataLSID above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="Material_35" caption="Insert Material below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_38" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="Data_44" caption="Insert Data below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_48" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="ExperimentRun_59" caption="Insert ExperimentRun below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_60" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_79" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="ExperimentLogEntry_80" caption="Insert ExperimentLogEntry below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_93" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="InstanceDetails_99" caption="Insert InstanceDetails below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_102" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="MaterialLSID_121" caption="Insert MaterialLSID below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="DataLSID_125" caption="Insert DataLSID below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="Material_35" caption="Remove Material" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_38" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="Data_44" caption="Remove Data" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_48" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="ExperimentRun_59" caption="Remove ExperimentRun" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_60" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_79" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="ExperimentLogEntry_80" caption="Remove ExperimentLogEntry" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_93" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="InstanceDetails_99" caption="Remove InstanceDetails" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_102" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="MaterialLSID_121" caption="Remove MaterialLSID" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="DataLSID_125" caption="Remove DataLSID" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="Properties_45" caption="Remove Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="Properties_58" caption="Remove Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="Properties_113" caption="Remove Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="Properties_112" caption="Remove Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="CommonParametersApplied_114" caption="Remove CommonParametersApplied" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="ApplicationInstanceCollection_115" caption="Remove ApplicationInstanceCollection" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="InstanceParametersApplied_116" caption="Remove InstanceParametersApplied" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="Material_35" caption="Insert Material" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_38" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="Data_44" caption="Insert Data" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_48" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="ExperimentRun_59" caption="Insert ExperimentRun" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_60" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_79" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="ExperimentLogEntry_80" caption="Insert ExperimentLogEntry" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_93" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="InstanceDetails_99" caption="Insert InstanceDetails" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_102" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="MaterialLSID_121" caption="Insert MaterialLSID" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="DataLSID_125" caption="Insert DataLSID" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="Properties_45" caption="Insert Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="Properties_58" caption="Insert Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="Properties_113" caption="Insert Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="Properties_112" caption="Insert Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="CommonParametersApplied_114" caption="Insert CommonParametersApplied" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="ApplicationInstanceCollection_115" caption="Insert ApplicationInstanceCollection" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="InstanceParametersApplied_116" caption="Insert InstanceParametersApplied" showIf="immediate"></xsf:button>
+			</xsf:menuArea>
+			<xsf:mainpane transform="view1.xsl"></xsf:mainpane>
+			<xsf:unboundControls>
+				<xsf:button name="btnProtocols">
+					<xsf:ruleSetAction ruleSet="ruleSet_6"></xsf:ruleSetAction>
+				</xsf:button>
+				<xsf:button name="CTRL600_7"></xsf:button>
+			</xsf:unboundControls>
+		</xsf:view>
+		<xsf:view showMenuItem="yes" name="Export Format" caption="Export Format">
+			<xsf:mainpane transform="ExportFormat.xsl"></xsf:mainpane>
+			<xsf:editing>
+				<xsf:xmlToEdit name="Data_33" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputDataObjects/exp:Data" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputDataObjects">
+					<xsf:editWith caption="Data" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Data">
+								<exp:Data rdf:about="">
+									<exp:Name></exp:Name>
+									<exp:CpasType></exp:CpasType>
+									<exp:SourceProtocolLSID></exp:SourceProtocolLSID>
+									<exp:DataFileUrl></exp:DataFileUrl>
+									<exp:Properties rdf:parseType="Collection">
+										<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+										<exp:PropertyObject>
+											<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+											<exp:ChildProperties rdf:parseType="Collection">
+												<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												<exp:PropertyObject>
+													<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+													<exp:ChildProperties rdf:parseType="Collection">
+														<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+													</exp:ChildProperties>
+												</exp:PropertyObject>
+											</exp:ChildProperties>
+										</exp:PropertyObject>
+									</exp:Properties>
+								</exp:Data>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ProtocolApplication_22" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications">
+					<xsf:editWith caption="ProtocolApplication" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:ProtocolApplication">
+								<exp:ProtocolApplication rdf:about="">
+									<exp:Name></exp:Name>
+									<exp:CpasType></exp:CpasType>
+									<exp:ProtocolLSID></exp:ProtocolLSID>
+									<exp:ActionSequence></exp:ActionSequence>
+									<exp:ActivityDate></exp:ActivityDate>
+									<exp:Comments></exp:Comments>
+									<exp:InputRefs rdf:parseType="Collection">
+										<exp:MaterialLSID CpasType=""></exp:MaterialLSID>
+										<exp:DataLSID CpasType="" DataFileUrl=""></exp:DataLSID>
+									</exp:InputRefs>
+									<exp:ProtocolApplicationParameters rdf:parseType="Collection">
+										<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									</exp:ProtocolApplicationParameters>
+									<exp:OutputMaterials rdf:parseType="Collection">
+										<exp:Material rdf:about="">
+											<exp:Name></exp:Name>
+											<exp:CpasType></exp:CpasType>
+											<exp:SourceProtocolLSID></exp:SourceProtocolLSID>
+											<exp:Properties rdf:parseType="Collection">
+												<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												<exp:PropertyObject>
+													<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+													<exp:ChildProperties rdf:parseType="Collection">
+														<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+													</exp:ChildProperties>
+												</exp:PropertyObject>
+											</exp:Properties>
+										</exp:Material>
+									</exp:OutputMaterials>
+									<exp:OutputDataObjects rdf:parseType="Collection">
+										<exp:Data rdf:about="">
+											<exp:Name></exp:Name>
+											<exp:CpasType></exp:CpasType>
+											<exp:SourceProtocolLSID></exp:SourceProtocolLSID>
+											<exp:DataFileUrl></exp:DataFileUrl>
+											<exp:Properties rdf:parseType="Collection">
+												<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												<exp:PropertyObject>
+													<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+													<exp:ChildProperties rdf:parseType="Collection">
+														<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+														<exp:PropertyObject>
+															<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+															<exp:ChildProperties rdf:parseType="Collection">
+																<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+															</exp:ChildProperties>
+														</exp:PropertyObject>
+													</exp:ChildProperties>
+												</exp:PropertyObject>
+											</exp:Properties>
+										</exp:Data>
+									</exp:OutputDataObjects>
+									<exp:Properties rdf:parseType="Collection">
+										<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+										<exp:PropertyObject>
+											<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+											<exp:ChildProperties rdf:parseType="Collection">
+												<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												<exp:PropertyObject>
+													<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+													<exp:ChildProperties rdf:parseType="Collection">
+														<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+													</exp:ChildProperties>
+												</exp:PropertyObject>
+											</exp:ChildProperties>
+										</exp:PropertyObject>
+									</exp:Properties>
+								</exp:ProtocolApplication>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ProtocolApplicationParameters_25" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:ProtocolApplicationParameters" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication">
+					<xsf:editWith caption="ProtocolApplicationParameters" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:ProtocolApplicationParameters">
+								<exp:ProtocolApplicationParameters rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+								</exp:ProtocolApplicationParameters>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="MaterialLSID_23" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:InputRefs/exp:MaterialLSID" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:InputRefs">
+					<xsf:editWith caption="MaterialLSID" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:MaterialLSID">
+								<exp:MaterialLSID CpasType=""></exp:MaterialLSID>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Properties_34" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputDataObjects/exp:Data/exp:Properties" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputDataObjects/exp:Data">
+					<xsf:editWith caption="Properties" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Properties">
+								<exp:Properties rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									<exp:PropertyObject>
+										<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+										<exp:ChildProperties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											<exp:PropertyObject>
+												<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+												<exp:ChildProperties rdf:parseType="Collection">
+													<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												</exp:ChildProperties>
+											</exp:PropertyObject>
+										</exp:ChildProperties>
+									</exp:PropertyObject>
+								</exp:Properties>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Properties_13" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:Properties" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun">
+					<xsf:editWith caption="Properties" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Properties">
+								<exp:Properties rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									<exp:PropertyObject>
+										<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+										<exp:ChildProperties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											<exp:PropertyObject>
+												<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+												<exp:ChildProperties rdf:parseType="Collection">
+													<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												</exp:ChildProperties>
+											</exp:PropertyObject>
+										</exp:ChildProperties>
+									</exp:PropertyObject>
+								</exp:Properties>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_26" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:ProtocolApplicationParameters/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:ProtocolApplicationParameters">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ExperimentRun_12" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun" container="/exp:ExperimentArchive/exp:ExperimentRuns">
+					<xsf:editWith caption="ExperimentRun" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:ExperimentRun">
+								<exp:ExperimentRun rdf:about="" CreateNewIfDuplicate="false" GenerateDataFromStepRecord="false">
+									<exp:Name></exp:Name>
+									<exp:ProtocolLSID></exp:ProtocolLSID>
+									<exp:Comments></exp:Comments>
+									<exp:ExperimentLog rdf:parseType="Collection">
+										<exp:ExperimentLogEntry ActionSequenceRef=""></exp:ExperimentLogEntry>
+									</exp:ExperimentLog>
+									<exp:ProtocolApplications rdf:parseType="Collection"></exp:ProtocolApplications>
+								</exp:ExperimentRun>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_36" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_38" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputDataObjects/exp:Data/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputDataObjects/exp:Data/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="DataLSID_24" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:InputRefs/exp:DataLSID" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:InputRefs">
+					<xsf:editWith caption="DataLSID" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:DataLSID">
+								<exp:DataLSID CpasType="" DataFileUrl=""></exp:DataLSID>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_39" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ActivityDate_37" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:ActivityDate">
+					<xsf:editWith proofing="no" autoComplete="no" component="xField"></xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Material_27" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputMaterials/exp:Material" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputMaterials">
+					<xsf:editWith caption="Material" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Material">
+								<exp:Material rdf:about="">
+									<exp:Name></exp:Name>
+									<exp:CpasType></exp:CpasType>
+									<exp:SourceProtocolLSID></exp:SourceProtocolLSID>
+									<exp:Properties rdf:parseType="Collection">
+										<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+										<exp:PropertyObject>
+											<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+											<exp:ChildProperties rdf:parseType="Collection">
+												<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											</exp:ChildProperties>
+										</exp:PropertyObject>
+									</exp:Properties>
+								</exp:Material>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Properties_28" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputMaterials/exp:Material/exp:Properties" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputMaterials/exp:Material">
+					<xsf:editWith caption="Properties" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Properties">
+								<exp:Properties rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									<exp:PropertyObject>
+										<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+										<exp:ChildProperties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+										</exp:ChildProperties>
+									</exp:PropertyObject>
+								</exp:Properties>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_29" item="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputMaterials/exp:Material/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:ProtocolApplications/exp:ProtocolApplication/exp:OutputMaterials/exp:Material/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+			</xsf:editing>
+			<xsf:menuArea name="msoInsertMenu">
+				<xsf:menu caption="&amp;Section">
+					<xsf:button action="xCollection::insert" xmlToEdit="ExperimentRun_12" caption="ExperimentRun"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="ProtocolApplication_22" caption="ProtocolApplication"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="MaterialLSID_23" caption="MaterialLSID"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="DataLSID_24" caption="DataLSID"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_26" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="Material_27" caption="Material"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_29" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_36" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="Data_33" caption="Data"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_38" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_39" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="Properties_13" caption="Properties"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="ProtocolApplicationParameters_25" caption="ProtocolApplicationParameters"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="Properties_28" caption="Properties"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="Properties_34" caption="Properties"></xsf:button>
+				</xsf:menu>
+			</xsf:menuArea>
+			<xsf:menuArea name="msoStructuralEditingContextMenu">
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="ExperimentRun_12" caption="Insert ExperimentRun above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="ProtocolApplication_22" caption="Insert ProtocolApplication above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="MaterialLSID_23" caption="Insert MaterialLSID above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="DataLSID_24" caption="Insert DataLSID above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_26" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="Material_27" caption="Insert Material above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_29" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_36" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="Data_33" caption="Insert Data above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_38" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_39" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="ExperimentRun_12" caption="Insert ExperimentRun below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="ProtocolApplication_22" caption="Insert ProtocolApplication below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="MaterialLSID_23" caption="Insert MaterialLSID below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="DataLSID_24" caption="Insert DataLSID below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_26" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="Material_27" caption="Insert Material below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_29" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_36" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="Data_33" caption="Insert Data below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_38" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_39" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="ExperimentRun_12" caption="Remove ExperimentRun" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="ProtocolApplication_22" caption="Remove ProtocolApplication" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="MaterialLSID_23" caption="Remove MaterialLSID" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="DataLSID_24" caption="Remove DataLSID" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_26" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="Material_27" caption="Remove Material" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_29" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_36" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="Data_33" caption="Remove Data" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_38" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_39" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="Properties_13" caption="Remove Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="ProtocolApplicationParameters_25" caption="Remove ProtocolApplicationParameters" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="Properties_28" caption="Remove Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="Properties_34" caption="Remove Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="ExperimentRun_12" caption="Insert ExperimentRun" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="ProtocolApplication_22" caption="Insert ProtocolApplication" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="MaterialLSID_23" caption="Insert MaterialLSID" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="DataLSID_24" caption="Insert DataLSID" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_26" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="Material_27" caption="Insert Material" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_29" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_36" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="Data_33" caption="Insert Data" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_38" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_39" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="Properties_13" caption="Insert Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="ProtocolApplicationParameters_25" caption="Insert ProtocolApplicationParameters" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="Properties_28" caption="Insert Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="Properties_34" caption="Insert Properties" showIf="immediate"></xsf:button>
+			</xsf:menuArea>
+			<xsf:unboundControls>
+				<xsf:button name="btnRunView">
+					<xsf:ruleSetAction ruleSet="ruleSet_11"></xsf:ruleSetAction>
+				</xsf:button>
+			</xsf:unboundControls>
+		</xsf:view>
+		<xsf:view showMenuItem="yes" name="ProtocolDefs" caption="ProtocolDefs">
+			<xsf:editing>
+				<xsf:xmlToEdit name="SimpleVal_5" item="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol/exp:ParameterDeclarations/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol/exp:ParameterDeclarations">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="SimpleVal_6" item="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol/exp:Properties/exp:SimpleVal" container="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol/exp:Properties">
+					<xsf:editWith caption="SimpleVal" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:SimpleVal">
+								<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Protocol_1" item="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol" container="/exp:ExperimentArchive/exp:ProtocolDefinitions">
+					<xsf:editWith caption="Protocol" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Protocol">
+								<exp:Protocol rdf:about="">
+									<exp:Name></exp:Name>
+									<exp:ProtocolDescription></exp:ProtocolDescription>
+									<exp:ApplicationType>ProtocolApplication</exp:ApplicationType>
+									<exp:MaxInputMaterialPerInstance>0</exp:MaxInputMaterialPerInstance>
+									<exp:MaxInputDataPerInstance>0</exp:MaxInputDataPerInstance>
+									<exp:OutputMaterialPerInstance>0</exp:OutputMaterialPerInstance>
+									<exp:OutputDataPerInstance>0</exp:OutputDataPerInstance>
+									<exp:OutputMaterialType>Material</exp:OutputMaterialType>
+									<exp:OutputDataType>Data`</exp:OutputDataType>
+									<exp:Instrument></exp:Instrument>
+									<exp:Software></exp:Software>
+									<exp:Contact>
+										<exp:ContactId></exp:ContactId>
+										<exp:Email></exp:Email>
+										<exp:FirstName></exp:FirstName>
+										<exp:LastName></exp:LastName>
+										<exp:Properties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											<exp:PropertyObject>
+												<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+												<exp:ChildProperties rdf:parseType="Collection">
+													<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												</exp:ChildProperties>
+											</exp:PropertyObject>
+										</exp:Properties>
+									</exp:Contact>
+									<exp:ParameterDeclarations rdf:parseType="Collection">
+										<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									</exp:ParameterDeclarations>
+								</exp:Protocol>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ProtocolDescription_4" item="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol/exp:ProtocolDescription">
+					<xsf:editWith type="plainMultiline" component="xField"></xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="Properties_3" item="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol/exp:Properties" container="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol">
+					<xsf:editWith caption="Properties" xd:autogeneration="template" component="xOptional">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:Properties">
+								<exp:Properties rdf:parseType="Collection">
+									<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+									<exp:PropertyObject>
+										<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+										<exp:ChildProperties rdf:parseType="Collection">
+											<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+											<exp:PropertyObject>
+												<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+												<exp:ChildProperties rdf:parseType="Collection">
+													<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+												</exp:ChildProperties>
+											</exp:PropertyObject>
+										</exp:ChildProperties>
+									</exp:PropertyObject>
+								</exp:Properties>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ProtocolAction_9" item="/exp:ExperimentArchive/exp:ProtocolActionDefinitions/exp:ProtocolActionSet/exp:ProtocolAction" container="/exp:ExperimentArchive/exp:ProtocolActionDefinitions/exp:ProtocolActionSet">
+					<xsf:editWith caption="ProtocolAction" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:ProtocolAction">
+								<exp:ProtocolAction ChildProtocolLSID="" ActionSequence="">
+									<exp:PredecessorAction ActionSequenceRef=""></exp:PredecessorAction>
+								</exp:ProtocolAction>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="PredecessorAction_10" item="/exp:ExperimentArchive/exp:ProtocolActionDefinitions/exp:ProtocolActionSet/exp:ProtocolAction/exp:PredecessorAction" container="/exp:ExperimentArchive/exp:ProtocolActionDefinitions/exp:ProtocolActionSet/exp:ProtocolAction">
+					<xsf:editWith caption="PredecessorAction" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:PredecessorAction">
+								<exp:PredecessorAction ActionSequenceRef=""></exp:PredecessorAction>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+				<xsf:xmlToEdit name="ProtocolActionSet_8" item="/exp:ExperimentArchive/exp:ProtocolActionDefinitions/exp:ProtocolActionSet" container="/exp:ExperimentArchive/exp:ProtocolActionDefinitions">
+					<xsf:editWith caption="ProtocolActionSet" xd:autogeneration="template" component="xCollection">
+						<xsf:fragmentToInsert>
+							<xsf:chooseFragment innerFragment="exp:ProtocolActionSet">
+								<exp:ProtocolActionSet ParentProtocolLSID="">
+									<exp:ProtocolAction ChildProtocolLSID="" ActionSequence="">
+										<exp:PredecessorAction ActionSequenceRef=""></exp:PredecessorAction>
+									</exp:ProtocolAction>
+								</exp:ProtocolActionSet>
+							</xsf:chooseFragment>
+						</xsf:fragmentToInsert>
+					</xsf:editWith>
+				</xsf:xmlToEdit>
+			</xsf:editing>
+			<xsf:unboundControls>
+				<xsf:button name="btnRunView">
+					<xsf:ruleSetAction ruleSet="ruleSet_9"></xsf:ruleSetAction>
+				</xsf:button>
+			</xsf:unboundControls>
+			<xsf:menuArea name="msoInsertMenu">
+				<xsf:menu caption="&amp;Section">
+					<xsf:button action="xCollection::insert" xmlToEdit="Protocol_1" caption="Protocol"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_5" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_6" caption="SimpleVal"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="ProtocolActionSet_8" caption="ProtocolActionSet"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="ProtocolAction_9" caption="ProtocolAction"></xsf:button>
+					<xsf:button action="xCollection::insert" xmlToEdit="PredecessorAction_10" caption="PredecessorAction"></xsf:button>
+					<xsf:button action="xOptional::insert" xmlToEdit="Properties_3" caption="Properties"></xsf:button>
+				</xsf:menu>
+			</xsf:menuArea>
+			<xsf:menuArea name="msoStructuralEditingContextMenu">
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="Protocol_1" caption="Insert Protocol above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_5" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="SimpleVal_6" caption="Insert SimpleVal above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="ProtocolActionSet_8" caption="Insert ProtocolActionSet above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="ProtocolAction_9" caption="Insert ProtocolAction above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertBefore" xmlToEdit="PredecessorAction_10" caption="Insert PredecessorAction above" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="Protocol_1" caption="Insert Protocol below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_5" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="SimpleVal_6" caption="Insert SimpleVal below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="ProtocolActionSet_8" caption="Insert ProtocolActionSet below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="ProtocolAction_9" caption="Insert ProtocolAction below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insertAfter" xmlToEdit="PredecessorAction_10" caption="Insert PredecessorAction below" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="Protocol_1" caption="Remove Protocol" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_5" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="SimpleVal_6" caption="Remove SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="ProtocolActionSet_8" caption="Remove ProtocolActionSet" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="ProtocolAction_9" caption="Remove ProtocolAction" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::remove" xmlToEdit="PredecessorAction_10" caption="Remove PredecessorAction" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::remove" xmlToEdit="Properties_3" caption="Remove Properties" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="Protocol_1" caption="Insert Protocol" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_5" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="SimpleVal_6" caption="Insert SimpleVal" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="ProtocolActionSet_8" caption="Insert ProtocolActionSet" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="ProtocolAction_9" caption="Insert ProtocolAction" showIf="immediate"></xsf:button>
+				<xsf:button action="xCollection::insert" xmlToEdit="PredecessorAction_10" caption="Insert PredecessorAction" showIf="immediate"></xsf:button>
+				<xsf:button action="xOptional::insert" xmlToEdit="Properties_3" caption="Insert Properties" showIf="immediate"></xsf:button>
+			</xsf:menuArea>
+			<xsf:mainpane transform="ProtocolDefs.xsl"></xsf:mainpane>
+		</xsf:view>
+	</xsf:views>
+	<xsf:applicationParameters application="InfoPath Design Mode">
+		<xsf:solutionProperties automaticallyCreateNodes="no" lastOpenView="view1.xsl" lastVersionNeedingTransform="1.0.0.15" fullyEditableNamespace="http://schemas.microsoft.com/office/infopath/2003/myXSD/2005-11-05T06:56:29" scriptLanguage="jscript"></xsf:solutionProperties>
+	</xsf:applicationParameters>
+	<xsf:documentSchemas>
+		<xsf:documentSchema location="http://cpas.fhcrc.org/exp/xml expTypes.xsd"></xsf:documentSchema>
+		<xsf:documentSchema location="http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfTypes.xsd"></xsf:documentSchema>
+	</xsf:documentSchemas>
+	<xsf:fileNew>
+		<xsf:initialXmlDocument caption="ExperimentForm" href="template.xml"></xsf:initialXmlDocument>
+	</xsf:fileNew>
+	<xsf:calculations></xsf:calculations>
+	<xsf:ruleSets>
+		<xsf:ruleSet name="ruleSet_1">
+			<xsf:rule caption="SetID" isEnabled="yes">
+				<xsf:assignmentAction targetField="../@OntologyEntryURI" expression="&quot;terms.fhcrc.org#Custom&quot; + translate(., &quot; &quot;, &quot;.&quot;)"></xsf:assignmentAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_2">
+			<xsf:rule caption="SetFolderLSIDFromName" condition="../@rdf:about = &quot;&quot;" isEnabled="yes">
+				<xsf:assignmentAction targetField="../@rdf:about" expression="concat(&quot;${FolderLSIDBase}:&quot;, translate(., &quot; &quot;, &quot;+&quot;))"></xsf:assignmentAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_3">
+			<xsf:rule caption="SetLSIDFromName1" condition="../@rdf:about = &quot;&quot;" isEnabled="yes">
+				<xsf:assignmentAction targetField="../@rdf:about" expression="concat(&quot;${FolderLSIDBase}:&quot;, translate(., &quot; &quot;, &quot;+&quot;))"></xsf:assignmentAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_4">
+			<xsf:rule caption="SetLSIDFromNameDataInput" condition="../@rdf:about = &quot;&quot;" isEnabled="yes">
+				<xsf:assignmentAction targetField="../@rdf:about" expression="concat(&quot;${FolderLSIDBase}:&quot;, translate(., &quot; &quot;, &quot;+&quot;))"></xsf:assignmentAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_5">
+			<xsf:rule caption="SetLSID from Name ExpRun" isEnabled="yes">
+				<xsf:assignmentAction targetField="../@rdf:about" expression="'concat(&quot;${FolderLSIDBase}:&quot;, translate(., &quot; &quot;, &quot;+&quot;))'"></xsf:assignmentAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_6">
+			<xsf:rule caption="Switch to ProtocolView" isEnabled="yes">
+				<xsf:switchViewAction view="ProtocolDefs"></xsf:switchViewAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_7">
+			<xsf:rule caption="Switch to Run View" isEnabled="yes">
+				<xsf:switchViewAction view="Experiment"></xsf:switchViewAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_9">
+			<xsf:rule caption="Switch to Run View" isEnabled="yes">
+				<xsf:switchViewAction view="Experiment"></xsf:switchViewAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_10">
+			<xsf:rule caption="SetPropertyIDFromName0" isEnabled="yes">
+				<xsf:assignmentAction targetField="../@OntologyEntryURI" expression="concat(&quot;${DefaultLSIDAuthority}:&quot;, translate(., &quot; &quot;, &quot;+&quot;))"></xsf:assignmentAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+		<xsf:ruleSet name="ruleSet_11">
+			<xsf:rule caption="Switch to Run View" isEnabled="yes">
+				<xsf:switchViewAction view="Experiment"></xsf:switchViewAction>
+			</xsf:rule>
+		</xsf:ruleSet>
+	</xsf:ruleSets>
+	<xsf:domEventHandlers>
+		<xsf:domEventHandler match="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol/exp:ParameterDeclarations/exp:SimpleVal/@Name">
+			<xsf:ruleSetAction ruleSet="ruleSet_1"></xsf:ruleSetAction>
+		</xsf:domEventHandler>
+		<xsf:domEventHandler handlerObject="msoxd_exp_MaxInputMaterialPerInstance" match="/exp:ExperimentArchive/exp:ProtocolDefinitions/exp:Protocol/exp:MaxInputMaterialPerInstance"></xsf:domEventHandler>
+		<xsf:domEventHandler match="/exp:ExperimentArchive/exp:ExperimentRuns/exp:ExperimentRun/exp:Name">
+			<xsf:ruleSetAction ruleSet="ruleSet_5"></xsf:ruleSetAction>
+		</xsf:domEventHandler>
+		<xsf:domEventHandler match="/exp:ExperimentArchive/exp:Experiment/exp:Properties/exp:SimpleVal/@Name">
+			<xsf:ruleSetAction ruleSet="ruleSet_10"></xsf:ruleSetAction>
+		</xsf:domEventHandler>
+		<xsf:domEventHandler match="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Material/exp:Name">
+			<xsf:ruleSetAction ruleSet="ruleSet_3"></xsf:ruleSetAction>
+		</xsf:domEventHandler>
+		<xsf:domEventHandler match="/exp:ExperimentArchive/exp:Experiment/exp:Name">
+			<xsf:ruleSetAction ruleSet="ruleSet_2"></xsf:ruleSetAction>
+		</xsf:domEventHandler>
+		<xsf:domEventHandler match="/exp:ExperimentArchive/exp:StartingInputDefinitions/exp:Data/exp:Name">
+			<xsf:ruleSetAction ruleSet="ruleSet_4"></xsf:ruleSetAction>
+		</xsf:domEventHandler>
+	</xsf:domEventHandlers>
+	<xsf:scripts language="jscript" enforceScriptTimeout="yes">
+		<xsf:script src="script.js"></xsf:script>
+	</xsf:scripts>
+</xsf:xDocumentClass>

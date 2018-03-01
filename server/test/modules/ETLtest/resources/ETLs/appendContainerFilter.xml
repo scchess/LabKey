@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+<name>Append Test With Container Filter</name>
+<description>append rows from source to target, using a container filter</description>
+<transforms>
+    <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+        <description>Copy to target</description>
+        <source schemaName="etltest" queryName="source" containerFilter="CurrentAndSubfolders"/>
+        <destination schemaName="etltest" queryName="target" />
+    </transform>
+</transforms>
+<incrementalFilter className="ModifiedSinceFilterStrategy" timestampColumnName="modified"/>
+</etl>

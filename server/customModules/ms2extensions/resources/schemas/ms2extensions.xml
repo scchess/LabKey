@@ -1,0 +1,13 @@
+<tables xmlns="http://labkey.org/data/xml">
+    <table tableName="Ms2RunAggregates" tableDbType="TABLE">
+        <columns>
+            <column columnName="ms2Run">
+            	<nullable>false</nullable> 
+            	<isKeyField>true</isKeyField> 
+	        </column>
+            <column columnName="TotalPeptides"/>
+            <column columnName="DistinctPeptides"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+</tables>

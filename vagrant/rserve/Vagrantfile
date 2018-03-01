@@ -1,0 +1,119 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Determine host OS
+HOST = RbConfig::CONFIG['host_os']
+
+#
+# Create and Set Variables to be used in VagrantFile 
+# Commands Below. 
+#
+# Set IP address for the virtual machine
+VIP = "192.168.10.20"
+HOST_VIP = VIP.rpartition(".")[0] + ".1"
+
+# Source checkout root
+LABKEY_ROOT = "../.."
+
+# Allow user override for fileroot.  Default to build's file root
+LABKEY_FILEROOT = ENV['LABKEY_FILEROOT'] || (LABKEY_ROOT + "/build/deploy/files")
+
+# Allow user override for pipeline root.  Default to build's file root
+LABKEY_PIPEROOT = ENV['LABKEY_PIPEROOT'] || (LABKEY_ROOT + "/build/deploy/files")
+
+# Specify Chef Repository location 
+CHEF_REPO = "../chef-solo"
+
+# Tomcat TEMP directory 
+CATALINA_TEMP = ENV['CATALINA_HOME'] + "/temp/reports_temp"
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # All Vagrant configuration is done here. The most common configuration
+  # options are documented and commented below. For a complete reference,
+  # please see the online documentation at vagrantup.com.
+
+  # Every Vagrant virtual environment requires a box to build off of.
+  config.vm.box = "precise64"
+
+  # The url from where the 'config.vm.box' box will be fetched if it
+  # doesn't already exist on the user's system.
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  config.vm.network :private_network, ip: VIP
+  config.vm.hostname = "rserve"
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # 
+  # If you are running on MacOSX we will use NFS when creating these 
+  # folders due to performance problems with VirtualBox shared folders.
+  # For Windows users, we will use non-NFS sharing.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+  if HOST =~ /donotuse/
+      config.vm.synced_folder ".", "/vagrant", :nfs => true
+      config.vm.synced_folder "#{CHEF_REPO}", "/srv/chef-solo", :nfs => true
+      config.vm.synced_folder "#{CATALINA_TEMP}", "/labkey/reports_temp", :nfs => true
+      config.vm.synced_folder "#{LABKEY_FILEROOT}", "/labkey/fileroot",  :nfs => true
+      config.vm.synced_folder "#{LABKEY_PIPEROOT}", "/labkey/piperoot",  :nfs => true
+  else
+      config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777", "fmode=666"]
+      config.vm.synced_folder "#{CHEF_REPO}", "/srv/chef-solo", :mount_options => ["dmode=777", "fmode=666"]
+      config.vm.synced_folder "#{CATALINA_TEMP}", "/labkey/reports_temp", :mount_options => ["dmode=777", "fmode=666"]
+      config.vm.synced_folder "#{LABKEY_FILEROOT}", "/labkey/fileroot",  :mount_options => ["dmode=777", "fmode=666"]
+      config.vm.synced_folder "#{LABKEY_PIPEROOT}", "/labkey/piperoot",  :mount_options => ["dmode=777", "fmode=666"]
+  end
+
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  #
+  config.vm.provider :virtualbox do |vb|
+      # Don't boot with headless mode
+      # vb.gui = true
+      
+      # Automagically set # of CPU and amount of memory 
+      # if running on MacOSX
+      # Give VM 1/4 system memory & access to all cpu cores on the host
+      if HOST =~ /darwin/
+          cpus = `sysctl -n hw.ncpu`.to_i
+          # sysctl returns Bytes and we need to convert to MB
+          mem = `sysctl -n hw.memsize`.to_i / 1024 / 1024 / 4
+      elsif HOST =~ /linux/
+          cpus = `nproc`.to_i
+          # meminfo shows KB and we need to convert to MB
+          mem = `grep 'MemTotal' /proc/meminfo | sed -e 's/MemTotal://' -e 's/ kB//'`.to_i / 1024 / 4
+      else # sorry Windows folks, I can't help you
+          cpus = 2
+          mem = 1024
+      end
+      
+      vb.customize ["modifyvm", :id, "--memory", mem]
+      vb.customize ["modifyvm", :id, "--cpus", cpus]
+  end
+
+  # Enable provisioning with chef solo.
+  # When using chef, LabKey specifies attributes and the run list in the a 
+  # JSON file. This files are stored in ../chef/json-files. See the 
+  # file specified in the "json-file" attribute below for chef 
+  # configuration information
+  #
+  config.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path = "../chef-solo/cookbooks"
+      #chef.log_level = "debug"
+      jsonFile = JSON.parse(File.read("../chef-solo/json-files/rserve.json"))
+      jsonFile[:run_list] = jsonFile.delete("recipes")
+      chef.json.merge!(jsonFile)
+      chef.json.merge!({
+          "labkey" => {
+              "host_ip" => HOST_VIP
+          }
+      })
+      #chef.nfs = true
+  end
+end

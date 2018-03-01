@@ -1,0 +1,15 @@
+import org.labkey.gradle.task.ClientApiDistribution
+import org.labkey.gradle.util.GroupNames
+
+dist.description="Non-Java client API and schema documentation for a LabKey Server distribution"
+
+Task apiDistTask = project.task("distribution",
+    group: GroupNames.DISTRIBUTION,
+    type: ClientApiDistribution,
+    description: "Create the client API distribution"
+).dependsOn(project.project(":remoteapi:java").tasks.fatJar,
+            project.project(":remoteapi:java").tasks.javadocJar, // this is for the teamcity-specific artifacts; perhaps we can remove this
+            project.project(":server").tasks.jsdoc,
+            project.project(":server").tasks.xsddoc)
+if (project.findProject(":remoteapi:sas") != null)
+   apiDistTask.dependsOn(project.project(":remoteapi:sas").tasks.distribution)

@@ -1,0 +1,2 @@
+project.tasks.jar.baseName='Specimen_tracking'
+project.tasks.jspJar.baseName='Specimen_tracking'

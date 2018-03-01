@@ -1,0 +1,7 @@
+dependencies {
+   external ("com.googlecode.json-simple:json-simple:${jsonSimpleVersion}")
+           {
+              // exclude this because it gets in the way of our own JSON object implementations from server/api
+              exclude group: "org.json", module:"json"
+           }
+}

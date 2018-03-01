@@ -1,0 +1,1 @@
+ALTER TABLE adjudication.AssayType ALTER COLUMN label NVARCHAR(200) NULL;

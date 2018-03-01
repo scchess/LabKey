@@ -1,0 +1,59 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="rd_skin_sensitization" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Test Date</columnTitle>
+                    </column>
+                    <column columnName="projectCode">
+                        <columnTitle>Project Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>rd_project_category</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="skin_sen_pk">
+                        <columnTitle>Skin Sensitization PK</columnTitle>
+                    </column>
+                    <column columnName="wheal_positive_control">
+                        <columnTitle>Wheal Positive Control</columnTitle>
+                    </column>
+                    <column columnName="wheal_negative_control">
+                        <columnTitle>Wheal Negative Control</columnTitle>
+                    </column>
+                    <column columnName="wheal_dust_mite">
+                        <columnTitle>Wheal Dust Mite</columnTitle>
+                    </column>
+                    <column columnName="wheal_cockroach">
+                        <columnTitle>Wheal Cockroach</columnTitle>
+                    </column>
+                    <column columnName="wheal_mold">
+                        <columnTitle>Wheal Mold</columnTitle>
+                    </column>
+                    <column columnName="wheal_trees">
+                        <columnTitle>Wheal Trees</columnTitle>
+                    </column>
+                    <column columnName="wheal_weeds">
+                        <columnTitle>Wheal Weeds</columnTitle>
+                    </column>
+                    <column columnName="wheal_grasses">
+                        <columnTitle>Wheal Grasses</columnTitle>
+                    </column>
+                    <column columnName="wheal_ascarid">
+                        <columnTitle>Wheal Ascarid</columnTitle>
+                    </column>
+                    <column columnName="wheal_offspring_comment">
+                        <columnTitle>Wheal Offsprint Comment</columnTitle>
+                    </column>
+                    <column columnName="remark">
+                        <columnTitle>Comments</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

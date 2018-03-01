@@ -1,0 +1,8 @@
+Hooray!
+<p>
+The vehicle row id is: <span id='vehicle.rowid'>not set</span>!
+<script type="text/javascript">
+    var span = document.getElementById("vehicle.rowid");
+    span.innerHTML = LABKEY.ActionURL.getParameter("rowid");
+</script>
+

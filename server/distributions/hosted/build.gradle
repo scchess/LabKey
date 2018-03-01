@@ -1,0 +1,30 @@
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+import org.labkey.gradle.plugin.Distribution
+
+apply plugin: 'org.labkey.distribution'
+
+dist.description="Distribution of all modules for hosted instances of LabKey Server"
+
+Distribution.inheritDependencies(project, ":server:distributions:legacy")
+
+BuildUtils.addModuleDistributionDependencies(project, [
+	":server:optionalModules:cas",
+	":server:customModules:ehr",
+	":externalModules:labModules:flowassays",
+	":externalModules:labModules:LDK",
+	":externalModules:labModules:laboratory",
+	":externalModules:labModules:Viral_Load_Assay"])
+
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName="hosted"
+            dist.includeTarGZArchive=true
+            dist.extraFileIdentifier='-Hosted'
+        }
+)

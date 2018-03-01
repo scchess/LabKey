@@ -1,0 +1,88 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="rd_master" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="id">
+                        <columnTitle>Master List PK</columnTitle>
+                    </column>
+                    <column columnName="an_id">
+                        <columnTitle>AN Id</columnTitle>
+                    </column>
+                    <column columnName="species">
+                        <columnTitle>Species</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>species_codes</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="animalId">
+                        <columnTitle>Animal Id</columnTitle>
+                        <url>/ehr/participantView.view?participantId=${animalId}</url>
+                    </column>
+                    <column columnName="proj_code_1">
+                        <columnTitle>Project Code 1</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>rd_project_category</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="proj_code_2">
+                        <columnTitle>Project Code 2</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>rd_project_category</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="treatment">
+                        <columnTitle>Treatment</columnTitle>
+                    </column>
+                    <column columnName="stagger_group">
+                        <columnTitle>Stagger Group</columnTitle>
+                    </column>
+                    <column columnName="age_category">
+                        <columnTitle>Age Category</columnTitle>
+                    </column>
+                    <column columnName="birthdate">
+                        <columnTitle>Birth Date</columnTitle>
+                    </column>
+                    <column columnName="death_date">
+                        <columnTitle>Death Date</columnTitle>
+                    </column>
+                    <column columnName="necropsy_wt_kg">
+                        <columnTitle>Necropsy Weight (kg)</columnTitle>
+                    </column>
+                    <column columnName="gender">
+                        <columnTitle>Sex</columnTitle>
+                    </column>
+                    <column columnName="birthplace">
+                        <columnTitle>Birth Place</columnTitle>
+                    </column>
+                    <column columnName="dam">
+                        <columnTitle>Dam Id</columnTitle>
+                        <url>/ehr/participantView.view?participantId=${dam}</url>
+                    </column>
+                    <column columnName="dam_genetics_verify">
+                        <columnTitle>Dam Genetics Verify</columnTitle>
+                    </column>
+                    <column columnName="sire">
+                        <columnTitle>Sire Id</columnTitle>
+                        <url>/ehr/participantView.view?participantId=${sire}</url>
+                    </column>
+                    <column columnName="sire_genetics_verify">
+                        <columnTitle>Sire Genetics Verify</columnTitle>
+                    </column>
+                    <column columnName="genetics_comment">
+                        <columnTitle>Genetics Comments</columnTitle>
+                    </column>
+                    <column columnName="comments">
+                        <columnTitle>Comments</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

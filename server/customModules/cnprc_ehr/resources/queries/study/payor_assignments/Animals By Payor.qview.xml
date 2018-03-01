@@ -1,0 +1,87 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id/birth/species">
+            <properties>
+                <property name="columnTitle" value="Species Code"/>
+            </properties>
+        </column>
+        <column name="Id">
+            <properties>
+                <property name="columnTitle" value="Animal ID"/>
+            </properties>
+        </column>
+        <column name="Id/demographics/gender">
+            <properties>
+                <property name="columnTitle" value="Sex"/>
+            </properties>
+        </column>
+        <column name="Id/age/yearsAndMonthsAndDays">
+            <properties>
+                <property name="columnTitle" value="Age"/>
+            </properties>
+        </column>
+        <column name="Id/MostRecentWeight/MostRecentWeight">
+            <properties>
+                <property name="columnTitle" value="Weight (kg)"/>
+            </properties>
+        </column>
+        <column name="Id/curLocation/location">
+            <properties>
+                <property name="columnTitle" value="Location"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/primaryProject"/>
+        <column name="Id/DemographicsActiveAssignment/secondaryProjects">
+            <properties>
+                <property name="columnTitle" value="Secondary Project(s)"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePayor/currentPayorDate">
+            <properties>
+                <property name="columnTitle" value="Payor Assignment Date"/>
+            </properties>
+        </column>
+        <column name="payor_id">
+            <properties>
+                <property name="columnTitle" value="Searched Payor"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePayor/payor_ids">
+            <properties>
+                <property name="columnTitle" value="Current Payor"/>
+            </properties>
+        </column>
+        <column name="Id/flagList/values">
+            <properties>
+                <property name="columnTitle" value="Census Flags"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/conNum">
+            <properties>
+                <property name="columnTitle" value="Pregnancy"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/daysPregnant">
+            <properties>
+                <property name="columnTitle" value="Gest Days"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveColony/colonyCode">
+            <properties>
+                <property name="columnTitle" value="Colony Code"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveBreedingGroup/groupCode">
+            <properties>
+                <property name="columnTitle" value="Breeding Code"/>
+            </properties>
+        </column>
+    </columns>
+    <filters>
+        <filter column="Id/demographics/calculated_status" operator="eq" value="Alive"/>
+        <filter column="enddate" operator="isblank"/>
+    </filters>
+    <sorts>
+        <sort column="date" descending="false"/>
+    </sorts>
+</customView>

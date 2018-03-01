@@ -1,0 +1,33 @@
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+import org.labkey.gradle.plugin.Distribution
+
+apply plugin: 'org.labkey.distribution'
+
+dist.description="Distribution of modules used for LabKey Server Evaluation"
+
+Distribution.inheritDependencies(project, ":server:distributions:base")
+
+BuildUtils.addModuleDistributionDependencies(project, [":server:modules:issues",
+                                                       ":server:modules:list",
+                                                       ":server:modules:search",
+                                                       ":server:modules:study",
+                                                       ":server:modules:visualization",
+                                                       ":server:optionalModules:cas",
+                                                       ":server:optionalModules:docker",
+                                                       ":server:optionalModules:rstudio",
+                                                       ":server:optionalModules:evaluationContent"])
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName="eval"
+            dist.includeWindowsInstaller=false
+            dist.includeZipArchive=false
+            dist.includeTarGZArchive=true
+            dist.extraFileIdentifier='-eval'
+        }
+)

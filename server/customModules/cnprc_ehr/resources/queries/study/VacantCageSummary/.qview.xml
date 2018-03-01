@@ -1,0 +1,6 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <sorts>
+        <sort column="enclosure" descending="false"/>
+        <sort column="cage_size" descending="false"/>
+    </sorts>
+</customView>

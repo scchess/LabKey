@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>FreezerDB Samples - With no Animal or Conception Ids</name>
+    <description>Freezer sample database</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc_fdb" queryName="q_fdb_samples_no_id"/>
+            <destination schemaName="cnprc_ehr" queryName="fdb_samples_no_id" bulkLoad="true" targetOption="truncate"/>
+        </transform>
+    </transforms>
+    <schedule>
+        <!-- run at 1 am everyday -->
+        <cron expression="0 0 1 * * ? *"/> <!--seconds, minutes, hours, day-of-month, month, day-of-week, year(optional) -->
+    </schedule>
+</etl>

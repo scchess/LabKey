@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bioml>
+  <!-- Override default parameters here. -->
+  <note label="pipeline, protocol name" type="input">Find Features</note>
+  <note label="pipeline, protocol description" type="input"/>
+  <note label="pipeline, email address" type="input">daves@labkey.com</note>
+  <note label="pipeline, load folder" type="input">/Pipeline Test</note>
+</bioml>

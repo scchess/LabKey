@@ -1,0 +1,150 @@
+<tables xmlns="http://labkey.org/data/xml">
+    <table tableName="populations" tableDbType="TABLE">
+        <tableTitle>Population Names</tableTitle>
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <pkColumnName>name</pkColumnName>
+        <columns>
+            <column columnName="name">
+                <nullable>true</nullable>
+            </column>
+            <column columnName="marker">
+            </column>
+            <column columnName="importAliases">
+                <columnTitle>Import Aliases</columnTitle>
+            </column>
+            <column columnName="comments">
+                <nullable>true</nullable>
+            </column>
+            <column columnName="createdby">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="created">
+                <isUserEditable>false</isUserEditable>
+                <shownInInsertView>false</shownInInsertView>
+                <shownInUpdateView>false</shownInUpdateView>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="modifiedby">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="modified">
+                <isUserEditable>false</isUserEditable>
+                <shownInInsertView>false</shownInInsertView>
+                <shownInUpdateView>false</shownInUpdateView>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="units" tableDbType="TABLE">
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <pkColumnName>unit</pkColumnName>
+        <columns>
+            <column columnName="unit">
+            </column>
+        </columns>
+    </table>
+    <table tableName="instruments" tableDbType="TABLE">
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <pkColumnName>instrument</pkColumnName>
+        <columns>
+            <column columnName="instrument">
+            </column>
+        </columns>
+    </table>
+    <table tableName="assay_types" tableDbType="TABLE">
+        <tableTitle>Flow Assay Types</tableTitle>
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="name"/>
+            <column columnName="description"/>
+        </columns>
+    </table>
+    <table tableName="fcsfilemetadata" tableDbType="TABLE">
+        <tableTitle>FCS Files</tableTitle>
+        <javaCustomizer class="org.labkey.laboratory.query.LaboratoryTableCustomizer" />
+        <pkColumnName>rowid</pkColumnName>
+        <columns>
+            <column columnName="rowid">
+                <columnTitle>Row Id</columnTitle>
+            </column>
+            <column columnName="fcsId">
+                <columnTitle>FCS File</columnTitle>
+                <fk>
+                    <fkDbSchema>flow</fkDbSchema>
+                    <fkTable>fcsfiles</fkTable>
+                    <fkColumnName>rowid</fkColumnName>
+                </fk>
+            </column>
+            <column columnName="subjectid">
+                <nullable>true</nullable>
+                <columnTitle>Subject Id</columnTitle>
+                <conceptURI>http://cpas.labkey.com/Study#ParticipantId</conceptURI>
+            </column>
+            <column columnName="date">
+                <columnTitle>Sample Date</columnTitle>
+                <conceptURI>http://cpas.labkey.com/laboratory#sampleDate</conceptURI>
+            </column>
+            <column columnName="category">
+                <columnTitle>Category</columnTitle>
+                <fk>
+                    <fkDbSchema>laboratory</fkDbSchema>
+                    <fkTable>samplecategory</fkTable>
+                    <fkColumnName>category</fkColumnName>
+                </fk>
+            </column>
+            <column columnName="tissue">
+                <columnTitle>Tissue</columnTitle>
+            </column>
+            <column columnName="sampletype">
+                <nullable>true</nullable>
+                <columnTitle>Sample Type</columnTitle>
+                <fk>
+                    <fkDbSchema>laboratory</fkDbSchema>
+                    <fkTable>sample_type</fkTable>
+                    <fkColumnName>type</fkColumnName>
+                </fk>
+            </column>
+            <column columnName="treatment">
+                <columnTitle>Treatment</columnTitle>
+            </column>
+            <column columnName="sampleid">
+                <nullable>true</nullable>
+                <columnTitle>Sample Id</columnTitle>
+                <fk>
+                    <fkDbSchema>laboratory</fkDbSchema>
+                    <fkTable>samples</fkTable>
+                    <fkColumnName>freezerid</fkColumnName>
+                </fk>
+            </column>
+            <column columnName="comment">
+                <nullable>true</nullable>
+            </column>
+            <column columnName="container">
+
+            </column>
+            <column columnName="createdby">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="created">
+                <isUserEditable>false</isUserEditable>
+                <shownInInsertView>false</shownInInsertView>
+                <shownInUpdateView>false</shownInUpdateView>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="modifiedby">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="modified">
+                <isUserEditable>false</isUserEditable>
+                <shownInInsertView>false</shownInInsertView>
+                <shownInUpdateView>false</shownInUpdateView>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+</tables>

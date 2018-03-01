@@ -1,0 +1,30 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="breedingRoster" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="animalId">
+                        <url>/ehr/participantView.view?participantId=${animalId}</url>
+                    </column>
+                    <column columnName="book"/>
+                    <column columnName="maleEnemy1">
+                        <url>/ehr/participantView.view?participantId=${maleEnemy1}</url>
+                    </column>
+                    <column columnName="maleEnemy2">
+                        <url>/ehr/participantView.view?participantId=${maleEnemy2}</url>
+                    </column>
+                    <column columnName="maleEnemy3">
+                        <url>/ehr/participantView.view?participantId=${maleEnemy3}</url>
+                    </column>
+                    <column columnName="maleEnemy4">
+                        <url>/ehr/participantView.view?participantId=${maleEnemy4}</url>
+                    </column>
+                    <column columnName="maleEnemy5">
+                        <url>/ehr/participantView.view?participantId=${maleEnemy5}</url>
+                    </column>
+                    <column columnName="objectid"/>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

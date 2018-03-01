@@ -1,0 +1,43 @@
+#
+# Vagrantfile for the LabKey Test Team version of Shibboleth-IDP
+# 
+# The Docker configuration was adapted from https://github.com/jtgasper3/docker-shibboleth-idp
+# 
+#
+# Create and Set Variables to be used in VagrantFile
+# Commands Below.
+#
+VAGRANTFILE_API_VERSION = "2"
+DOCKERHOST_VAGRANTFILE = "../dockerhost/Vagrantfile"
+
+# 
+# Define and start the Vagrant VM 
+# 
+Vagrant.configure("2") do |config|
+
+	# Configure the Docker host 
+	config.vm.provider "docker" do |d|
+		d.vagrant_vagrantfile = DOCKERHOST_VAGRANTFILE
+	end 
+
+	# Start the Shibboleth Container using the dockerfile in the 
+	# ./shibboleth-idp container directory
+	# 
+	config.vm.define "shibboleth-idp" do |sh| 
+		sh.vm.provider "docker" do |d| 
+			d.name = "shibboleth-idp"
+			d.build_dir = "./shibboleth-idp"
+			d.ports = ['443:443', '8443:8443']
+		end
+
+		sh.vm.synced_folder "./shib-logs",
+                        "/opt/shibboleth-idp/logs"
+                        #type: "nfs"
+        sh.vm.synced_folder "./shib-config",
+                        "/external-mount"
+                        #type: "nfs"
+	end 
+
+
+end 
+

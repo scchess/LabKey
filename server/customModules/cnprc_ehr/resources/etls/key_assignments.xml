@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>Key Assignments</name>
+    <description>Key Assignments</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc" queryName="q_key_assignments"/>
+            <destination schemaName="cnprc_ehr" queryName="key_assignments" bulkLoad="true" targetOption="merge">
+                <alternateKeys>
+                    <column name="objectid"/>
+                </alternateKeys>
+            </destination>
+        </transform>
+    </transforms>
+    <incrementalFilter className="ModifiedSinceFilterStrategy" timestampColumnName="date_time">
+        <deletedRowsSource schemaName="cnprcSrc_aud" queryName="q_key_assignments_delete" timestampColumnName="date_time" deletedSourceKeyColumnName="objectid" targetKeyColumnName="objectid"/>
+    </incrementalFilter>
+    <schedule>
+        <!-- run at 1 am every Monday -->
+        <cron expression="0 0 1 ? * MON *"/> <!--seconds, minutes, hours, day-of-month, month, day-of-week, year(optional) -->    </schedule>
+</etl>

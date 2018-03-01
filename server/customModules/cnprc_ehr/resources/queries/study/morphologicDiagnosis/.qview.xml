@@ -1,0 +1,22 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="date"/>
+        <column name="projectCode"/>
+        <column name="seq1"/>
+        <column name="tissue"/>
+        <column name="morphology"/>
+        <column name="etiology"/>
+        <column name="diagnosis"/>
+        <column name="disease"/>
+        <column name="process"/>
+        <column name="distribution"/>
+        <column name="topographyNotes"/>
+        <column name="morphologyNotes"/>
+        <column name="comments"/>
+        <column name="remark"/>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

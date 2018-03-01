@@ -1,0 +1,6 @@
+"id"	"date"	"projectCode"	"seq1"	"tissue"	"morphology"	"etiology"	"diagnosis"	"disease"	"process"	"distribution"	"topographyNotes"	"morphologyNotes"	"remark"	"comments"	"QCStateLabel"	"objectId"
+"TEST2950014"	"2015-04-21 00:00"	""	"1"	"T-54480"	"M-00100"	"E-YY015"	"F-76480"	"D-43152"	"P-11100"	"J-YY045"	""	""	""	""	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ae"
+"TEST9118022"	"2015-04-21 00:00"	""	"2"	"T-78000"	"M-34000"	"E-16524"	"F-YY043"	"D-43151"	"P-12500"	"J-C1EC0"	""	""	""	""	"Completed"	"e2bbef52-70ae-102e-8c2a-9926f351b9ae"
+"TEST1441142"	"2012-07-17 00:00"	""	"1"	"T-00100"	"M-14110"	"E-25420"	"F-YY038"	"D-Y0001"	"P-60210"	"J-YY093"	""	""	""	""	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"
+"TEST3224553"	"2015-05-01 11:22:53.0"	""	"1"	"T-18422"	"M-52000"	"E-YY280"	"F-62000"	"D-Y0001"	"P-04660"	"J-YY078"	""	""	""	""	"Completed"	"e3bbef52-70ae-102e-8c2a-9926f351b9ae"
+"TEST1993532"	"2016-05-04 10:00:00.0"	""	"1"	"T-18422"	"M-YY019"	"E-YY280"	"F-YY042"	"D-Y0001"	"P-82700"	"J-C1410"	""	""	""	""	"Completed"	"e4bbef52-70ae-102e-8c2a-9926f351b9ae"

@@ -1,0 +1,6 @@
+<webpart available="always" xmlns="http://labkey.org/data/xml/webpart">
+    <view name="results"  />
+    <locations>
+        <location name="body"/>
+    </locations>
+</webpart>

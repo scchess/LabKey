@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!--
+
+         * Copyright (c) 2015-2017 LabKey Corporation
+         *
+         * Licensed under the Apache License, Version 2.0 (the "License");
+         * you may not use this file except in compliance with the License.
+         * You may obtain a copy of the License at
+         *
+         *     http://www.apache.org/licenses/LICENSE-2.0
+         *
+         * Unless required by applicable law or agreed to in writing, software
+         * distributed under the License is distributed on an "AS IS" BASIS,
+         * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+         * See the License for the specific language governing permissions and
+         * limitations under the License.
+
+         -->
+<tables xsi:schemaLocation="http://cpas.fhcrc.org/data/xml ..\..\..\..\schemas\tableInfo.xsd" xmlns="http://labkey.org/data/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <table tableName="AdjudicationCase" tableDbType="TABLE">
+        <columns>
+            <column columnName="CaseId"/>
+            <column columnName="ParticipantId"/>
+            <column columnName="StatusId">
+                <isUserEditable>false</isUserEditable>
+            </column>
+            <column columnName="Created"/>
+            <column columnName="Completed">
+                <isUserEditable>false</isUserEditable>
+            </column>
+            <column columnName="Notified">
+                <isUserEditable>false</isUserEditable>
+            </column>
+            <column columnName="AssayFilename"/>
+            <column columnName="Comment"/>
+            <column columnName="NewData">
+                <isUserEditable>false</isUserEditable>
+            </column>
+            <column columnName="LabVerified"/>
+            <column columnName="Container">
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="Determination" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="CaseId"/>
+            <column columnName="Completed"/>
+            <column columnName="Status"/>
+            <column columnName="Hiv1Infected"/>
+            <column columnName="Hiv2Infected"/>
+            <column columnName="Hiv1InfectedVisit"/>
+            <column columnName="Hiv2InfectedVisit"/>
+            <column columnName="Hiv1Comment"/>
+            <column columnName="Hiv2Comment"/>
+            <column columnName="LastUpdated"/>
+            <column columnName="LastUpdatedBy"/>
+            <column columnName="TeamNumber">
+                <columnTitle>Adjudicator Team</columnTitle>
+            </column>
+            <column columnName="Container">
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="Kit" tableDbType="TABLE">
+        <columns>
+            <column columnName="Code"/>
+            <column columnName="Category"/>
+            <column columnName="Description"/>
+        </columns>
+        <titleColumn>Description</titleColumn>
+    </table>
+    <table tableName="Status" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Status"/>
+            <column columnName="SequenceOrder"/>
+            <column columnName="Container">
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="Visit" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="CaseId"/>
+            <column columnName="Visit"/>
+            <column columnName="Container">
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="AssayType" tableDbType="TABLE">
+        <titleColumn>DisplayName</titleColumn>
+        <columns>
+            <column columnName="RowId">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="Name">
+                <description>Text to match when uploading data file.</description>
+            </column>
+            <column columnName="Label">
+                <description>Text to be displayed in case details.</description>
+            </column>
+            <column columnName="Created">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="Modified">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="CreatedBy">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="ModifiedBy">
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="Container">
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="AssayResults" tableDbType="NOT_IN_DB">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="ParticipantId"/>
+            <column columnName="EntityId"/>
+            <column columnName="Visit"/>
+            <column columnName="Network"/>
+            <column columnName="Lab"/>
+            <column columnName="AssayType"/>
+            <column columnName="AssayKit"/>
+            <column columnName="Result"/>
+            <column columnName="DrawDate"/>
+            <column columnName="CopiesML"/>
+            <column columnName="TestDate"/>
+            <column columnName="Comment"/>
+            <column columnName="CaseId"/>
+        </columns>
+    </table>
+    <table tableName="AssayAttachments" tableDbType="NOT_IN_DB">
+        <columns>
+            <column columnName="Parent"/>
+            <column columnName="DocumentName"/>
+        </columns>
+    </table>
+    <table tableName="AdjudicationUser" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="UserId">
+                <columnTitle>User</columnTitle>
+            </column>
+            <column columnName="RoleId">
+                <columnTitle>Role</columnTitle>
+            </column>
+            <column columnName="Container">
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="AdjudicationTeamUser" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="AdjudicationUserId">
+                <fk>
+                    <fkColumnName>RowId</fkColumnName>
+                    <fkTable>AdjudicationUser</fkTable>
+                </fk>
+            </column>
+            <column columnName="TeamNumber"/>
+            <column columnName="Notify"/>
+            <column columnName="Container">
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="AdjudicationRole" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="SupportedKits" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="KitCode">
+                <columnTitle>Kit</columnTitle>
+            </column>
+            <column columnName="Container">
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="CaseDocuments" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="CaseId"/>
+            <column columnName="DocumentName"/>
+            <column columnName="Document"/>
+        </columns>
+    </table>
+ </tables>

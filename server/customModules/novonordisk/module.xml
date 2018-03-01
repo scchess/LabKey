@@ -1,0 +1,7 @@
+<module xmlns="http://labkey.org/moduleProperties/xml/">
+    <clientDependencies>
+        <dependency path="Ext4"/>
+        <dependency path="extWidgets/IconPanel.css" />
+        <dependency path="extWidgets/IconPanel.js" />
+    </clientDependencies>
+</module>

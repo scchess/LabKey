@@ -1,0 +1,74 @@
+<query xmlns="http://labkey.org/data/xml/query" hidden="false">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="PassFail" tableDbType="NOT_IN_DB">
+                <tableUrl>query/executeQuery.view?schemaName=flow&amp;query.queryName=PassFailDetails&amp;query.Key~eq=${Key}</tableUrl>
+                <titleColumn>Verdict</titleColumn>
+                <columns>
+                    <column columnName="Verdict">
+                        <conditionalFormats>
+                            <conditionalFormat>
+                                <filters>
+                                    <filter operator="neq" value="PASS"/>
+                                </filters>
+                                <textColor>CC0000</textColor>
+                            </conditionalFormat>
+                        </conditionalFormats>
+                    </column>
+
+                    <column columnName="negctrl_CD4_Resp">
+                        <formatString>#,##0.00</formatString>
+                        <datatype>DOUBLE</datatype>
+                        <conditionalFormats>
+                            <conditionalFormat>
+                                <filters>
+                                    <filter operator="gt" value="0.1"/>
+                                </filters>
+                                <textColor>CC0000</textColor>
+                            </conditionalFormat>
+                        </conditionalFormats>
+                    </column>
+
+                    <column columnName="negctrl_CD8_Resp">
+                        <datatype>DOUBLE</datatype>
+                        <formatString>#,##0.00</formatString>
+                        <conditionalFormats>
+                            <conditionalFormat>
+                                <filters>
+                                    <filter operator="gt" value="0.1"/>
+                                </filters>
+                                <textColor>CC0000</textColor>
+                            </conditionalFormat>
+                        </conditionalFormats>
+                    </column>
+
+                    <column columnName="posctrl_CD4_Resp">
+                        <formatString>#,##0.00</formatString>
+                        <datatype>DOUBLE</datatype>
+                        <conditionalFormats>
+                            <conditionalFormat>
+                                <filters>
+                                    <filter operator="lt" value="1.2"/>
+                                </filters>
+                                <textColor>CC0000</textColor>
+                            </conditionalFormat>
+                        </conditionalFormats>
+                    </column>
+
+                    <column columnName="posctrl_CD8_Resp">
+                        <datatype>DOUBLE</datatype>
+                        <formatString>#,##0.00</formatString>
+                        <conditionalFormats>
+                            <conditionalFormat>
+                                <filters>
+                                    <filter operator="lt" value="1.2"/>
+                                </filters>
+                                <textColor>CC0000</textColor>
+                            </conditionalFormat>
+                        </conditionalFormats>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

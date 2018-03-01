@@ -1,0 +1,23 @@
+<query xmlns="http://labkey.org/data/xml/query">
+  <metadata>
+    <tables xmlns="http://labkey.org/data/xml">
+      <table tableName="quotes" tableDbType="TABLE">
+        <columns>
+      <column columnName="quote_number">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="key">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+          <column columnName="vendor">
+            <fk>
+              <fkDbSchema>purchase</fkDbSchema>
+              <fkTable>vendors</fkTable>
+              <fkColumnName>vendor</fkColumnName>
+            </fk>
+          </column>
+        </columns>
+      </table>
+    </tables>
+  </metadata>
+</query>

@@ -1,0 +1,22 @@
+<script src="/ehr/lib/underscore.js"></script>
+<script src="/ehr/lib/underscore-string.js"></script>
+<script src="/ehr/lib/knockout.js"></script>
+<script src="/ehr/lib/knockout-mapping.js"></script>
+<script type="application/javascript">
+    var require = {
+        paths: {
+            "text":              "/ehr/lib/require-text", // Make Text Plugin work
+            "classify":          "/ehr/lib/classify",
+            "supersqlstore":     "/ehr/lib/supersqlstore"
+        },
+        waitSeconds: 0
+    };
+</script>
+
+<script src="/ehr/lib/require.js" data-main="/ehr/requirements"></script>
+<script src="/ehr/HousingAndAssignmentHistory.js"></script>
+
+<animal-housing params="animalid: 'r95061'"></animal-housing>
+<animal-housing params="animalid: 'r09026'"></animal-housing>
+<animal-housing params="animalid: 'r92031'"></animal-housing>
+<animal-housing params="animalid: 'r95003'"></animal-housing>

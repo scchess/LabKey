@@ -1,0 +1,29 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="observation_types" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="obsCode">
+                        <columnTitle>Observation Code</columnTitle>
+                    </column>
+                    <column columnName="snomedCode">
+                        <columnTitle>SNOMED Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>snomed</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                            <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="pregnancyDisplayFlag">
+                        <columnTitle>Pregnancy Display Flag</columnTitle>
+                    </column>
+                    <column columnName="visualSignsOnlyFlag">
+                        <columnTitle>Visual Signs Only Flag</columnTitle>
+                    </column>
+
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

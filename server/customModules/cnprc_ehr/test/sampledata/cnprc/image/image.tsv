@@ -1,0 +1,10 @@
+Id	owner_type	owner_name	create_unit	modality	device_type	device_name	subject_type	subject_name	subject_location	subject_species	subject_organ	original_filename	original_format_name	original_format_extension	original_width_pixels	original_height_pixels	original_size_bytes	upload_by	upload_timestamp	upload_comment	description	is_public	image_repository	is_stock	is_stock_approved	stock_approved_by	stock_approved_timestamp	is_release_approved	release_approved_by	release_approved_timestamp	objectid	Created	CreatedBy	Modified	ModifiedBy	Container
+XY000001	UNIT	PATHOLOGY	PATHOLOGY	PHOTOGRAPHY	SLIDE SCANNER		ANIMAL	TEST2950014		MCY	LUNG								2011-07-19 14:44																	
+XY000002	UNIT	PATHOLOGY	PATHOLOGY	PHOTOGRAPHY	SLIDE SCANNER		ANIMAL	TEST9118022		MCY	LUNG								2011-07-19 14:45																	
+XY000003	PROJECT		PATHOLOGY	PHOTOGRAPHY	DIGITAL CAMERA	Nikon	ANIMAL	TEST1441142		Mmu 	CECUM								2005-08-26 14:42																	
+XY000004	PROJECT		PATHOLOGY	PHOTOGRAPHY	DIGITAL CAMERA	Nikon	ANIMAL	TEST3224553		Mmu	CECUM								2005-09-06 09:15																	
+XY000005	PROJECT		PATHOLOGY	PHOTOGRAPHY	DIGITAL CAMERA	Nikon	ANIMAL	TEST1993532		Mmu	KIDNEY								2005-09-07 16:08																	
+XY000006	PROJECT		PATHOLOGY	PHOTOGRAPHY	DIGITAL CAMERA	Nikon	ANIMAL	TEST3804589		Mmu	KIDNEY								2005-09-07 16:08
+XY000007	PROJECT		PATHOLOGY	PHOTOGRAPHY	DIGITAL CAMERA	Nikon	ANIMAL	TEST5904521		Mmu	UTERUS								2005-09-12 14:27																	
+XY000008	PROJECT		PATHOLOGY	PHOTOGRAPHY	DIGITAL CAMERA	Nikon	ANIMAL	TEST2312318		Mmu	UTERUS								2005-09-12 14:28																	
+XY000009	PROJECT		PATHOLOGY	PHOTOGRAPHY	DIGITAL CAMERA	Nikon	ANIMAL	TEST6390238		Mmu	LIVER								2005-09-12 14:42

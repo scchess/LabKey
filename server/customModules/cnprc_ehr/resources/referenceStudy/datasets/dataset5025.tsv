@@ -1,0 +1,5 @@
+"Id"	"date"	"parent"	"oldParent"	"relationship"	"remark"	"QCStateLabel"	"objectId"
+"TEST3804589"	"2011-07-18 13:29:02.0"	"TEST2312318"	"TEST2312318"	"dam"	""	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ae"
+"TEST3804589"	"2011-07-18 13:29:02.0"	"TEST6390238"	"TEST6390238"	"sire"	""	"Completed"	"dbee90d4-b9ba-102d-8c2a-9926f351b9ae"
+"TEST2"	"2011-06-20 17:56:53.0"	"TEST2312318"	"TEST2312318"	"dam"	""	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"
+"TEST2"	"2011-06-20 17:56:53.0"	"TEST6390238"	"TEST6390238"	"sire"	""	"Completed"	"e1bbef52-a0ae-102e-8c2a-9926f351b9ae"

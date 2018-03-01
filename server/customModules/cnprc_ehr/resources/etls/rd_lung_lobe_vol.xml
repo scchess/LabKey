@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>Respiratory Diseases - Lung Lobe Volume</name>
+    <description>Respiratory Diseases - Asthma Lung Lobe Vol Historical Data</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc_rd" queryName="q_rd_lung_lobe_vol"/>
+            <destination schemaName="cnprc_ehr" queryName="rd_lung_lobe_vol" bulkLoad="true" targetOption="truncate"/>
+        </transform>
+    </transforms>
+</etl>

@@ -1,0 +1,70 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="project" tableDbType="TABLE">
+                <tableUrl>/CNPRC_EHR/projectDetails.view?project=${projectCode}</tableUrl>
+                <columns>
+                    <column columnName="projectCode"/>
+                    <column columnName="protocol">
+                        <columnTitle>AUCAAC Protocol</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>protocol</fkTable>
+                            <fkColumnName>protocol</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="projectType">
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>project_types</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName useRawValue="true"/>
+                        </fk>
+                    </column>
+                    <column columnName="unitCode">
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>center_unit</fkTable>
+                            <fkColumnName>center_unit_code</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="project_tracking_id"/>
+                    <column columnName="pp_id"/>
+                    <column columnName="an_requested_per_year"/>
+                    <column columnName="an_used_assigned"/>
+                    <column columnName="date_protocol_sub_aucaac"/>
+                    <column columnName="direct_amt_received"/>
+                    <column columnName="direct_amt_requested_1"/>
+                    <column columnName="direct_amt_requested_2"/>
+                    <column columnName="funding_agency_1"/>
+                    <column columnName="funding_agency_2"/>
+                    <column columnName="grant_contract_id"/>
+                    <column columnName="oi_department"/>
+                    <column columnName="oi_name"/>
+                    <column columnName="pi_department"/>
+                    <column columnName="pi_name"/>
+                    <column columnName="attributes"/>
+                    <column columnName="startdate"/>
+                    <column columnName="comments"/>
+                    <column columnName="enddate"/>
+                    <column columnName="tb_exempt_flag"/>
+                    <column columnName="title"/>
+                    <column columnName="tracking_status"/>
+                    <column columnName="proposed_end_date"/>
+                    <column columnName="proposed_start_date"/>
+                    <column columnName="protocol_end_date"/>
+                    <column columnName="protocol_response_date"/>
+                    <column columnName="sp_requested"/>
+                    <column columnName="total_animals"/>
+                    <column columnName="visual_signs_auto_rpt_flag"/>
+                    <column columnName="is_prpt_recognized"/>
+                    <column columnName="pi_affiliation"/>
+                    <column columnName="oi_affiliation"/>
+                    <column columnName="is_tissue_avail"/>
+                    <column columnName="pi_person_fk"/>
+                    <column columnName="research"/>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

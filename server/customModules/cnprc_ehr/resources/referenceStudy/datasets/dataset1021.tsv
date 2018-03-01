@@ -1,0 +1,7 @@
+"fileNum"	"sequence"	"recordType"	"recordStatus"	"remark"	"id"	"date"	"fulldate"	"location"	"enclosure"	"area"	"rawId"	"raw_location"	"observation"	"obsCode1"	"obsCode2"	"obsCode3"	"obsCode4"	"obsCode5"	"obsCode6"	"obsCode7"	"obsCode8"	"obsCode9"	"obsCode10"	"technician"	"attendant"	"QCStateLabel"	"objectId"
+"1000000"	"15"	"D"	"P"	"MORNING HEALTH REPORT"	"TEST3804589 "	"7/19/16 0:00"	"7/19/16 6:50"	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ae"
+"1000001"	"15"	"D"	"P"	"MORNING HEALTH REPORT"	"TEST2"	"7/19/16 0:00"	"7/19/16 6:50"	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"dbee90d4-b9ba-102d-8c2a-9926f351b9ae"
+"1000002"	"8"	"D"	"P"	"MORNING HEALTH REPORT"	"TEST6390238"	"7/19/16 0:00"	"7/19/16 5:55"	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"
+"1000002"	"8"	"D"	"P"	"MORNING HEALTH REPORT"	"TEST3224553"	"7/19/11 0:00"	"7/19/16 5:55"	""	""	""	""	""	"LIQDSTL"	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"
+"1000002"	"8"	"D"	"P"	"MORNING HEALTH REPORT"	"TEST3224553"	"1/19/11 0:00"	"7/19/16 5:55"	""	""	""	""	""	"LIQDSTL"	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"
+"1000002"	"8"	"D"	"P"	"MORNING HEALTH REPORT"	"TEST3224553"	"10/19/10 0:00"	"7/19/16 5:55"	""	""	""	""	""	"LIQDSTL"	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"

@@ -1,0 +1,6 @@
+<view xmlns="http://labkey.org/data/xml/view"
+      title="D3 Test">
+      <dependencies>
+            <dependency path="/vis/visDependencies"></dependency>
+      </dependencies>
+</view>

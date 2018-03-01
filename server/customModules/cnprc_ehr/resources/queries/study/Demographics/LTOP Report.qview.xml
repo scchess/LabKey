@@ -1,0 +1,37 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="Id/curLocation/location">
+            <properties>
+                <property name="columnTitle" value="Location"/>
+            </properties>
+        </column>
+        <column name="gender/code">
+            <properties>
+                <property name="columnTitle" value="Sex"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/primaryProject"/>
+        <column name="Id/age/yearsAndMonths">
+            <properties>
+                <property name="columnTitle" value="Age today Y M"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveLongTermCases/date"/>
+        <column name="Id/DemographicsActiveLongTermCases/problems"/>
+        <column name="Id/DemographicsActiveLongTermCases/remarks">
+            <properties>
+                <property name="columnTitle" value="History"/>
+            </properties>
+        </column>
+    </columns>
+    <filters>
+        <filter column="Id/curLocation/location" operator="doesnotstartwith" value="NC"/>
+        <filter column="Id/curLocation/location" operator="doesnotstartwith" value="CC"/>
+        <filter column="calculated_status" operator="eq" value="Alive"/>
+        <filter column="Id/DemographicsActiveLongTermCases/date" operator="isnonblank"/>
+    </filters>
+    <sorts>
+        <sort column="Id" descending="false"/>
+    </sorts>
+</customView>

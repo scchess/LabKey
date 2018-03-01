@@ -1,0 +1,38 @@
+<module xmlns="http://labkey.org/moduleProperties/xml/">
+    <properties>
+        <propertyDescriptor name="MGAPContainer">
+            <canSetPerContainer>false</canSetPerContainer>
+            <description>This is the path to the container holding the mGAP Project.  Use of slashes is very important - it should be in the format '/myProject/mGap'</description>
+            <editPermissions>
+                <permission>ADMIN</permission>
+            </editPermissions>
+        </propertyDescriptor>
+        <propertyDescriptor name="MGAPContactUsers">
+            <canSetPerContainer>false</canSetPerContainer>
+            <description>This is a comma separated list of LabKey user names of users that should be notified by email when requests are submitted through mGAP.</description>
+            <editPermissions>
+                <permission>ADMIN</permission>
+            </editPermissions>
+        </propertyDescriptor>
+        <propertyDescriptor name="MGAPMailChimpList">
+            <canSetPerContainer>true</canSetPerContainer>
+            <description>This is the ID of the MailChimp subscription list to which new users are auto-added.</description>
+            <editPermissions>
+                <permission>ADMIN</permission>
+            </editPermissions>
+        </propertyDescriptor>
+        <propertyDescriptor name="MGAPMailChimpApiKey">
+            <canSetPerContainer>true</canSetPerContainer>
+            <description>This is the API key to use for MailChimp requests.  This should be in the form userName:apiKey</description>
+            <editPermissions>
+                <permission>ADMIN</permission>
+            </editPermissions>
+        </propertyDescriptor>
+    </properties>
+    <clientDependencies>
+        <dependency path="mGAP/mgap.css"/>
+        <dependency path="internal/jQuery"/>
+        <dependency path="https://cdn.plot.ly/plotly-latest.min.js"/>
+        <dependency path="mGAP/Utils.js"/>
+    </clientDependencies>
+</module>

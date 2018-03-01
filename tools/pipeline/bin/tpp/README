@@ -1,0 +1,22 @@
+Trans-Proteomic Pipeline Directory
+------------------------------------------------------------------------------
+
+This is the directory where all the necessary Sashimi components are placed.
+Information on the Sashimi open source project can be found at:
+
+http://sashimi.sourceforge.net/
+
+--------------------------
+Directions
+--------------------------
+1. Get the sources for the Sashimi 'Trans Proteomic Pipeline' project.
+2. Make the following modifications to <root>/src/Makefile.inc:
+	- Add a line with XML_ONLY=1
+	- Modify TPP_ROOT to point to the installed location of this directory.
+3. Run 'make configure all install' at a command prompt.
+
+4. At present you must also get the sashimi/misc project.
+5. Set the environment variable RAMP_ROOT to point to:
+	<tpp>/src/Parsers/ramp
+6. Run 'make mzxml2dta dtafilter' at a command prompt.
+7. Copy the executables to the 'bin' directory under this directory.

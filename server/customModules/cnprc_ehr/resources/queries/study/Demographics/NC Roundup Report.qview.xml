@@ -1,0 +1,47 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="Id/HomeLocation/Room">
+            <properties>
+                <property name="columnTitle" value="Location"/>
+            </properties>
+        </column>
+        <column name="Id/NcRoundup/hoLocation">
+            <properties>
+                <property name="columnTitle" value="HO Location"/>
+            </properties>
+        </column>
+        <column name="Id/age/yearsAndMonths">
+            <properties>
+                <property name="columnTitle" value="Age today"/>
+            </properties>
+        </column>
+        <column name="Id/MostRecentWeight/MostRecentWeight">
+            <properties>
+                <property name="columnTitle" value="Current Weight (kg)"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/primaryProject"/>
+        <column name="Id/DemographicsActiveAssignment/secondaryProjects"/>
+        <column name="Id/NcRoundup/VAS"/>
+        <column name="Id/DemographicsHolds/holdFlags"/>
+        <column name="Id/flagList/values">
+            <properties>
+                <property name="columnTitle" value="Flags"/>
+            </properties>
+        </column>
+        <column name="Id/NcRoundup/Geriatric"/>
+        <column name="Id/NcRoundup/Tetanus"/>
+        <column name="Id/NcRoundup/Measles"/>
+        <column name="Id/NcRoundup/SerumBank"/>
+        <column name="Id/NcRoundup/VGL"/>
+        <column name="Id/NcRoundup/Dam"/>
+
+    </columns>
+    <filters>
+        <filter column="Id/NcRoundup/Id" operator="isnonblank"/>
+    </filters>
+    <sorts>
+        <sort column="Id" descending="false"/>
+    </sorts>
+</customView>

@@ -1,0 +1,9 @@
+<tables xmlns="http://labkey.org/data/xml">
+    <table tableName="" tableDbType="TABLE">
+        <columns>
+            <column columnName="PercentModified" wrappedColumnName="FileName">
+                <url>/query/executeQuery.view?schemaName=targetedms&amp;queryName=PivotedPercentModified&amp;query.RunId~eq=${Id}</url>
+            </column>
+        </columns>
+    </table>
+</tables>

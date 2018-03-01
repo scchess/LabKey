@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>Observation Types</name>
+    <description>Codes used for standardized reporting of Morning Health Obs</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc" queryName="q_observation_types" />
+            <destination schemaName="cnprc_ehr" queryName="observation_types" bulkLoad="true" batchSize="500" targetOption="truncate"/>
+        </transform>
+    </transforms>
+    <schedule>
+        <!-- run at 1 am everyday -->
+        <cron expression="0 0 1 * * ? *"/> <!--seconds, minutes, hours, day-of-month, month, day-of-week, year(optional) -->
+    </schedule>
+</etl>

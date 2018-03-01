@@ -1,0 +1,158 @@
+<ft:folderType xmlns:ft="http://labkey.org/data/xml/folderType">
+    <ft:name>Adjudication</ft:name>
+    <ft:description>A folder that provides case adjudication</ft:description>
+    <ft:folderTabs>
+        <ft:folderTab>
+            <ft:name>Overview</ft:name>
+            <ft:caption>Overview</ft:caption>
+            <ft:requiredWebParts>
+                <ft:webPart>
+                    <ft:name>Wiki</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+            </ft:requiredWebParts>
+            <ft:permissions>
+                <ft:permission name="org.labkey.api.security.permissions.ReadPermission" />
+            </ft:permissions>
+        </ft:folderTab>
+        <ft:folderTab>
+            <ft:name>Upload</ft:name>
+            <ft:caption>Upload</ft:caption>
+            <ft:requiredWebParts>
+                <ft:webPart>
+                    <ft:name>Adjudication Upload Wizard</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+            </ft:requiredWebParts>
+            <ft:permissions>
+                <ft:permission name="org.labkey.adjudication.security.AdjudicationCaseUploadPermission"/>
+            </ft:permissions>
+        </ft:folderTab>
+        <ft:folderTab>
+            <ft:name>AdministratorDashboard</ft:name>
+            <ft:caption>Administrator Dashboard</ft:caption>
+            <ft:requiredWebParts>
+                <ft:webPart>
+                    <ft:name>Adjudication Alerts</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Admin Dashboard</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Case Summary Report</ft:name>
+                    <ft:location>right</ft:location>
+                </ft:webPart>
+            </ft:requiredWebParts>
+            <ft:permissions>
+                <ft:permission name="org.labkey.adjudication.security.AdjudicationReviewPermission"/>
+            </ft:permissions>
+        </ft:folderTab>
+        <ft:folderTab>
+            <ft:name>FolderAdminDashboard</ft:name>
+            <ft:caption>Administrator Dashboard</ft:caption>
+            <ft:requiredWebParts>
+                <ft:webPart>
+                    <ft:name>Adjudication Alerts</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Admin Dashboard</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Case Summary Report</ft:name>
+                    <ft:location>right</ft:location>
+                </ft:webPart>
+            </ft:requiredWebParts>
+            <ft:permissions>
+                <ft:permission name="org.labkey.api.security.permissions.AdminPermission"/>
+            </ft:permissions>
+        </ft:folderTab>
+        <ft:folderTab>
+            <ft:name>Adjudication</ft:name>
+            <ft:caption>Case Determination</ft:caption>
+            <ft:requiredWebParts>
+                <ft:webPart>
+                    <ft:name>Adjudication Alerts</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Dashboard</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Case Summary Report</ft:name>
+                    <ft:location>right</ft:location>
+                </ft:webPart>
+            </ft:requiredWebParts>
+            <ft:permissions>
+                <ft:permission name="org.labkey.adjudication.security.AdjudicationPermission"/>
+            </ft:permissions>
+        </ft:folderTab>
+        <ft:folderTab>
+            <ft:name>InfectionMonitor</ft:name>
+            <ft:caption>Infection Monitor</ft:caption>
+            <ft:requiredWebParts>
+                <ft:webPart>
+                    <ft:name>Query</ft:name>
+                    <ft:location>body</ft:location>
+                    <ft:property name="title" value="Case Determinations" />
+                    <ft:property name="schemaName" value="adjudication" />
+                    <ft:property name="queryName" value="CaseDeterminations" />
+                </ft:webPart>
+            </ft:requiredWebParts>
+            <ft:permissions>
+                <ft:permission name="org.labkey.adjudication.security.AdjudicationInfectionMonitorPermission"/>
+            </ft:permissions>
+        </ft:folderTab>
+        <ft:folderTab>
+            <ft:name>InfectionMonitorAdmin</ft:name>
+            <ft:caption>Infection Monitor</ft:caption>
+            <ft:requiredWebParts>
+                <ft:webPart>
+                    <ft:name>Query</ft:name>
+                    <ft:location>body</ft:location>
+                    <ft:property name="title" value="Case Determinations" />
+                    <ft:property name="schemaName" value="adjudication" />
+                    <ft:property name="queryName" value="CaseDeterminations" />
+                </ft:webPart>
+            </ft:requiredWebParts>
+            <ft:permissions>
+                <ft:permission name="org.labkey.api.security.permissions.AdminPermission"/>
+            </ft:permissions>
+        </ft:folderTab>
+        <ft:folderTab>
+            <ft:name>Manage</ft:name>
+            <ft:caption>Manage</ft:caption>
+            <ft:requiredWebParts>
+                <ft:webPart>
+                    <ft:name>Adjudication Manage</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Users</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Assay Kits</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+                <ft:webPart>
+                    <ft:name>Adjudication Assay Types</ft:name>
+                    <ft:location>body</ft:location>
+                </ft:webPart>
+            </ft:requiredWebParts>
+            <ft:permissions>
+                <ft:permission name="org.labkey.api.security.permissions.AdminPermission"/>
+            </ft:permissions>
+        </ft:folderTab>
+    </ft:folderTabs>
+    <ft:modules>
+        <ft:moduleName>Core</ft:moduleName>
+        <ft:moduleName>Query</ft:moduleName>
+        <ft:moduleName>Adjudication</ft:moduleName>
+    </ft:modules>
+    <ft:defaultModule>Adjudication</ft:defaultModule>
+</ft:folderType>

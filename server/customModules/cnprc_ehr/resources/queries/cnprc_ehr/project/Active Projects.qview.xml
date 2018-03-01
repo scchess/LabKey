@@ -1,0 +1,46 @@
+
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="project_tracking_id"/>
+        <column name="projectCode"/>
+        <column name="title"/>
+        <column name="an_requested_per_year"/>
+        <column name="an_used_assigned"/>
+        <column name="protocol"/>
+        <column name="unitCode"/>
+        <column name="date_protocol_sub_aucaac"/>
+        <column name="direct_amt_received"/>
+        <column name="direct_amt_requested_1"/>
+        <column name="direct_amt_requested_2"/>
+        <column name="funding_agency_1"/>
+        <column name="funding_agency_2"/>
+        <column name="grant_contract_id"/>
+        <column name="oi_department"/>
+        <column name="oi_name"/>
+        <column name="pi_department"/>
+        <column name="pi_name"/>
+        <column name="attributes"/>
+        <column name="startdate"/>
+        <column name="enddate"/>
+        <column name="tb_exempt_flag"/>
+        <column name="tracking_status"/>
+        <column name="proposed_end_date"/>
+        <column name="proposed_start_date"/>
+        <column name="protocol_end_date"/>
+        <column name="protocol_response_date"/>
+        <column name="sp_requested"/>
+        <column name="total_animals"/>
+        <column name="visual_signs_auto_rpt_flag"/>
+        <column name="is_prpt_recognized"/>
+        <column name="pi_affiliation"/>
+        <column name="oi_affiliation"/>
+        <column name="is_tissue_avail"/>
+        <column name="pi_person_fk"/>
+    </columns>
+    <filters>
+        <filter column="enddate" operator="dategte" value="-0d"/>
+    </filters>
+    <sorts>
+        <sort column="projectCode" descending="true" />
+    </sorts>
+</customView>

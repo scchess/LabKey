@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>Respiratory Diseases - Skin Sensitization</name>
+    <description>Respiratory Diseases - Skin Sensitization Historical Data</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc_rd" queryName="q_rd_skin_sensitization"/>
+            <destination schemaName="study" queryName="rd_skin_sensitization" bulkLoad="true" targetOption="truncate">
+                <columnTransforms>
+                    <column source="ASS_TEST_DATE" target="date"/>
+                </columnTransforms>
+            </destination>
+        </transform>
+    </transforms>
+</etl>

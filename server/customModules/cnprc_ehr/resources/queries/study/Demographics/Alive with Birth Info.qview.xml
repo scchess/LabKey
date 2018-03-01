@@ -1,0 +1,76 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="species/code">
+            <properties>
+                <property name="columnTitle" value="Species"/>
+            </properties>
+        </column>
+        <column name="gender/code">
+            <properties>
+                <property name="columnTitle" value="Sex"/>
+            </properties>
+        </column>
+        <column name="Id/birth/type">
+            <properties>
+                <property name="columnTitle" value="Birth Type"/>
+            </properties>
+        </column>
+        <column name="Id/birth/date">
+            <properties>
+                <property name="columnTitle" value="Birth Date"/>
+            </properties>
+        </column>
+        <column name="Id/WeightEncounter/Birth Weight::w1">
+            <properties>
+                <property name="columnTitle" value="Birth Weight"/>
+            </properties>
+        </column>
+        <column name="Id/birth/birth_viability">
+            <properties>
+                <property name="columnTitle" value="Birth Viability"/>
+            </properties>
+        </column>
+        <column name="Id/birth/room">
+            <properties>
+                <property name="columnTitle" value="Birth Room"/>
+            </properties>
+        </column>
+        <column name="Id/birth/cage">
+            <properties>
+                <property name="columnTitle" value="Birth Cage"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsBirthPlace/birthPlace">
+            <properties>
+                <property name="columnTitle" value="Birth Place"/>
+            </properties>
+        </column>
+        <column name="Id/Demographics/origin">
+            <properties>
+                <property name="columnTitle" value="Birth Origin"/>
+            </properties>
+        </column>
+        <column name="Id/demographicsBirthInfo/conceptionNumber">
+            <properties>
+                <property name="columnTitle" value="Conception Number"/>
+            </properties>
+        </column>
+        <column name="Id/demographicsBirthInfo/breedingType">
+            <properties>
+                <property name="columnTitle" value="Dam Breeding Type"/>
+            </properties>
+        </column>
+        <column name="Id/demographicsBirthInfo/pregnancyType">
+            <properties>
+                <property name="columnTitle" value="Dam Pregnancy Type"/>
+            </properties>
+        </column>
+    </columns>
+    <filters>
+        <filter column="calculated_status" operator="eq" value="Alive"/>
+    </filters>
+    <sorts>
+        <sort column="Id" descending="false"/>
+    </sorts>
+</customView>

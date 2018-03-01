@@ -1,0 +1,97 @@
+#
+# Vagrantfile for the LabKey Test Team version of Rserver running remote RStudio
+# 
+# The Docker configuration was adapted from https://hub.docker.com/r/rocker/rstudio/
+# 
+#
+# Create and Set Variables to be used in VagrantFile
+# Commands Below.
+#
+VAGRANTFILE_API_VERSION = "2"
+
+# Determine host OS
+HOST = RbConfig::CONFIG['host_os']
+
+# Set IP address for the virtual machine
+VIP = "192.168.10.31"
+HOST_VIP = VIP.rpartition(".")[0] + ".1"
+
+# NOT USED: Directory to be shared between VirtualBox VM and host. 
+# This will be used by rstudiohost for Shared Volume
+  HOST_PATH = "./labkeyroot"
+  VM_PATH = "/src/labkeyroot"
+  
+  # Define required plugins
+#VAGRANT_PLUGIN_DEPENDENCIES = %w( landrush vagrant-vbguest )
+
+ # install required plugins if necessary
+#if ARGV[0] == 'up'
+#    required_plugins = VAGRANT_PLUGIN_DEPENDENCIES
+#    missing_plugins = []
+#    required_plugins.each do |plugin|
+#        missing_plugins.push(plugin) unless Vagrant.has_plugin? plugin
+#    end
+
+#    if ! missing_plugins.empty?
+#        install_these = missing_plugins.join(' ')
+#        puts "Found missing plugins: #{install_these}.  Installing..."
+#        system( "vagrant plugin install #{install_these}")
+#		system( "vagrant #{ARGV.join(" ")}") 
+		#puts "Plugin dependencies loaded, please restart vagrant machine"
+		#exec "Vagrant halt"
+#    end	
+#end
+
+RSTUDIOHOST_VAGRANTFILE = "../rstudiohost/Vagrantfile"
+
+# 
+# Define and start the Vagrant VM 
+# 
+Vagrant.configure("2") do |config|
+
+	# Configure the Docker host 
+	config.vm.provider "docker" do |d|
+		d.vagrant_vagrantfile = RSTUDIOHOST_VAGRANTFILE
+	end
+	
+	config.vm.synced_folder "/etc/R/remotework", "/etc/R/remotework",  :nfs => true, nfs_udp: false, create: true
+	config.vm.synced_folder "#{HOST_PATH}", "#{VM_PATH}",  :nfs => true, nfs_udp: false, create: true
+	#config.vm.hostname = "rstudio.vagrant.test"
+	#config.landrush.enabled = true
+	
+    config.vm.provider :virtualbox do |vb|
+        vb.name = "rserverhost"
+        # Automagically set # of CPU and amount of memory
+        # if running on MacOSX
+        #  - Give VM 1/4 system memory & access to all cpu cores on the host. 
+        # If running on Windows, hard code the value
+      if HOST =~ /darwin/
+          cpus = `sysctl -n hw.ncpu`.to_i
+          # sysctl returns Bytes and we need to convert to MB
+          mem = `sysctl -n hw.memsize`.to_i / 1024 / 1024 / 4
+      else # sorry Windows folks, I can't help you
+          cpus = 2
+          mem = 4096
+      end
+
+      vb.customize ["modifyvm", :id, "--memory", mem]
+      vb.customize ["modifyvm", :id, "--cpus", cpus]
+
+    end
+	
+	#Start rstudio Container using the dockerfile in the ./rstudio directory
+	config.vm.define "rstudio" do |rs|
+		rs.vm.provider "docker" do |d|
+		d.name = "rstudio"
+		d.build_dir = "./rstudio"
+		d.ports = ['6311:6311', '389:389', '8787:8787']
+		end
+		
+		rs.vm.synced_folder "./remotework",
+			"/etc/R/remotework"
+			#type: "nfs"
+		rs.vm.synced_folder "/labkeyroot",
+			"/src/labkeyroot"
+			#type: "nfs"
+	end
+end

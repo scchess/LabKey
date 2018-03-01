@@ -1,0 +1,36 @@
+<script type="text/javascript">
+
+Ext4.onReady(function (){
+    var webpart = <%=webpartContext%>;
+
+    Ext4.create('LDK.panel.NavPanel', {
+        renderTo: webpart.wrapperDivId,
+        width: '100%',
+        sections: [{
+            header: 'Admin',
+            items: [
+                {name: 'ETL Admin', url: '<%=contextPath%>/dataintegration<%=containerPath%>/begin.view?'},
+                {name: 'Genetics Calculations', url: '<%=contextPath%>/ehr<%=containerPath%>/geneticCalculationSettings.view?'},
+                {name: 'Populate Initial Data', url: '<%=contextPath%>/CNPRC_EHR<%=containerPath%>/populateData.view?'},
+                {name: 'Populate Templates', url: '<%=contextPath%>/cnprc_ehr<%=containerPath%>/populateTemplates.view?'},
+                {name: 'Manage EHR Study', url: '<%=contextPath%>/study<%=containerPath%>/manageStudy.view?'},
+                {name: 'Set EHR Properties', url: '<%=contextPath%>/core<%=containerPath%>/modulePropertyAdmin.view?moduleName=EHR'},
+                {name: 'Update Study QCStates', url: '<%=contextPath%>/ehr<%=containerPath%>/ensureQCStates.view?'},
+                {name: 'Verify Dataset Resources', url: '<%=contextPath%>/ehr<%=containerPath%>/verifyDatasetResources.view?'}
+            ]
+        },{
+            header: 'Logs',
+            items: [
+                {name: 'Labkey.log', url: '<%=contextPath%>/admin/showPrimaryLog.view'},
+                {name: 'Labkey-errors.log', url: '<%=contextPath%>/admin/showAllErrors.view'}
+            ]
+        },{
+            header: 'Notifications',
+            items: [
+                {name: 'Notification Admin', url: '<%=contextPath%>/ldk<%=containerPath%>/notificationAdmin.view?'}
+            ]
+        }]
+    });
+});
+
+</script>

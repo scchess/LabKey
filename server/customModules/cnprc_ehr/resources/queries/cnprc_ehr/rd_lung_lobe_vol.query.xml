@@ -1,0 +1,46 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="rd_lung_lobe_vol" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="id">
+                        <columnTitle>Lung Lobe Vol PK</columnTitle>
+                    </column>
+                    <column columnName="animalId">
+                        <columnTitle>Animal Id</columnTitle>
+                        <url>/ehr/participantView.view?participantId=${animalId}</url>
+                    </column>
+                    <column columnName="project_code">
+                        <columnTitle>Project Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>rd_project_category</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="rt_mid_lobe_vol">
+                        <columnTitle>Rt Mid Lobe Vol</columnTitle>
+                    </column>
+                    <column columnName="rt_mid_lobe_fix">
+                        <columnTitle>Rt Mid Lobe Fix</columnTitle>
+                    </column>
+                    <column columnName="rt_cra_lobe_vol">
+                        <columnTitle>Rt Cra Lobe Vol</columnTitle>
+                    </column>
+                    <column columnName="rt_cra_lobe_fix">
+                        <columnTitle>Rt Cra Lobe Fix</columnTitle>
+                    </column>
+                    <column columnName="lt_cra_lobe_vol">
+                        <columnTitle>Lt Cra Lobe Vol</columnTitle>
+                    </column>
+                    <column columnName="lt_cra_lobe_fix">
+                        <columnTitle>Lt Cra Lobe Fix</columnTitle>
+                    </column>
+                    <column columnName="llv_comments">
+                        <columnTitle>Comments</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

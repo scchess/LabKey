@@ -1,0 +1,9 @@
+
+.tick-text a, .point {
+    cursor: default;
+}
+
+.plot-export-btn {
+    display:inline;
+    float:right;
+}

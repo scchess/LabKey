@@ -1,0 +1,26 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Home Location" tableDbType="NOT_IN_DB">
+                <tableTitle>Home Location</tableTitle>
+                <columns>
+                    <column columnName="Id">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="Location">
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>cage_location_history</fkTable>
+                            <fkColumnName>location</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="room"/>
+                    <column columnName="cage"/>
+                    <column columnName="reloq_seq">
+                        <columnTitle>Sequence</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

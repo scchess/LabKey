@@ -1,0 +1,15 @@
+value	description	category
+CG	Continuous pair with grate	Pairing Code
+CP	Continuous pair	Pairing Code
+IG	Intermittent pair with grate	Pairing Code
+IP	Intermittent pair	Pairing Code
+U	Unsuccessful	Pairing Code
+SP	Socialization play, play groups	Pairing Code
+F	Fought (Retired code)	Pairing Code
+C	Compatible (Retired code)	Pairing Code
+XS	Experimental deferral, single	Deferment Status Code
+XD	Experimental deferral, no group mate	Deferment Status Code
+XG	Experimental deferral with grate	Deferment Status Code
+PS	Permanent deferral, social incompatibility	Deferment Status Code
+AW	Single, awaiting pairing	Deferment Status Code
+CF	Compatible, then fought (Retired code)	Deferment Status Code

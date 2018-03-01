@@ -1,0 +1,37 @@
+#
+# Vagrantfile for the LabKey Test Team version of OpenLDAP
+# 
+# The Docker configuration was adapted from https://github.com/jtgasper3/docker-shibboleth-idp
+# 
+#
+# Create and Set Variables to be used in VagrantFile
+# Commands Below.
+#
+VAGRANTFILE_API_VERSION = "2"
+DOCKERHOST_VAGRANTFILE = "../dockerhost/Vagrantfile"
+
+# 
+# Define and start the Vagrant VM 
+# 
+Vagrant.configure("2") do |config|
+
+	# Configure the Docker host 
+	config.vm.provider "docker" do |d|
+		d.vagrant_vagrantfile = DOCKERHOST_VAGRANTFILE
+	end 
+
+	# Start the Slapd Container using the dockerfile in the 
+	# ./slapd container directory
+	# 
+	config.vm.define "openldap" do |sh| 
+		sh.vm.provider "docker" do |d| 
+			d.name = "openldap"
+			d.build_dir = "./slapd"
+			d.ports = ['389:389']
+			d.create_args = ["-d"]
+		end
+	end 
+
+
+end 
+

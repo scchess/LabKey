@@ -1,0 +1,41 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id">
+            <properties>
+                <property name="columnTitle" value="Animal ID"/>
+            </properties>
+        </column>
+        <column name="date">
+            <properties>
+                <property name="columnTitle" value="Assigned"/>
+            </properties>
+        </column>
+        <column name="endDate">
+            <properties>
+                <property name="columnTitle" value="Released"/>
+            </properties>
+        </column>
+        <column name="projectCode">
+            <properties>
+                <property name="columnTitle" value="Project"/>
+            </properties>
+        </column>
+        <column name="assignmentStatus">
+            <properties>
+                <property name="columnTitle" value="Type"/>
+            </properties>
+        </column>
+        <column name="pi_name">
+            <properties>
+                <property name="columnTitle" value="PI Name"/>
+            </properties>
+        </column>
+        <column name="title" />
+        <column name="protocol"/>
+        <column name="unitCode"/>
+        <column name="timeOnProject"/>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

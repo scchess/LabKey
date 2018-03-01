@@ -1,0 +1,9 @@
+<libraries xmlns="http://labkey.org/clientLibrary/xml/">
+    <library compileInProductionMode="false">
+        <script path="elisa/util.js"/>
+        <script path="elisa/report.js"/>
+    </library>
+    <dependencies>
+        <dependency path="Ext3" />
+    </dependencies>
+</libraries>

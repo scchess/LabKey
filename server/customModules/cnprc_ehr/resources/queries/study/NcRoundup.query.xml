@@ -1,0 +1,18 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="NcRoundup" tableDbType="NOT_IN_DB">
+                <columns>
+                    <column columnName="hoLocation">
+                        <columnTitle>HO Location</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>cage</fkTable>
+                            <fkColumnName>location</fkColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

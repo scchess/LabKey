@@ -1,0 +1,27 @@
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+import org.labkey.gradle.plugin.Distribution
+
+apply plugin: 'org.labkey.distribution'
+
+Distribution.inheritDependencies(project, ":server:distributions:pro_plus")
+
+BuildUtils.addModuleDistributionDependencies(project, [":server:modules:dumbster",
+                                                       ":server:modules:timeline",
+                                                       ":server:customModules:viscstudies",
+                                                       ":server:modules:viability",
+                                                       ":server:optionalModules:cds",
+                                                       ":server:customModules:atlastools",
+                                                       ":server:customModules:adjudication"])
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName="atlas"
+            dist.includeTarGZArchive=true
+            dist.extraFileIdentifier='-Atlas'
+        }
+)

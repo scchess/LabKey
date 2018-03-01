@@ -1,0 +1,14 @@
+value	description	sort_order
+Vis	Visual check - visual assessment is needed, wound and location entered as text	1
+Sts	Suture check - suture check is needed, wound and location entered as text	2
+Bdg	Bandage check or change	3
+Access to D/C	Assess animal for discharge	4
+Await Labs	Day or date to check for lab results	5
+AMC	Awaiting medical assessment for euthanasia, plus date for assessment	6
+Relocation	Pending relocation, date of relocation sometimes entered	7
+Other	Text field needed for entry of additional instructions	8
+Await Wt	Date to perform next weighing	9
+Vet	Date or day(s) of the week to perform vet assessment, may be a single date or multiple alpha characters to indicate days of week, such as MWF for Monday, Wednesday and Friday	10
+Sedate	Date to perform sedation	11
+D/C	Date to Discharge	12
+U/S	Date to perform ultrasound	13

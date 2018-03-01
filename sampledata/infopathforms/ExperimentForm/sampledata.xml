@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Peter Hussey (LabKey) -->
+<?mso-infoPathSolution solutionVersion="1.0.0.46" productVersion="11.0.6357" PIVersion="1.0.0.0" href="file:///C:\Documents%20and%20Settings\phussey\My%20Documents\XarForms\ExperimentForm009.xsn" name="urn:schemas-microsoft-com:office:infopath:ExperimentForm009:http---cpas-fhcrc-org-exp-xml" language="en-us" ?>
+<?mso-application progid="InfoPath.Document"?>
+<exp:ExperimentArchive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:exp="http://cpas.fhcrc.org/exp/xml" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2005-11-05T06:56:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<exp:Experiment rdf:about="">
+		<exp:Name>(enter name of study )</exp:Name>
+		<exp:Hypothesis/>
+		<exp:ExperimentDescriptionURL/>
+		<exp:Comments/>
+		<exp:Contact/>
+	</exp:Experiment>
+	<exp:ProtocolDefinitions rdf:parseType="Collection">
+		<exp:Protocol rdf:about="">
+			<exp:Name>(enter name for run protocol)</exp:Name>
+			<exp:ProtocolDescription/>
+			<exp:ApplicationType>ExperimentRun</exp:ApplicationType>
+			<exp:MaxInputMaterialPerInstance xsi:nil="true"/>
+			<exp:MaxInputDataPerInstance xsi:nil="true"/>
+			<exp:OutputMaterialPerInstance xsi:nil="true"/>
+			<exp:OutputDataPerInstance xsi:nil="true"/>
+			<exp:OutputMaterialType>Material</exp:OutputMaterialType>
+			<exp:OutputDataType>Data`</exp:OutputDataType>
+			<exp:Instrument/>
+			<exp:Software/>
+			<exp:Contact/>
+			<exp:ParameterDeclarations rdf:parseType="Collection">
+				<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"/>
+			</exp:ParameterDeclarations>
+		</exp:Protocol>
+		<exp:Protocol rdf:about="${FolderLSIDBase}:MarkRunOutputs">
+			<exp:Name>MarkRunOutputs</exp:Name>
+			<exp:ProtocolDescription>This protocol identifies the data and/or material objects considered to be the outputs of the overall experiment run.  The inputs to an application or this protocol are considered the outputs of the run.  </exp:ProtocolDescription>
+			<exp:ApplicationType>ExperimentRunOutput</exp:ApplicationType>
+			<exp:MaxInputMaterialPerInstance xsi:nil="true"/>
+			<exp:MaxInputDataPerInstance xsi:nil="true"/>
+			<exp:OutputMaterialPerInstance>0</exp:OutputMaterialPerInstance>
+			<exp:OutputDataPerInstance>0</exp:OutputDataPerInstance>
+			<exp:OutputMaterialType>Material</exp:OutputMaterialType>
+			<exp:OutputDataType>Data`</exp:OutputDataType>
+			<exp:Instrument/>
+			<exp:Software/>
+			<exp:Contact/>
+			<exp:ParameterDeclarations rdf:parseType="Collection">
+				<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"/>
+			</exp:ParameterDeclarations>
+		</exp:Protocol>
+	</exp:ProtocolDefinitions>
+	<exp:ProtocolActionDefinitions rdf:parseType="Collection">
+		<exp:ProtocolActionSet ParentProtocolLSID="">
+			<exp:ProtocolAction ChildProtocolLSID="" ActionSequence="1">
+				<exp:PredecessorAction ActionSequenceRef="1"/>
+			</exp:ProtocolAction>
+			<exp:ProtocolAction ChildProtocolLSID="" ActionSequence="1000">
+				<exp:PredecessorAction ActionSequenceRef="1"/>
+			</exp:ProtocolAction>
+		</exp:ProtocolActionSet>
+	</exp:ProtocolActionDefinitions>
+	<exp:StartingInputDefinitions rdf:parseType="Collection">
+		<exp:Material rdf:about="">
+			<exp:Name/>
+			<exp:CpasType/>
+		</exp:Material>
+		<exp:Data rdf:about="">
+			<exp:Name/>
+			<exp:CpasType/>
+			<exp:DataFileUrl/>
+		</exp:Data>
+	</exp:StartingInputDefinitions>
+	<exp:ExperimentRuns rdf:parseType="Collection">
+		<exp:ExperimentRun rdf:about="" CreateNewIfDuplicate="false" GenerateDataFromStepRecord="true">
+			<exp:Name/>
+			<exp:ProtocolLSID/>
+			<exp:Comments/>
+			<exp:ExperimentLog rdf:parseType="Collection">
+				<exp:ExperimentLogEntry ActionSequenceRef="1"/>
+				<exp:ExperimentLogEntry ActionSequenceRef="1000"/>
+			</exp:ExperimentLog>
+			<exp:ProtocolApplications rdf:parseType="Collection"/>
+		</exp:ExperimentRun>
+	</exp:ExperimentRuns>
+</exp:ExperimentArchive>

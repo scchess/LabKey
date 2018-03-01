@@ -1,0 +1,38 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Behavior" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Test Date</columnTitle>
+                    </column>
+                    <column columnName="dayOneActivity">
+                        <columnTitle>Day One Activity</columnTitle>
+                    </column>
+                    <column columnName="dayOneEmotionality">
+                        <columnTitle>Day One Emotionality</columnTitle>
+                    </column>
+                    <column columnName="dayTwoActivity">
+                        <columnTitle>Day Two Activity</columnTitle>
+                    </column>
+                    <column columnName="dayTwoEmotionality">
+                        <columnTitle>Day Two Emotionality</columnTitle>
+                    </column>
+                    <column columnName="vigilant">
+                        <columnTitle>Vigilant</columnTitle>
+                    </column>
+                    <column columnName="gentle">
+                        <columnTitle>Gentle</columnTitle>
+                    </column>
+                    <column columnName="confident">
+                        <columnTitle>Confident</columnTitle>
+                    </column>
+                    <column columnName="nervous">
+                        <columnTitle>Nervous</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

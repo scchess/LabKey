@@ -1,0 +1,86 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="rd_asthma_cbc" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Test Date</columnTitle>
+                    </column>
+                    <column columnName="seq_pk">
+                        <columnTitle>Seq PK</columnTitle>
+                    </column>
+                    <column columnName="remark">
+                        <columnTitle>Comment</columnTitle>
+                    </column>
+                    <column columnName="total_wbc">
+                        <columnTitle>Total WBC</columnTitle>
+                    </column>
+                    <column columnName="rbc">
+                        <columnTitle>RBC</columnTitle>
+                    </column>
+                    <column columnName="hgb">
+                        <columnTitle>HGB</columnTitle>
+                    </column>
+                    <column columnName="hct">
+                        <columnTitle>HCT</columnTitle>
+                    </column>
+                    <column columnName="mcv">
+                        <columnTitle>MCV</columnTitle>
+                    </column>
+                    <column columnName="mch">
+                        <columnTitle>MCH</columnTitle>
+                    </column>
+                    <column columnName="mchc">
+                        <columnTitle>MCHC</columnTitle>
+                    </column>
+                    <column columnName="platelets">
+                        <columnTitle>Platelets</columnTitle>
+                    </column>
+                    <column columnName="plas_prot">
+                        <columnTitle>Plas Prot</columnTitle>
+                    </column>
+                    <column columnName="fibrogen">
+                        <columnTitle>Fibrogen</columnTitle>
+                    </column>
+                    <column columnName="neut_band">
+                        <columnTitle>Neut Band</columnTitle>
+                    </column>
+                    <column columnName="neut_band_per">
+                        <columnTitle>Neut Band Per</columnTitle>
+                    </column>
+                    <column columnName="neut_seg">
+                        <columnTitle>Neut Seg</columnTitle>
+                    </column>
+                    <column columnName="neut_seg_per">
+                        <columnTitle>Neut Seg Per</columnTitle>
+                    </column>
+                    <column columnName="lymphocyte">
+                        <columnTitle>Lymphocyte</columnTitle>
+                    </column>
+                    <column columnName="lymphocyte_per">
+                        <columnTitle>Lymphocyte Per</columnTitle>
+                    </column>
+                    <column columnName="monocyte">
+                        <columnTitle>Monocyte</columnTitle>
+                    </column>
+                    <column columnName="monocyte_per">
+                        <columnTitle>Monocyte Per</columnTitle>
+                    </column>
+                    <column columnName="eosinophil">
+                        <columnTitle>Eosinophil</columnTitle>
+                    </column>
+                    <column columnName="eosinophil_per">
+                        <columnTitle>Eosinophil Per</columnTitle>
+                    </column>
+                    <column columnName="basophil">
+                        <columnTitle>Basophil</columnTitle>
+                    </column>
+                    <column columnName="basophil_per">
+                        <columnTitle>Basophil Per</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

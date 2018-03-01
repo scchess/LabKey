@@ -1,0 +1,10 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="PercentModified"/>
+        <column name="Created"/>
+        <column name="CreatedBy"/>
+    </columns>
+    <sorts>
+        <sort column="Created" descending="true" />
+    </sorts>
+</customView>

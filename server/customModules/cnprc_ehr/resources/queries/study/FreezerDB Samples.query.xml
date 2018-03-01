@@ -1,0 +1,122 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="freezerdb_samples" tableDbType="TABLE">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Collection Date</columnTitle>
+                    </column>
+
+                    <column columnName="unit">
+                        <columnTitle>Unit</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>fdb_box_prefs</fkTable>
+                            <fkColumnName>unit</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="sample_type">
+                        <columnTitle>Sample Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>fdb_sample_types</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="strain">
+                        <columnTitle>Strain</columnTitle>
+                    </column>
+                    <column columnName="years">
+                        <columnTitle>Years</columnTitle>
+                    </column>
+                    <column columnName="months">
+                        <columnTitle>Months</columnTitle>
+                    </column>
+                    <column columnName="days">
+                        <columnTitle>Days</columnTitle>
+                    </column>
+                    <column columnName="gestational_age">
+                        <columnTitle>Gestational Age</columnTitle>
+                    </column>
+                    <column columnName="projectCode">
+                        <columnTitle>Project Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>project</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                            <fkDisplayColumnName>projectCode</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="cell_type">
+                        <columnTitle>Cell Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>fdb_cell_types</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="samples_group">
+                        <columnTitle>Group</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>fdb_group</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="age_group">
+                        <columnTitle>Age Group</columnTitle>
+                        <!--<fk>-->
+                            <!--<fkDbSchema>ehr_lookups</fkDbSchema>-->
+                            <!--<fkTable>ageclass</fkTable>-->
+                            <!--<fkColumnName>ageclass</fkColumnName>-->
+                            <!--<fkDisplayColumnName>Label</fkDisplayColumnName>-->
+                        <!--</fk>-->
+                    </column>
+                    <column columnName="technician">
+                        <columnTitle>Technician</columnTitle>
+                    </column>
+                    <column columnName="storage_type">
+                        <columnTitle>Storage Type</columnTitle>
+                    </column>
+                    <column columnName="tank">
+                        <columnTitle>Tank</columnTitle>
+                    </column>
+                    <column columnName="cane">
+                        <columnTitle>Cane</columnTitle>
+                    </column>
+                    <column columnName="box">
+                        <columnTitle>Box</columnTitle>
+                    </column>
+                    <column columnName="location_start">
+                        <columnTitle>Location Start</columnTitle>
+                    </column>
+                    <column columnName="location_end">
+                        <columnTitle>Location End</columnTitle>
+                    </column>
+                    <column columnName="vials">
+                        <columnTitle>Vials</columnTitle>
+                    </column>
+                    <column columnName="vials_remaining">
+                        <columnTitle>Vials Remaining</columnTitle>
+                    </column>
+                    <column columnName="concentration">
+                        <columnTitle>Concentration</columnTitle>
+                    </column>
+                    <column columnName="sample_volume">
+                        <columnTitle>Sample Volume</columnTitle>
+                    </column>
+                    <column columnName="remark">
+                        <columnTitle>Comment</columnTitle>
+                    </column>
+                    <column columnName="pk">
+                        <columnTitle>PK</columnTitle>
+                    </column>
+                    <column columnName="old_pk">
+                        <columnTitle>Old PK</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

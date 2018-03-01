@@ -1,0 +1,14 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="LatestWeightDate"/>
+        <column name="LatestWeight"/>
+        <column name="IntervalInDays"/>
+        <column name="IntervalInMonths"/>
+        <column name="OldWeight"/>
+        <column name="PctChange"/>
+    </columns>
+    <sorts>
+        <sort column="PctChange" descending="false"/>
+    </sorts>
+</customView>

@@ -1,0 +1,29 @@
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+
+apply plugin: 'org.labkey.distribution'
+
+dist.description="Distribution to support CAS login-only LabKey Server"
+
+BuildUtils.addModuleDistributionDependencies(project, [
+	":server:internal",
+	":server:api",
+    ":server:optionalModles:cas",
+	":server:modules:core",
+    ":server:modules:experiment",    // core depends on experiment: PropertyService for users table
+	":server:modules:query"          // core depnds on query: getSelectSql()
+])
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName="login"
+            dist.includeWindowsInstaller=true
+            dist.includeZipArchive=true
+            dist.includeTarGZArchive=true
+            dist.extraFileIdentifier='-login'
+        }
+)

@@ -1,0 +1,46 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="path_inv_blocks" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="path_inv_blocks_pk">
+                        <columnTitle>Blocks PK</columnTitle>
+                    </column>
+                    <column columnName="anseq_fk">
+                        <columnTitle>Pathology Inventory Key</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="cabinet">
+                        <columnTitle>Cabinet</columnTitle>
+                    </column>
+                    <column columnName="drawer">
+                        <columnTitle>Drawer</columnTitle>
+                    </column>
+                    <column columnName="tray">
+                        <columnTitle>Tray</columnTitle>
+                    </column>
+                    <column columnName="tissue">
+                        <columnTitle>Tissue</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>tissue</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="comments">
+                        <columnTitle>Comment</columnTitle>
+                    </column>
+                    <column columnName="check_seq_fk">
+                        <columnTitle>Checkout Key</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>path_inv_checkout</fkTable>
+                            <fkColumnName>path_inv_checkout_pk</fkColumnName>
+                            <fkDisplayColumnName useRawValue="true"/>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

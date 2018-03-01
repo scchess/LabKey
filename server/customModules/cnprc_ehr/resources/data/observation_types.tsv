@@ -1,0 +1,9 @@
+value	category	editorconfig	schemaName	queryName	valueColumn
+Other		{"xtype":"textfield"}
+App		{"xtype":"ehr-simplecombo","schemaName":"ehr_lookups","queryName":"app_score","displayField":"description","sortFields":"sort_order","valueField":"value"}
+Hyd		{"xtype":"ehr-simplecombo","schemaName":"ehr_lookups","queryName":"hyd_score","displayField":"description","sortFields":"sort_order","valueField":"value"}
+Stool		{"xtype":"ehr-simplecombo","schemaName":"ehr_lookups","queryName":"stool_score","displayField":"description","sortFields":"sort_order","valueField":"value"}
+Plan		{"xtype":"ehr-simplecombo","schemaName":"ehr_lookups","queryName":"plan_short_term","displayField":"value","sortFields":"sort_order","valueField":"value"}
+Today		{"xtype":"ehr-simplecombo","schemaName":"ehr_lookups","queryName":"plan_today","displayField":"value","sortFields":"sort_order","valueField":"value"}
+This Month		{"xtype":"ehr-simplecombo","schemaName":"ehr_lookups","queryName":"plan_this_month","displayField":"value","sortFields":"sort_order","valueField":"value"}
+Long Term Plan		{"xtype":"ehr-simplecombo","schemaName":"ehr_lookups","queryName":"plan_long_term","displayField":"value","sortFields":"sort_order","valueField":"value"}

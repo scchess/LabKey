@@ -1,0 +1,58 @@
+<script type="text/javascript">
+
+    Ext4.onReady(function(){
+        var webpart = <%=webpartContext%>;
+        Ext4.create('EHR.panel.ColonyOverviewPanel', {
+            getSpfPanel: function (spf, title)  {
+                return {
+                        xtype: 'cnprc-ehr-populationpanel',
+                        titleText: title,
+                        filterArray: [
+                            LABKEY.Filter.create('calculated_status', 'Alive', LABKEY.Filter.Types.EQUAL),
+                            LABKEY.Filter.create('spf', spf, LABKEY.Filter.Types.EQUALS)],
+                        rowField: EHR.panel.PopulationPanel.FIELDS.species,
+                        colFields: [EHR.panel.PopulationPanel.FIELDS.ageclass, EHR.panel.PopulationPanel.FIELDS.gender]
+                    }
+            },
+            getTabs: function(){
+                return [{
+                    title: 'Population Composition',
+                    style: 'padding 5px;',
+                    items: [{
+                        xtype: 'cnprc-ehr-populationpanel',
+                        filterArray: [
+                            LABKEY.Filter.create('calculated_status', 'Alive', LABKEY.Filter.Types.EQUAL)],
+                        rowField: EHR.panel.PopulationPanel.FIELDS.species,
+                        colFields: [EHR.panel.PopulationPanel.FIELDS.ageclass, EHR.panel.PopulationPanel.FIELDS.gender]
+                    }],
+                    itemId: 'population'
+                }, {
+                    title: 'SPF Colony',
+                    style: 'padding 5px;',
+                    items: [this.getSpfPanel(0, 'SPF 0 (Conventional)'),
+                            this.getSpfPanel(1, 'SPF 1 (Level 1)'),
+                            this.getSpfPanel(2, 'SPF 2 (Level 2)'),
+                            this.getSpfPanel(3, 'SPF 3 (Level 2 Minus)'),
+                            this.getSpfPanel(4, 'SPF 4 (CMV Neg)')],
+                    itemId: 'spf'
+                }, {
+                    title: 'Clinical Case Summary',
+                    items: [{
+                        xtype: 'cnprc-ehr-clinicalsummarypanel'
+                    }],
+                    itemId: 'clinicalSummary'
+                },{
+                    title: 'Housing Summary',
+                    xtype: 'cnprc-ehr-housingsummarypanel',
+                    itemId: 'housingSummary'
+                }, {
+                    title: 'Utilization Summary',
+                    items: [{
+                        xtype: 'cnprc-ehr-utilizationsummarypanel'
+                    }],
+                    itemId: 'utilizationSummary'
+                }];
+            }
+        }).render(webpart.wrapperDivId);
+    });
+</script>

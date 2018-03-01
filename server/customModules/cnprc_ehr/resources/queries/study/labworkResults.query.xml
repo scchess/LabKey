@@ -1,0 +1,104 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="labworkResults" tableDbType="TABLE" useColumnOrder="true">
+                <tableUrl />
+                <insertUrl />
+                <importUrl />
+                <updateUrl />
+                <deleteUrl />
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Test Date</columnTitle>
+                    </column>
+                    <column columnName="projectCode"/>
+                    <column columnName="daysOld">
+                        <columnTitle>Days Old</columnTitle>
+                    </column>
+                    <column columnName="bigRear">
+                        <columnTitle>Rearing Conditions (during BBA Assessment)</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>bigRear</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="spf">
+                        <columnTitle>Specific Pathogen Free</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>spf_status</fkTable>
+                            <fkColumnName>name</fkColumnName>
+                            <fkDisplayColumnName>id</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="samp1">
+                        <columnTitle>Samp 1</columnTitle>
+                    </column>
+                    <column columnName="samp2">
+                        <columnTitle>Samp 2</columnTitle>
+                    </column>
+                    <column columnName="samp3">
+                        <columnTitle>Samp 3</columnTitle>
+                    </column>
+                    <column columnName="samp4">
+                        <columnTitle>Samp 4</columnTitle>
+                    </column>
+                    <column columnName="zsamp1">
+                        <columnTitle>ZSamp 1</columnTitle>
+                    </column>
+                    <column columnName="zsamp2">
+                        <columnTitle>ZSamp 2</columnTitle>
+                    </column>
+                    <column columnName="zsamp3">
+                        <columnTitle>ZSamp 3</columnTitle>
+                    </column>
+                    <column columnName="zsamp4">
+                        <columnTitle>ZSamp 4</columnTitle>
+                    </column>
+                    <column columnName="wbc">
+                        <columnTitle>WBC</columnTitle>
+                    </column>
+                    <column columnName="lympho">
+                        <columnTitle>Lympho</columnTitle>
+                    </column>
+                    <column columnName="cd4">
+                        <columnTitle>CD4</columnTitle>
+                    </column>
+                    <column columnName="cd8">
+                        <columnTitle>CD8</columnTitle>
+                    </column>
+                    <column columnName="hemoglobin">
+                        <columnTitle>Hemoglobin</columnTitle>
+                    </column>
+                    <column columnName="hemotocrit">
+                        <columnTitle>Hemotocrit</columnTitle>
+                    </column>
+                    <column columnName="mcv">
+                        <columnTitle>MCV</columnTitle>
+                    </column>
+                    <column columnName="plama_protein">
+                        <columnTitle>Plasma Protein</columnTitle>
+                    </column>
+                    <column columnName="rearing">
+                        <columnTitle>Rearing</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>rearing</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="sertcode">
+                        <columnTitle>SERT Code</columnTitle>
+                    </column>
+                    <column columnName="maoacode">
+                        <columnTitle>MAOA Code</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

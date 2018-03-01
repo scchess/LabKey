@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>Respiratory Diseases - Master</name>
+    <description>Respiratory Diseases - Historical Data from Master table</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc_rd" queryName="q_rd_master"/>
+            <destination schemaName="cnprc_ehr" queryName="rd_master" bulkLoad="true" targetOption="truncate"/>
+        </transform>
+    </transforms>
+</etl>

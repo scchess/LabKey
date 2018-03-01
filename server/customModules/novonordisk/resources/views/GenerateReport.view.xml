@@ -1,0 +1,9 @@
+<view xmlns="http://labkey.org/data/xml/view"
+        title="Generate Reports" >
+    <permissions>
+        <permission name="read"/>
+    </permissions>
+    <dependencies>
+        <dependency path="Ext4"/>
+    </dependencies>
+</view>

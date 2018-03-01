@@ -1,0 +1,27 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Nursing" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Assign Date</columnTitle>
+                    </column>
+                    <column columnName="motherId">
+                        <columnTitle>Mother</columnTitle>
+                        <url>/ehr/participantView.view?participantId=${motherId}</url>
+                    </column>
+                    <column columnName="assignType">
+                        <columnTitle>Assign Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>nursing_assign_types</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

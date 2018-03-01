@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bioml>
+  <note label="pipeline config, admin email" type="input"></note>
+    <note>Email address used for cluster failure notification</note>
+  <note label="pipeline config, scheduler" type="input">Torque</note>
+    <note>Cluster scheduler (currently supported: Torque, SGE)</note>
+  <note label="pipeline config, scheduler queue" type="input">labkey</note>
+    <note>Name of queue to use with the cluster scheduler.
+          If blank, the pipeline will use different names for each
+          type of job. (e.g. "xtandem", "mascot")</note>
+  <note label="pipeline config, work local" type="input">no</note>
+    <note>Set for cluster to perform work locally.  Otherwise, cluster
+          nodes transfer input files to the local machine, and transfer
+          back the results.</note>
+
+  <note label="pipeline config, conversion protocol" type="input">http</note>
+    <note>Protocol used for communicating with the mzXML conversion server
+          (supported: http and https)</note>
+  <note label="pipeline config, conversion server" type="input"></note>
+    <note>Name or IP address (and port) of the mzXML conversion server
+          (e.g. converter.myorg.net or 128.124.0.1:8080)</note>
+  <note label="pipeline config, conversion server windows" type="input">yes</note>
+    <note>Set if conversion server is running on Windows</note>
+
+  <note label="pipeline config, labkey protocol" type="input">http</note>
+    <note>Protocol used for communicating with the LabKey Server
+          (supported: http and https)</note>
+  <note label="pipeline config, labkey server" type="input"></note>
+    <note>Name or IP address (and port) of the LabKey Server
+          (e.g. labkey.myorg.net or 128.124.0.2:8080)</note>
+  <note label="pipeline config, labkey context path" type="input">/labkey</note>
+    <note>Context path of the LabKey web application on the LabKey Server
+          (default install currently uses '/labkey' but values such as
+          '/cpas' and '/CPAS' have been used in the past)</note>
+  <note label="pipeline config, labkey server windows" type="input">yes</note>
+    <note>Set if the LabKey Server is running on Windows</note>
+
+  <note label="pipeline config, windows path prefix" type="input">T:</note>
+    <note>Windows prefix for mapping paths on Unix scheduler to
+          Windows servers</note>
+  <note label="pipeline config, unix path prefix" type="input">/home</note>
+    <note>Unix prefix for mapping paths on Unix scheduler to
+          Windows servers</note>
+  <note label="pipeline config, fasta root path" type="input">/data/databases</note>
+    <note>Default path where FASTA files are kept</note>
+</bioml>

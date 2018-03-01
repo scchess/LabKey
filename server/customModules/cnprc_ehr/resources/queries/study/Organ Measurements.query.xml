@@ -1,0 +1,36 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="OrganMeasurements" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Work Performed Date</columnTitle>
+                    </column>
+                    <column columnName="enddate">
+                        <columnTitle>Report Completion Date</columnTitle>
+                    </column>
+                    <column columnName="tissue">
+                        <columnTitle>Organ Measurement Type</columnTitle>
+                    </column>
+                    <column columnName="measurementValue">
+                        <columnTitle>Measurement</columnTitle>
+                    </column>
+                    <column columnName="unit">
+                        <columnTitle>Unit</columnTitle>
+                    </column>
+                    <column columnName="projectCode">
+                        <columnTitle>Project Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>project</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                            <fkDisplayColumnName>projectCode</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>
+

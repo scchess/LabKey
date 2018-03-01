@@ -1,0 +1,223 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+buildDir = new File(project.rootProject.buildDir, "/remoteapi/java")
+
+def artifactPrefix = 'labkey-client-api'
+def description = "The client-side library for Java developers is a separate JAR from the LabKey Server code base. It can be used by any Java program, including another Java web application."
+def orgUrl = "http://www.labkey.org"
+
+
+
+import org.labkey.gradle.plugin.LabKey
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+import org.labkey.gradle.task.PomFile
+
+dependencies {
+    compile "org.apache.httpcomponents:httpmime:${httpmimeVersion}"
+    compile ("com.googlecode.json-simple:json-simple:${jsonSimpleVersion}")
+            {
+                // exclude this because it gets in the way of our own JSON object implementations from server/api
+                exclude group: "org.json", module:"json"
+            }
+    compile "net.sf.opencsv:opencsv:${opencsvVersion}"
+}
+
+jar {
+    baseName artifactPrefix
+
+    sourceCompatibility = project.sourceCompatibility
+    targetCompatibility = project.targetCompatibility
+
+    sourceSets
+            {
+                main {
+                    java {
+                        srcDirs = ['src']
+                    }
+                }
+            }
+
+    libsDirName = "jar"
+}
+
+project.task("fatJar",
+        description: "Generate single jar file containing the api and all its dependent classes",
+        group: GroupNames.BUILD,
+        type: Jar,
+        {
+            Jar jar ->
+                jar.from sourceSets.main.output
+                jar.from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }}
+                jar.baseName artifactPrefix
+                jar.version project.version
+                jar.classifier LabKey.FAT_JAR_CLASSIFIER
+                jar.dependsOn project.tasks.jar
+                jar.into('lib') {
+                    from tasks.jar
+                    from configurations.compile
+                }
+        }
+)
+
+project.task('javadocJar', description: "Generate jar file of javadoc files", type: Jar) {Jar jar ->
+            jar.from project.tasks.javadoc.destinationDir
+            jar.group GroupNames.DISTRIBUTION
+            jar.baseName artifactPrefix
+            jar.classifier LabKey.JAVADOC_CLASSIFIER
+            jar.dependsOn project.tasks.javadoc
+        }
+
+project.task('sourcesJar', description: "Generate jar file of source files", type: Jar) {Jar jar ->
+            jar.from project.sourceSets.main.allJava
+
+            jar.group GroupNames.DISTRIBUTION
+            jar.baseName artifactPrefix
+            jar.classifier LabKey.SOURCES_CLASSIFIER
+}
+
+project.artifacts {
+    archives project.tasks.sourcesJar
+    archives project.tasks.javadocJar
+    archives project.tasks.fatJar
+}
+
+Properties pomProperties = new Properties()
+pomProperties.put("ArtifactId", artifactPrefix)
+pomProperties.put("Organization", "LabKey")
+pomProperties.put("OrganizationURL", orgUrl)
+pomProperties.put("Description", description )
+pomProperties.put("License", "The Apache Software License, Version 2.0")
+pomProperties.put("LicenseURL", "http://www.apache.org/licenses/LICENSE-2.0.txt")
+
+// N.B.  This seems redundant with the properties above, but artifactoryPublish needs to have a pom file, and I
+// can't figure out how to make it depend on the default pom file task (using tasks.generatePomFileForLibsPublication
+// produces an error complaining about not knowing what this task is).  Using the pomFileTask as a dependency for
+// bintrayUpload does not work because the default generatePomFile... task runs after the pomFileTask and thus
+// the pom file we attempt to publish with does not have any of the properties specified above.  Since I
+// can't figure out how to grab onto this task (don't know what type it is either), I can't disable it or specify
+// an ordering.  And so we have two, which I really don't like.
+def pomConfig = {
+   organization {
+      name 'LabKey'
+      url orgUrl
+   }
+   licenses {
+      license {
+         name 'The Apache Software License, Version 2.0'
+         url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+         distribution 'repo'
+      }
+   }
+   scm {
+        url 'http://hedgehog.fhcrc.org/tor/stedi/trunk'
+        connection 'http://hedgehog.fhcrc.org/tor/stedi/trunk'
+        developerConnection 'http://hedgehog.fhcrc.org/tor/stedi/trunk'
+   }
+   developers {
+        developer {
+            id 'labkey-team'
+            name 'The LabKey Development Team'
+            organization 'LabKey.org'
+            organizationUrl orgUrl
+        }
+    }
+}
+
+project.afterEvaluate {
+    Task pomFileTask = project.task("pomFile",
+            group: GroupNames.PUBLISHING,
+            description: "create the pom file for this project",
+            type: PomFile,
+            {
+                PomFile pom ->
+                    pom.pomProperties = pomProperties
+            }
+    )
+    project.publishing {
+        publications {
+            libs(MavenPublication) {
+                from components.java
+                pom.withXml {
+                    asNode().appendNode('url', orgUrl)
+                    asNode().appendNode('name', artifactPrefix)
+                    asNode().appendNode('description', description)
+                    asNode().children().last() + pomConfig
+                }
+                project.tasks.each {
+                    if (it instanceof Jar)
+                    {
+                        artifactId artifactPrefix
+                        artifact it
+                    }
+                }
+            }
+        }
+
+        if (BuildUtils.shouldPublish(project))
+        {
+            project.artifactoryPublish {
+                project.tasks.each {
+                    if (it instanceof Jar)
+                    {
+                        dependsOn it
+                    }
+                }
+                dependsOn pomFileTask
+                publications('libs')
+            }
+        }
+
+    }
+    project.model {
+        tasks.publishLibsPublicationToMavenLocal {
+            enabled = false
+        }
+    }
+}
+
+// This section is used for publishing the jar files to bintray and then on to maven central.
+if (project.hasProperty('bintray_user')
+        && project.hasProperty('bintray_api_key')
+        && project.hasProperty('gpg_passphrase')
+        && project.hasProperty('sonatype_username')
+        && project.hasProperty('sonatype_password'))
+{
+    apply plugin: 'com.jfrog.bintray'
+    bintray {
+        user = project.bintray_user
+        key = project.bintray_api_key
+        publications = ['libs']
+        publish = true
+        pkg {
+            repo = project.version.endsWith('SNAPSHOT') ? 'libs-snapshot' : 'libs-release'
+            desc = description
+            websiteUrl = orgUrl
+            name = artifactPrefix
+            userOrg = 'labkey'
+            licenses = ['Apache-2.0']
+            vcsUrl = 'https://hedgehog.fhcrc.org/tor/stedi/'
+            version {
+                name = project.version
+                desc = "LabKey Java Client API ${project.version}"
+                released = new Date()
+                gpg {
+                    sign = true
+                    passphrase = project.gpg_passphrase
+                }
+
+                mavenCentralSync {
+                    sync = true //[Default: true] Determines whether to sync the version to Maven Central.
+                    user = project.sonatype_username //OSS user token: mandatory
+                    password = project.sonatype_password //OSS user password: mandatory
+                    close = '1'
+                    //Optional property. By default the staging repository is closed and artifacts are released to Maven Central. 
+                    //You can optionally turn this behaviour off (by puting 0 as value) and release the version manually.
+                }
+            }
+        }
+    }
+}
+

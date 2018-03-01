@@ -1,0 +1,19 @@
+<div id="results"></div>
+<script type="text/javascript">
+    Ext.onReady(function() {
+        //Find all the assays
+        IaviElisa.getProtocols(function(assays) {
+                //We assume there is only one for now.
+                if (assays.length > 1)
+                    alert("Multiple ELISA assays found. Using " + assays[0].name);
+                else if (assays.length == 0)
+                {
+                    alert("No IAVI Elisa assays found.");
+                    return;
+                }
+                var assay = assays[0];
+                showData(assay.name, "Titer", "results");
+            });
+        }
+    );
+</script>

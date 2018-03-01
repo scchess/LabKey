@@ -1,0 +1,23 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="observation_type_snomed" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="obsCode">
+                        <isKeyField>true</isKeyField>
+                    </column>
+                    <column columnName="snomed">
+                        <columnTitle>SNOMED Code</columnTitle>
+                        <shownInDetailsView>true</shownInDetailsView>
+                        <isUserEditable>true</isUserEditable>
+                    </column>
+                    <column columnName="snomedMeaning">
+                        <columnTitle>SNOMED Meaning</columnTitle>
+                        <shownInDetailsView>true</shownInDetailsView>
+                        <isUserEditable>true</isUserEditable>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

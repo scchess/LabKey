@@ -1,0 +1,19 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="activeCases" tableDbType="NOT_IN_DB">
+                <tableTitle>Active Cases</tableTitle>
+                <columns>
+                    <column columnName="admitType">
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>admit_type</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ * Copyright (c) 2015-2016 LabKey Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+
+ -->
+<tables xsi:schemaLocation="http://labkey.org/data/xml ..\..\..\..\schemas\tableInfo.xsd" xmlns="http://labkey.org/data/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <table tableName="Participant" tableDbType="TABLE">
+        <columns>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="RowId"/>
+            <column columnName="LastName"/>
+            <column columnName="FirstName"/>
+            <column columnName="BirthDate"/>
+            <column columnName="Arm1Consent"/>
+            <column columnName="Arm2Consent"/>
+            <column columnName="FutureResearchConsent"/>
+            <column columnName="Signature"/>
+        </columns>
+    </table>
+    <table tableName="SurveyResponse" tableDbType="TABLE">
+        <columns>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="RowId"/>
+            <column columnName="GUID"/>
+            <column columnName="SurveyDesignId"/>
+        </columns>
+    </table>
+    <table tableName="ParticipantResponseMap" tableDbType="TABLE">
+        <columns>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="ParticipantId"/>
+            <column columnName="GUID"/>
+        </columns>
+    </table>
+    <table tableName="DiagnosisStatus" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="HispanicOrigin" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="EducationLevel" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="MaritalStatus" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="EmploymentStatus" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="PatientDemographics" tableDbType="TABLE">
+        <titleColumn>PatientId</titleColumn>
+        <columns>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+            <column columnName="DiagnosisStatus"/>
+            <column columnName="BirthDate"/>
+            <column columnName="RaceWhite"/>
+            <column columnName="RaceBlack"/>
+            <column columnName="RaceNativeAmerican"/>
+            <column columnName="RaceAsian"/>
+            <column columnName="RaceHawaiian"/>
+            <column columnName="RaceOther"/>
+            <column columnName="RaceHispanic"/>
+            <column columnName="HispanicOrigin"/>
+            <column columnName="HispanicOriginOther"/>
+            <column columnName="ZipCode"/>
+            <column columnName="EducationLevel"/>
+            <column columnName="MaritalStatus"/>
+            <column columnName="EmploymentStatus"/>
+            <column columnName="EmploymentStatusOther"/>
+        </columns>
+    </table>
+    <table tableName="Insurance" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+            <column columnName="Name"/>
+            <column columnName="Commercial"/>
+            <column columnName="Military"/>
+        </columns>
+    </table>
+    <table tableName="PSALevel" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="CancerExtent" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="YesNoOther" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="ClinicalDiagnosis" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+            <column columnName="DiagnosisDate"/>
+            <column columnName="PSALevel"/>
+            <column columnName="CancerExtent"/>
+            <column columnName="GeneticTest"/>
+        </columns>
+    </table>
+    <table tableName="FamilyRelationship" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="AgeAtDiagnosis" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="CancerStartLocation" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="FamilyHistory" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+            <column columnName="Relationship"/>
+            <column columnName="AgeAtDiagnosis"/>
+            <column columnName="CancerStartLocation"/>
+            <column columnName="OtherRelationship"/>
+        </columns>
+    </table>
+    <table tableName="CurrentTreatmentState" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="PrimaryClinician" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="TreatmentSatisfaction" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="Treatment" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+            <column columnName="CurrentTreatmentState"/>
+            <column columnName="TreatmentWithinYear"/>
+            <column columnName="PrimaryClinician"/>
+            <column columnName="CancerSpreadBeyondProstate"/>
+            <column columnName="SpreadToLymphs"/>
+            <column columnName="SpreadToBones"/>
+            <column columnName="SpreadToOrgans"/>
+            <column columnName="OrgansSpreadTo"/>
+            <column columnName="SpreadToDontKnow"/>
+            <column columnName="TreatmentSatisfaction"/>
+        </columns>
+    </table>
+    <table tableName="TreatmentType" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+
+            <column columnName="Name"/>
+            <column columnName="StartDate"/>
+            <column columnName="EndDate"/>
+            <column columnName="Surgery"/>
+            <column columnName="Radiation"/>
+            <column columnName="Ongoing"/>
+        </columns>
+    </table>
+    <table tableName="ProblemScale" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="StandardScale" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="UrineLeak" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="UrineControl" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="DiaperUse" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="ErectionQuality" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="ErectionFrequency" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="LifeQuality" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+
+            <column columnName="FourWeekFrequencyUrineLeaking"/>
+            <column columnName="FourWeekUrineControl"/>
+            <column columnName="FourWeekDiaperUse"/>
+            <column columnName="FourWeekProblemUrineLeaking"/>
+            <column columnName="FourWeekProblemUrinationPain"/>
+            <column columnName="FourWeekProblemUrinationBleeding"/>
+            <column columnName="FourWeekProblemUrinationWeakStream"/>
+            <column columnName="FourWeekProblemUrinationFrequently"/>
+
+            <column columnName="FourWeekProblemUrinationOverall"/>
+            <column columnName="ProblemBowelUrgency"/>
+            <column columnName="ProblemBowelFrequency"/>
+            <column columnName="ProblemStoolControl"/>
+            <column columnName="ProblemStoolBlood"/>
+            <column columnName="ProblemRectalPain"/>
+
+            <column columnName="FourWeekProblemBowel"/>
+            <column columnName="FourWeekAbilityErection"/>
+            <column columnName="FourWeekAbilityOrgasm"/>
+
+            <column columnName="FourWeekQualityErection"/>
+            <column columnName="FourWeekFrequencyErection"/>
+            <column columnName="FourWeekSexualFunction"/>
+            <column columnName="FourWeekSexualProblem"/>
+            <column columnName="FourWeekProblemHotFlash"/>
+            <column columnName="FourWeekProblemBreast"/>
+            <column columnName="FourWeekProblemDepression"/>
+            <column columnName="FourWeekProblemEnergy"/>
+            <column columnName="FourWeekProblemWeight"/>
+        </columns>
+    </table>
+    <table tableName="MedicalCondition" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+            <column columnName="Condition"/>
+            <column columnName="Notes"/>
+            <column columnName="Cancer"/>
+        </columns>
+    </table>
+    <table tableName="DaysOfExercise" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="AttendSupportGroup" tableDbType="TABLE" hidden="true">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="Name"/>
+        </columns>
+    </table>
+    <table tableName="Lifestyle" tableDbType="TABLE">
+        <columns>
+            <column columnName="RowId"/>
+            <column columnName="Container"/>
+            <column columnName="Created"/>
+            <column columnName="Modified"/>
+            <column columnName="PatientId"/>
+
+            <column columnName="AlternateTherapySpecialDiet"/>
+            <column columnName="AlternateTherapyDietSupplement"/>
+            <column columnName="AlternateTherapyVitamin"/>
+            <column columnName="AlternateTherapyHomeopathy"/>
+            <column columnName="AlternateTherapyPhysical"/>
+            <column columnName="AlternateTherapyOriental"/>
+            <column columnName="AlternateTherapyPsychotherapy"/>
+            <column columnName="AlternateTherapyPrayer"/>
+            <column columnName="AlternateTherapyFaith"/>
+            <column columnName="AlternateTherapyMind"/>
+            <column columnName="AlternateTherapyOther"/>
+            <column columnName="AlternateTherapyNone"/>
+
+            <column columnName="Cigarettes"/>
+            <column columnName="CigarettesPerDayBeforeDiagnosis"/>
+            <column columnName="CigarettesPerDayCurrently"/>
+            <column columnName="YearsOfCigaretteUse"/>
+
+            <column columnName="Alcohol"/>
+            <column columnName="AlcoholPerDayBeforeDiagnosis"/>
+            <column columnName="AlcoholPerDayCurrently"/>
+
+            <column columnName="HeightFeet"/>
+            <column columnName="HeightInches"/>
+            <column columnName="Weight"/>
+            <column columnName="FourWeekDaysOfExercise"/>
+            <column columnName="AttendedProstateSupportGroup"/>
+            <column columnName="ProstateCancerExperience"/>
+        </columns>
+    </table>
+</tables>

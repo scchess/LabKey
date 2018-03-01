@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    Ext4.onReady(function(){
+        var webpart = <%=webpartContext%>;
+
+        Ext4.create('SequenceAnalysis.panel.SequenceAnalysisPanel', {
+            path : LABKEY.ActionURL.getParameter("path"),
+            readsets : LABKEY.ActionURL.getParameter("readsets")
+        }).render(webpart.wrapperDivId);
+    });
+
+</script>

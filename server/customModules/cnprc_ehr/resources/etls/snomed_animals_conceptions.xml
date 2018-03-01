@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>SNOMED - Animals and Conceptions</name>
+    <description>SNOMED records for Animals and Conceptions/Fetuses</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc" queryName="q_snomed_animals_conceptions"/>
+            <destination schemaName="study" queryName="snomed_animals_conceptions" bulkLoad="true" batchSize="5000" targetOption="merge">
+                <columnTransforms>
+                    <column source="sno_date" target="date"/>
+                </columnTransforms>
+                <alternateKeys>
+                    <column name="objectid"/>
+                </alternateKeys>
+            </destination>
+        </transform>
+    </transforms>
+    <incrementalFilter className="ModifiedSinceFilterStrategy" timestampColumnName="date_time">
+        <deletedRowsSource schemaName="cnprcSrc" queryName="q_snomed_animals_conceptions_delete" timestampColumnName="date_time" deletedSourceKeyColumnName="objectid" targetKeyColumnName="objectid"/>
+    </incrementalFilter>
+    <schedule>
+        <poll interval="60m"/>
+    </schedule>
+</etl>

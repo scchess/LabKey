@@ -1,0 +1,52 @@
+#1. Submitting institution, contact, date: 
+    Institute for Systems Biology 
+    Proteomics Group 
+    1441 N 34th Street 
+    Seattle, WA 98103, USA
+    Priska von Haller
+
+#2. URL link to a www resource
+    http://www.systemsbiology.org
+
+#3. Literature reference PubMed identification:
+    von Haller et al. 2003,  Mol Cell Proteomics, 2, 428
+    PMID: 12832456 
+
+#4. Experiment Description:
+    Lipid Rafts were prepared from
+    Human Jurkat T-cell stimulated via T cell receptor/CD28
+    cross-linking and from control (unstimulated) cells.
+
+#5. Treatment Description:
+    non-ICAT, Unlabeled avidin-affinity flow-through fractions 
+    (accompanies ICAT experiments)
+
+#6. Instrument Type:
+    LCQ Classic
+
+#7. Organism NCBI_TaxID (9606 for human) 
+    9606
+
+#8. Bio source description (eVOC) anatomical site
+    blood
+
+#9. Developmental stage (eVOC) 
+    Adult 
+
+#10. Pathology (eVOC)
+    Normal
+
+#11. Cell-type
+    Human Jurkat T-cells
+
+#12. Data Contributors:
+    Priska von Haller, Eugene Yi, Samuel Donohoe, Julian Watts
+
+
+#Files                      Content                        size [bytes]
+raftflow_dat.tar.gz         MS/MS in .dat format              324776240
+raftflow_mzXML.tar.gz       MS/MS in .mzXML format            395496178
+raftflow_searched.tar.gz    Files from: SEQUEST,              131344164
+                            PeptideProphet, Interact, 
+                            and ProteinProphet 
+interact-prob-prot.xml.gz   ProteinProphet                       288678

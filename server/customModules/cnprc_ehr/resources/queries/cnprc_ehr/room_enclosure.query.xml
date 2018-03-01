@@ -1,0 +1,27 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="room_enclosure" tableDbType="TABLE">
+                <columns>
+                    <column columnName="room">
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>rooms</fkTable>
+                            <fkColumnName>room</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="file_status"/>
+                    <column columnName="indoorOutdoorFlag"/>
+                    <column columnName="management_type"/>
+                    <column columnName="supervisor"/>
+                    <column columnName="weight_sheet_frequency"/>
+                    <column columnName="food_id"/>
+                    <column columnName="supplemental_diet"/>
+                    <column columnName="remark"/>
+                    <column columnName="isMhRoom"/>
+                    <column columnName="mh_group"/>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

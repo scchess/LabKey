@@ -1,0 +1,2187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peakdata version="1.0"
+          sourceFilename="test2.mzXML">
+  <software name="peakaboo"
+            version="1.0"
+            source="Spielberg Family Center for Applied Proteomics">
+    <parameters count="4">
+      <parameter name="scanBegin" value="1"/>
+      <parameter name="scanEnd" value="5484"/>
+      <parameter name="mzLow" value="200"/>
+      <parameter name="mzHigh" value="2000"/>
+    </parameters>
+  </software>
+  <scans count="1564">
+    <scan scanNumber="1927" retentionTime="1909.9" observationDuration="1.53916">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="23">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="1084.44" area="1849.91" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.27" intensity="131" area="185.769" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="418.881" charge="0">
+          <peaks count="3">
+            <peak mz="418.881" intensity="278.242" area="446.889" error="0" frequency="256633" phase="0" decay="0"/>
+            <peak mz="419.883" intensity="0" area="0" error="0" frequency="256020" phase="0" decay="0"/>
+            <peak mz="420.887" intensity="0" area="0" error="0" frequency="255410" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.898" charge="0">
+          <peaks count="3">
+            <peak mz="424.898" intensity="512.909" area="862.737" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.901" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="1">
+          <peaks count="3">
+            <peak mz="427.379" intensity="590.957" area="998.563" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.382" intensity="219.39" area="317.066" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.386" intensity="0" area="0" error="0" frequency="250354" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="440.407" charge="0">
+          <peaks count="3">
+            <peak mz="440.407" intensity="341.199" area="539.337" error="0" frequency="244089" phase="0" decay="0"/>
+            <peak mz="441.41" intensity="0" area="0" error="0" frequency="243535" phase="0" decay="0"/>
+            <peak mz="442.413" intensity="0" area="0" error="0" frequency="242983" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.869" charge="0">
+          <peaks count="3">
+            <peak mz="486.869" intensity="374.511" area="662.834" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.871" intensity="0" area="0" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.874" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="492.886" charge="0">
+          <peaks count="3">
+            <peak mz="492.886" intensity="359.648" area="616.13" error="0" frequency="218100" phase="0" decay="0"/>
+            <peak mz="493.889" intensity="0" area="0" error="0" frequency="217657" phase="0" decay="0"/>
+            <peak mz="494.892" intensity="0" area="0" error="0" frequency="217216" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="498.903" charge="0">
+          <peaks count="3">
+            <peak mz="498.903" intensity="210.325" area="377.286" error="0" frequency="215469" phase="0" decay="0"/>
+            <peak mz="499.906" intensity="0" area="0" error="0" frequency="215037" phase="0" decay="0"/>
+            <peak mz="500.909" intensity="0" area="0" error="0" frequency="214607" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.855" charge="0">
+          <peaks count="3">
+            <peak mz="554.855" intensity="456.301" area="717.711" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.858" intensity="0" area="0" error="0" frequency="193391" phase="0" decay="0"/>
+            <peak mz="556.861" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.872" charge="0">
+          <peaks count="3">
+            <peak mz="560.872" intensity="407.533" area="653.661" error="0" frequency="191663" phase="0" decay="0"/>
+            <peak mz="561.875" intensity="0" area="0" error="0" frequency="191321" phase="0" decay="0"/>
+            <peak mz="562.878" intensity="0" area="0" error="0" frequency="190980" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="622.96" charge="0">
+          <peaks count="3">
+            <peak mz="622.96" intensity="196.672" area="346.116" error="0" frequency="172560" phase="0" decay="0"/>
+            <peak mz="623.963" intensity="0" area="0" error="0" frequency="172283" phase="0" decay="0"/>
+            <peak mz="624.966" intensity="0" area="0" error="0" frequency="172006" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="628.86" charge="0">
+          <peaks count="3">
+            <peak mz="628.86" intensity="381.816" area="606.801" error="0" frequency="170941" phase="0" decay="0"/>
+            <peak mz="629.863" intensity="0" area="0" error="0" frequency="170669" phase="0" decay="0"/>
+            <peak mz="630.866" intensity="0" area="0" error="0" frequency="170398" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="635.663" charge="0">
+          <peaks count="3">
+            <peak mz="635.663" intensity="189.565" area="339.972" error="0" frequency="169112" phase="0" decay="0"/>
+            <peak mz="636.666" intensity="0" area="0" error="0" frequency="168845" phase="0" decay="0"/>
+            <peak mz="637.669" intensity="0" area="0" error="0" frequency="168580" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="649.734" charge="5">
+          <peaks count="6">
+            <peak mz="649.734" intensity="507.953" area="659.669" error="0" frequency="165449" phase="0" decay="0"/>
+            <peak mz="649.935" intensity="701.363" area="1212.81" error="0" frequency="165398" phase="0" decay="0"/>
+            <peak mz="650.135" intensity="0" area="0" error="0" frequency="165347" phase="0" decay="0"/>
+            <peak mz="650.336" intensity="274.309" area="558.967" error="0" frequency="165296" phase="0" decay="0"/>
+            <peak mz="650.536" intensity="0" area="0" error="0" frequency="165245" phase="0" decay="0"/>
+            <peak mz="650.737" intensity="0" area="0" error="0" frequency="165194" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.601" charge="0">
+          <peaks count="3">
+            <peak mz="659.601" intensity="285.977" area="524.422" error="0" frequency="162974" phase="0" decay="0"/>
+            <peak mz="660.604" intensity="0" area="0" error="0" frequency="162727" phase="0" decay="0"/>
+            <peak mz="661.607" intensity="0" area="0" error="0" frequency="162480" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="690.83" charge="0">
+          <peaks count="3">
+            <peak mz="690.83" intensity="378.365" area="610.787" error="0" frequency="155607" phase="0" decay="0"/>
+            <peak mz="691.833" intensity="0" area="0" error="0" frequency="155381" phase="0" decay="0"/>
+            <peak mz="692.836" intensity="0" area="0" error="0" frequency="155156" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="696.846" charge="1">
+          <peaks count="3">
+            <peak mz="696.846" intensity="248.787" area="393.26" error="0" frequency="154263" phase="0" decay="0"/>
+            <peak mz="697.849" intensity="92.6031" area="125.161" error="0" frequency="154042" phase="0" decay="0"/>
+            <peak mz="698.852" intensity="0" area="0" error="0" frequency="153820" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.414" charge="3">
+          <peaks count="5">
+            <peak mz="733.414" intensity="932.196" area="1598.76" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.748" intensity="794.716" area="1307.67" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.082" intensity="467.766" area="589.389" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.416" intensity="233.501" area="329.809" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.752" intensity="0" area="0" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="758.821" charge="0">
+          <peaks count="3">
+            <peak mz="758.821" intensity="231.517" area="346.858" error="0" frequency="141664" phase="0" decay="0"/>
+            <peak mz="759.824" intensity="0" area="0" error="0" frequency="141477" phase="0" decay="0"/>
+            <peak mz="760.827" intensity="0" area="0" error="0" frequency="141290" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="775.806" charge="0">
+          <peaks count="3">
+            <peak mz="775.806" intensity="239.721" area="411.14" error="0" frequency="138562" phase="0" decay="0"/>
+            <peak mz="776.809" intensity="0" area="0" error="0" frequency="138384" phase="0" decay="0"/>
+            <peak mz="777.812" intensity="0" area="0" error="0" frequency="138205" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="811.917" charge="4">
+          <peaks count="6">
+            <peak mz="811.917" intensity="878.778" area="1493.98" error="0" frequency="132399" phase="0" decay="0"/>
+            <peak mz="812.168" intensity="1222.03" area="2078.89" error="0" frequency="132359" phase="0" decay="0"/>
+            <peak mz="812.418" intensity="1241.12" area="1878.23" error="0" frequency="132318" phase="0" decay="0"/>
+            <peak mz="812.669" intensity="366.861" area="548.576" error="0" frequency="132277" phase="0" decay="0"/>
+            <peak mz="812.92" intensity="391.084" area="512.332" error="0" frequency="132236" phase="0" decay="0"/>
+            <peak mz="813.171" intensity="194.489" area="248.81" error="0" frequency="132195" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="820.789" charge="0">
+          <peaks count="3">
+            <peak mz="820.789" intensity="206.8" area="350.472" error="0" frequency="130968" phase="0" decay="0"/>
+            <peak mz="821.792" intensity="0" area="0" error="0" frequency="130808" phase="0" decay="0"/>
+            <peak mz="822.795" intensity="0" area="0" error="0" frequency="130649" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1627.21" charge="0">
+          <peaks count="4">
+            <peak mz="1627.21" intensity="353.683" area="608.924" error="0" frequency="66060.8" phase="0" decay="0"/>
+            <peak mz="1628.21" intensity="0" area="0" error="0" frequency="66020.1" phase="0" decay="0"/>
+            <peak mz="1629.21" intensity="0" area="0" error="0" frequency="65979.5" phase="0" decay="0"/>
+            <peak mz="1630.22" intensity="0" area="0" error="0" frequency="65939" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1930" retentionTime="1913.22" observationDuration="1.53937">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="21">
+        <peakFamily mzMonoisotopic="407.891" charge="0">
+          <peaks count="3">
+            <peak mz="407.891" intensity="283.795" area="456.106" error="0" frequency="263547" phase="0" decay="0"/>
+            <peak mz="408.894" intensity="0" area="0" error="0" frequency="262901" phase="0" decay="0"/>
+            <peak mz="409.898" intensity="0" area="0" error="0" frequency="262257" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="709.29" area="1177.26" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.27" intensity="167.766" area="233.391" error="0" frequency="259489" phase="0" decay="0"/>
+            <peak mz="415.274" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="0">
+          <peaks count="3">
+            <peak mz="424.897" intensity="399.278" area="679.555" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.9" intensity="0" area="0" error="0" frequency="252404" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="0">
+          <peaks count="3">
+            <peak mz="427.379" intensity="751.328" area="1247.7" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.382" intensity="0" area="0" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.386" intensity="0" area="0" error="0" frequency="250354" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="437.908" charge="0">
+          <peaks count="3">
+            <peak mz="437.908" intensity="342.295" area="602.199" error="0" frequency="245482" phase="0" decay="0"/>
+            <peak mz="438.911" intensity="0" area="0" error="0" frequency="244921" phase="0" decay="0"/>
+            <peak mz="439.914" intensity="0" area="0" error="0" frequency="244363" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="440.407" charge="0">
+          <peaks count="3">
+            <peak mz="440.407" intensity="361.606" area="582.518" error="0" frequency="244089" phase="0" decay="0"/>
+            <peak mz="441.41" intensity="0" area="0" error="0" frequency="243535" phase="0" decay="0"/>
+            <peak mz="442.413" intensity="0" area="0" error="0" frequency="242983" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="441.887" charge="0">
+          <peaks count="3">
+            <peak mz="441.887" intensity="291.049" area="445.547" error="0" frequency="243271" phase="0" decay="0"/>
+            <peak mz="442.89" intensity="0" area="0" error="0" frequency="242721" phase="0" decay="0"/>
+            <peak mz="443.893" intensity="0" area="0" error="0" frequency="242172" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.869" charge="0">
+          <peaks count="3">
+            <peak mz="486.869" intensity="329.54" area="536.655" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.871" intensity="0" area="0" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.874" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.856" charge="0">
+          <peaks count="3">
+            <peak mz="554.856" intensity="382.62" area="649.253" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.858" intensity="0" area="0" error="0" frequency="193391" phase="0" decay="0"/>
+            <peak mz="556.861" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.871" charge="2">
+          <peaks count="4">
+            <peak mz="560.871" intensity="412.845" area="747.864" error="0" frequency="191663" phase="0" decay="0"/>
+            <peak mz="561.372" intensity="66.0527" area="60.8721" error="0" frequency="191492" phase="0" decay="0"/>
+            <peak mz="561.874" intensity="0" area="0" error="0" frequency="191321" phase="0" decay="0"/>
+            <peak mz="562.376" intensity="0" area="0" error="0" frequency="191150" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="622.842" charge="0">
+          <peaks count="3">
+            <peak mz="622.842" intensity="496.443" area="843.097" error="0" frequency="172593" phase="0" decay="0"/>
+            <peak mz="623.845" intensity="0" area="0" error="0" frequency="172315" phase="0" decay="0"/>
+            <peak mz="624.848" intensity="0" area="0" error="0" frequency="172039" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="628.861" charge="0">
+          <peaks count="3">
+            <peak mz="628.861" intensity="250.59" area="436.671" error="0" frequency="170941" phase="0" decay="0"/>
+            <peak mz="629.864" intensity="0" area="0" error="0" frequency="170669" phase="0" decay="0"/>
+            <peak mz="630.867" intensity="0" area="0" error="0" frequency="170397" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="630.403" charge="0">
+          <peaks count="3">
+            <peak mz="630.403" intensity="220.412" area="394.693" error="0" frequency="170523" phase="0" decay="0"/>
+            <peak mz="631.406" intensity="0" area="0" error="0" frequency="170252" phase="0" decay="0"/>
+            <peak mz="632.409" intensity="0" area="0" error="0" frequency="169982" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.517" charge="0">
+          <peaks count="3">
+            <peak mz="659.517" intensity="231.518" area="408.208" error="0" frequency="162995" phase="0" decay="0"/>
+            <peak mz="660.52" intensity="0" area="0" error="0" frequency="162747" phase="0" decay="0"/>
+            <peak mz="661.523" intensity="0" area="0" error="0" frequency="162501" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="684.815" charge="0">
+          <peaks count="3">
+            <peak mz="684.815" intensity="322.803" area="524.014" error="0" frequency="156973" phase="0" decay="0"/>
+            <peak mz="685.818" intensity="0" area="0" error="0" frequency="156744" phase="0" decay="0"/>
+            <peak mz="686.821" intensity="0" area="0" error="0" frequency="156515" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="690.83" charge="0">
+          <peaks count="3">
+            <peak mz="690.83" intensity="339.051" area="555.982" error="0" frequency="155607" phase="0" decay="0"/>
+            <peak mz="691.833" intensity="0" area="0" error="0" frequency="155381" phase="0" decay="0"/>
+            <peak mz="692.836" intensity="0" area="0" error="0" frequency="155156" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="696.845" charge="0">
+          <peaks count="3">
+            <peak mz="696.845" intensity="229.847" area="431.864" error="0" frequency="154263" phase="0" decay="0"/>
+            <peak mz="697.848" intensity="0" area="0" error="0" frequency="154042" phase="0" decay="0"/>
+            <peak mz="698.851" intensity="0" area="0" error="0" frequency="153821" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.412" charge="3">
+          <peaks count="5">
+            <peak mz="733.412" intensity="2432.87" area="3699.64" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.746" intensity="2317.13" area="3862.51" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.08" intensity="1689.53" area="2445.25" error="0" frequency="146439" phase="0" decay="0"/>
+            <peak mz="734.415" intensity="896.147" area="1371.42" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.75" intensity="373.093" area="528.657" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="758.82" charge="0">
+          <peaks count="3">
+            <peak mz="758.82" intensity="362.767" area="571.112" error="0" frequency="141664" phase="0" decay="0"/>
+            <peak mz="759.823" intensity="0" area="0" error="0" frequency="141477" phase="0" decay="0"/>
+            <peak mz="760.826" intensity="0" area="0" error="0" frequency="141291" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="811.918" charge="4">
+          <peaks count="6">
+            <peak mz="811.918" intensity="1043.44" area="1688.71" error="0" frequency="132399" phase="0" decay="0"/>
+            <peak mz="812.168" intensity="1645.19" area="2711.74" error="0" frequency="132358" phase="0" decay="0"/>
+            <peak mz="812.419" intensity="1491.45" area="2441.69" error="0" frequency="132318" phase="0" decay="0"/>
+            <peak mz="812.67" intensity="837.765" area="1228.02" error="0" frequency="132277" phase="0" decay="0"/>
+            <peak mz="812.921" intensity="357.757" area="452.612" error="0" frequency="132236" phase="0" decay="0"/>
+            <peak mz="813.172" intensity="0" area="0" error="0" frequency="132195" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1100.12" charge="0">
+          <peaks count="4">
+            <peak mz="1100.12" intensity="360.99" area="598.366" error="0" frequency="97713.8" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="0" area="0" error="0" frequency="97624.8" phase="0" decay="0"/>
+            <peak mz="1102.12" intensity="0" area="0" error="0" frequency="97536" phase="0" decay="0"/>
+            <peak mz="1103.13" intensity="0" area="0" error="0" frequency="97447.1" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1934" retentionTime="1916.96" observationDuration="1.53959">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="19">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="785.153" area="1323.52" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.27" intensity="217.512" area="317.26" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.274" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="418.881" charge="0">
+          <peaks count="3">
+            <peak mz="418.881" intensity="284.735" area="475.785" error="0" frequency="256633" phase="0" decay="0"/>
+            <peak mz="419.883" intensity="0" area="0" error="0" frequency="256020" phase="0" decay="0"/>
+            <peak mz="420.887" intensity="0" area="0" error="0" frequency="255410" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="0">
+          <peaks count="3">
+            <peak mz="424.897" intensity="403.123" area="672.832" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.9" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="1">
+          <peaks count="3">
+            <peak mz="427.379" intensity="988.839" area="1690.24" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.381" intensity="249.409" area="327.559" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.385" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="440.408" charge="0">
+          <peaks count="3">
+            <peak mz="440.408" intensity="267.614" area="469.254" error="0" frequency="244089" phase="0" decay="0"/>
+            <peak mz="441.411" intensity="0" area="0" error="0" frequency="243534" phase="0" decay="0"/>
+            <peak mz="442.414" intensity="0" area="0" error="0" frequency="242982" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.868" charge="1">
+          <peaks count="3">
+            <peak mz="486.868" intensity="337.37" area="584.512" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.871" intensity="80.8221" area="101.699" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.874" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="492.885" charge="0">
+          <peaks count="3">
+            <peak mz="492.885" intensity="339.818" area="584.43" error="0" frequency="218100" phase="0" decay="0"/>
+            <peak mz="493.888" intensity="0" area="0" error="0" frequency="217657" phase="0" decay="0"/>
+            <peak mz="494.891" intensity="0" area="0" error="0" frequency="217216" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="498.901" charge="0">
+          <peaks count="3">
+            <peak mz="498.901" intensity="278.001" area="519.507" error="0" frequency="215471" phase="0" decay="0"/>
+            <peak mz="499.903" intensity="0" area="0" error="0" frequency="215038" phase="0" decay="0"/>
+            <peak mz="500.906" intensity="0" area="0" error="0" frequency="214608" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="548.839" charge="0">
+          <peaks count="3">
+            <peak mz="548.839" intensity="281.332" area="442.536" error="0" frequency="195865" phase="0" decay="0"/>
+            <peak mz="549.841" intensity="0" area="0" error="0" frequency="195508" phase="0" decay="0"/>
+            <peak mz="550.844" intensity="0" area="0" error="0" frequency="195152" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.049" charge="0">
+          <peaks count="3">
+            <peak mz="560.049" intensity="503.878" area="803.258" error="0" frequency="191944" phase="0" decay="0"/>
+            <peak mz="561.052" intensity="0" area="0" error="0" frequency="191601" phase="0" decay="0"/>
+            <peak mz="562.055" intensity="0" area="0" error="0" frequency="191259" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.873" charge="0">
+          <peaks count="3">
+            <peak mz="560.873" intensity="385.433" area="634.371" error="0" frequency="191662" phase="0" decay="0"/>
+            <peak mz="561.875" intensity="0" area="0" error="0" frequency="191320" phase="0" decay="0"/>
+            <peak mz="562.878" intensity="0" area="0" error="0" frequency="190979" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="628.861" charge="0">
+          <peaks count="3">
+            <peak mz="628.861" intensity="311.207" area="513.457" error="0" frequency="170941" phase="0" decay="0"/>
+            <peak mz="629.864" intensity="0" area="0" error="0" frequency="170669" phase="0" decay="0"/>
+            <peak mz="630.867" intensity="0" area="0" error="0" frequency="170397" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="636.003" charge="1">
+          <peaks count="3">
+            <peak mz="636.003" intensity="352.034" area="597.633" error="0" frequency="169021" phase="0" decay="0"/>
+            <peak mz="637.006" intensity="0" area="13.0588" error="0" frequency="168755" phase="0" decay="0"/>
+            <peak mz="638.009" intensity="0" area="0" error="0" frequency="168490" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="649.735" charge="5">
+          <peaks count="6">
+            <peak mz="649.735" intensity="387.236" area="682.022" error="0" frequency="165449" phase="0" decay="0"/>
+            <peak mz="649.936" intensity="135.938" area="171.234" error="0" frequency="165398" phase="0" decay="0"/>
+            <peak mz="650.137" intensity="375.819" area="642.94" error="0" frequency="165347" phase="0" decay="0"/>
+            <peak mz="650.337" intensity="265.452" area="339.548" error="0" frequency="165296" phase="0" decay="0"/>
+            <peak mz="650.538" intensity="259.489" area="421.853" error="0" frequency="165245" phase="0" decay="0"/>
+            <peak mz="650.739" intensity="0" area="0" error="0" frequency="165194" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.935" charge="0">
+          <peaks count="3">
+            <peak mz="659.935" intensity="295.047" area="545.531" error="0" frequency="162892" phase="0" decay="0"/>
+            <peak mz="660.938" intensity="0" area="0" error="0" frequency="162645" phase="0" decay="0"/>
+            <peak mz="661.941" intensity="0" area="0" error="0" frequency="162398" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.413" charge="3">
+          <peaks count="5">
+            <peak mz="733.413" intensity="3829.09" area="5842.31" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.747" intensity="3622.93" area="5895.45" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.081" intensity="2406.01" area="3474.68" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.415" intensity="1303.59" area="1970.21" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.75" intensity="574.998" area="893.972" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.737" charge="3">
+          <peaks count="5">
+            <peak mz="740.737" intensity="376.053" area="549.739" error="0" frequency="145123" phase="0" decay="0"/>
+            <peak mz="741.071" intensity="280.824" area="489.372" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="741.405" intensity="0" area="0" error="0" frequency="144992" phase="0" decay="0"/>
+            <peak mz="741.739" intensity="0" area="0" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.075" intensity="0" area="0" error="0" frequency="144861" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="811.918" charge="4">
+          <peaks count="6">
+            <peak mz="811.918" intensity="472.416" area="770.955" error="0" frequency="132399" phase="0" decay="0"/>
+            <peak mz="812.169" intensity="1234.54" area="2048.79" error="0" frequency="132358" phase="0" decay="0"/>
+            <peak mz="812.419" intensity="913.71" area="1494.32" error="0" frequency="132318" phase="0" decay="0"/>
+            <peak mz="812.67" intensity="446.449" area="659.561" error="0" frequency="132277" phase="0" decay="0"/>
+            <peak mz="812.921" intensity="414.387" area="537.832" error="0" frequency="132236" phase="0" decay="0"/>
+            <peak mz="813.172" intensity="171.376" area="226.21" error="0" frequency="132195" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.61" charge="2">
+          <peaks count="5">
+            <peak mz="1099.61" intensity="364.625" area="599.491" error="0" frequency="97758.5" phase="0" decay="0"/>
+            <peak mz="1100.11" intensity="277.711" area="349.836" error="0" frequency="97713.9" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="217.231" area="341.747" error="0" frequency="97669.4" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="0" area="0" error="0" frequency="97625" phase="0" decay="0"/>
+            <peak mz="1101.62" intensity="0" area="0" error="0" frequency="97580.4" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1937" retentionTime="1919.58" observationDuration="1.53877">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="14">
+        <peakFamily mzMonoisotopic="413.266" charge="1">
+          <peaks count="3">
+            <peak mz="413.266" intensity="909.637" area="1542.72" error="0" frequency="260120" phase="0" decay="0"/>
+            <peak mz="414.269" intensity="334.581" area="511.788" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258863" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="0">
+          <peaks count="3">
+            <peak mz="424.897" intensity="410.299" area="661.295" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.899" intensity="0" area="0" error="0" frequency="252404" phase="0" decay="0"/>
+            <peak mz="426.903" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.378" charge="1">
+          <peaks count="3">
+            <peak mz="427.378" intensity="510.889" area="866.99" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.381" intensity="325.727" area="467.876" error="0" frequency="250942" phase="0" decay="0"/>
+            <peak mz="429.385" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.855" charge="0">
+          <peaks count="3">
+            <peak mz="554.855" intensity="382.88" area="619.133" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.858" intensity="0" area="0" error="0" frequency="193391" phase="0" decay="0"/>
+            <peak mz="556.861" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="559.798" charge="4">
+          <peaks count="5">
+            <peak mz="559.798" intensity="507.432" area="764.635" error="0" frequency="192030" phase="0" decay="0"/>
+            <peak mz="560.049" intensity="479.763" area="794.612" error="0" frequency="191944" phase="0" decay="0"/>
+            <peak mz="560.299" intensity="230.876" area="388.356" error="0" frequency="191859" phase="0" decay="0"/>
+            <peak mz="560.55" intensity="0" area="0" error="0" frequency="191773" phase="0" decay="0"/>
+            <peak mz="560.801" intensity="0" area="0" error="0" frequency="191687" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.873" charge="0">
+          <peaks count="3">
+            <peak mz="560.873" intensity="430.138" area="663.842" error="0" frequency="191662" phase="0" decay="0"/>
+            <peak mz="561.875" intensity="0" area="0" error="0" frequency="191320" phase="0" decay="0"/>
+            <peak mz="562.879" intensity="0" area="0" error="0" frequency="190979" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="636.161" charge="0">
+          <peaks count="3">
+            <peak mz="636.161" intensity="441.67" area="813.546" error="0" frequency="168979" phase="0" decay="0"/>
+            <peak mz="637.164" intensity="0" area="0" error="0" frequency="168713" phase="0" decay="0"/>
+            <peak mz="638.167" intensity="0" area="0" error="0" frequency="168448" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="660.112" charge="0">
+          <peaks count="3">
+            <peak mz="660.112" intensity="510.023" area="895.987" error="0" frequency="162848" phase="0" decay="0"/>
+            <peak mz="661.115" intensity="0" area="0" error="0" frequency="162601" phase="0" decay="0"/>
+            <peak mz="662.118" intensity="0" area="0" error="0" frequency="162355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.413" charge="3">
+          <peaks count="5">
+            <peak mz="733.413" intensity="5910.22" area="8967.74" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.747" intensity="7032.51" area="12052.9" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.081" intensity="5088.07" area="7392.68" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.415" intensity="2089.73" area="3183.14" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.75" intensity="585.454" area="1119.53" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.741" charge="3">
+          <peaks count="5">
+            <peak mz="740.741" intensity="456.653" area="784.507" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.075" intensity="328.546" area="525.065" error="0" frequency="145056" phase="0" decay="0"/>
+            <peak mz="741.409" intensity="364.066" area="559.546" error="0" frequency="144991" phase="0" decay="0"/>
+            <peak mz="741.743" intensity="127.492" area="228.28" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.079" intensity="0" area="0" error="0" frequency="144860" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="746.061" charge="3">
+          <peaks count="5">
+            <peak mz="746.061" intensity="452.978" area="629.102" error="0" frequency="144087" phase="0" decay="0"/>
+            <peak mz="746.395" intensity="486.304" area="749.821" error="0" frequency="144022" phase="0" decay="0"/>
+            <peak mz="746.729" intensity="0" area="0" error="0" frequency="143958" phase="0" decay="0"/>
+            <peak mz="747.063" intensity="0" area="0" error="0" frequency="143894" phase="0" decay="0"/>
+            <peak mz="747.399" intensity="0" area="0" error="0" frequency="143829" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="812.17" charge="4">
+          <peaks count="6">
+            <peak mz="812.17" intensity="624.813" area="973.321" error="0" frequency="132358" phase="0" decay="0"/>
+            <peak mz="812.421" intensity="646.06" area="985.065" error="0" frequency="132317" phase="0" decay="0"/>
+            <peak mz="812.672" intensity="633.274" area="1133.79" error="0" frequency="132277" phase="0" decay="0"/>
+            <peak mz="812.922" intensity="413.654" area="716.046" error="0" frequency="132236" phase="0" decay="0"/>
+            <peak mz="813.173" intensity="0" area="0" error="0" frequency="132195" phase="0" decay="0"/>
+            <peak mz="813.424" intensity="0" area="0" error="0" frequency="132154" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.62" charge="2">
+          <peaks count="5">
+            <peak mz="1099.62" intensity="411.269" area="714.279" error="0" frequency="97757.8" phase="0" decay="0"/>
+            <peak mz="1100.12" intensity="512.444" area="664.788" error="0" frequency="97713.3" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="341.731" area="567.053" error="0" frequency="97668.8" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="0" area="0" error="0" frequency="97624.3" phase="0" decay="0"/>
+            <peak mz="1101.63" intensity="0" area="0" error="0" frequency="97579.8" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1110.61" charge="2">
+          <peaks count="5">
+            <peak mz="1110.61" intensity="206.826" area="323.328" error="0" frequency="96790.5" phase="0" decay="0"/>
+            <peak mz="1111.11" intensity="384.286" area="634.469" error="0" frequency="96746.8" phase="0" decay="0"/>
+            <peak mz="1111.61" intensity="226.617" area="341.608" error="0" frequency="96703.2" phase="0" decay="0"/>
+            <peak mz="1112.11" intensity="0" area="0" error="0" frequency="96659.6" phase="0" decay="0"/>
+            <peak mz="1112.62" intensity="0" area="0" error="0" frequency="96615.9" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1943" retentionTime="1923.54" observationDuration="1.53916">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="10">
+        <peakFamily mzMonoisotopic="413.266" charge="1">
+          <peaks count="3">
+            <peak mz="413.266" intensity="1093.02" area="1874.71" error="0" frequency="260120" phase="0" decay="0"/>
+            <peak mz="414.269" intensity="258.821" area="384.351" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258863" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.898" charge="0">
+          <peaks count="3">
+            <peak mz="424.898" intensity="559.413" area="945.42" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.9" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="1">
+          <peaks count="3">
+            <peak mz="427.379" intensity="503.692" area="840.866" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.382" intensity="240.26" area="346.89" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.386" intensity="0" area="0" error="0" frequency="250354" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="559.797" charge="4">
+          <peaks count="5">
+            <peak mz="559.797" intensity="593.394" area="887.623" error="0" frequency="192031" phase="0" decay="0"/>
+            <peak mz="560.048" intensity="614.902" area="973.337" error="0" frequency="191945" phase="0" decay="0"/>
+            <peak mz="560.299" intensity="684.455" area="1129.46" error="0" frequency="191859" phase="0" decay="0"/>
+            <peak mz="560.549" intensity="0" area="0" error="0" frequency="191773" phase="0" decay="0"/>
+            <peak mz="560.801" intensity="0" area="0" error="0" frequency="191687" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="636.215" charge="0">
+          <peaks count="3">
+            <peak mz="636.215" intensity="349.495" area="654.106" error="0" frequency="168965" phase="0" decay="0"/>
+            <peak mz="637.218" intensity="0" area="0" error="0" frequency="168699" phase="0" decay="0"/>
+            <peak mz="638.221" intensity="0" area="0" error="0" frequency="168434" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.412" charge="3">
+          <peaks count="5">
+            <peak mz="733.412" intensity="8885.38" area="13739" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.746" intensity="10756.2" area="17463.6" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.08" intensity="6360.05" area="9232.95" error="0" frequency="146439" phase="0" decay="0"/>
+            <peak mz="734.414" intensity="2651.31" area="4181.41" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.75" intensity="1158.04" area="1839.17" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.74" charge="3">
+          <peaks count="5">
+            <peak mz="740.74" intensity="929.194" area="1619.35" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.074" intensity="777.48" area="1124.51" error="0" frequency="145056" phase="0" decay="0"/>
+            <peak mz="741.408" intensity="813.937" area="1208.96" error="0" frequency="144991" phase="0" decay="0"/>
+            <peak mz="741.742" intensity="322.196" area="464.833" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.078" intensity="0" area="0" error="0" frequency="144860" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="746.06" charge="3">
+          <peaks count="5">
+            <peak mz="746.06" intensity="356.552" area="551.162" error="0" frequency="144087" phase="0" decay="0"/>
+            <peak mz="746.394" intensity="543.494" area="882.387" error="0" frequency="144023" phase="0" decay="0"/>
+            <peak mz="746.728" intensity="437.603" area="663.199" error="0" frequency="143958" phase="0" decay="0"/>
+            <peak mz="747.062" intensity="0" area="0" error="0" frequency="143894" phase="0" decay="0"/>
+            <peak mz="747.398" intensity="0" area="0" error="0" frequency="143829" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.61" charge="2">
+          <peaks count="5">
+            <peak mz="1099.61" intensity="653.722" area="847.16" error="0" frequency="97758.3" phase="0" decay="0"/>
+            <peak mz="1100.12" intensity="860.48" area="1430.94" error="0" frequency="97713.8" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="422.212" area="541.369" error="0" frequency="97669.3" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="213.799" area="415.837" error="0" frequency="97624.8" phase="0" decay="0"/>
+            <peak mz="1101.62" intensity="0" area="0" error="0" frequency="97580.2" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1110.61" charge="2">
+          <peaks count="5">
+            <peak mz="1110.61" intensity="358.877" area="512.911" error="0" frequency="96790.6" phase="0" decay="0"/>
+            <peak mz="1111.11" intensity="431.362" area="707.348" error="0" frequency="96746.9" phase="0" decay="0"/>
+            <peak mz="1111.61" intensity="0" area="0" error="0" frequency="96703.3" phase="0" decay="0"/>
+            <peak mz="1112.11" intensity="0" area="0" error="0" frequency="96659.7" phase="0" decay="0"/>
+            <peak mz="1112.61" intensity="0" area="0" error="0" frequency="96616" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1946" retentionTime="1926.17" observationDuration="1.53976">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="11">
+        <peakFamily mzMonoisotopic="413.266" charge="1">
+          <peaks count="3">
+            <peak mz="413.266" intensity="918.975" area="1557.35" error="0" frequency="260120" phase="0" decay="0"/>
+            <peak mz="414.269" intensity="192.019" area="249.314" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258863" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.898" charge="0">
+          <peaks count="3">
+            <peak mz="424.898" intensity="390.563" area="671.892" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.901" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.378" charge="1">
+          <peaks count="3">
+            <peak mz="427.378" intensity="807.09" area="1327.77" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.381" intensity="169.826" area="211.764" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.385" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.868" charge="0">
+          <peaks count="3">
+            <peak mz="486.868" intensity="368.819" area="664.523" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.871" intensity="0" area="0" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.874" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.855" charge="0">
+          <peaks count="3">
+            <peak mz="554.855" intensity="448.032" area="745.623" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.858" intensity="0" area="0" error="0" frequency="193392" phase="0" decay="0"/>
+            <peak mz="556.861" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="559.797" charge="4">
+          <peaks count="5">
+            <peak mz="559.797" intensity="1236.07" area="1861.53" error="0" frequency="192031" phase="0" decay="0"/>
+            <peak mz="560.048" intensity="650.296" area="1050.07" error="0" frequency="191945" phase="0" decay="0"/>
+            <peak mz="560.299" intensity="859.942" area="1278.84" error="0" frequency="191859" phase="0" decay="0"/>
+            <peak mz="560.549" intensity="137.616" area="210.877" error="0" frequency="191773" phase="0" decay="0"/>
+            <peak mz="560.801" intensity="0" area="0" error="0" frequency="191687" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.413" charge="3">
+          <peaks count="5">
+            <peak mz="733.413" intensity="11695" area="19799.6" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.748" intensity="12506.9" area="21812.6" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.082" intensity="8669.53" area="11240.6" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.416" intensity="3818.12" area="6353.23" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.751" intensity="1105.57" area="1966.12" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.737" charge="3">
+          <peaks count="5">
+            <peak mz="740.737" intensity="982.194" area="1445.06" error="0" frequency="145123" phase="0" decay="0"/>
+            <peak mz="741.071" intensity="1271.15" area="2403.88" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="741.405" intensity="785.542" area="1221.44" error="0" frequency="144992" phase="0" decay="0"/>
+            <peak mz="741.739" intensity="162.838" area="369.664" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.075" intensity="0" area="0" error="0" frequency="144861" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="746.061" charge="3">
+          <peaks count="5">
+            <peak mz="746.061" intensity="336.358" area="482.11" error="0" frequency="144087" phase="0" decay="0"/>
+            <peak mz="746.395" intensity="434.578" area="674.895" error="0" frequency="144022" phase="0" decay="0"/>
+            <peak mz="746.729" intensity="165.357" area="235.939" error="0" frequency="143958" phase="0" decay="0"/>
+            <peak mz="747.063" intensity="200.232" area="303.74" error="0" frequency="143894" phase="0" decay="0"/>
+            <peak mz="747.398" intensity="0" area="0" error="0" frequency="143829" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.62" charge="2">
+          <peaks count="5">
+            <peak mz="1099.62" intensity="883.993" area="1156.49" error="0" frequency="97758.2" phase="0" decay="0"/>
+            <peak mz="1100.12" intensity="986.707" area="1573.68" error="0" frequency="97713.6" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="633.588" area="823.525" error="0" frequency="97669.1" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="263.693" area="432.469" error="0" frequency="97624.7" phase="0" decay="0"/>
+            <peak mz="1101.62" intensity="275.832" area="354.703" error="0" frequency="97580.1" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1110.6" charge="2">
+          <peaks count="5">
+            <peak mz="1110.6" intensity="476.653" area="914.985" error="0" frequency="96791.3" phase="0" decay="0"/>
+            <peak mz="1111.1" intensity="391.573" area="575.858" error="0" frequency="96747.6" phase="0" decay="0"/>
+            <peak mz="1111.6" intensity="257.45" area="336.52" error="0" frequency="96704" phase="0" decay="0"/>
+            <peak mz="1112.1" intensity="110.298" area="150.47" error="0" frequency="96660.4" phase="0" decay="0"/>
+            <peak mz="1112.61" intensity="0" area="0" error="0" frequency="96616.7" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1948" retentionTime="1928.32" observationDuration="1.53904">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="11">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="860.883" area="1464.53" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.269" intensity="179.049" area="267.407" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="0">
+          <peaks count="3">
+            <peak mz="424.897" intensity="557.848" area="948.945" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.9" intensity="0" area="0" error="0" frequency="252404" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="1">
+          <peaks count="3">
+            <peak mz="427.379" intensity="601.874" area="997.235" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.382" intensity="219.55" area="308.777" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.386" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.868" charge="0">
+          <peaks count="3">
+            <peak mz="486.868" intensity="434.753" area="715.577" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.871" intensity="0" area="0" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.874" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="492.885" charge="0">
+          <peaks count="3">
+            <peak mz="492.885" intensity="476.836" area="787.205" error="0" frequency="218101" phase="0" decay="0"/>
+            <peak mz="493.887" intensity="0" area="0" error="0" frequency="217658" phase="0" decay="0"/>
+            <peak mz="494.89" intensity="0" area="0" error="0" frequency="217217" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="559.799" charge="4">
+          <peaks count="5">
+            <peak mz="559.799" intensity="248.481" area="344.887" error="0" frequency="192030" phase="0" decay="0"/>
+            <peak mz="560.05" intensity="1086.29" area="2098.06" error="0" frequency="191944" phase="0" decay="0"/>
+            <peak mz="560.3" intensity="414.931" area="766.762" error="0" frequency="191858" phase="0" decay="0"/>
+            <peak mz="560.551" intensity="280.677" area="446.094" error="0" frequency="191772" phase="0" decay="0"/>
+            <peak mz="560.802" intensity="0" area="0" error="0" frequency="191686" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.413" charge="3">
+          <peaks count="5">
+            <peak mz="733.413" intensity="11719.9" area="19709.5" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.748" intensity="15193.3" area="26440.1" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.082" intensity="8644.1" area="11213.3" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.416" intensity="4603.64" area="7603.51" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.751" intensity="1219.74" area="1993.37" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.739" charge="3">
+          <peaks count="5">
+            <peak mz="740.739" intensity="729.848" area="1191.7" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.073" intensity="1564.86" area="2243.45" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="741.407" intensity="1062.31" area="1586.81" error="0" frequency="144991" phase="0" decay="0"/>
+            <peak mz="741.742" intensity="319.285" area="478.571" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.077" intensity="191.261" area="274.765" error="0" frequency="144860" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="746.059" charge="3">
+          <peaks count="5">
+            <peak mz="746.059" intensity="487.399" area="731.285" error="0" frequency="144087" phase="0" decay="0"/>
+            <peak mz="746.394" intensity="565.403" area="865.337" error="0" frequency="144023" phase="0" decay="0"/>
+            <peak mz="746.728" intensity="371.198" area="558.059" error="0" frequency="143958" phase="0" decay="0"/>
+            <peak mz="747.062" intensity="275.959" area="407.848" error="0" frequency="143894" phase="0" decay="0"/>
+            <peak mz="747.397" intensity="0" area="0" error="0" frequency="143829" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.62" charge="2">
+          <peaks count="5">
+            <peak mz="1099.62" intensity="927.623" area="1191.94" error="0" frequency="97758" phase="0" decay="0"/>
+            <peak mz="1100.12" intensity="1361.09" area="2243.66" error="0" frequency="97713.4" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="615.126" area="806.734" error="0" frequency="97668.9" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="301.358" area="417.093" error="0" frequency="97624.5" phase="0" decay="0"/>
+            <peak mz="1101.62" intensity="232.61" area="304.303" error="0" frequency="97579.9" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1110.6" charge="2">
+          <peaks count="5">
+            <peak mz="1110.6" intensity="553.817" area="790.076" error="0" frequency="96791" phase="0" decay="0"/>
+            <peak mz="1111.11" intensity="535.213" area="871.207" error="0" frequency="96747.3" phase="0" decay="0"/>
+            <peak mz="1111.61" intensity="385.849" area="694.813" error="0" frequency="96703.7" phase="0" decay="0"/>
+            <peak mz="1112.11" intensity="0" area="0" error="0" frequency="96660.1" phase="0" decay="0"/>
+            <peak mz="1112.61" intensity="240.6" area="349.528" error="0" frequency="96616.4" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1951" retentionTime="1931.19" observationDuration="1.53874">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="11">
+        <peakFamily mzMonoisotopic="413.266" charge="1">
+          <peaks count="3">
+            <peak mz="413.266" intensity="923.21" area="1579.16" error="0" frequency="260120" phase="0" decay="0"/>
+            <peak mz="414.269" intensity="325.572" area="490.804" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258863" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.896" charge="0">
+          <peaks count="3">
+            <peak mz="424.896" intensity="605.506" area="1027.86" error="0" frequency="253000" phase="0" decay="0"/>
+            <peak mz="425.899" intensity="0" area="0" error="0" frequency="252404" phase="0" decay="0"/>
+            <peak mz="426.903" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.378" charge="0">
+          <peaks count="3">
+            <peak mz="427.378" intensity="675.136" area="1103.27" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.381" intensity="0" area="0" error="0" frequency="250942" phase="0" decay="0"/>
+            <peak mz="429.385" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="559.796" charge="4">
+          <peaks count="5">
+            <peak mz="559.796" intensity="724.792" area="1098.29" error="0" frequency="192031" phase="0" decay="0"/>
+            <peak mz="560.047" intensity="1110.57" area="1963.63" error="0" frequency="191945" phase="0" decay="0"/>
+            <peak mz="560.298" intensity="320.57" area="686.726" error="0" frequency="191859" phase="0" decay="0"/>
+            <peak mz="560.548" intensity="0" area="0" error="0" frequency="191773" phase="0" decay="0"/>
+            <peak mz="560.8" intensity="0" area="0" error="0" frequency="191687" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.346" charge="4">
+          <peaks count="5">
+            <peak mz="659.346" intensity="246.672" area="361.458" error="0" frequency="163037" phase="0" decay="0"/>
+            <peak mz="659.597" intensity="413.357" area="867.308" error="0" frequency="162975" phase="0" decay="0"/>
+            <peak mz="659.847" intensity="0" area="0" error="0" frequency="162913" phase="0" decay="0"/>
+            <peak mz="660.098" intensity="136.147" area="225.926" error="0" frequency="162851" phase="0" decay="0"/>
+            <peak mz="660.349" intensity="131.971" area="191.508" error="0" frequency="162789" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.599" charge="2">
+          <peaks count="4">
+            <peak mz="659.599" intensity="551.739" area="954.808" error="0" frequency="162975" phase="0" decay="0"/>
+            <peak mz="660.101" intensity="180.689" area="187.622" error="0" frequency="162851" phase="0" decay="0"/>
+            <peak mz="660.602" intensity="0" area="0" error="0" frequency="162727" phase="0" decay="0"/>
+            <peak mz="661.104" intensity="0" area="0" error="0" frequency="162604" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.412" charge="3">
+          <peaks count="5">
+            <peak mz="733.412" intensity="12269.2" area="18729.9" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.747" intensity="12830.5" area="21027.9" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.081" intensity="8567.15" area="12458.8" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.415" intensity="3228.53" area="4867.81" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.75" intensity="1926.42" area="3037.64" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.738" charge="3">
+          <peaks count="5">
+            <peak mz="740.738" intensity="1158.29" area="1863.06" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.072" intensity="1232.51" area="1791.94" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="741.406" intensity="870.61" area="1485.39" error="0" frequency="144992" phase="0" decay="0"/>
+            <peak mz="741.74" intensity="392.283" area="560.953" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.076" intensity="0" area="0" error="0" frequency="144861" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="746.058" charge="3">
+          <peaks count="5">
+            <peak mz="746.058" intensity="316.166" area="497.391" error="0" frequency="144087" phase="0" decay="0"/>
+            <peak mz="746.393" intensity="708.541" area="1336.21" error="0" frequency="144023" phase="0" decay="0"/>
+            <peak mz="746.727" intensity="263.549" area="506.446" error="0" frequency="143958" phase="0" decay="0"/>
+            <peak mz="747.061" intensity="0" area="0" error="0" frequency="143894" phase="0" decay="0"/>
+            <peak mz="747.396" intensity="0" area="0" error="0" frequency="143829" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.62" charge="2">
+          <peaks count="5">
+            <peak mz="1099.62" intensity="812.63" area="1044.49" error="0" frequency="97758.2" phase="0" decay="0"/>
+            <peak mz="1100.12" intensity="1087" area="1775.83" error="0" frequency="97713.6" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="568.538" area="736.934" error="0" frequency="97669.1" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="263.153" area="370.171" error="0" frequency="97624.7" phase="0" decay="0"/>
+            <peak mz="1101.62" intensity="0" area="0" error="0" frequency="97580.1" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1110.6" charge="2">
+          <peaks count="5">
+            <peak mz="1110.6" intensity="356.847" area="528.369" error="0" frequency="96791" phase="0" decay="0"/>
+            <peak mz="1111.1" intensity="689.211" area="1124.76" error="0" frequency="96747.4" phase="0" decay="0"/>
+            <peak mz="1111.61" intensity="383.609" area="689.208" error="0" frequency="96703.7" phase="0" decay="0"/>
+            <peak mz="1112.11" intensity="0" area="0" error="0" frequency="96660.2" phase="0" decay="0"/>
+            <peak mz="1112.61" intensity="0" area="0" error="0" frequency="96616.5" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1955" retentionTime="1934.92" observationDuration="1.53932">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="11">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="960.463" area="1591.18" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.27" intensity="157.723" area="234.048" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.274" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="0">
+          <peaks count="3">
+            <peak mz="424.897" intensity="487.184" area="804.757" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.9" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.378" charge="1">
+          <peaks count="3">
+            <peak mz="427.378" intensity="862.036" area="1450.71" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.381" intensity="66.6254" area="84.7669" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.385" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="559.797" charge="4">
+          <peaks count="5">
+            <peak mz="559.797" intensity="697.855" area="1025.51" error="0" frequency="192031" phase="0" decay="0"/>
+            <peak mz="560.048" intensity="495.475" area="813.182" error="0" frequency="191945" phase="0" decay="0"/>
+            <peak mz="560.299" intensity="439.013" area="657.036" error="0" frequency="191859" phase="0" decay="0"/>
+            <peak mz="560.549" intensity="307.399" area="432.328" error="0" frequency="191773" phase="0" decay="0"/>
+            <peak mz="560.801" intensity="0" area="0" error="0" frequency="191687" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="622.843" charge="0">
+          <peaks count="3">
+            <peak mz="622.843" intensity="530.417" area="863.015" error="0" frequency="172592" phase="0" decay="0"/>
+            <peak mz="623.846" intensity="0" area="0" error="0" frequency="172315" phase="0" decay="0"/>
+            <peak mz="624.849" intensity="0" area="0" error="0" frequency="172038" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="690.832" charge="0">
+          <peaks count="3">
+            <peak mz="690.832" intensity="564.161" area="861.936" error="0" frequency="155606" phase="0" decay="0"/>
+            <peak mz="691.835" intensity="0" area="0" error="0" frequency="155381" phase="0" decay="0"/>
+            <peak mz="692.838" intensity="0" area="0" error="0" frequency="155156" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.414" charge="3">
+          <peaks count="5">
+            <peak mz="733.414" intensity="9096.6" area="13851.7" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.748" intensity="10146.9" area="17745.9" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.082" intensity="7004.19" area="12131.3" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.416" intensity="2975.06" area="4484.69" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.752" intensity="979.19" area="1645.98" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.741" charge="3">
+          <peaks count="5">
+            <peak mz="740.741" intensity="768.786" area="1358.5" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.075" intensity="613.059" area="1021.74" error="0" frequency="145056" phase="0" decay="0"/>
+            <peak mz="741.409" intensity="334.836" area="481.296" error="0" frequency="144991" phase="0" decay="0"/>
+            <peak mz="741.743" intensity="425.738" area="722.497" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.079" intensity="78.2478" area="188.637" error="0" frequency="144860" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="746.061" charge="3">
+          <peaks count="5">
+            <peak mz="746.061" intensity="434.319" area="707.451" error="0" frequency="144087" phase="0" decay="0"/>
+            <peak mz="746.395" intensity="514.794" area="765.533" error="0" frequency="144022" phase="0" decay="0"/>
+            <peak mz="746.729" intensity="0" area="0" error="0" frequency="143958" phase="0" decay="0"/>
+            <peak mz="747.064" intensity="0" area="0" error="0" frequency="143894" phase="0" decay="0"/>
+            <peak mz="747.399" intensity="0" area="0" error="0" frequency="143829" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.62" charge="2">
+          <peaks count="5">
+            <peak mz="1099.62" intensity="416.565" area="716.237" error="0" frequency="97757.7" phase="0" decay="0"/>
+            <peak mz="1100.12" intensity="610.203" area="776.03" error="0" frequency="97713.2" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="649.002" area="1200.22" error="0" frequency="97668.7" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="164.667" area="208.046" error="0" frequency="97624.2" phase="0" decay="0"/>
+            <peak mz="1101.63" intensity="0" area="0" error="0" frequency="97579.6" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1110.61" charge="2">
+          <peaks count="5">
+            <peak mz="1110.61" intensity="224.316" area="356" error="0" frequency="96790.6" phase="0" decay="0"/>
+            <peak mz="1111.11" intensity="565.513" area="906.281" error="0" frequency="96746.9" phase="0" decay="0"/>
+            <peak mz="1111.61" intensity="0" area="0" error="0" frequency="96703.3" phase="0" decay="0"/>
+            <peak mz="1112.11" intensity="0" area="0" error="0" frequency="96659.7" phase="0" decay="0"/>
+            <peak mz="1112.62" intensity="0" area="0" error="0" frequency="96616" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1958" retentionTime="1937.5" observationDuration="1.53941">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="14">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="884.87" area="1475.1" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.27" intensity="360.369" area="534.11" error="0" frequency="259489" phase="0" decay="0"/>
+            <peak mz="415.274" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.898" charge="0">
+          <peaks count="3">
+            <peak mz="424.898" intensity="444.495" area="757.99" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.901" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.905" intensity="0" area="0" error="0" frequency="251809" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="1">
+          <peaks count="3">
+            <peak mz="427.379" intensity="819.335" area="1350.71" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.382" intensity="268.592" area="389.706" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.386" intensity="0" area="0" error="0" frequency="250354" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="437.909" charge="0">
+          <peaks count="3">
+            <peak mz="437.909" intensity="305.919" area="526.497" error="0" frequency="245482" phase="0" decay="0"/>
+            <peak mz="438.912" intensity="0" area="0" error="0" frequency="244921" phase="0" decay="0"/>
+            <peak mz="439.915" intensity="0" area="0" error="0" frequency="244362" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="449.361" charge="0">
+          <peaks count="3">
+            <peak mz="449.361" intensity="310.834" area="536.491" error="0" frequency="239225" phase="0" decay="0"/>
+            <peak mz="450.364" intensity="0" area="0" error="0" frequency="238693" phase="0" decay="0"/>
+            <peak mz="451.367" intensity="0" area="0" error="0" frequency="238162" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="487.893" charge="0">
+          <peaks count="3">
+            <peak mz="487.893" intensity="315.098" area="557.121" error="0" frequency="220332" phase="0" decay="0"/>
+            <peak mz="488.896" intensity="0" area="0" error="0" frequency="219880" phase="0" decay="0"/>
+            <peak mz="489.899" intensity="0" area="0" error="0" frequency="219430" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="559.797" charge="4">
+          <peaks count="5">
+            <peak mz="559.797" intensity="483.127" area="716.655" error="0" frequency="192031" phase="0" decay="0"/>
+            <peak mz="560.048" intensity="694.24" area="1149.94" error="0" frequency="191945" phase="0" decay="0"/>
+            <peak mz="560.299" intensity="49.1536" area="124.021" error="0" frequency="191859" phase="0" decay="0"/>
+            <peak mz="560.549" intensity="108.125" area="163.39" error="0" frequency="191773" phase="0" decay="0"/>
+            <peak mz="560.801" intensity="0" area="0" error="0" frequency="191687" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="622.845" charge="0">
+          <peaks count="3">
+            <peak mz="622.845" intensity="487.687" area="799.579" error="0" frequency="172592" phase="0" decay="0"/>
+            <peak mz="623.847" intensity="0" area="0" error="0" frequency="172315" phase="0" decay="0"/>
+            <peak mz="624.851" intensity="0" area="0" error="0" frequency="172038" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.602" charge="0">
+          <peaks count="3">
+            <peak mz="659.602" intensity="623.23" area="1088.99" error="0" frequency="162974" phase="0" decay="0"/>
+            <peak mz="660.605" intensity="0" area="0" error="0" frequency="162726" phase="0" decay="0"/>
+            <peak mz="661.608" intensity="0" area="0" error="0" frequency="162480" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="690.83" charge="0">
+          <peaks count="3">
+            <peak mz="690.83" intensity="377.592" area="624.083" error="0" frequency="155607" phase="0" decay="0"/>
+            <peak mz="691.833" intensity="0" area="0" error="0" frequency="155381" phase="0" decay="0"/>
+            <peak mz="692.836" intensity="0" area="0" error="0" frequency="155156" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="696.846" charge="0">
+          <peaks count="3">
+            <peak mz="696.846" intensity="345.605" area="564.067" error="0" frequency="154263" phase="0" decay="0"/>
+            <peak mz="697.849" intensity="0" area="0" error="0" frequency="154042" phase="0" decay="0"/>
+            <peak mz="698.852" intensity="0" area="0" error="0" frequency="153820" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.413" charge="3">
+          <peaks count="5">
+            <peak mz="733.413" intensity="6982.34" area="10572.4" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.747" intensity="8622.78" area="15113.6" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.081" intensity="4998.29" area="7257" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.415" intensity="2405.46" area="3628.4" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.751" intensity="483.417" area="830.888" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.74" charge="3">
+          <peaks count="5">
+            <peak mz="740.74" intensity="411.151" area="687.705" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.074" intensity="806.656" area="1165.33" error="0" frequency="145056" phase="0" decay="0"/>
+            <peak mz="741.408" intensity="246.95" area="356.505" error="0" frequency="144991" phase="0" decay="0"/>
+            <peak mz="741.743" intensity="287.048" area="420.102" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.078" intensity="0" area="0" error="0" frequency="144860" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.61" charge="2">
+          <peaks count="5">
+            <peak mz="1099.61" intensity="478.405" area="611.188" error="0" frequency="97758.4" phase="0" decay="0"/>
+            <peak mz="1100.12" intensity="359.803" area="646.114" error="0" frequency="97713.8" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="294.902" area="392.638" error="0" frequency="97669.3" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="147.147" area="233.374" error="0" frequency="97624.9" phase="0" decay="0"/>
+            <peak mz="1101.62" intensity="0" area="0" error="0" frequency="97580.3" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1961" retentionTime="1940.1" observationDuration="1.53915">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="17">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="953.248" area="1608.45" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.27" intensity="210.176" area="333.338" error="0" frequency="259489" phase="0" decay="0"/>
+            <peak mz="415.274" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="0">
+          <peaks count="3">
+            <peak mz="424.897" intensity="331.121" area="564.295" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.9" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="1">
+          <peaks count="3">
+            <peak mz="427.379" intensity="714.532" area="1208.62" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.382" intensity="244.406" area="343.948" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.386" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="440.406" charge="0">
+          <peaks count="3">
+            <peak mz="440.406" intensity="316.738" area="505.166" error="0" frequency="244090" phase="0" decay="0"/>
+            <peak mz="441.409" intensity="0" area="0" error="0" frequency="243535" phase="0" decay="0"/>
+            <peak mz="442.412" intensity="0" area="0" error="0" frequency="242983" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.868" charge="0">
+          <peaks count="3">
+            <peak mz="486.868" intensity="383.221" area="684.336" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.871" intensity="0" area="0" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.874" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="492.886" charge="0">
+          <peaks count="3">
+            <peak mz="492.886" intensity="473.962" area="836.731" error="0" frequency="218100" phase="0" decay="0"/>
+            <peak mz="493.889" intensity="0" area="0" error="0" frequency="217657" phase="0" decay="0"/>
+            <peak mz="494.892" intensity="0" area="0" error="0" frequency="217216" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.856" charge="0">
+          <peaks count="3">
+            <peak mz="554.856" intensity="510.857" area="815.449" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.859" intensity="0" area="0" error="0" frequency="193391" phase="0" decay="0"/>
+            <peak mz="556.862" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.871" charge="0">
+          <peaks count="3">
+            <peak mz="560.871" intensity="373.152" area="701.951" error="0" frequency="191663" phase="0" decay="0"/>
+            <peak mz="561.874" intensity="0" area="0" error="0" frequency="191321" phase="0" decay="0"/>
+            <peak mz="562.877" intensity="0" area="0" error="0" frequency="190980" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="616.825" charge="0">
+          <peaks count="3">
+            <peak mz="616.825" intensity="333.646" area="532.489" error="0" frequency="174276" phase="0" decay="0"/>
+            <peak mz="617.828" intensity="0" area="0" error="0" frequency="173993" phase="0" decay="0"/>
+            <peak mz="618.831" intensity="0" area="0" error="0" frequency="173711" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="628.86" charge="0">
+          <peaks count="3">
+            <peak mz="628.86" intensity="320.103" area="527.176" error="0" frequency="170941" phase="0" decay="0"/>
+            <peak mz="629.862" intensity="0" area="0" error="0" frequency="170669" phase="0" decay="0"/>
+            <peak mz="630.865" intensity="0" area="0" error="0" frequency="170398" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="636.101" charge="0">
+          <peaks count="3">
+            <peak mz="636.101" intensity="332.368" area="608.397" error="0" frequency="168995" phase="0" decay="0"/>
+            <peak mz="637.104" intensity="0" area="0" error="0" frequency="168729" phase="0" decay="0"/>
+            <peak mz="638.107" intensity="0" area="0" error="0" frequency="168464" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.349" charge="4">
+          <peaks count="5">
+            <peak mz="659.349" intensity="448.376" area="731.898" error="0" frequency="163036" phase="0" decay="0"/>
+            <peak mz="659.6" intensity="571.38" area="851.736" error="0" frequency="162974" phase="0" decay="0"/>
+            <peak mz="659.851" intensity="357.532" area="533.352" error="0" frequency="162912" phase="0" decay="0"/>
+            <peak mz="660.101" intensity="158.825" area="243.172" error="0" frequency="162851" phase="0" decay="0"/>
+            <peak mz="660.352" intensity="0" area="0" error="0" frequency="162789" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="660.049" charge="0">
+          <peaks count="3">
+            <peak mz="660.049" intensity="480.762" area="892.488" error="0" frequency="162864" phase="0" decay="0"/>
+            <peak mz="661.052" intensity="0" area="0" error="0" frequency="162616" phase="0" decay="0"/>
+            <peak mz="662.055" intensity="0" area="0" error="0" frequency="162370" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="684.815" charge="0">
+          <peaks count="3">
+            <peak mz="684.815" intensity="336.528" area="579.697" error="0" frequency="156974" phase="0" decay="0"/>
+            <peak mz="685.818" intensity="0" area="0" error="0" frequency="156744" phase="0" decay="0"/>
+            <peak mz="686.821" intensity="0" area="0" error="0" frequency="156515" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.414" charge="3">
+          <peaks count="5">
+            <peak mz="733.414" intensity="3981.97" area="6039.71" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.748" intensity="5298.47" area="9103.3" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.082" intensity="2809.96" area="4916.81" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.416" intensity="1676.79" area="2517.3" error="0" frequency="146371" phase="0" decay="0"/>
+            <peak mz="734.752" intensity="552.974" area="982.714" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.74" charge="3">
+          <peaks count="5">
+            <peak mz="740.74" intensity="246.432" area="352.38" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.074" intensity="366.112" area="569.155" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="741.408" intensity="263.111" area="336.426" error="0" frequency="144991" phase="0" decay="0"/>
+            <peak mz="741.742" intensity="349.258" area="561.913" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.078" intensity="0" area="0" error="0" frequency="144860" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="741.071" charge="3">
+          <peaks count="5">
+            <peak mz="741.071" intensity="253.058" area="527.439" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="741.405" intensity="240.905" area="370.526" error="0" frequency="144992" phase="0" decay="0"/>
+            <peak mz="741.739" intensity="238.371" area="501.246" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.073" intensity="0" area="0" error="0" frequency="144861" phase="0" decay="0"/>
+            <peak mz="742.409" intensity="0" area="0" error="0" frequency="144796" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1964" retentionTime="1942.68" observationDuration="1.53971">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="21">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="909.55" area="1523" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.269" intensity="266.858" area="389.306" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.898" charge="0">
+          <peaks count="3">
+            <peak mz="424.898" intensity="466.041" area="778.585" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.901" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.905" intensity="0" area="0" error="0" frequency="251809" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="1">
+          <peaks count="3">
+            <peak mz="427.379" intensity="709.523" area="1200.35" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.382" intensity="92.6197" area="113.161" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.386" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="437.909" charge="0">
+          <peaks count="3">
+            <peak mz="437.909" intensity="257.874" area="444.045" error="0" frequency="245482" phase="0" decay="0"/>
+            <peak mz="438.911" intensity="0" area="0" error="0" frequency="244921" phase="0" decay="0"/>
+            <peak mz="439.914" intensity="0" area="0" error="0" frequency="244363" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="440.406" charge="0">
+          <peaks count="3">
+            <peak mz="440.406" intensity="311.42" area="517.284" error="0" frequency="244090" phase="0" decay="0"/>
+            <peak mz="441.409" intensity="0" area="0" error="0" frequency="243535" phase="0" decay="0"/>
+            <peak mz="442.412" intensity="0" area="0" error="0" frequency="242983" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.869" charge="0">
+          <peaks count="3">
+            <peak mz="486.869" intensity="525.935" area="892.365" error="0" frequency="220795" phase="0" decay="0"/>
+            <peak mz="487.872" intensity="0" area="0" error="0" frequency="220341" phase="0" decay="0"/>
+            <peak mz="488.875" intensity="0" area="0" error="0" frequency="219889" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="492.885" charge="0">
+          <peaks count="3">
+            <peak mz="492.885" intensity="384.111" area="668.019" error="0" frequency="218100" phase="0" decay="0"/>
+            <peak mz="493.888" intensity="0" area="0" error="0" frequency="217657" phase="0" decay="0"/>
+            <peak mz="494.891" intensity="0" area="0" error="0" frequency="217216" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.855" charge="0">
+          <peaks count="3">
+            <peak mz="554.855" intensity="409.198" area="676.658" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.858" intensity="0" area="0" error="0" frequency="193392" phase="0" decay="0"/>
+            <peak mz="556.861" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.048" charge="4">
+          <peaks count="5">
+            <peak mz="560.048" intensity="300.217" area="424.624" error="0" frequency="191945" phase="0" decay="0"/>
+            <peak mz="560.299" intensity="272.367" area="426.896" error="0" frequency="191859" phase="0" decay="0"/>
+            <peak mz="560.549" intensity="0" area="0" error="0" frequency="191773" phase="0" decay="0"/>
+            <peak mz="560.8" intensity="112.609" area="169.352" error="0" frequency="191687" phase="0" decay="0"/>
+            <peak mz="561.052" intensity="0" area="0" error="0" frequency="191601" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.872" charge="0">
+          <peaks count="3">
+            <peak mz="560.872" intensity="413.583" area="620.832" error="0" frequency="191662" phase="0" decay="0"/>
+            <peak mz="561.875" intensity="0" area="0" error="0" frequency="191320" phase="0" decay="0"/>
+            <peak mz="562.878" intensity="0" area="0" error="0" frequency="190979" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="622.844" charge="0">
+          <peaks count="3">
+            <peak mz="622.844" intensity="348.762" area="560.106" error="0" frequency="172592" phase="0" decay="0"/>
+            <peak mz="623.847" intensity="0" area="0" error="0" frequency="172315" phase="0" decay="0"/>
+            <peak mz="624.85" intensity="0" area="13.375" error="0" frequency="172038" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="628.86" charge="0">
+          <peaks count="3">
+            <peak mz="628.86" intensity="307.469" area="475.516" error="0" frequency="170941" phase="0" decay="0"/>
+            <peak mz="629.863" intensity="0" area="0" error="0" frequency="170669" phase="0" decay="0"/>
+            <peak mz="630.866" intensity="0" area="0" error="0" frequency="170397" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="636.151" charge="0">
+          <peaks count="3">
+            <peak mz="636.151" intensity="298.329" area="538.079" error="0" frequency="168982" phase="0" decay="0"/>
+            <peak mz="637.154" intensity="0" area="0" error="0" frequency="168716" phase="0" decay="0"/>
+            <peak mz="638.157" intensity="0" area="0" error="0" frequency="168451" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.349" charge="4">
+          <peaks count="5">
+            <peak mz="659.349" intensity="304.712" area="477.442" error="0" frequency="163036" phase="0" decay="0"/>
+            <peak mz="659.6" intensity="228.987" area="290.311" error="0" frequency="162974" phase="0" decay="0"/>
+            <peak mz="659.851" intensity="681.517" area="1006.55" error="0" frequency="162912" phase="0" decay="0"/>
+            <peak mz="660.101" intensity="477.016" area="834.643" error="0" frequency="162851" phase="0" decay="0"/>
+            <peak mz="660.352" intensity="0" area="0" error="0" frequency="162789" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.601" charge="4">
+          <peaks count="5">
+            <peak mz="659.601" intensity="228.987" area="331.425" error="0" frequency="162974" phase="0" decay="0"/>
+            <peak mz="659.851" intensity="633.286" area="1091.99" error="0" frequency="162912" phase="0" decay="0"/>
+            <peak mz="660.102" intensity="477.016" area="764.911" error="0" frequency="162850" phase="0" decay="0"/>
+            <peak mz="660.353" intensity="0" area="0" error="0" frequency="162789" phase="0" decay="0"/>
+            <peak mz="660.604" intensity="0" area="0" error="0" frequency="162727" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="660.112" charge="0">
+          <peaks count="3">
+            <peak mz="660.112" intensity="265.228" area="529.142" error="0" frequency="162848" phase="0" decay="0"/>
+            <peak mz="661.115" intensity="0" area="0" error="0" frequency="162601" phase="0" decay="0"/>
+            <peak mz="662.118" intensity="0" area="0" error="0" frequency="162355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="690.831" charge="0">
+          <peaks count="3">
+            <peak mz="690.831" intensity="421.264" area="682.55" error="0" frequency="155606" phase="0" decay="0"/>
+            <peak mz="691.834" intensity="0" area="0" error="0" frequency="155381" phase="0" decay="0"/>
+            <peak mz="692.837" intensity="0" area="0" error="0" frequency="155156" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.415" charge="3">
+          <peaks count="5">
+            <peak mz="733.415" intensity="2567.21" area="3000.42" error="0" frequency="146571" phase="0" decay="0"/>
+            <peak mz="733.749" intensity="3380.93" area="5210.46" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.083" intensity="1734.23" area="3031.68" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.417" intensity="1719.03" area="2606.01" error="0" frequency="146371" phase="0" decay="0"/>
+            <peak mz="734.753" intensity="273.75" area="477.368" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.739" charge="3">
+          <peaks count="5">
+            <peak mz="740.739" intensity="400.042" area="575.975" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.073" intensity="376.147" area="600.993" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="741.407" intensity="346.179" area="459.132" error="0" frequency="144991" phase="0" decay="0"/>
+            <peak mz="741.741" intensity="0" area="0" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.077" intensity="0" area="0" error="0" frequency="144861" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="758.821" charge="0">
+          <peaks count="3">
+            <peak mz="758.821" intensity="280.11" area="462.515" error="0" frequency="141664" phase="0" decay="0"/>
+            <peak mz="759.824" intensity="0" area="0" error="0" frequency="141477" phase="0" decay="0"/>
+            <peak mz="760.827" intensity="0" area="0" error="0" frequency="141290" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1099.62" charge="2">
+          <peaks count="5">
+            <peak mz="1099.62" intensity="275.271" area="341.072" error="0" frequency="97758.2" phase="0" decay="0"/>
+            <peak mz="1100.12" intensity="354.149" area="640.335" error="0" frequency="97713.6" phase="0" decay="0"/>
+            <peak mz="1100.62" intensity="112.947" area="147.038" error="0" frequency="97669.2" phase="0" decay="0"/>
+            <peak mz="1101.12" intensity="0" area="0" error="0" frequency="97624.7" phase="0" decay="0"/>
+            <peak mz="1101.62" intensity="0" area="0" error="0" frequency="97580.1" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1967" retentionTime="1945.26" observationDuration="1.53924">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="23">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="950.839" area="1612.65" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.27" intensity="169.16" area="229.362" error="0" frequency="259489" phase="0" decay="0"/>
+            <peak mz="415.274" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="418.881" charge="0">
+          <peaks count="3">
+            <peak mz="418.881" intensity="332.112" area="567.889" error="0" frequency="256633" phase="0" decay="0"/>
+            <peak mz="419.884" intensity="0" area="0" error="0" frequency="256020" phase="0" decay="0"/>
+            <peak mz="420.887" intensity="0" area="0" error="0" frequency="255409" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="1">
+          <peaks count="3">
+            <peak mz="424.897" intensity="485.299" area="821.517" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.9" intensity="137.595" area="219.945" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="0">
+          <peaks count="3">
+            <peak mz="427.379" intensity="841.374" area="1445.69" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.382" intensity="0" area="0" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.386" intensity="0" area="0" error="0" frequency="250354" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="432.946" charge="0">
+          <peaks count="3">
+            <peak mz="432.946" intensity="236.884" area="370.709" error="0" frequency="248296" phase="0" decay="0"/>
+            <peak mz="433.948" intensity="0" area="0" error="0" frequency="247722" phase="0" decay="0"/>
+            <peak mz="434.952" intensity="0" area="0" error="0" frequency="247150" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="440.404" charge="0">
+          <peaks count="3">
+            <peak mz="440.404" intensity="267.13" area="496.604" error="0" frequency="244091" phase="0" decay="0"/>
+            <peak mz="441.407" intensity="0" area="0" error="0" frequency="243536" phase="0" decay="0"/>
+            <peak mz="442.409" intensity="0" area="0" error="0" frequency="242984" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.868" charge="0">
+          <peaks count="3">
+            <peak mz="486.868" intensity="354.628" area="618.451" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.871" intensity="0" area="0" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.874" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="487.89" charge="0">
+          <peaks count="3">
+            <peak mz="487.89" intensity="208.632" area="379.757" error="0" frequency="220333" phase="0" decay="0"/>
+            <peak mz="488.893" intensity="0" area="0" error="0" frequency="219881" phase="0" decay="0"/>
+            <peak mz="489.896" intensity="0" area="0" error="0" frequency="219431" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="492.886" charge="0">
+          <peaks count="3">
+            <peak mz="492.886" intensity="343.098" area="564.378" error="0" frequency="218100" phase="0" decay="0"/>
+            <peak mz="493.889" intensity="0" area="0" error="0" frequency="217657" phase="0" decay="0"/>
+            <peak mz="494.892" intensity="0" area="0" error="0" frequency="217216" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="527.88" charge="0">
+          <peaks count="3">
+            <peak mz="527.88" intensity="267.687" area="488.517" error="0" frequency="203641" phase="0" decay="0"/>
+            <peak mz="528.883" intensity="0" area="0" error="0" frequency="203255" phase="0" decay="0"/>
+            <peak mz="529.886" intensity="0" area="0" error="0" frequency="202871" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.856" charge="0">
+          <peaks count="3">
+            <peak mz="554.856" intensity="443.827" area="711.961" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.859" intensity="0" area="0" error="0" frequency="193391" phase="0" decay="0"/>
+            <peak mz="556.862" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="559.798" charge="2">
+          <peaks count="4">
+            <peak mz="559.798" intensity="232.181" area="402.618" error="0" frequency="192030" phase="0" decay="0"/>
+            <peak mz="560.3" intensity="172.734" area="223.151" error="0" frequency="191858" phase="0" decay="0"/>
+            <peak mz="560.801" intensity="0" area="0" error="0" frequency="191687" phase="0" decay="0"/>
+            <peak mz="561.303" intensity="0" area="0" error="0" frequency="191515" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.872" charge="0">
+          <peaks count="3">
+            <peak mz="560.872" intensity="505.908" area="804.534" error="0" frequency="191663" phase="0" decay="0"/>
+            <peak mz="561.875" intensity="0" area="0" error="0" frequency="191320" phase="0" decay="0"/>
+            <peak mz="562.878" intensity="0" area="0" error="0" frequency="190979" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="622.843" charge="0">
+          <peaks count="3">
+            <peak mz="622.843" intensity="350.07" area="581.996" error="0" frequency="172592" phase="0" decay="0"/>
+            <peak mz="623.846" intensity="0" area="0" error="0" frequency="172315" phase="0" decay="0"/>
+            <peak mz="624.849" intensity="0" area="0" error="0" frequency="172038" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="639.833" charge="0">
+          <peaks count="3">
+            <peak mz="639.833" intensity="228.715" area="372.113" error="0" frequency="168009" phase="0" decay="0"/>
+            <peak mz="640.836" intensity="0" area="0" error="0" frequency="167746" phase="0" decay="0"/>
+            <peak mz="641.839" intensity="0" area="0" error="0" frequency="167484" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.349" charge="4">
+          <peaks count="5">
+            <peak mz="659.349" intensity="460.521" area="691.58" error="0" frequency="163036" phase="0" decay="0"/>
+            <peak mz="659.6" intensity="339.469" area="499.212" error="0" frequency="162974" phase="0" decay="0"/>
+            <peak mz="659.85" intensity="243.369" area="391.978" error="0" frequency="162913" phase="0" decay="0"/>
+            <peak mz="660.101" intensity="315.847" area="480.059" error="0" frequency="162851" phase="0" decay="0"/>
+            <peak mz="660.352" intensity="0" area="0" error="0" frequency="162789" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="690.829" charge="0">
+          <peaks count="3">
+            <peak mz="690.829" intensity="423.069" area="813.886" error="0" frequency="155607" phase="0" decay="0"/>
+            <peak mz="691.832" intensity="0" area="0" error="0" frequency="155381" phase="0" decay="0"/>
+            <peak mz="692.835" intensity="0" area="0" error="0" frequency="155156" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="696.848" charge="0">
+          <peaks count="3">
+            <peak mz="696.848" intensity="314.439" area="495.518" error="0" frequency="154263" phase="0" decay="0"/>
+            <peak mz="697.851" intensity="0" area="0" error="0" frequency="154041" phase="0" decay="0"/>
+            <peak mz="698.854" intensity="0" area="0" error="0" frequency="153820" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.412" charge="3">
+          <peaks count="5">
+            <peak mz="733.412" intensity="1710" area="2592.33" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.746" intensity="2655.82" area="4399.13" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.08" intensity="1467.4" area="2145.54" error="0" frequency="146439" phase="0" decay="0"/>
+            <peak mz="734.414" intensity="367.738" area="649.913" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.75" intensity="136.147" area="184.098" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="740.74" charge="3">
+          <peaks count="5">
+            <peak mz="740.74" intensity="192.721" area="284.471" error="0" frequency="145122" phase="0" decay="0"/>
+            <peak mz="741.074" intensity="459.62" area="717.468" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="741.408" intensity="146.001" area="202.737" error="0" frequency="144991" phase="0" decay="0"/>
+            <peak mz="741.742" intensity="0" area="0" error="0" frequency="144926" phase="0" decay="0"/>
+            <peak mz="742.077" intensity="0" area="0" error="0" frequency="144860" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="758.819" charge="0">
+          <peaks count="3">
+            <peak mz="758.819" intensity="263.593" area="429.271" error="0" frequency="141664" phase="0" decay="0"/>
+            <peak mz="759.822" intensity="0" area="0" error="0" frequency="141477" phase="0" decay="0"/>
+            <peak mz="760.825" intensity="0" area="0" error="0" frequency="141291" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="764.834" charge="0">
+          <peaks count="3">
+            <peak mz="764.834" intensity="363.156" area="598.377" error="0" frequency="140550" phase="0" decay="0"/>
+            <peak mz="765.837" intensity="0" area="0" error="0" frequency="140366" phase="0" decay="0"/>
+            <peak mz="766.84" intensity="0" area="0" error="0" frequency="140182" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1627.19" charge="0">
+          <peaks count="4">
+            <peak mz="1627.19" intensity="373.42" area="570.164" error="0" frequency="66061.5" phase="0" decay="0"/>
+            <peak mz="1628.2" intensity="0" area="0" error="0" frequency="66020.8" phase="0" decay="0"/>
+            <peak mz="1629.2" intensity="0" area="0" error="0" frequency="65980.2" phase="0" decay="0"/>
+            <peak mz="1630.2" intensity="0" area="0" error="0" frequency="65939.6" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1972" retentionTime="1949.41" observationDuration="1.53913">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="29">
+        <peakFamily mzMonoisotopic="408.909" charge="0">
+          <peaks count="3">
+            <peak mz="408.909" intensity="213.188" area="403.096" error="0" frequency="262892" phase="0" decay="0"/>
+            <peak mz="409.911" intensity="0" area="0" error="0" frequency="262249" phase="0" decay="0"/>
+            <peak mz="410.915" intensity="0" area="0" error="0" frequency="261608" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="413.266" charge="1">
+          <peaks count="3">
+            <peak mz="413.266" intensity="984.86" area="1723.54" error="0" frequency="260120" phase="0" decay="0"/>
+            <peak mz="414.269" intensity="183.434" area="391.52" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258863" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="418.88" charge="0">
+          <peaks count="3">
+            <peak mz="418.88" intensity="254.899" area="412.43" error="0" frequency="256633" phase="0" decay="0"/>
+            <peak mz="419.883" intensity="0" area="0" error="0" frequency="256021" phase="0" decay="0"/>
+            <peak mz="420.887" intensity="0" area="0" error="0" frequency="255410" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="0">
+          <peaks count="3">
+            <peak mz="424.897" intensity="456.055" area="758.031" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.899" intensity="0" area="0" error="0" frequency="252404" phase="0" decay="0"/>
+            <peak mz="426.903" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.378" charge="1">
+          <peaks count="3">
+            <peak mz="427.378" intensity="671.734" area="1128.35" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.381" intensity="198.679" area="304.122" error="0" frequency="250942" phase="0" decay="0"/>
+            <peak mz="429.385" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="430.915" charge="0">
+          <peaks count="3">
+            <peak mz="430.915" intensity="262.406" area="433.618" error="0" frequency="249466" phase="0" decay="0"/>
+            <peak mz="431.917" intensity="0" area="0" error="0" frequency="248887" phase="0" decay="0"/>
+            <peak mz="432.921" intensity="0" area="0" error="0" frequency="248310" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="437.908" charge="0">
+          <peaks count="3">
+            <peak mz="437.908" intensity="284.68" area="480.453" error="0" frequency="245482" phase="0" decay="0"/>
+            <peak mz="438.911" intensity="0" area="0" error="0" frequency="244921" phase="0" decay="0"/>
+            <peak mz="439.914" intensity="0" area="0" error="0" frequency="244363" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="440.404" charge="0">
+          <peaks count="3">
+            <peak mz="440.404" intensity="350.932" area="532.953" error="0" frequency="244091" phase="0" decay="0"/>
+            <peak mz="441.407" intensity="0" area="0" error="0" frequency="243536" phase="0" decay="0"/>
+            <peak mz="442.409" intensity="0" area="0" error="0" frequency="242984" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="441.887" charge="0">
+          <peaks count="3">
+            <peak mz="441.887" intensity="233.199" area="387.705" error="0" frequency="243272" phase="0" decay="0"/>
+            <peak mz="442.89" intensity="0" area="0" error="0" frequency="242721" phase="0" decay="0"/>
+            <peak mz="443.893" intensity="0" area="0" error="0" frequency="242172" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.868" charge="0">
+          <peaks count="3">
+            <peak mz="486.868" intensity="350.168" area="588.932" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.87" intensity="0" area="0" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.873" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="487.89" charge="0">
+          <peaks count="3">
+            <peak mz="487.89" intensity="238.944" area="432.649" error="0" frequency="220333" phase="0" decay="0"/>
+            <peak mz="488.893" intensity="0" area="0" error="0" frequency="219882" phase="0" decay="0"/>
+            <peak mz="489.896" intensity="0" area="0" error="0" frequency="219431" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="492.885" charge="0">
+          <peaks count="3">
+            <peak mz="492.885" intensity="437.217" area="702.389" error="0" frequency="218100" phase="0" decay="0"/>
+            <peak mz="493.888" intensity="0" area="0" error="0" frequency="217657" phase="0" decay="0"/>
+            <peak mz="494.891" intensity="0" area="0" error="0" frequency="217216" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="498.901" charge="0">
+          <peaks count="3">
+            <peak mz="498.901" intensity="232.996" area="386.175" error="0" frequency="215470" phase="0" decay="0"/>
+            <peak mz="499.904" intensity="0" area="0" error="0" frequency="215038" phase="0" decay="0"/>
+            <peak mz="500.907" intensity="0" area="0" error="0" frequency="214607" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="548.838" charge="0">
+          <peaks count="3">
+            <peak mz="548.838" intensity="265.991" area="427.019" error="0" frequency="195865" phase="0" decay="0"/>
+            <peak mz="549.841" intensity="0" area="0" error="0" frequency="195508" phase="0" decay="0"/>
+            <peak mz="550.844" intensity="0" area="0" error="0" frequency="195152" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.855" charge="0">
+          <peaks count="3">
+            <peak mz="554.855" intensity="378.97" area="639.893" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.858" intensity="0" area="0" error="0" frequency="193392" phase="0" decay="0"/>
+            <peak mz="556.861" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.874" charge="0">
+          <peaks count="3">
+            <peak mz="560.874" intensity="369.338" area="657.798" error="0" frequency="191662" phase="0" decay="0"/>
+            <peak mz="561.877" intensity="0" area="0" error="0" frequency="191320" phase="0" decay="0"/>
+            <peak mz="562.88" intensity="0" area="0" error="0" frequency="190979" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="616.827" charge="0">
+          <peaks count="3">
+            <peak mz="616.827" intensity="220.295" area="348.59" error="0" frequency="174276" phase="0" decay="0"/>
+            <peak mz="617.83" intensity="0" area="0" error="0" frequency="173993" phase="0" decay="0"/>
+            <peak mz="618.833" intensity="0" area="0" error="0" frequency="173711" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="622.843" charge="0">
+          <peaks count="3">
+            <peak mz="622.843" intensity="408.403" area="697.875" error="0" frequency="172592" phase="0" decay="0"/>
+            <peak mz="623.846" intensity="0" area="0" error="0" frequency="172315" phase="0" decay="0"/>
+            <peak mz="624.849" intensity="0" area="0" error="0" frequency="172038" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="628.856" charge="0">
+          <peaks count="3">
+            <peak mz="628.856" intensity="226.019" area="436.161" error="0" frequency="170942" phase="0" decay="0"/>
+            <peak mz="629.859" intensity="0" area="0" error="0" frequency="170670" phase="0" decay="0"/>
+            <peak mz="630.862" intensity="0" area="0" error="0" frequency="170398" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="636.139" charge="0">
+          <peaks count="3">
+            <peak mz="636.139" intensity="237.773" area="454.867" error="0" frequency="168985" phase="0" decay="0"/>
+            <peak mz="637.142" intensity="0" area="0" error="0" frequency="168719" phase="0" decay="0"/>
+            <peak mz="638.145" intensity="0" area="0" error="0" frequency="168454" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="639.832" charge="0">
+          <peaks count="3">
+            <peak mz="639.832" intensity="180.182" area="339.386" error="0" frequency="168010" phase="0" decay="0"/>
+            <peak mz="640.834" intensity="0" area="0" error="0" frequency="167747" phase="0" decay="0"/>
+            <peak mz="641.838" intensity="0" area="0" error="0" frequency="167485" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="645.851" charge="0">
+          <peaks count="3">
+            <peak mz="645.851" intensity="306.397" area="525.286" error="0" frequency="166444" phase="0" decay="0"/>
+            <peak mz="646.854" intensity="0" area="0" error="0" frequency="166186" phase="0" decay="0"/>
+            <peak mz="647.857" intensity="0" area="0" error="0" frequency="165929" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.348" charge="4">
+          <peaks count="5">
+            <peak mz="659.348" intensity="563.602" area="958.477" error="0" frequency="163037" phase="0" decay="0"/>
+            <peak mz="659.598" intensity="465.376" area="606.369" error="0" frequency="162975" phase="0" decay="0"/>
+            <peak mz="659.849" intensity="116.975" area="168.468" error="0" frequency="162913" phase="0" decay="0"/>
+            <peak mz="660.1" intensity="373.054" area="580.34" error="0" frequency="162851" phase="0" decay="0"/>
+            <peak mz="660.351" intensity="0" area="0" error="0" frequency="162789" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="690.832" charge="0">
+          <peaks count="3">
+            <peak mz="690.832" intensity="327.95" area="503.652" error="0" frequency="155606" phase="0" decay="0"/>
+            <peak mz="691.834" intensity="0" area="0" error="0" frequency="155381" phase="0" decay="0"/>
+            <peak mz="692.838" intensity="0" area="0" error="0" frequency="155156" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="696.846" charge="0">
+          <peaks count="3">
+            <peak mz="696.846" intensity="293.648" area="444.353" error="0" frequency="154263" phase="0" decay="0"/>
+            <peak mz="697.849" intensity="0" area="0" error="0" frequency="154042" phase="0" decay="0"/>
+            <peak mz="698.852" intensity="0" area="0" error="0" frequency="153821" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.414" charge="3">
+          <peaks count="5">
+            <peak mz="733.414" intensity="671.905" area="984.76" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.748" intensity="1162.97" area="2092.28" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.082" intensity="794.962" area="1026.66" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.416" intensity="473.233" area="723.68" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.751" intensity="0" area="0" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="748.327" charge="0">
+          <peaks count="3">
+            <peak mz="748.327" intensity="197.509" area="361.767" error="0" frequency="143651" phase="0" decay="0"/>
+            <peak mz="749.33" intensity="0" area="0" error="0" frequency="143458" phase="0" decay="0"/>
+            <peak mz="750.333" intensity="0" area="0" error="0" frequency="143267" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="832.823" charge="0">
+          <peaks count="3">
+            <peak mz="832.823" intensity="252.138" area="427.934" error="0" frequency="129076" phase="0" decay="0"/>
+            <peak mz="833.826" intensity="0" area="0" error="0" frequency="128921" phase="0" decay="0"/>
+            <peak mz="834.83" intensity="0" area="0" error="0" frequency="128766" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1627.2" charge="0">
+          <peaks count="4">
+            <peak mz="1627.2" intensity="285.797" area="472.751" error="0" frequency="66061.3" phase="0" decay="0"/>
+            <peak mz="1628.2" intensity="0" area="0" error="0" frequency="66020.7" phase="0" decay="0"/>
+            <peak mz="1629.2" intensity="0" area="0" error="0" frequency="65980.1" phase="0" decay="0"/>
+            <peak mz="1630.2" intensity="0" area="0" error="0" frequency="65939.5" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+    <scan scanNumber="1976" retentionTime="1952.45" observationDuration="1.53924">
+      <calibrationParameters A="1.075e+008" B="-3.455e+008"/>
+      <peakFamilies count="42">
+        <peakFamily mzMonoisotopic="413.267" charge="1">
+          <peaks count="3">
+            <peak mz="413.267" intensity="806.676" area="1337.56" error="0" frequency="260119" phase="0" decay="0"/>
+            <peak mz="414.269" intensity="134.348" area="190.786" error="0" frequency="259490" phase="0" decay="0"/>
+            <peak mz="415.273" intensity="0" area="0" error="0" frequency="258862" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="418.88" charge="0">
+          <peaks count="3">
+            <peak mz="418.88" intensity="252.942" area="416.167" error="0" frequency="256634" phase="0" decay="0"/>
+            <peak mz="419.883" intensity="0" area="0" error="0" frequency="256021" phase="0" decay="0"/>
+            <peak mz="420.886" intensity="0" area="0" error="0" frequency="255410" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="424.897" charge="0">
+          <peaks count="3">
+            <peak mz="424.897" intensity="384.518" area="630.545" error="0" frequency="252999" phase="0" decay="0"/>
+            <peak mz="425.9" intensity="0" area="0" error="0" frequency="252403" phase="0" decay="0"/>
+            <peak mz="426.904" intensity="0" area="0" error="0" frequency="251810" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="427.379" charge="1">
+          <peaks count="3">
+            <peak mz="427.379" intensity="797.933" area="1347.5" error="0" frequency="251530" phase="0" decay="0"/>
+            <peak mz="428.381" intensity="173.826" area="251.593" error="0" frequency="250941" phase="0" decay="0"/>
+            <peak mz="429.385" intensity="0" area="0" error="0" frequency="250355" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="430.914" charge="0">
+          <peaks count="3">
+            <peak mz="430.914" intensity="191.466" area="332.938" error="0" frequency="249467" phase="0" decay="0"/>
+            <peak mz="431.917" intensity="0" area="0" error="0" frequency="248887" phase="0" decay="0"/>
+            <peak mz="432.92" intensity="0" area="0" error="0" frequency="248310" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="432.946" charge="0">
+          <peaks count="3">
+            <peak mz="432.946" intensity="164.443" area="269.45" error="0" frequency="248296" phase="0" decay="0"/>
+            <peak mz="433.948" intensity="0" area="0" error="0" frequency="247722" phase="0" decay="0"/>
+            <peak mz="434.952" intensity="0" area="0" error="0" frequency="247150" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="437.908" charge="0">
+          <peaks count="3">
+            <peak mz="437.908" intensity="279.895" area="430.104" error="0" frequency="245482" phase="0" decay="0"/>
+            <peak mz="438.911" intensity="0" area="0" error="0" frequency="244921" phase="0" decay="0"/>
+            <peak mz="439.914" intensity="0" area="0" error="0" frequency="244363" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="440.404" charge="0">
+          <peaks count="3">
+            <peak mz="440.404" intensity="295.036" area="482.393" error="0" frequency="244091" phase="0" decay="0"/>
+            <peak mz="441.407" intensity="0" area="0" error="0" frequency="243536" phase="0" decay="0"/>
+            <peak mz="442.41" intensity="0" area="0" error="0" frequency="242984" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="449.36" charge="0">
+          <peaks count="3">
+            <peak mz="449.36" intensity="234.639" area="377.185" error="0" frequency="239226" phase="0" decay="0"/>
+            <peak mz="450.363" intensity="0" area="0" error="0" frequency="238693" phase="0" decay="0"/>
+            <peak mz="451.366" intensity="0" area="0" error="0" frequency="238163" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="453.891" charge="0">
+          <peaks count="3">
+            <peak mz="453.891" intensity="211.029" area="318.9" error="0" frequency="236838" phase="0" decay="0"/>
+            <peak mz="454.893" intensity="0" area="0" error="0" frequency="236316" phase="0" decay="0"/>
+            <peak mz="455.896" intensity="0" area="0" error="0" frequency="235796" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="459.906" charge="0">
+          <peaks count="3">
+            <peak mz="459.906" intensity="224.725" area="376.027" error="0" frequency="233740" phase="0" decay="0"/>
+            <peak mz="460.909" intensity="0" area="0" error="0" frequency="233232" phase="0" decay="0"/>
+            <peak mz="461.912" intensity="0" area="0" error="0" frequency="232725" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="486.868" charge="0">
+          <peaks count="3">
+            <peak mz="486.868" intensity="357.825" area="566.855" error="0" frequency="220796" phase="0" decay="0"/>
+            <peak mz="487.871" intensity="0" area="0" error="0" frequency="220342" phase="0" decay="0"/>
+            <peak mz="488.874" intensity="0" area="0" error="0" frequency="219890" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="487.892" charge="0">
+          <peaks count="3">
+            <peak mz="487.892" intensity="236.468" area="419.974" error="0" frequency="220333" phase="0" decay="0"/>
+            <peak mz="488.894" intensity="0" area="0" error="0" frequency="219881" phase="0" decay="0"/>
+            <peak mz="489.898" intensity="0" area="0" error="0" frequency="219430" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="492.883" charge="0">
+          <peaks count="3">
+            <peak mz="492.883" intensity="361.796" area="657.995" error="0" frequency="218101" phase="0" decay="0"/>
+            <peak mz="493.885" intensity="0" area="0" error="0" frequency="217659" phase="0" decay="0"/>
+            <peak mz="494.888" intensity="0" area="0" error="0" frequency="217217" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="509.876" charge="0">
+          <peaks count="3">
+            <peak mz="509.876" intensity="155.908" area="274.046" error="0" frequency="210832" phase="0" decay="0"/>
+            <peak mz="510.879" intensity="0" area="0" error="0" frequency="210419" phase="0" decay="0"/>
+            <peak mz="511.882" intensity="0" area="0" error="0" frequency="210006" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="554.856" charge="0">
+          <peaks count="3">
+            <peak mz="554.856" intensity="369.878" area="549.194" error="0" frequency="193741" phase="0" decay="0"/>
+            <peak mz="555.859" intensity="0" area="0" error="0" frequency="193391" phase="0" decay="0"/>
+            <peak mz="556.862" intensity="0" area="0" error="0" frequency="193043" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="560.871" charge="0">
+          <peaks count="3">
+            <peak mz="560.871" intensity="410.313" area="750.409" error="0" frequency="191663" phase="0" decay="0"/>
+            <peak mz="561.874" intensity="0" area="0" error="0" frequency="191321" phase="0" decay="0"/>
+            <peak mz="562.877" intensity="0" area="0" error="0" frequency="190980" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="566.889" charge="0">
+          <peaks count="3">
+            <peak mz="566.889" intensity="159.612" area="281.491" error="0" frequency="189628" phase="0" decay="0"/>
+            <peak mz="567.892" intensity="0" area="0" error="0" frequency="189293" phase="0" decay="0"/>
+            <peak mz="568.895" intensity="0" area="0" error="0" frequency="188959" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="571.846" charge="0">
+          <peaks count="3">
+            <peak mz="571.846" intensity="169.685" area="297.391" error="0" frequency="187984" phase="0" decay="0"/>
+            <peak mz="572.849" intensity="0" area="0" error="0" frequency="187655" phase="0" decay="0"/>
+            <peak mz="573.852" intensity="0" area="0" error="0" frequency="187327" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="577.862" charge="0">
+          <peaks count="3">
+            <peak mz="577.862" intensity="232.312" area="366.526" error="0" frequency="186027" phase="0" decay="0"/>
+            <peak mz="578.865" intensity="0" area="0" error="0" frequency="185705" phase="0" decay="0"/>
+            <peak mz="579.868" intensity="0" area="0" error="0" frequency="185384" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="622.843" charge="0">
+          <peaks count="3">
+            <peak mz="622.843" intensity="284.833" area="461.779" error="0" frequency="172592" phase="0" decay="0"/>
+            <peak mz="623.846" intensity="0" area="0" error="0" frequency="172315" phase="0" decay="0"/>
+            <peak mz="624.849" intensity="0" area="0" error="0" frequency="172038" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="628.861" charge="0">
+          <peaks count="3">
+            <peak mz="628.861" intensity="384.788" area="644.773" error="0" frequency="170941" phase="0" decay="0"/>
+            <peak mz="629.863" intensity="0" area="0" error="0" frequency="170669" phase="0" decay="0"/>
+            <peak mz="630.866" intensity="0" area="0" error="0" frequency="170397" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="630.529" charge="0">
+          <peaks count="3">
+            <peak mz="630.529" intensity="176.892" area="317.528" error="0" frequency="170489" phase="0" decay="0"/>
+            <peak mz="631.531" intensity="0" area="0" error="0" frequency="170218" phase="0" decay="0"/>
+            <peak mz="632.534" intensity="0" area="0" error="0" frequency="169948" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="635.645" charge="0">
+          <peaks count="3">
+            <peak mz="635.645" intensity="173.217" area="323.275" error="0" frequency="169116" phase="0" decay="0"/>
+            <peak mz="636.647" intensity="0" area="0" error="0" frequency="168850" phase="0" decay="0"/>
+            <peak mz="637.65" intensity="0" area="0" error="0" frequency="168584" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.35" charge="4">
+          <peaks count="5">
+            <peak mz="659.35" intensity="332.164" area="481.148" error="0" frequency="163036" phase="0" decay="0"/>
+            <peak mz="659.601" intensity="338.55" area="503.788" error="0" frequency="162974" phase="0" decay="0"/>
+            <peak mz="659.851" intensity="455.078" area="778.296" error="0" frequency="162912" phase="0" decay="0"/>
+            <peak mz="660.102" intensity="203.949" area="309.611" error="0" frequency="162850" phase="0" decay="0"/>
+            <peak mz="660.353" intensity="227.116" area="296.945" error="0" frequency="162789" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="659.6" charge="4">
+          <peaks count="5">
+            <peak mz="659.6" intensity="338.55" area="425.218" error="0" frequency="162974" phase="0" decay="0"/>
+            <peak mz="659.85" intensity="485.188" area="716.403" error="0" frequency="162913" phase="0" decay="0"/>
+            <peak mz="660.101" intensity="203.949" area="355.839" error="0" frequency="162851" phase="0" decay="0"/>
+            <peak mz="660.352" intensity="227.116" area="383.272" error="0" frequency="162789" phase="0" decay="0"/>
+            <peak mz="660.603" intensity="0" area="0" error="0" frequency="162727" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="673.345" charge="2">
+          <peaks count="4">
+            <peak mz="673.345" intensity="529.967" area="814.769" error="0" frequency="159647" phase="0" decay="0"/>
+            <peak mz="673.847" intensity="446.644" area="647.425" error="0" frequency="159529" phase="0" decay="0"/>
+            <peak mz="674.348" intensity="0" area="0" error="0" frequency="159410" phase="0" decay="0"/>
+            <peak mz="674.85" intensity="0" area="0" error="0" frequency="159292" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="684.813" charge="0">
+          <peaks count="3">
+            <peak mz="684.813" intensity="171.187" area="266.371" error="0" frequency="156974" phase="0" decay="0"/>
+            <peak mz="685.816" intensity="0" area="0" error="0" frequency="156744" phase="0" decay="0"/>
+            <peak mz="686.819" intensity="0" area="0" error="0" frequency="156515" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="690.829" charge="0">
+          <peaks count="3">
+            <peak mz="690.829" intensity="434.854" area="705.928" error="0" frequency="155607" phase="0" decay="0"/>
+            <peak mz="691.832" intensity="0" area="0" error="0" frequency="155381" phase="0" decay="0"/>
+            <peak mz="692.835" intensity="0" area="0" error="0" frequency="155156" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="696.849" charge="0">
+          <peaks count="3">
+            <peak mz="696.849" intensity="194.76" area="341.464" error="0" frequency="154263" phase="0" decay="0"/>
+            <peak mz="697.852" intensity="0" area="0" error="0" frequency="154041" phase="0" decay="0"/>
+            <peak mz="698.855" intensity="0" area="0" error="0" frequency="153820" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="707.82" charge="0">
+          <peaks count="3">
+            <peak mz="707.82" intensity="194.786" area="298.38" error="0" frequency="151872" phase="0" decay="0"/>
+            <peak mz="708.823" intensity="0" area="0" error="0" frequency="151657" phase="0" decay="0"/>
+            <peak mz="709.826" intensity="0" area="0" error="0" frequency="151442" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="713.833" charge="0">
+          <peaks count="3">
+            <peak mz="713.833" intensity="189.806" area="369.129" error="0" frequency="150592" phase="0" decay="0"/>
+            <peak mz="714.835" intensity="0" area="0" error="0" frequency="150381" phase="0" decay="0"/>
+            <peak mz="715.839" intensity="0" area="0" error="0" frequency="150170" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="733.413" charge="3">
+          <peaks count="5">
+            <peak mz="733.413" intensity="579.045" area="1002.05" error="0" frequency="146572" phase="0" decay="0"/>
+            <peak mz="733.747" intensity="538.921" area="868.819" error="0" frequency="146505" phase="0" decay="0"/>
+            <peak mz="734.081" intensity="330.861" area="423.566" error="0" frequency="146438" phase="0" decay="0"/>
+            <peak mz="734.415" intensity="231.65" area="381.94" error="0" frequency="146372" phase="0" decay="0"/>
+            <peak mz="734.751" intensity="89.8572" area="135.452" error="0" frequency="146305" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="741.073" charge="0">
+          <peaks count="3">
+            <peak mz="741.073" intensity="163.94" area="273.785" error="0" frequency="145057" phase="0" decay="0"/>
+            <peak mz="742.076" intensity="0" area="0" error="0" frequency="144861" phase="0" decay="0"/>
+            <peak mz="743.079" intensity="0" area="0" error="0" frequency="144665" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="752.8" charge="0">
+          <peaks count="3">
+            <peak mz="752.8" intensity="213.701" area="371.498" error="0" frequency="142797" phase="0" decay="0"/>
+            <peak mz="753.803" intensity="0" area="0" error="0" frequency="142607" phase="0" decay="0"/>
+            <peak mz="754.806" intensity="0" area="0" error="0" frequency="142417" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="758.818" charge="0">
+          <peaks count="3">
+            <peak mz="758.818" intensity="187.679" area="328.154" error="0" frequency="141665" phase="0" decay="0"/>
+            <peak mz="759.821" intensity="0" area="0" error="0" frequency="141478" phase="0" decay="0"/>
+            <peak mz="760.824" intensity="0" area="0" error="0" frequency="141291" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="879.134" charge="0">
+          <peaks count="3">
+            <peak mz="879.134" intensity="208.109" area="352.34" error="0" frequency="122276" phase="0" decay="0"/>
+            <peak mz="880.137" intensity="0" area="0" error="0" frequency="122137" phase="0" decay="0"/>
+            <peak mz="881.139" intensity="0" area="0" error="0" frequency="121998" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="894.79" charge="0">
+          <peaks count="3">
+            <peak mz="894.79" intensity="204.724" area="357.095" error="0" frequency="120137" phase="0" decay="0"/>
+            <peak mz="895.793" intensity="0" area="0" error="0" frequency="120002" phase="0" decay="0"/>
+            <peak mz="896.795" intensity="0" area="0" error="0" frequency="119868" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="947.046" charge="0">
+          <peaks count="3">
+            <peak mz="947.046" intensity="164.889" area="287.548" error="0" frequency="113508" phase="0" decay="0"/>
+            <peak mz="948.049" intensity="0" area="0" error="0" frequency="113388" phase="0" decay="0"/>
+            <peak mz="949.052" intensity="0" area="0" error="0" frequency="113268" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1122.09" charge="0">
+          <peaks count="4">
+            <peak mz="1122.09" intensity="174.042" area="318.285" error="0" frequency="95800.2" phase="0" decay="0"/>
+            <peak mz="1123.09" intensity="0" area="0" error="0" frequency="95714.6" phase="0" decay="0"/>
+            <peak mz="1124.1" intensity="0" area="0" error="0" frequency="95629.2" phase="0" decay="0"/>
+            <peak mz="1125.1" intensity="0" area="0" error="0" frequency="95543.9" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1345.69" charge="1">
+          <peaks count="4">
+            <peak mz="1345.69" intensity="381.19" area="669.339" error="0" frequency="79881.4" phase="0" decay="0"/>
+            <peak mz="1346.69" intensity="186.838" area="298.493" error="0" frequency="79821.9" phase="0" decay="0"/>
+            <peak mz="1347.7" intensity="0" area="0" error="0" frequency="79762.5" phase="0" decay="0"/>
+            <peak mz="1348.7" intensity="0" area="0" error="0" frequency="79703.2" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+        <peakFamily mzMonoisotopic="1627.22" charge="0">
+          <peaks count="4">
+            <peak mz="1627.22" intensity="383.139" area="617.525" error="0" frequency="66060.6" phase="0" decay="0"/>
+            <peak mz="1628.22" intensity="0" area="0" error="0" frequency="66019.9" phase="0" decay="0"/>
+            <peak mz="1629.22" intensity="0" area="0" error="0" frequency="65979.3" phase="0" decay="0"/>
+            <peak mz="1630.22" intensity="0" area="0" error="0" frequency="65938.7" phase="0" decay="0"/>
+          </peaks>
+        </peakFamily>
+      </peakFamilies>
+    </scan>
+  </scans>
+</peakdata>

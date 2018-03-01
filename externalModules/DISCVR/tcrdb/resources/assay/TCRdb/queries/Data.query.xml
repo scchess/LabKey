@@ -1,0 +1,135 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Data" tableDbType="TABLE" useColumnOrder="true">
+                <javaCustomizer class="org.labkey.laboratory.query.DefaultAssayCustomizer" />
+                <columns>
+                    <column columnName="subjectId">
+                    </column>
+                    <column columnName="date">
+                        <description>The date the sample was collected</description>
+                    </column>
+                    <column columnName="libraryId">
+                        <fk>
+                            <fkDbSchema>tcrdb</fkDbSchema>
+                            <fkTable>mixcr_libraries</fkTable>
+                            <fkColumnName>rowid</fkColumnName>
+                        </fk>
+                        <measure>false</measure>
+                        <dimension>false</dimension>
+                    </column>
+                    <column columnName="sampleType">
+                        <fk>
+                            <fkDbSchema>laboratory</fkDbSchema>
+                            <fkTable>sample_type</fkTable>
+                            <fkColumnName>type</fkColumnName>
+                        </fk>
+                        <measure>false</measure>
+                        <dimension>false</dimension>
+                    </column>
+                    <column columnName="alignmentId">
+                        <fk>
+                            <fkDbSchema>exp</fkDbSchema>
+                            <fkTable>data</fkTable>
+                            <fkColumnName>RowId</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="clonesFile">
+                        <columnTitle>Clones File</columnTitle>
+                        <fk>
+                            <fkDbSchema>exp</fkDbSchema>
+                            <fkTable>data</fkTable>
+                            <fkColumnName>RowId</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="vdjFile">
+                        <columnTitle>VDJ File</columnTitle>
+                        <fk>
+                            <fkDbSchema>exp</fkDbSchema>
+                            <fkTable>data</fkTable>
+                            <fkColumnName>RowId</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="stimulation">
+                        <!--<fk>-->
+                            <!--<fkDbSchema>laboratories</fkDbSchema>-->
+                            <!--<fkTable>sample_type</fkTable>-->
+                            <!--<fkColumnName>types</fkColumnName>-->
+                        <!--</fk>-->
+                        <measure>false</measure>
+                        <dimension>true</dimension>
+                    </column>
+                    <column columnName="analysisId">
+                        <fk>
+                            <fkDbSchema>sequenceanalysis</fkDbSchema>
+                            <fkTable>sequence_analyses</fkTable>
+                            <fkColumnName>rowid</fkColumnName>
+                            <fkDisplayColumnName>rowid</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="pipelineRunId">
+                        <columnTitle>Run Id</columnTitle>
+                        <fk>
+                            <fkDbSchema>exp</fkDbSchema>
+                            <fkTable>runs</fkTable>
+                            <fkColumnName>RowId</fkColumnName>
+                            <fkDisplayColumnName>RowId</fkDisplayColumnName>
+                        </fk>
+                        <url>/experiment/showRunGraphDetail.view?rowId=${pipelineRunId}</url>
+                    </column>
+                    <column columnName="comment">
+                        <inputType>textarea</inputType>
+                        <measure>false</measure>
+                        <dimension>false</dimension>
+                    </column>
+                    <column columnName="qcflag">
+                        <columnTitle>QC Flags</columnTitle>
+                        <measure>false</measure>
+                        <dimension>false</dimension>
+                    </column>
+                    <column columnName="well96" wrappedColumnName="well">
+                        <isUnselectable>true</isUnselectable>
+                        <shownInInsertView>false</shownInInsertView>
+                        <shownInUpdateView>false</shownInUpdateView>
+                        <columnTitle>Well Position in 96-well Plate</columnTitle>
+                        <fk>
+                            <fkDbSchema>laboratory</fkDbSchema>
+                            <fkTable>96well_plate</fkTable>
+                            <fkColumnName>well</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="disabled">
+                        <conditionalFormats>
+                            <conditionalFormat>
+                                <backgroundColor>FF0000</backgroundColor>
+                                <filters>
+                                    <filter operator="eq" value="true"/>
+                                </filters>
+                            </conditionalFormat>
+                        </conditionalFormats>
+                    </column>
+                </columns>
+                <buttonBarOptions position="both" includeStandardButtons="true">
+                    <includeScript>/laboratory.context</includeScript>
+                    <includeScript>/laboratory/assayButtons.js</includeScript>
+                    <includeScript>/tcrdb/window/ChangeStatusWindow.js</includeScript>
+                    <includeScript>/tcrdb/window/ExportDataWindow.js</includeScript>
+                    <item text="More Actions" insertAfter="last">
+                        <item text="View Runs">
+                            <onClick>Laboratory.Assay.viewRunsBtn(dataRegion, 'Data')</onClick>
+                        </item>
+                        <item text="Manage Assay">
+                            <onClick>Laboratory.Assay.manageAssayBtn(dataRegion, 'Data')</onClick>
+                        </item>
+                        <item text="Change Status">
+                            <onClick>TCRdb.window.ChangeStatusWindow.buttonHandler(dataRegionName);</onClick>
+                        </item>
+                        <item text="View Alignments">
+                            <onClick>TCRdb.window.ExportDataWindow.viewAlignmentHandler(dataRegionName, arguments[0] ? arguments[0].ownerCt : null);</onClick>
+                        </item>
+                    </item>
+                </buttonBarOptions>
+            </table>
+        </tables>
+    </metadata>
+</query>

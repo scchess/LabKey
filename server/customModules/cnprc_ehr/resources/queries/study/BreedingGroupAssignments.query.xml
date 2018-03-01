@@ -1,0 +1,26 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="breedingGroupAssignments" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Assignment Date</columnTitle>
+                    </column>
+                    <column columnName="groupCode">
+                        <columnTitle>Breeding Group Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>breeding_group</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="enddate">
+                        <columnTitle>Release Date</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

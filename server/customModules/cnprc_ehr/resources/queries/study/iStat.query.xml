@@ -1,0 +1,59 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="iStat" tableDbType="TABLE" useColumnOrder="true">
+                <tableUrl />
+                <tableTitle>iStat</tableTitle>
+                <columns>
+                    <column columnName="lsid">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="Id">
+
+                    </column>
+                    <column columnName="date">
+
+                    </column>
+                    <column columnName="enddate">
+                        <isHidden>false</isHidden>
+                        <shownInDetailsView>true</shownInDetailsView>
+                    </column>
+                    <column columnName="testid">
+                        <columnTitle>Test Id</columnTitle>
+                        <displayWidth>120</displayWidth>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>istat_tests</fkTable>
+                            <fkColumnName>testid</fkColumnName>
+                            <fkDisplayColumnName useRawValue="true"/>
+                        </fk>
+                    </column>
+                    <column columnName="projectCode">
+                        <columnTitle>Project Code</columnTitle>
+                    </column>
+                    <column columnName="result">
+                        <columnTitle>Result</columnTitle>
+                    </column>
+                    <column columnName="resultOORIndicator">
+                        <columnTitle>Result OOR Indicator</columnTitle>
+                    </column>
+                    <column columnName="resultNumber">
+                        <columnTitle>Result Number</columnTitle>
+                    </column>
+                    <column columnName="resultInRange">
+                        <columnTitle>Result In Range</columnTitle>
+                    </column>
+                    <column columnName="units">
+                        <columnTitle>Units</columnTitle>
+                    </column>
+                    <column columnName="qualresult">
+                        <columnTitle>Qual Result</columnTitle>
+                    </column>
+                    <column columnName="method">
+                        <columnTitle>Method</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

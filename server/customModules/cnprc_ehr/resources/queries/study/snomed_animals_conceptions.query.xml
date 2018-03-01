@@ -1,0 +1,82 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="snomed_animals_conceptions" tableDbType="TABLE">
+                <!--<javaCustomizer class="org.labkey.cnprc_ehr.table.CNPRC_EHRCustomizer" />-->
+                <insertUrl />
+                <importUrl />
+                <updateUrl />
+                <deleteUrl />
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <formatString>Date</formatString>
+                    </column>
+                    <column columnName="infoQualifier">
+                        <columnTitle>Info Qual</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>snomed_qualifiers</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="snoPk">
+                        <columnTitle>SNOMED Image</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>image_snomed</fkTable>
+                            <fkColumnName>snomed_pk</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="biopsyFk">
+                        <columnTitle>Biopsy</columnTitle>
+                        <url>/query/executeQuery.view?schemaName=study&amp;
+                            query.queryName=Biopsies&amp;
+                            query.prPk~eq=${biopsyFk}
+                        </url>
+                    </column>
+                    <column columnName="necropsyFk">
+                        <columnTitle>Necropsy</columnTitle>
+                        <url>/query/executeQuery.view?schemaName=study&amp;
+                            query.queryName=Necropsies&amp;
+                            query.prPk~eq=${necropsyFk}
+                        </url>
+                    </column>
+                    <column columnName="treatmentFk">
+                        <columnTitle>Treatment</columnTitle>
+                        <url>/query/executeQuery.view?schemaName=study&amp;
+                            query.queryName=Treatment Orders&amp;
+                            query.treatmentPk~eq=${treatmentFk}
+                        </url>
+                    </column>
+                    <column columnName="foreignSeq">
+                        <columnTitle>Foreign Seq</columnTitle>
+                    </column>
+                    <column columnName="snoSeq">
+                        <columnTitle>SNOMED Seq</columnTitle>
+                    </column>
+                    <column columnName="timeQualifier">
+                        <columnTitle>Time Qualifier</columnTitle>
+                    </column>
+                    <column columnName="syntacticLink">
+                        <columnTitle>Syntactic Link</columnTitle>
+                    </column>
+                    <column columnName="subjectType">
+                        <columnTitle>Subject Type</columnTitle>
+                    </column>
+                    <column columnName="code/code"/>
+                    <column columnName="code">
+                        <columnTitle>SNOMED Code Meaning</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>snomed</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                            <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

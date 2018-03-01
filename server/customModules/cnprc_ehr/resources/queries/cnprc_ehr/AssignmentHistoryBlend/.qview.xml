@@ -1,0 +1,15 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="assigned"/>
+        <column name="released"/>
+        <column name="payorId"/>
+        <column name="primaryProject"/>
+        <column name="secondaryProjects"/>
+        <column name="colonyCode"/>
+        <column name="groupCode"/>
+    </columns>
+    <sorts>
+        <sort column="assigned" descending="true" />
+    </sorts>
+</customView>

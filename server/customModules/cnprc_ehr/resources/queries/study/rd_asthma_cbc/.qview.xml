@@ -1,0 +1,33 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="date"/>
+        <column name="seq_pk"/>
+        <column name="remark"/>
+        <column name="total_wbc"/>
+        <column name="rbc"/>
+        <column name="hgb"/>
+        <column name="hct"/>
+        <column name="mcv"/>
+        <column name="mch"/>
+        <column name="mchc"/>
+        <column name="platelets"/>
+        <column name="plas_prot"/>
+        <column name="fibrogen"/>
+        <column name="neut_band"/>
+        <column name="neut_band_per"/>
+        <column name="neut_seg"/>
+        <column name="neut_seg_per"/>
+        <column name="lymphocyte"/>
+        <column name="lymphocyte_per"/>
+        <column name="monocyte"/>
+        <column name="monocyte_per"/>
+        <column name="eosinophil"/>
+        <column name="eosinophil_per"/>
+        <column name="basophil"/>
+        <column name="basophil_per"/>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

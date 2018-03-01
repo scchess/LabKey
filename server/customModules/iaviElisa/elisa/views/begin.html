@@ -1,0 +1,100 @@
+<table width="100%">
+    <tr>
+        <td valign="top" width="20%">
+            <table class="labkey-wp">
+                <tr class="labkey-wp-header"><th title="Studies" class="labkey-wp-title-left">Results</th><th class="labkey-wp-title-right">&nbsp;</th></tr>
+<tr ><td class="labkey-wp-body" colspan="2">
+<div style="font-size: larger;">
+    Click on any of the studies for a summary of Elisa results for the study.<br>
+    <div id="study_summaries"></div>
+</div>
+
+</td></tr></table>
+
+        </td>
+        <td width="80%" valign="top" id="webPart">
+            <table class="labkey-wp">
+                <tr class="labkey-wp-header"><th title="Studies" class="labkey-wp-title-left">Overview</th><th class="labkey-wp-title-right">&nbsp;</th></tr>
+<tr ><td class="labkey-wp-body" colspan="2">
+<div style="font-size: larger;">
+    The IAVI Elisa assay is designed to read plate data, calculate Titers and publish results to studies. The assay reads data from both BioTek and SoftMax Pro plate formats.
+    This project contains the the following information.
+    <div id="summary"></div>
+</div>
+
+</td></tr></table>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    var assay;
+    IaviElisa.getProtocols(function(protocols) {
+        if (protocols.length == 0)
+        {
+            alert("Assay Design is not created yet, administrator needs to create and name an Assay Design.");
+            if (LABKEY.Security.currentUser.isAdmin)
+                window.location = LABKEY.ActionURL.buildURL("assay", "designer", null, {providerName:IaviElisa.assayTypeName});
+        }
+        if (protocols.length > 1)
+            alert("More than one assay design is present. Support for multiple protocols is not yet implemented. Using design " + protocols[0].name);
+
+        assay = protocols[0];
+
+        showButtonBar(assay);
+        showSummary();
+        showStudySummary();
+    });
+
+
+    function showStudySummary()
+    {
+        var studyQuery = "SELECT Results.Run.Batch.TargetStudy As TargetStudy, \
+MIN(Results.Run.Batch.TargetStudy.Label) As StudyLabel, \
+Count(Results.ObjectId) AS ApprovedSamples \
+FROM \"" + assay.name + " Data\" Results WHERE Results.Properties.Status = 'Approved' GROUP BY Results.Run.Batch.TargetStudy";
+        LABKEY.Query.executeSql({schemaName:"assay", containerFilter:"CurrentAndSubfolders",
+            sql:studyQuery,
+            successCallback:function(data) {
+                var html = "<table class='labkey-data-region labkey-show-borders'><tr><th class='labkey-col-header'>Study</th><th class='labkey-col-header'>Approved Results</th></tr>";
+                for (var i = 0; i < data.rows.length; i++)
+                {
+                    html += "<tr><td align='left'><a href='" + LABKEY.ActionURL.buildURL("iavielisa", "results", data.rows[i].TargetStudy) + "'>";
+                    html += h(data.rows[i].StudyLabel);
+                    html += "</a></td><td align='right'>";
+                    html += data.rows[i].ApprovedSamples;
+                    html += "</td></tr>";
+                }
+                html += "</table>";
+                Ext.get("study_summaries").update(html);
+            }
+        });
+    }
+
+    function showSummary()
+    {
+        LABKEY.Query.executeSql({schemaName:"assay", containerFilter:"CurrentAndSubfolders",
+            sql:"SELECT COUNT(Batches.RowId) As BatchCount,\
+                SUM(Batches.RunCount) As PlateCount,\
+                (SELECT COUNT(Results.ObjectId) AS r FROM \"" + assay.name + " Data\" Results WHERE Results.Properties.ParticipantID IS NOT NULL) As ResultCount,\
+                (SELECT COUNT(Results.ObjectId) AS r FROM \"" + assay.name + " Data\" Results WHERE Results.Properties.Status = 'Approved') As ApprovedCount\
+                FROM \"" + assay.name + " Batches\" Batches",
+            successCallback:function (result) {
+                var row = result.rows[0];
+                var params = {rowId:assay.id};
+                var approvedParams = {rowId:assay.id};
+                approvedParams[assay.name + " Data.Properties/Status~eq"] = "Approved";
+                Ext.get("summary").update(
+                        "<div style='font-size:larger'><ul>" +
+                        "<li><a href='" + LABKEY.ActionURL.buildURL("assay", "assayBatches", null, params) + "'>" + row.BatchCount + " Batches" +
+                        "<li><a href='" + LABKEY.ActionURL.buildURL("assay", "assayRuns", null, params) + "'>" + row.PlateCount + " Plates" +
+                        "<li><a href='" + LABKEY.ActionURL.buildURL("assay", "assayResults", null, params) + "'>" + row.ResultCount + " Results" +
+                        "<li><a href='" +
+                            LABKEY.ActionURL.buildURL("assay", "assayResults", null, approvedParams) + "'>" + row.ApprovedCount + " Approved Results" +
+                        "</ul></div>");
+
+            }
+        }
+       );
+    }
+
+</script>

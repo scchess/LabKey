@@ -1,0 +1,36 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="LocationReport" tableDbType="NOT_IN_DB" useColumnOrder="true">
+                <javaCustomizer class="org.labkey.cnprc_ehr.table.CNPRC_EHRCustomizer" />
+                <columns>
+                    <column columnName="Id">
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>Id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="birth">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="deathOrOnDate">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="Id/demographicsActivePregnancy/conNum">
+                        <columnTitle>Pregnancy</columnTitle>
+                    </column>
+                    <column columnName="room">
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>rooms</fkTable>
+                            <fkColumnName>room</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="location"/>
+                    <column columnName="area"/>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

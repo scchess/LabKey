@@ -1,0 +1,19 @@
+msInspect directory
+------------------------------------------------------------------------------
+
+This directory should contain versions of msInspect in order to support
+the msInspect pipeline.  For more information on msInspect:
+
+http://proteomics.fhcrc.org/
+
+Information on command line usage of msInspect may be found at:
+
+http://proteomics.fhcrc.org/CPAS/Wiki/home/FHCRC%20Help/page.view?name=viewer%2Fcommand%20line
+
+--------------------------------------
+Directions
+--------------------------------------
+1. Download viewerApp.jar from the web site.
+2. Place in this directory.
+3. Get the version number for this jar.
+4. Rename to viewerApp.<version>.jar.

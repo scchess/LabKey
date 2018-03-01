@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-infoPathSolution name="urn:schemas-microsoft-com:office:infopath:ExperimentForm:http---cpas-fhcrc-org-exp-xml" href="manifest.xsf" solutionVersion="1.0.0.48" productVersion="11.0.6357" PIVersion="1.0.0.0" ?>
+<?mso-application progid="InfoPath.Document"?>
+<exp:ExperimentArchive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:exp="http://cpas.fhcrc.org/exp/xml" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2005-11-05T06:56:29" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<exp:Experiment rdf:about="">
+		<exp:Name></exp:Name>
+		<exp:Hypothesis></exp:Hypothesis>
+		<exp:ExperimentDescriptionURL></exp:ExperimentDescriptionURL>
+		<exp:Comments></exp:Comments>
+		<exp:Contact>
+			<exp:ContactId></exp:ContactId>
+			<exp:Email></exp:Email>
+			<exp:FirstName></exp:FirstName>
+			<exp:LastName></exp:LastName>
+			<exp:Properties rdf:parseType="Collection">
+				<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+				<exp:PropertyObject>
+					<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+					<exp:ChildProperties rdf:parseType="Collection">
+						<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+					</exp:ChildProperties>
+				</exp:PropertyObject>
+			</exp:Properties>
+		</exp:Contact>
+	</exp:Experiment>
+	<exp:ProtocolDefinitions rdf:parseType="Collection">
+		<exp:Protocol rdf:about="">
+			<exp:Name></exp:Name>
+			<exp:ProtocolDescription></exp:ProtocolDescription>
+			<exp:ApplicationType>ProtocolApplication</exp:ApplicationType>
+			<exp:MaxInputMaterialPerInstance>0</exp:MaxInputMaterialPerInstance>
+			<exp:MaxInputDataPerInstance>0</exp:MaxInputDataPerInstance>
+			<exp:OutputMaterialPerInstance>0</exp:OutputMaterialPerInstance>
+			<exp:OutputDataPerInstance>0</exp:OutputDataPerInstance>
+			<exp:OutputMaterialType>Material</exp:OutputMaterialType>
+			<exp:OutputDataType>Data`</exp:OutputDataType>
+			<exp:Instrument></exp:Instrument>
+			<exp:Software></exp:Software>
+			<exp:Contact>
+				<exp:ContactId></exp:ContactId>
+				<exp:Email></exp:Email>
+				<exp:FirstName></exp:FirstName>
+				<exp:LastName></exp:LastName>
+				<exp:Properties rdf:parseType="Collection">
+					<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+					<exp:PropertyObject>
+						<exp:PropertyObjectDeclaration ValueType="PropertyURI" OntologyEntryURI="" Name=""></exp:PropertyObjectDeclaration>
+						<exp:ChildProperties rdf:parseType="Collection">
+							<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+						</exp:ChildProperties>
+					</exp:PropertyObject>
+				</exp:Properties>
+			</exp:Contact>
+			<exp:ParameterDeclarations rdf:parseType="Collection">
+				<exp:SimpleVal Name="" OntologyEntryURI="" ValueType="String" xsi:nil="true"></exp:SimpleVal>
+			</exp:ParameterDeclarations>
+		</exp:Protocol>
+	</exp:ProtocolDefinitions>
+	<exp:ProtocolActionDefinitions rdf:parseType="Collection">
+		<exp:ProtocolActionSet ParentProtocolLSID="">
+			<exp:ProtocolAction ChildProtocolLSID="" ActionSequence="">
+				<exp:PredecessorAction ActionSequenceRef=""></exp:PredecessorAction>
+			</exp:ProtocolAction>
+		</exp:ProtocolActionSet>
+	</exp:ProtocolActionDefinitions>
+	<exp:StartingInputDefinitions rdf:parseType="Collection">
+		<exp:Material rdf:about="">
+			<exp:Name></exp:Name>
+			<exp:CpasType>Material</exp:CpasType>
+		</exp:Material>
+		<exp:Data rdf:about="">
+			<exp:Name></exp:Name>
+			<exp:CpasType>Data</exp:CpasType>
+			<exp:DataFileUrl></exp:DataFileUrl>
+		</exp:Data>
+	</exp:StartingInputDefinitions>
+	<exp:ExperimentRuns rdf:parseType="Collection">
+		<exp:ExperimentRun rdf:about="" CreateNewIfDuplicate="false" GenerateDataFromStepRecord="false">
+			<exp:Name></exp:Name>
+			<exp:ProtocolLSID></exp:ProtocolLSID>
+			<exp:Comments></exp:Comments>
+			<exp:ExperimentLog rdf:parseType="Collection">
+				<exp:ExperimentLogEntry ActionSequenceRef=""></exp:ExperimentLogEntry>
+			</exp:ExperimentLog>
+			<exp:ProtocolApplications rdf:parseType="Collection"></exp:ProtocolApplications>
+		</exp:ExperimentRun>
+	</exp:ExperimentRuns>
+</exp:ExperimentArchive>

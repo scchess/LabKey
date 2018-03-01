@@ -1,0 +1,101 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="image" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="owner_type">
+                        <columnTitle>Owner Type</columnTitle>
+                    </column>
+                    <column columnName="owner_name">
+                        <columnTitle>Owner Name</columnTitle>
+                    </column>
+                    <column columnName="create_unit">
+                        <columnTitle>Create Unit</columnTitle>
+                    </column>
+                    <column columnName="modality">
+                        <columnTitle>Modality</columnTitle>
+                    </column>
+                    <column columnName="device_type">
+                        <columnTitle>Device Type</columnTitle>
+                    </column>
+                    <column columnName="device_name">
+                        <columnTitle>Device Name</columnTitle>
+                    </column>
+                    <column columnName="subject_type">
+                        <columnTitle>Subject Type</columnTitle>
+                    </column>
+                    <column columnName="subject_name">
+                        <columnTitle>Subject Name</columnTitle>
+                    </column>
+                    <column columnName="subject_location">
+                        <columnTitle>Location</columnTitle>
+                    </column>
+                    <column columnName="subject_species">
+                        <columnTitle>Species</columnTitle>
+                    </column>
+                    <column columnName="subject_organ">
+                        <columnTitle>Organ</columnTitle>
+                    </column>
+                    <column columnName="original_filename">
+                        <columnTitle>Original Filename</columnTitle>
+                    </column>
+                    <column columnName="original_format_name">
+                        <columnTitle>Original Format</columnTitle>
+                    </column>
+                    <column columnName="original_format_extension">
+                        <columnTitle>Original Format Extension</columnTitle>
+                    </column>
+                    <column columnName="original_width_pixels">
+                        <columnTitle>Original Width (pixels)</columnTitle>
+                    </column>
+                    <column columnName="original_height_pixels">
+                        <columnTitle>Original Height (pixels)</columnTitle>
+                    </column>
+                    <column columnName="original_size_bytes">
+                        <columnTitle>Original Size (bytes)</columnTitle>
+                    </column>
+                    <column columnName="upload_by">
+                        <columnTitle>Uploaded By</columnTitle>
+                    </column>
+                    <column columnName="upload_timestamp">
+                        <columnTitle>Uploaded On</columnTitle>
+                    </column>
+                    <column columnName="upload_comment">
+                        <columnTitle>Upload Comment</columnTitle>
+                    </column>
+                    <column columnName="description">
+                        <columnTitle>Description</columnTitle>
+                    </column>
+                    <column columnName="is_public">
+                        <columnTitle>Is Public?</columnTitle>
+                    </column>
+                    <column columnName="image_repository">
+                        <columnTitle>Image Repository</columnTitle>
+                    </column>
+                    <column columnName="is_stock">
+                        <columnTitle>Is Stock?</columnTitle>
+                    </column>
+                    <column columnName="is_stock_approved">
+                        <columnTitle>Is Stock Approved?</columnTitle>
+                    </column>
+                    <column columnName="stock_approved_by">
+                        <columnTitle>Stock Approved By</columnTitle>
+                    </column>
+                    <column columnName="stock_approved_timestamp">
+                        <columnTitle>Stock Approved Date</columnTitle>
+                    </column>
+                    <column columnName="is_release_approved">
+                        <columnTitle>Is Release Approved?</columnTitle>
+                    </column>
+                    <column columnName="release_approved_by">
+                        <columnTitle>Release Approved By</columnTitle>
+                    </column>
+                    <column columnName="release_approved_timestamp">
+                        <columnTitle>Release Approved Date</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

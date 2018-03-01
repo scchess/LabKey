@@ -1,0 +1,294 @@
+project_code	protocol_definition_type	sort_order	study_week	pp_group	pp_text
+IAM05	P	20	22	1	Eleventh Cycle in Regimen
+IAM05	P	21	24	1	Twelveth Cycle in Regimen
+IAM05	P	22	25	1	Necropy - animals 1 & 4
+IAM05	P	23	26	1	Necropy - animals 2 & 3
+IAM05	D	1			**Definition of 2 week Exposure Cycle:
+IAM05	D	2			
+IAM05	D	3			Group 1:  Filtered Air days 1 thru 14 of cycle
+IAM05	D	4			(Sensitized controls - no ozone or allergen exposure during Cycles)
+IAM06	H	1			Project Summary of Infant Asthma Monkeys - IAM06
+IAM06	P	1	-2 (+/- 2 days)	All	Birth of Animals
+IAM06	P	2	0	All	10 ug HDMA in 10mg AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+IAM06	P	3	2	All	10 ug HDMA in 10mg AlOH (40mg/ml), SQ
+IAM06	P	4	2 (+/- 3 days)	All	First Cycle in ozone/allergen Exposure Regimen**
+IAM06	P	5	4	All	Second Cycle in Regimen
+IAM06	P	6	5	All	Skin Test
+IAM06	P	7	6	All	Third Cycle in Regimen 
+IAM06	P	8	8	All	Fourth Cylce in Regimen 
+IAM06	P	9	10	All	Fifth Cycle in Regimen
+IAM06	P	10	11	All	Necropsy during second week of Fifth Cycle
+IAM06	D	1			**Definition of 2 week ozone/allergen Exposure Cycle:
+IAM06	D	2			
+IAM06	D	3			Group 1: Filtered Air days 1 thru 14 of cycle
+IAM06	D	4			Group 2: Filtered air days 1 & 2, HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM06	D	5			Group 3: Ozone days 1 thru 5 of cycle followed by 9 days filtered air
+IAM06	D	6			Group 4: Ozone days 1 thru 5, plus HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM06	D	7			
+IAM06	D	8			Ozone dose = 0.5ppm for 8 hours per day
+IAM06	D	9			HDMA concentration before aerosolization = 1 mg/ml for 2.5 hours per day
+MAM02	H	1			Project Summary of Juvenile Asthma Monkeys - MAM02
+MAM02	P	1	-1	All	PFT - Histamine
+MAM02	P	2	0	2&4	12.5 ug HDMA in 10mg AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+MAM02	P	3	2	All	Intranasal HDMA (Groups 2&4) or Saline (Groups 1&3)
+MAM02	P	4	2.5	All	Intranasal HDMA (Groups 2&4) or Saline (Groups 1&3)
+MAM02	P	5	3	2&4	12.5 ug HDMA in 10mg AlOH (40mg/ml), SQ
+MAM02	P	6	5	All	Skin Test
+MAM02	P	7	6	All	First Cycle in ozone/allergen Exposure Regimen**
+MAM02	P	8	6	All	PFT-Baseline (started ~0.5 to 3 hours after end of HDMA exposure for Groups 2&4)
+MAM02	P	9	7	All	PFT - Histamine
+MAM02	P	10	8	All	Second Cycle in Regimen (HDMA concentration reduced to 0.25mg/ml on day 3, Group 4)
+MAM02	P	11	10	All	Third Cycle in Regimen (HDMA concentration 0.25 mg/ml, Group 4)
+MAM02	P	12	12	All	Fourth Cylce in Regimen (HDMA concentration 0.25 mg/ml, Groups 2&4)
+MAM02	P	13	14	All	Fifth Cycle in Regimen (HDMA concentration 0.25 mg/ml, Groups 2&4)   
+MAM02	P	14	14	All	PFT-Baseline (started ~0.5 to 3 hours after end of HDMA exposure for Groups 2&4)
+MAM02	P	15	15	All	PFT - Histamine
+MAM02	P	16	16	All	Sixth Cycle in Regimen (HDMA concentration 0.25 mg/ml, Groups 2&4)
+MAM02	P	17	18	All	Seventh Cycle in Regimen(HDMA concentration 0.25 mg/ml Group 2, 0.50 mg/ml Group 4)
+MAM02	P	18	20	All	Eighth Cycle in Regimen 
+MAM02	P	19	21	All	Bronchoalveolar Lavage
+MAM02	P	20	22	All	Nineth Cylce in Regimen
+MAM02	P	21	24	All	Tenth Cycle in Regimen
+MAM02	P	22	24	Group A	PFT-Baseline (started ~0.5 to 3 hours after end of HDMA exposure for Groups 2&4)
+MAM02	P	23	25	Group A	PFT - Histamine
+MAM02	P	24	25.5	Group A	PFT - HDM
+MAM02	P	25	26	All	Eleventh Cycle in Regimen 
+MAM02	P	26	27	Group A	Necropsy
+MAM02	P	27	28	Group B	Twelveth Cylce in Regimen
+MAM02	P	28	28	Group B	PFT-Baseline (started ~0.5 to 3 hours after end of HDMA exposure for Groups 2&4)
+MAM02	P	29	29	Group B	PFT - Histamine
+MAM02	P	30	29.5	Group B	PFT - HDM
+MAM02	P	31	30	Group B	Thirteenth Cycle in Regimen
+MAM02	P	32	31	Group B	Necropsy
+MAM02	D	1			**Definition of 2 week ozone/allergen Exposure Cycle:
+MAM02	D	2			
+MAM02	D	3			Group 1: Filtered Air days 1 thru 14 of cycle
+MAM02	D	4			Group 2: Filtered air days 1 & 2,  HDMA days 3,4,5 of cycle followed by 9 days filtered air
+MAM02	D	5			Group 3: Ozone days 1 thru 5 of cycle followed by 9 days filtered air
+MAM02	D	6			Group 4: Ozone days 1 thru 5,  plus HDMA days 3,4,5 of cycle followed by 9 days filtered air
+MAM02	D	7			
+MAM02	D	8			Ozone dose = 0.5ppm for 8 hours per day
+MAM02	D	9			HDMA concentration before aerosoliztion = 0.50 mg/ml for 2.5 hours per day, except where noted
+ISS01	H	1			Project Summary of Juvenile Asthma Monkeys with ISS Drug - ISS01
+ISS01	P	1	-1	All	PFT - Histamine
+ISS01	P	2	0	All	12.5 mg HDMA in 10ug AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+ISS01	P	3	1	All	HDMA Aerosol  + 0.25 ml B. Pertussis
+ISS01	P	4	2	All	12.5 mg HDMA in 10ug AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+ISS01	P	5	2	All	HDMA Aerosol
+ISS01	P	6	4	All	12.5 mg HDMA in 10ug AlOH (40mg/ml), SQ +  0.25ml B. Pertussis, IM Injection
+ISS01	P	7	4	All	HDMA Aerosol
+ISS01	P	8	5	All	PFT -  Histamine
+ISS01	P	9	5	All	Skin Test
+ISS01	P	10	7	All	12.5 ug HDMA in 10mg AlOH (40mg/ml), SQ
+ISS01	P	11	8	All	Intranasal HDMA (0.25 ml/nostril)
+ISS01	P	12	11	All	Skin Test
+ISS01	P	13	11	All	PFT - Histamine
+ISS01	P	14	13	All	First Cycle in Exposure Regimen**
+ISS01	P	15	15	All	Second Cycle in Regimen
+ISS01	P	16	17	All	Third Cycle in Regimen 
+ISS01	P	17	19	All	Fourth Cylce in Regimen 
+ISS01	P	18	19	All	Bronchoalveolar Lavage (post PFT - Histamine)
+ISS01	P	19	21	All	Fifth Cycle in Regimen    
+ISS01	P	20	21	All	Bronchoalveolar Lavage (post PFT - Histamine)
+ISS01	P	21	23	All	 ISS Treatment Group 2,  SHAM for Group 1
+ISS01	P	22	23	All	Sixth Cycle in Regimen 
+ISS01	P	23	25	All	 ISS Treatment Group 2,  SHAM for Group 1
+ISS01	P	24	25	All	Seventh Cycle in Regimen 
+ISS01	P	25	25	All	Static Lung Mechanics (post PFT - Histamine)
+ISS01	P	26	27	All	 ISS Treatment Group 2,  SHAM for Group 1
+ISS01	P	27	27	All	Eighth Cycle in Regimen 
+ISS01	P	28	29	All	Nineth Cylce in Regimen
+ISS01	P	29	29	All	Static Lung Mechanics (post PFT - Histamine)
+ISS01	P	30	31	All	Tenth Cycle in Regimen
+ISS01	P	31	31	All	Skin Test
+ISS01	P	32	33	All	Eleventh Cycle in Regimen
+ISS01	P	33	33	All	Static Lung Mechanics (post PFT - Histamine)
+ISS01	P	34	35	All	Twelveth Cylce in Regimen
+ISS01	P	35	37	All	Thirteenth Cycle in Regimen
+ISS01	P	36	37	All	Bronchoalveolar Lavage (post PFT - Histamine)
+ISS01	P	37	39	Group A	 ISS Treatment Group 2,  SHAM for Group 1
+ISS01	P	38	39	Group A	Fourteenth Cycle in Regimen
+ISS01	P	39	41	All	 ISS Treatment Group 2,  SHAM for Group 1
+ISS01	P	40	41	All	Fifteenth Cycle in Regimen (PFT in Group A animals only)
+ISS01	P	41	43	All	 ISS Treatment Group 2,  SHAM for Group 1
+ISS01	P	42	43	All	Sixteenth Cycle in Regimen (PFT in Group A only)
+ISS01	P	43	43	Group A	Static Lung Mechanics (post PFT - Histamine)
+ISS01	P	44	44	Group A	Bronchoalveolar Lavage
+ISS01	P	45	45	All	 ISS Treatment Group 2,  SHAM for Group 1
+ISS01	P	46	45	All	Seventeenth Cycle in Regimen (Chamber Aerosol Only)
+ISS01	P	47	45	Group A	Bronchoalveolar Lavage (4-6 hours post Sixteenth Cycle)
+ISS01	P	48	45	Group A	NECROPSY
+ISS01	P	49	45	Group B	Static Lung Mechanics (post PFT - Histamine)
+ISS01	P	50	46	Group B	Bronchoalveolar Lavage
+ISS01	P	51	47	Group B	 ISS Treatment Group 2,  SHAM for Group 1
+ISS01	P	52	47	Group B	Eighteenth Cycle in Regimen (Chamber Aerosol only)
+ISS01	P	53	47	Group B	Bronchoaleveolar Lavage (4-6 hours post Seventeenth Cycle)
+ISS01	P	54	47	Group B	NECROPSY
+ISS01	D	1			**Definition of 2 week Exposure Cycle:
+ISS01	D	2			
+ISS01	D	3			HDMA chamber aerosol day 1,  PFT - Histamine day 2,  followed by 12 days Filtered Air
+ISS01	D	4			
+ISS01	D	5			ISS dose = 0.5 mg/kg
+ISS01	D	6			HDMA concentration before aerosolization = 0.50 mg/ml, 2.5 hours/day
+IAM07	H	1			Project Summary of Infant Asthma Monkeys - IAM07
+IAM07	P	1	-2 (+/- 2 days)	All	Birth of Animals
+IAM07	P	2	0	All	10 ug HDMA in 10mg AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+IAM07	P	3	2	All	10 ug HDMA in 10mg AlOH (40mg/ml), SQ
+IAM07	P	4	2 (+/- 3 days)	All	First Cycle in ozone/allergen Exposure Regimen**
+IAM07	P	5	4	All	Second Cycle in Regimen
+IAM07	P	6	5	All	Skin Test
+IAM07	P	7	6	All	Third Cycle in Regimen 
+IAM07	P	8	8	All	Fourth Cylce in Regimen 
+IAM07	P	9	10	All	Fifth Cycle in Regimen
+IAM07	P	10	10	All	PFT - Baseline
+IAM07	P	11	11	All	PFT - Histamine
+IAM07	P	12	11	All	Start Steroid Treatment***
+IAM07	P	13	12	All	Sixth Cycle in Regimen
+IAM07	P	14	14	All	Seventh Cycle in Regimen
+IAM07	P	15	16	All	Eighth Cycle in Regimen 
+IAM07	P	16	18	All	Nineth Cylce in Regimen
+IAM07	P	17	20	All	Tenth Cycle in Regimen
+IAM07	P	18	20	All	PFT- Baseline
+IAM07	P	19	21	All	PFT - Histamine 
+IAM07	P	20	21	All	PFT - HDMA
+IAM07	P	21	22	All	Eleventh Cycle in Regimen
+IAM07	P	22	23	All	Necropsy during second week of Eleventh Cycle
+IAM07	D	1			**Definition of 2 week ozone/allergen Exposure Cycle:
+IAM07	D	2			
+IAM07	D	3			Group 1: Filtered Air days 1 thru 14 of cycle
+IAM07	D	4			Group 2: Ozone days 1 thru 5, plus HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM07	D	5			Group 3: Filtered Air days 1 thru 14 of cycle 
+IAM07	D	6			Group 4: Ozone days 1 thru 5, plus HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM07	D	7			
+IAM07	D	8			Ozone dose = 0.5ppm for 8 hours per day
+IAM07	D	9			HDMA concentration before aerosolization = 1.0 mg/ml for 2.5 hours per day
+IAM07	D	10			***Steroid/Saline Treatment given 5 minutes a day 7 days a week for remainder of study
+IAM07	D	11			Groups 1 and 2 receive Mock Steriod, Groups 3 and 4 receive Steroid Treatment
+DEVLP					
+IAM01	H	1			Project Summary of Infant Asthma Monkeys - IAM01
+IAM01	P	1	-2 (+/- 2 days)	All	Birth of Animals
+IAM01	P	2	0	2 and 4	10 ug HDMA in 10mg AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+IAM01	P	3	2	2 and 4	10 ug HDMA in 10mg AlOH (40mg/ml), SQ
+IAM01	P	4	2 (+/- 3 days)	All	First Cycle in ozone/allergen Exposure Regimen**
+IAM01	P	5	4	All	Second Cycle in Regimen
+IAM01	P	6	5	All	Skin Test
+IAM01	P	7	6	All	Third Cycle in Regimen 
+IAM01	P	8	8	All	Fourth Cylce in Regimen 
+IAM01	P	9	10	All	Fifth Cycle in Regimen
+IAM01	P	10	12	All	Sixth Cycle in Regimen (only two days of allergen exposure = day 3 and 4)
+IAM01	P	11	12	All	PFT - HDMA  (performed day 5 of 6th Cylce) 
+IAM01	P	12	13	All	PFT - Histamine
+IAM01	P	13	14	All	Seventh Cycle in Regimen
+IAM01	P	14	16	All	Eighth Cycle in Regimen 
+IAM01	P	15	18	All	Nineth Cylce in Regimen
+IAM01	P	16	20	All	Tenth Cycle in Regimen
+IAM01	P	17	21	All	PFT - Histamine 
+IAM01	P	18	21	All	PFT - HDMA
+IAM01	P	19	22	All	Eleventh Cycle in Regimen
+IAM01	P	20	23	All	Necropsy during second week of Eleventh Cycle
+IAM01	D	1			**Definition of 2 week ozone/allergen Exposure Cycle:
+IAM01	D	2			
+IAM01	D	3			Group 1: Filtered Air days 1 thru 14 of cycle
+IAM01	D	4			Group 2: Filtered air days 1 & 2, HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM01	D	5			Group 3: Ozone days 1 thru 5 of cycle followed by 9 days filtered air
+IAM01	D	6			Group 4: Ozone days 1 thru 5, plus HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM01	D	7			
+IAM01	D	8			Ozone dose = 0.5ppm for 8 hours per day
+IAM01	D	9			HDMA concentration before aerosolization = 1 mg/ml for 2.5 hours per day
+IAM02	H	1			Project Summary of Infant Asthma Monkeys - IAM02
+IAM02	P	1	-2 (+/- 2 days)	All	Birth of Animals
+IAM02	P	2	0	2 and 4	10 ug HDMA in 10mg AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+IAM02	P	3	2	2 and 4	10 ug HDMA in 10mg AlOH (40mg/ml), SQ
+IAM02	P	4	2 (+/- 3 days)	All	First Cycle in ozone/allergen Exposue Regimen**
+IAM02	P	5	4	All	Second Cycle in Regimen
+IAM02	P	6	5	All	Skin Test
+IAM02	P	7	6	All	Third Cycle in Regimen 
+IAM02	P	8	8	All	Fourth Cylce in Regimen 
+IAM02	P	9	10	All	Fifth Cycle in Regimen
+IAM02	P	10	12	All	Sixth Cycle in Regimen
+IAM02	P	11	12	All	PFT - Baseline
+IAM02	P	12	13	All	PFT - Histamine
+IAM02	P	13	14	All	Seventh Cycle in Regimen
+IAM02	P	14	16	All	Eighth Cycle in Regimen 
+IAM02	P	15	18	All	Nineth Cylce in Regimen
+IAM02	P	16	20	All	Tenth Cycle in Regimen
+IAM02	P	17	21	All	PFT - Histamine 
+IAM02	P	18	21	All	PFT - HDMA
+IAM02	P	19	22	All	Eleventh Cycle in Regimen
+IAM02	P	20	23	All	Necropsy during second week of Eleventh Cycle
+IAM02	D	1			**Definition of 2 week ozone/allergen Exposure Cycle:
+IAM02	D	2			
+IAM02	D	3			Group 1: Filtered Air days 1 thru 14 of cycle
+IAM02	D	4			Group 2: Filtered air days 1 & 2, HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM02	D	5			Group 3: Ozone days 1 thru 5 of cycle followed by 9 days filtered air
+IAM02	D	6			Group 4: Ozone days 1 thru 5,  plus HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM02	D	7			
+IAM02	D	8			Ozone dose = 0.5ppm for 8 hours per day
+IAM02	D	9			HDMA concentration before aerosolization = 1 mg/ml for 2.5 hours per day
+IAM04	H	1			Project Summary of Infant Asthma Monkeys - IAM04
+IAM04	P	1	-2 (+/- 2 days)	All	Birth of Animals
+IAM04	P	2	0	2 and 4	10 ug HDMA in 10mg AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+IAM04	P	3	2	2 and 4	10 ug HDMA in 10mg AlOH (40mg/ml), SQ
+IAM04	P	4	2 (+/- 3 days)	All	First Cycle in ozone/allergen Exposure Regimen**
+IAM04	P	5	4	All	Second Cycle in Regimen
+IAM04	P	6	5	All	Skin Test
+IAM04	P	7	6	All	Third Cycle in Regimen 
+IAM04	P	8	8	All	Fourth Cylce in Regimen 
+IAM04	P	9	10	All	Fifth Cycle in Regimen
+IAM04	P	10	12	All	Sixth Cycle in Regimen
+IAM04	P	11	12	All	PFT - Baseline
+IAM04	P	12	13	All	PFT - Histamine
+IAM04	P	13	13	All	PFT - HDMA
+IAM04	P	14	14	All	Seventh Cycle in Regimen
+IAM04	P	15	16	All	Eighth Cycle in Regimen 
+IAM04	P	16	18	All	Nineth Cylce in Regimen
+IAM04	P	17	20	All	Tenth Cycle in Regimen
+IAM04	P	18	21	All	PFT - Histamine 
+IAM04	P	19	21	All	PFT - HDMA
+IAM04	P	20	22	All	Eleventh Cycle in Regimen
+IAM04	P	21	24  - 52	All	Filtered Air recovery period (No ozone exposure)
+IAM04	P	22	26	2 and 4	Maintenance HDMA exposure  (1 mg/ml for 2.5 hrs once / month)
+IAM04	P	23	30	2 and 4	Maintenance HDMA exposure  (1 mg/ml for 2.5 hrs once / month)
+IAM04	P	24	34	2 and 4	Maintenance HDMA exposure  (1 mg/ml for 2.5 hrs once / month)
+IAM04	P	25	38	2 and 4	Maintenance HDMA exposure  (1 mg/ml for 2.5 hrs once / month)
+IAM04	P	26	42	2 and 4	Maintenance HDMA exposure  (1 mg/ml for 2.5 hrs once / month)
+IAM04	P	27	46	2 and 4	Maintenance HDMA exposure  (1 mg/ml for 2.5 hrs once / month)
+IAM04	P	28	50	2 and 4	PFT - HDMA 
+IAM04	P	29	50	2 and 4	PFT - Histamine
+IAM04	P	30	51	2A and 4A	Maintenance HDMA exposure  (3 days during week)
+IAM04	P	31	52	2A and 4A	Necropsy
+IAM04	P	32	52	2B and 4B	Maintenance HDMA exposure  (3 days during week)
+IAM04	P	33	53	2B and 4B	Necropsy
+IAM04	P	34	53	1 and 3	PFT - HDMA 
+IAM04	P	35	53	1 and 3	PFT - Histamine
+IAM04	P	36	55	1A and 3A	Necropsy
+IAM04	P	37	56	1B and 3B	Necropsy
+IAM04	D	1			**Definition of 2 week ozone/allergen Exposure Cycle:
+IAM04	D	2			
+IAM04	D	3			Group 1: Filtered Air days 1 thru 14 of cycle
+IAM04	D	4			Group 2: Filtered air days 1 & 2, HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM04	D	5			Group 3: Ozone days 1 thru 5 of cycle followed by 9 days filtered air
+IAM04	D	6			Group 4: Ozone days 1 thru 5, plus HDMA days 3,4,5 of cycle followed by 9 days filtered air
+IAM04	D	7			
+IAM04	D	8			Ozone dose = 0.5ppm for 8 hours per day
+IAM04	D	9			HDMA concentration before aerosolization = 1 mg/ml for 2.5 hours per day
+IAM05	H	1			Project Summary of Infant Asthma Monkeys - IAM05
+IAM05	P	1	-2 (+/- 2 days)	1	Birth of Animals
+IAM05	P	2	0	1	10 ug HDMA in 10mg AlOH (40mg/ml), SQ  +  0.25ml B. Pertussis, IM Injection
+IAM05	P	3	2	1	10 ug HDMA in 10mg AlOH (40mg/ml), SQ
+IAM05	P	4	2 (+/- 3 days)	1	First Cycle in Exposure Regimen**
+IAM05	P	5	4	1	Second Cycle in Regimen
+IAM05	P	6	5	1	Skin Test
+IAM05	P	7	6	1	Third Cycle in Regimen 
+IAM05	P	8	8	1	Fourth Cylce in Regimen 
+IAM05	P	9	10	1	Fifth Cycle in Regimen
+IAM05	P	10	12	1	Sixth Cycle in Regimen
+IAM05	P	11	12	1	PFT - Baseline
+IAM05	P	12	13	1	PFT - Histamine
+IAM05	P	13	13	1	PFT - HDMA
+IAM05	P	14	14	1	Seventh Cycle in Regimen
+IAM05	P	15	16	1	Eighth Cycle in Regimen 
+IAM05	P	16	18	1	Nineth Cylce in Regimen
+IAM05	P	17	20	1	Tenth Cycle in Regimen
+IAM05	P	18	21	1	PFT - Histamine 
+IAM05	P	19	21	1	PFT - HDMA

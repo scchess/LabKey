@@ -1,0 +1,31 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id" />
+        <column name="date" />
+        <column name="daysOld" />
+        <column name="bigRear" />
+        <column name="spf" />
+        <column name="samp1" />
+        <column name="samp2" />
+        <column name="samp3" />
+        <column name="samp4" />
+        <column name="zsamp1" />
+        <column name="zsamp2" />
+        <column name="zsamp3" />
+        <column name="zsamp4" />
+        <column name="wbc" />
+        <column name="lympho" />
+        <column name="cd4" />
+        <column name="cd8" />
+        <column name="hemoglobin" />
+        <column name="hemotocrit" />
+        <column name="mcv" />
+        <column name="plama_protein" />
+        <column name="rearing" />
+        <column name="sertcode" />
+        <column name="maoacode" />
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

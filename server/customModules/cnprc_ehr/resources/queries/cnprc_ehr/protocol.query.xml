@@ -1,0 +1,19 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="protocol" tableDbType="TABLE">
+                <tableTitle>AUCAAC Protocols</tableTitle>
+                <columns>
+                    <column columnName="protocol">
+                        <columnTitle>AUCAAC Protocol</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>protocol</fkTable>
+                            <fkColumnName>protocol</fkColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

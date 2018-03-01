@@ -1,0 +1,48 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="key_assignments" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="key_assignment_pk">
+                        <columnTitle>Key Assignments PK</columnTitle>
+                    </column>
+                    <column columnName="key_fk">
+                        <columnTitle>Key</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>keys</fkTable>
+                            <fkColumnName>key_pk</fkColumnName>
+                            <fkDisplayColumnName useRawValue="true"/>
+                        </fk>
+                    </column>
+                    <column columnName="person_fk">
+                        <columnTitle>Person</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>persons</fkTable>
+                            <fkColumnName>person_pk</fkColumnName>
+                            <fkDisplayColumnName useRawValue="true"/>
+                        </fk>
+                    </column>
+                    <column columnName="date_issued">
+                        <columnTitle>Date Issued</columnTitle>
+                    </column>
+                    <column columnName="date_returned">
+                        <columnTitle>Date Returned</columnTitle>
+                    </column>
+                    <column columnName="status">
+                        <columnTitle>Status</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>key_assignment_status</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="comments">
+                        <columnTitle>Comment</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

@@ -1,0 +1,42 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="inoculation" tableDbType="TABLE" useColumnOrder="true">
+                <tableUrl />
+                <tableTitle>Experimental Inoculation</tableTitle>
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Inoculation Date</columnTitle>
+                    </column>
+                    <column columnName="projectCode">
+                        <columnTitle>Project Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>project</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                            <fkDisplayColumnName>projectCode</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="agent">
+                        <columnTitle>Agent</columnTitle>
+                    </column>
+                    <column columnName="route">
+                        <columnTitle>Route</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>routes</fkTable>
+                            <fkColumnName>route</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="doseInfo">
+                        <columnTitle>Dose Info</columnTitle>
+                    </column>
+                    <column columnName="remark">
+                        <columnTitle>Comment</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

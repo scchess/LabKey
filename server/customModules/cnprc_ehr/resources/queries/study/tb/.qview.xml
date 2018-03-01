@@ -1,0 +1,50 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="date"/>
+        <column name="site">
+            <properties>
+                <property name="columnTitle" value="TB Site"/>
+            </properties>
+        </column>
+        <column name="test">
+            <properties>
+                <property name="columnTitle" value="Test"/>
+            </properties>
+        </column>
+        <column name="testType">
+            <properties>
+                <property name="columnTitle" value="Test Type"/>
+            </properties>
+        </column>
+        <column name="twentyFourHrsResult">
+            <properties>
+                <property name="columnTitle" value="24 Hours Result"/>
+            </properties>
+        </column>
+        <column name="fortyEightHrsResult">
+            <properties>
+                <property name="columnTitle" value="48 Hours Result"/>
+            </properties>
+        </column>
+        <column name="seventyTwoHrsResult">
+            <properties>
+                <property name="columnTitle" value="72 Hours Result"/>
+            </properties>
+        </column>
+        <column name="user_name">
+            <properties>
+                <property name="columnTitle" value="User ID"/>
+            </properties>
+        </column>
+        <column name="entry_date_tm">
+            <properties>
+                <property name="columnTitle" value="Entry Timestamp"/>
+            </properties>
+        </column>
+    </columns>
+    <sorts>
+        <sort column="Date" descending="true" />
+        <sort column="Id" descending="true" />
+    </sorts>
+</customView>

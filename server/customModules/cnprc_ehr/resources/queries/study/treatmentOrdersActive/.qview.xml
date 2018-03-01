@@ -1,0 +1,23 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="startdate"/>
+        <column name="enddate"/>
+        <column name="category"/>
+        <column name="frequency"/>
+        <column name="drugName"/>
+        <column name="volume"/>
+        <column name="vol_units"/>
+        <column name="concentration"/>
+        <column name="conc_units"/>
+        <column name="amount"/>
+        <column name="amount_units"/>
+        <column name="route"/>
+        <column name="weightOverride"/>
+        <column name="dosingNotes"/>
+        <column name="userComment"/>
+    </columns>
+    <sorts>
+        <sort column="startdate" descending="true"/>
+    </sorts>
+</customView>

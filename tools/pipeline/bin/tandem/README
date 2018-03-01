@@ -1,0 +1,18 @@
+X! Tandem directory
+------------------------------------------------------------------------------
+
+This is the directory where the X! Tandem search engine lives. More
+information about the X! Tandem project can be found at:
+
+http://thegpm.org/
+
+----------------------------------------
+Directions
+----------------------------------------
+1. Get the sources for X! Tandem.
+2. Add any pluggable scoring modules you care to.
+3. Run 'make' from <root>/src/.
+4. Copy <root>/bin/tandem.exe to this directory.
+5. It is a good idea to at least 'diff' <root>/bin/default_input.xml
+   with the one found here, in case of any new changes.
+

@@ -1,0 +1,37 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="FosterInfantHistory" tableDbType="NOT_IN_DB" useColumnOrder="true">
+                <javaCustomizer class="org.labkey.cnprc_ehr.table.CNPRC_FosteringCustomizer" />
+                <columns>
+                    <column columnName="Id">
+                        <columnTitle>Foster Mother</columnTitle>
+                        <url>animalHistory.view?pageId=animalHistory#subjects:${motherId}&amp;removable:&amp;nonRemovable:[object Object]&amp;inputType:singleSubject&amp;showReport:1&amp;activeReport:fosteredInfant</url>
+                    </column>
+                    <column columnName="fosterInfant">
+                        <columnTitle>Foster Infant</columnTitle>
+                        <url>animalHistory.view?pageId=animalHistory#subjects:${fosterInfant}&amp;removable:&amp;nonRemovable:[object Object]&amp;inputType:singleSubject&amp;showReport:1&amp;activeReport:fosterMother</url>
+                    </column>
+                    <column columnName="date">
+                        <columnTitle>Assignment Date</columnTitle>
+                    </column>
+                    <column columnName="assignType">
+                        <columnTitle>Assignment Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>nursing_assign_types</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="releaseDate">
+                        <columnTitle>Release Date</columnTitle>
+                    </column>
+                    <column columnName="timeFostered">
+                        <columnTitle>Time Fostered</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

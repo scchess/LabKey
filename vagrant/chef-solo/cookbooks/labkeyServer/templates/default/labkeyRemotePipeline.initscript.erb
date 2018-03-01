@@ -1,0 +1,79 @@
+#!/bin/bash
+##############################################################################
+#
+# Small shell script to show how to start/stop LabKey Remote Pipeline Service
+# 
+# 
+# chkconfig: 35 98 90
+# description: Start and Stop the LabKey Remote Pipeline Service
+#
+##############################################################################
+#
+
+#
+# Adapt the following lines to your configuration
+JAVA_HOME=<%= @java_home %>
+
+LABKEY_HOME=/labkey/labkey
+LABKEY_USER=labkey
+LABKEY_LOG=$LABKEY_HOME/logs/output.log
+PATH=$JAVA_HOME:$PATH
+
+#Added to support labkey
+PATH=$PATH:/labkey/bin
+export PATH
+
+# for multi instances adapt those lines.
+TMP_DIR=/labkey/tmp
+PID_FILE=/var/run/labkeyRemotePipeline.pid
+
+#JAVA_OPTS="-Xmx384m -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+JAVA_OPTS="-Xmx384m"
+CLASSPATH=$JAVA_HOME/lib/tools.jar:$LABKEY_HOME/labkeyBootstrap.jar
+
+
+function get_pid {
+    #NOTE: sed will trim leading whitespace, giving a more consistent result
+    PID=`ps ax | grep java | grep labkey | grep -v grep | grep -v activemq | sed 's/^ *//' | cut -d ' ' -f 1`
+}
+
+# /bin/echo $PID
+
+case "$1" in
+  start)
+    #
+    # Start LabKey Remote Pipeline Service
+    #
+    get_pid
+    if [ -z "$PID" ]; then 
+        /bin/echo "Starting LabKey Remote Pipeline Service.."
+        cd $LABKEY_HOME
+        sudo -u $LABKEY_USER $JAVA_HOME/bin/java -cp $CLASSPATH $JAVA_OPTS \
+        org.labkey.bootstrap.RemoteServerBootstrap -configdir=$LABKEY_HOME/config -webappdir=$LABKEY_HOME/labkeywebapp >>$LABKEY_LOG 2>&1 & 
+        exit $?
+    else
+        /bin/echo "LabKey Remote Pipeline Service is already running, PID=$PID" 
+    fi
+    ;;
+
+  stop)
+    #
+    # Stop LabKey Remote Pipeline Service
+    #
+    get_pid 
+    if [ -z "$PID" ]; then 
+        /bin/echo "LabKey Remote Pipeline Service is not running."
+        exit 1
+    else
+        /bin/echo -n "Stopping LabKey Remote Pipeline Service.."
+        kill $PID
+        sleep 1
+        /bin/echo ".. Done."
+    fi
+    ;;
+
+  *)
+    echo "Usage remotePipelineServer start/stop"
+    exit 1
+    ;;
+esac

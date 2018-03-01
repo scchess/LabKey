@@ -1,0 +1,35 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="Id/curLocation/Location">
+            <properties>
+                <property name="columnTitle" value="Location"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/primaryProject"/>
+        <column name="Id/DemographicsActivePregnancy/conNum"/>
+        <column name="Id/DemographicsActivePregnancy/daysPregnant"/>
+        <column name="Id/TB Report/daysWeightOverdue"/>
+        <column name="Id/TB Report/daysTBOverdue">
+            <properties>
+                <property name="columnTitle" value="Days TB Overdue"/>
+            </properties>
+        </column>
+        <column name="Id/MostRecentWeight/MostRecentWeightDate">
+            <properties>
+                <property name="columnTitle" value="Last Weight"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsMostRecentTB/MostRecentTBDate">
+            <properties>
+                <property name="columnTitle" value="Last Tb Date"/>
+            </properties>
+        </column>
+    </columns>
+    <filters>
+        <filter column="Id/TB Report/Id" operator="isnonblank"/>
+    </filters>
+    <sorts>
+        <sort column="Id" descending="false"/>
+    </sorts>
+</customView>

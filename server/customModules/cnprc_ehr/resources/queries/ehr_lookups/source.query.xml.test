@@ -1,0 +1,36 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="source" tableDbType="TABLE" useColumnOrder="true">
+                <tableTitle>Source Field Values</tableTitle>
+                <importUrl></importUrl>
+                <insertUrl></insertUrl>
+                <updateUrl></updateUrl>
+                <deleteUrl></deleteUrl>
+                <pkColumnName>code</pkColumnName>
+                <titleColumn>meaning</titleColumn>
+                <tableUrl>
+                    /query/detailsQueryRow.view?schemaName=ehr_lookups&amp;query.queryName=source&amp;code=${code}
+                </tableUrl>
+                <columns>
+                    <column columnName="code">
+                        <isKeyField>true</isKeyField>
+                    </column>
+                    <column columnName="meaning">
+                        <columnTitle>Testttttttt</columnTitle>
+                        <nullable>true</nullable>
+                    </column>
+                    <column columnName="SourceCity">
+                        <nullable>true</nullable>
+                    </column>
+                    <column columnName="SourceState">
+                        <nullable>true</nullable>
+                    </column>
+                    <column columnName="SourceCountry">
+                        <nullable>true</nullable>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

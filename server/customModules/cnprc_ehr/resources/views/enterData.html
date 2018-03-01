@@ -1,0 +1,56 @@
+<script type="text/javascript">
+
+    Ext4.onReady(function () {
+        var webpart = <%=webpartContext%>;
+        var ctx = EHR.Utils.getEHRContext(webpart.wrapperDivId);
+        if (!ctx)
+            return;
+
+        function getFilteredCasesLink(label,filter) {
+            return {
+                xtype: 'ldk-linkbutton',
+                text: label,
+                linkCls: 'labkey-text-link',
+                href: LABKEY.ActionURL.buildURL('query', 'executeQuery', null, {
+                    schemaName: 'study',
+                    'query.queryName': 'Casemanagement', 'query.AdmitType~eq': filter
+                })
+            };
+        }
+
+        Ext4.create('EHR.panel.EnterDataPanel', {
+            additionalEnterNewSections:
+                    [
+                        {
+                            header: 'Case Management',
+                            renderer: function (item) {
+                                return item;
+                            },
+                            items: [{
+                                layout: 'hbox',
+                                bodyStyle: 'padding: 2px;background-color: transparent;',
+                                defaults: {
+                                    border: false
+                                },
+                                items: [
+                                    {
+                                        xtype: 'ldk-linkbutton',
+                                        text: 'All Cases',
+                                        linkCls: 'labkey-text-link',
+                                        href: LABKEY.ActionURL.buildURL('query', 'executeQuery', null, {
+                                            schemaName: 'study',
+                                            'query.queryName': 'Casemanagement'
+                                        })
+                                    }
+                                    , getFilteredCasesLink('Morning Health', 'MH')
+                                    , getFilteredCasesLink('Hospital', 'H')
+                                    , getFilteredCasesLink('Outpatient', 'O')
+                                    , getFilteredCasesLink('LTOP', 'L')
+                                    , getFilteredCasesLink('Post-Operation', 'P')
+                                ]
+                            }]
+                        }]
+        }).render(webpart.wrapperDivId);
+    });
+
+</script>

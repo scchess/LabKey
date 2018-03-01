@@ -1,0 +1,5 @@
+rowId	animalId	book	maleEnemy1	maleEnemy2	maleEnemy3	maleEnemy4	maleEnemy5	objectId	Created	CreatedBy	Modified	ModifiedBy	Container
+2001	44444	BO	44445					dbe961b9-b7ba-102d-8c2a-9926f351b9ae	2017-04-13 00:00:00.000	edy	2017-04-13 00:00:00.000	edy
+2002	44445	B4						dbe961b9-b7ba-102d-8c2a-9926f351b9ae	2017-04-13 00:00:00.000	edy	2017-04-13 00:00:00.000	edy
+2003	44446	C2						dbe961b9-b7ba-102d-8c2a-9926f351b9ae	2017-04-13 00:00:00.000	edy	2017-04-13 00:00:00.000	edy
+2001	TSTCP	BP	44445					dbe961b9-b7ba-102d-8c2a-9926f351b9af	2017-04-13 00:00:00.000	edy	2017-04-13 00:00:00.000	edy

@@ -1,0 +1,48 @@
+import org.labkey.gradle.plugin.Distribution
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+
+apply plugin: 'org.labkey.distribution'
+
+dist.description="Distribution of all modules supporting the Postgres database"
+
+Distribution.inheritDependencies(project, ":server:distributions:base")
+
+List<String> pgModules = []
+
+project.rootProject.allprojects {
+    Project p ->
+
+        if (p.file("module.properties").exists())
+        {
+            Properties props = new Properties()
+            props.load(new FileInputStream(p.file("module.properties")))
+            if (!props.containsKey("SupportedDatabases"))
+            {
+                pgModules += project.path
+            }
+            else
+            {
+                String dbs = props.get("SupportedDatabases")
+                if (dbs.toLowerCase().contains("pgsql"))
+                    pgModules += project.path
+            }
+        }
+}
+
+BuildUtils.addModuleDistributionDependencies(project, pgModules)
+
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName="allPg"
+            dist.includeWindowsInstaller=false
+            dist.includeZipArchive=false
+            dist.includeTarGZArchive=true
+            dist.extraFileIdentifier='-allPg'
+        }
+)

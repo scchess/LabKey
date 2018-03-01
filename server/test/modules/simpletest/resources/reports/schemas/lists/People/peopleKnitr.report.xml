@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportDescriptor descriptorType="rReportDescriptor" reportName="peopleKnitr" reportKey="lists/People" xmlns="http://labkey.org/query/xml" xmlns:rep="http://labkey.org/data/xml/reportProps">
+  <Properties>
+    <Prop name="descriptorType">rReportDescriptor</Prop>
+    <Prop name="reportName">Knitr People</Prop>
+    <Prop name="version">15.1</Prop>
+    <Prop name="reportType">ReportService.rReport</Prop>
+    <Prop name="queryName">People</Prop>
+    <Prop name="schemaName">lists</Prop>
+    <Prop name="dataRegionName">query</Prop>
+    <Prop name="cached">true</Prop>
+    <Prop name="sourceTabVisible">false</Prop>
+    <Prop name="runInBackground">false</Prop>
+    <Prop name="knitrFormat">Markdown</Prop>
+    <Prop name="modified">2015-10-26</Prop>
+    <Prop name="moduleReportCreatedDate">2015-08-01</Prop>
+  </Properties>
+  <tags>
+    <rep:property>
+      <rep:propDef name="thumbnailType" label="ThumbnailType" type="http://www.w3.org/2001/XMLSchema#string"/>
+      <rep:propValue value="AUTO"/>
+    </rep:property>
+    <rep:property>
+      <rep:propDef name="thumbnailRevision" label="ThumbnailRevision" type="http://www.w3.org/2001/XMLSchema#int"/>
+      <rep:propValue value="3.0"/>
+    </rep:property>
+  </tags>
+</ReportDescriptor>

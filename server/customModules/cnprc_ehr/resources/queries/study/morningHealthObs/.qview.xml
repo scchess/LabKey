@@ -1,0 +1,32 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="fileNum" />
+        <column name="sequence" />
+        <column name="recordType" />
+        <column name="recordStatus" />
+        <column name="remark" />
+        <column name="Id" />
+        <column name="date" />
+        <column name="fullDate" />
+        <column name="location" />
+        <column name="area" />
+        <column name="enclosure" />
+        <column name="cage" />
+        <column name="observation" />
+        <column name="obsCode1" />
+        <column name="obsCode2" />
+        <column name="obsCode3" />
+        <column name="obsCode4" />
+        <column name="obsCode5" />
+        <column name="obsCode6" />
+        <column name="obsCode7" />
+        <column name="obsCode8" />
+        <column name="obsCode9" />
+        <column name="obsCode10" />
+        <column name="technician" />
+        <column name="attendant" />
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

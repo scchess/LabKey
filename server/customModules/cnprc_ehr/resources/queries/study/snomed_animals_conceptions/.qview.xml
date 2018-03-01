@@ -1,0 +1,23 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="date"/>
+        <column name="code/code"/>
+        <column name="code"/>
+        <column name="infoQualifier"/>
+        <column name="foreignSeq"/>
+        <column name="snoSeq"/>
+        <column name="timeQualifier"/>
+        <column name="subjectType"/>
+        <column name="biopsyFk"/>
+        <column name="necropsyFk"/>
+        <column name="treatmentFk"/>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+        <sort column="infoQualifier" descending="false"/>
+        <sort column="snoSeq" descending="false"/>
+        <sort column="foreignSeq" descending="false"/>
+        <sort column="code/sortOrder" descending="false"/>
+    </sorts>
+</customView>
