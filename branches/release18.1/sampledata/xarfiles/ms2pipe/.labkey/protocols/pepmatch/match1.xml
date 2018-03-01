@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bioml>
+  <!-- Override default parameters here. -->
+  <note label="pipeline, protocol name" type="input">match1</note>
+  <note label="pipeline, protocol description" type="input"/>
+  <note label="pipeline, peakaboo enabled" type="input">false</note>
+</bioml>

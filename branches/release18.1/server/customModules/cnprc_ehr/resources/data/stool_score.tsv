@@ -1,0 +1,5 @@
+value	description	sort_order
+N	Normal	1
+SS	Semisolid	2
+B	Bloody	3
+L	Liquid/Diarrhea	4

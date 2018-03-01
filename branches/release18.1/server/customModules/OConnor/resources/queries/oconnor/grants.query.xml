@@ -1,0 +1,30 @@
+<query xmlns="http://labkey.org/data/xml/query">
+  <metadata>
+    <tables xmlns="http://labkey.org/data/xml">
+      <table tableName="grants" tableDbType="TABLE">
+		<titleColumn>id</titleColumn>
+		 <columns>
+          <column columnName="key">
+            <shownInInsertView>false</shownInInsertView>
+            <shownInUpdateView>false</shownInUpdateView>
+          </column>
+          <column columnName="id">
+            <columnTitle>Grant Number</columnTitle>
+          </column>
+          <column columnName="enabled">
+            <defaultValue>true</defaultValue>
+          </column>
+          <column columnName="title">
+            <columnTitle>Grant Title</columnTitle>
+          </column>
+          <column columnName="grant_type">
+            <columnTitle>Grant Mechanism (e.g., R01)</columnTitle>
+          </column>
+          <column columnName="grant_unit">
+            <columnTitle>Administrative Group</columnTitle>
+          </column>
+        </columns>
+      </table>
+    </tables>
+  </metadata>
+</query>

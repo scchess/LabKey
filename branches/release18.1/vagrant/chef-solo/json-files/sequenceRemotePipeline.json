@@ -1,0 +1,29 @@
+{
+    "Description": {
+        "Function": "Used to install and configure a LabKey Remote Pipeline on a stand-alone VM started by Vagrant, with sequence pipeline tools"
+    },
+    "java": {
+        "jdk_version": "7"
+    },
+
+    "labkey": {
+        "base": {
+            "domain": "labkey.com"
+        },
+        "server": {
+            "labkey_version": "14.1",
+            "14.1": {
+                "url": "http://labkey.s3.amazonaws.com/downloads/general/d/beta/LabKey14.1Beta-31315-bin.tar.gz"
+            }
+        }
+    },
+    "recipes": [
+    "apt::default",
+    "base::default",
+    "java::oracle",
+    "labkeyBase::default",
+    "labkeyServer::remotePipeline",
+    "sequenceAnalysisTools::default"
+    ]
+}
+

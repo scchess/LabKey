@@ -1,0 +1,13 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+   <columns>
+       <column name="Id" />
+       <column name="date" />
+       <column name="cause" />
+       <column name="manner" />
+       <column name="Id/NecropsyPerformed/necropsyPerformed"/>
+       <column name="notAtCenter" />
+   </columns>
+   <sorts>
+       <sort column="date" descending="true"/>
+   </sorts>
+</customView>

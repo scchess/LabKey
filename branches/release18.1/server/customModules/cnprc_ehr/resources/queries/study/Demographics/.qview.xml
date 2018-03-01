@@ -1,0 +1,67 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="species/code">
+            <properties>
+                <property name="columnTitle" value="Species"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePairingCode/observation">
+            <properties>
+                <property name="columnTitle" value="Pair Code"/>
+            </properties>
+        </column>
+        <column name="Id"/>
+        <column name="Id/curLocation/location"/>
+        <column name="gender/code">
+            <properties>
+                <property name="columnTitle" value="Sex"/>
+            </properties>
+        </column>
+        <column name="Id/age/yearsAndMonthsAndDays">
+            <properties>
+                <property name="columnTitle" value="Age (yy:mm:dd)"/>
+            </properties>
+        </column>
+
+        <column name="birth">
+            <properties>
+                <property name="columnTitle" value="Birth Date"/>
+            </properties>
+        </column>
+
+        <column name="Id/MostRecentWeight/MostRecentWeight">
+            <properties>
+                <property name="columnTitle" value="Weight (kg)"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsMostRecentBodyConditionScore/bodyConditionScore">
+            <properties>
+                <property name="columnTitle" value="BCS"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/primaryProject"/>
+        <column name="Id/DemographicsActiveAssignment/secondaryProjects"/>
+        <column name="Id/DemographicsActivePayor/payor_ids"/>
+        <column name="Id/DemographicsActivePairing/observation/value">
+            <properties>
+                <property name="columnTitle" value="Behavior Code"/>
+            </properties>
+        </column>
+        <column name="Id/flagList/values">
+            <properties>
+                <property name="columnTitle" value="Flags"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/daysPregnant"/>
+        <column name="Id/DemographicsActivePregnancy/conceptionDateStatus"/>
+        <column name="calculated_status">
+            <properties>
+                <property name="columnTitle" value="Status"/>
+            </properties>
+        </column>
+        <column name="history"/>
+    </columns>
+    <sorts>
+        <sort column="Id" descending="false"/>
+    </sorts>
+</customView>

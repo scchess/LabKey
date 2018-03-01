@@ -1,0 +1,32 @@
+{
+    "Description": {
+        "Function": "Used to install and configure a LabKey Remote Pipeline on a stand-alone VM started by Vagrant"
+    },
+    "java": {
+        "jdk_version": "7"
+    },
+
+    "labkey": {
+        "base": {
+            "domain": "labkey.com"
+        },
+        "server": {
+            "labkey_version": "14.1",
+            "14.1": {
+                "url": "http://labkey.s3.amazonaws.com/downloads/general/r/14.1/LabKey14.1-31615-bin.tar.gz"
+            }
+        },
+	"host_ip":  "192.168.2.20",
+	"activemq_host": "localhost"
+    },
+    "recipes": [
+    "apt::default",
+    "base::default",
+    "java::oracle",
+    "labkeyBase::default",
+    "labkeyServer::remotePipeline",
+    "activemq::default",
+    "tpp::default"
+    ]
+}
+

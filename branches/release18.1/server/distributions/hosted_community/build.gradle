@@ -1,0 +1,27 @@
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+import org.labkey.gradle.plugin.Distribution
+
+apply plugin: 'org.labkey.distribution'
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        description: "Community edition with additional modules needed for hosting",
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName='hosted_community'
+            dist.includeWindowsInstaller=false
+            dist.includeZipArchive=false
+            dist.includeTarGZArchive=true
+            dist.extraFileIdentifier='-hosted_community'
+        }
+)
+dist.description="Distribution of all community modules for LabKey Server in a hosted environment"
+
+Distribution.inheritDependencies(project, ":server:distributions:community")
+
+BuildUtils.addModuleDistributionDependencies(project, [
+        ":server:optionalModules:cas",
+        ":server:optionalModules:evaluationContent"])

@@ -1,0 +1,18 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="mAb"/>
+        <column name="Parental"/>
+        <column name="ChainID"/>
+        <column name="ModificationType"/>
+        <column name="Residue"/>
+        <column name="ModCount"/>
+        <column name="QCed"/>
+        <column name="R::Percent"/>
+        <column name="H::Percent"/>
+        <column name="L::Percent"/>
+        <column name="C::Percent"/>
+        <column name="M::Percent"/>
+        <column name="T::Percent"/>
+        <column name="ModifiedSequence"/>
+    </columns>
+</customView>

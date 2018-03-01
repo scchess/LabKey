@@ -1,0 +1,35 @@
+# Set encoding of strings to UTF8 instead of server native encoding
+encoding utf8
+
+# Location of password file
+pwdfile /etc/Rserv.logins
+
+# Read the password file at startup only, which is more efficient than
+# reading it for each client connection.
+cachepwd indefinitely
+
+# Require users to provide a password, but not in plaintext
+remote enable
+auth required
+plaintext disable
+
+# Normally, the Rserver changes to an unprivileged user on startup. The
+# password file would need to readable by this user. As client code also runs
+# as the unprivileged user, it could also read the password file, or otherwise
+# affect the listening service.
+#
+# Using the "su client" option, the Rserver runs as root, but when a client
+# connects, the client connection handler process reads the password file,
+# validates the user, and then changes to the unprivileged user. This
+# configuration prevents a client from affecting the listening server or
+# reading the password file.
+#
+# Note that the "su" option must appear before the "gid" and "uid" options,
+# otherwise the Rserver changes as soon as it reads the "gid" and "uid" options.
+#
+su client
+
+# User/group for running client code
+gid <%= @rserve_gid %>
+
+uid <%= @rserve_uid %>

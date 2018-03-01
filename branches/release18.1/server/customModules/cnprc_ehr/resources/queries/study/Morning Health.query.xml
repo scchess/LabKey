@@ -1,0 +1,157 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="MorningHealth" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Begin Date</columnTitle>
+                        <formatString>Date</formatString>
+                    </column>
+                    <column columnName="fulldate">
+                        <columnTitle>Full Date</columnTitle>
+                    </column>
+                    <column columnName="fileNum">
+                        <columnTitle>File Num</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>mh_file</fkTable>
+                            <fkColumnName>fileNo</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="sequence">
+                        <columnTitle>Record Seq</columnTitle>
+                    </column>
+                    <column columnName="recordType">
+                        <columnTitle>Record Type</columnTitle>
+                    </column>
+                    <column columnName="recordStatus">
+                        <columnTitle>Record Status</columnTitle>
+                    </column>
+                    <column columnName="rawId">
+                        <columnTitle>Raw Id</columnTitle>
+                    </column>
+                    <column columnName="raw_location">
+                        <columnTitle>Raw Location</columnTitle>
+                    </column>
+                    <column columnName="location">
+                        <columnTitle>Location</columnTitle>
+                    </column>
+                    <column columnName="area">
+                        <columnTitle>Area</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>areas</fkTable>
+                            <fkColumnName>area</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="enclosure">
+                        <columnTitle>Enclosure</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>rooms</fkTable>
+                            <fkColumnName>room</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="cage">
+                        <columnTitle>Cage</columnTitle>
+                    </column>
+                    <column columnName="observation">
+                        <columnTitle>Observation Code List</columnTitle>
+                    </column>
+                    <column columnName="obsCode1">
+                        <columnTitle>ObsCode 1</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode2">
+                        <columnTitle>ObsCode 2</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode3">
+                        <columnTitle>ObsCode 3</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode4">
+                        <columnTitle>ObsCode 4</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode5">
+                        <columnTitle>ObsCode 5</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode6">
+                        <columnTitle>ObsCode 6</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode7">
+                        <columnTitle>ObsCode 7</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode8">
+                        <columnTitle>ObsCode 8</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode9">
+                        <columnTitle>ObsCode 9</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="obsCode10">
+                        <columnTitle>ObsCode 10</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>observation_types</fkTable>
+                            <fkColumnName>obsCode</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="technician">
+                        <columnTitle>Technician</columnTitle>
+                    </column>
+                    <column columnName="attendant">
+                        <columnTitle>Attendant</columnTitle>
+                    </column>
+                    <column columnName="remark">
+                        <datatype>varchar</datatype>
+                        <propertyURI>urn:ehr.labkey.org/#Remark</propertyURI>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

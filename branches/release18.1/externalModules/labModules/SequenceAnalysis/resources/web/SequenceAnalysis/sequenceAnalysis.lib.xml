@@ -1,0 +1,19 @@
+<libraries xmlns="http://labkey.org/clientLibrary/xml/">
+    <library compileInProductionMode="true">
+        <script path="SequenceAnalysis/Utils.js"/>
+        <script path="SequenceAnalysis/sequenceAnalysis.css"/>
+        <script path="SequenceAnalysis/sequenceanalysisButtons.js"/>
+        <script path="SequenceAnalysis/window/RunExportWindow.js"/>
+        <script path="SequenceAnalysis/window/IlluminaApplicationWindow.js"/>
+        <script path="SequenceAnalysis/window/IlluminaSampleKitWindow.js"/>
+        <script path="SequenceAnalysis/field/ReadsetField.js"/>
+    </library>
+    <dependencies>
+        <dependency path="Ext4"/>
+        <dependency path="Ext4ClientApi"/>
+        <dependency path="clientapi"/>
+        <dependency path="LDK.context"/>
+        <dependency path="laboratory.context"/>
+        <dependency path="extWidgets/ImportWizard.js"/>
+    </dependencies>
+</libraries>

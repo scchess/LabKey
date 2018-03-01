@@ -1,0 +1,116 @@
+<query xmlns="http://labkey.org/data/xml/query">
+<metadata>
+    <tables xmlns="http://labkey.org/data/xml">
+        <table tableName="MorphologicDiagnosis" tableDbType="TABLE">
+            <tableUrl>/query/detailsQueryRow.view?schemaName=study&amp;query.queryName=Morphologic Diagnosis&amp;lsid=${lsid}</tableUrl>
+            <insertUrl />
+            <importUrl />
+            <updateUrl />
+            <deleteUrl />
+            <columns>
+                <column columnName="Id"/>
+                <column columnName="date">
+                    <columnTitle>Report Date</columnTitle>
+                    <formatString>Date</formatString>
+                </column>
+                <column columnName="projectCode">
+                    <columnTitle>Project Code</columnTitle>
+                    <fk>
+                        <fkDbSchema>cnprc_ehr</fkDbSchema>
+                        <fkTable>project</fkTable>
+                        <fkColumnName>projectCode</fkColumnName>
+                        <fkDisplayColumnName>projectCode</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="tissue">
+                    <columnTitle>Organ/Tissue</columnTitle>
+                    <fk>
+                        <fkDbSchema>ehr_lookups</fkDbSchema>
+                        <fkTable>snomed</fkTable>
+                        <fkColumnName>code</fkColumnName>
+                        <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="reportType">
+                    <columnTitle>Report Type</columnTitle>
+                    <fk>
+                        <fkDbSchema>ehr_lookups</fkDbSchema>
+                        <fkTable>snomed_qualifiers</fkTable>
+                        <fkColumnName>value</fkColumnName>
+                        <fkDisplayColumnName>description</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="morphology">
+                    <columnTitle>Morphology</columnTitle>
+                    <fk>
+                        <fkDbSchema>ehr_lookups</fkDbSchema>
+                        <fkTable>snomed</fkTable>
+                        <fkColumnName>code</fkColumnName>
+                        <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="diagnosis">
+                    <columnTitle>Function</columnTitle>
+                    <fk>
+                        <fkDbSchema>ehr_lookups</fkDbSchema>
+                        <fkTable>snomed</fkTable>
+                        <fkColumnName>code</fkColumnName>
+                        <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="etiology">
+                    <columnTitle>Etiology</columnTitle>
+                    <fk>
+                        <fkDbSchema>ehr_lookups</fkDbSchema>
+                        <fkTable>snomed</fkTable>
+                        <fkColumnName>code</fkColumnName>
+                        <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="disease">
+                    <columnTitle>Disease</columnTitle>
+                    <fk>
+                        <fkDbSchema>ehr_lookups</fkDbSchema>
+                        <fkTable>snomed</fkTable>
+                        <fkColumnName>code</fkColumnName>
+                        <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="process">
+                    <columnTitle>Procedure Performed</columnTitle>
+                    <fk>
+                        <fkDbSchema>ehr_lookups</fkDbSchema>
+                        <fkTable>snomed</fkTable>
+                        <fkColumnName>code</fkColumnName>
+                        <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="distribution">
+                    <columnTitle>Occupation</columnTitle>
+                    <fk>
+                        <fkDbSchema>ehr_lookups</fkDbSchema>
+                        <fkTable>snomed</fkTable>
+                        <fkColumnName>code</fkColumnName>
+                        <fkDisplayColumnName>Meaning</fkDisplayColumnName>
+                    </fk>
+                </column>
+                <column columnName="seq1">
+                    <columnTitle>Seq</columnTitle>
+                </column>
+                <column columnName="topographyNotes">
+                    <columnTitle>Topography Notes</columnTitle>
+                </column>
+                <column columnName="morphologyNotes">
+                    <columnTitle>Morphology Notes</columnTitle>
+                </column>
+                <column columnName="remark">
+                    <columnTitle>Other Comments</columnTitle>
+                </column>
+                <column columnName="comments">
+                    <columnTitle>Comments</columnTitle>
+                </column>
+            </columns>
+        </table>
+    </tables>
+</metadata>
+</query>

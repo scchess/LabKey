@@ -1,0 +1,47 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="cases" tableDbType="TABLE">
+                <tableUrl></tableUrl>
+                <insertUrl />
+                <importUrl />
+                <updateUrl />
+                <deleteUrl />
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Admit Date</columnTitle>
+                        <formatString>Date</formatString>
+                    </column>
+                    <column columnName="enddate">
+                        <columnTitle>Discharge Date</columnTitle>
+                    </column>
+                    <column columnName="category">
+                        <columnTitle>Category</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>clinremarks_category</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="admitType">
+                        <columnTitle>Admit Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>admit_type</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="problem">
+                        <columnTitle>Comment</columnTitle>
+                    </column>
+                    <column columnName="remark">
+                        <columnTitle>Long Term History</columnTitle>
+                        <inputType>textarea</inputType>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

@@ -1,0 +1,79 @@
+<script type="text/javascript">
+
+Ext4.onReady(function(){
+
+    var webpart = <%=webpartContext%>;
+    var ctx = EHR.Utils.getEHRContext(webpart.wrapperDivId);
+    if(!ctx)
+        return;
+
+    EHR.Utils.getReportLinks({
+        linkTypes: ['housing'],
+        success: function(results){
+            results = results.housing || {};
+
+            var formatLocationSearchValue = function (value) {
+                return value.toUpperCase().replace(/\s+/g, '');
+            };
+
+            var domSpec = [{
+                tag: 'div',
+                style: 'padding-bottom: 10px;',
+                html: 'This page contains a series of queries to search animal housing data.  If there are additional one-button reports you would like added to the top section, please submit a request using the \'user feedback\' item on the menu bar above.'
+            }];
+
+            if (results.domSpec && results.domSpec.length){
+                domSpec = domSpec.concat(results.domSpec);
+            }
+
+            domSpec = domSpec.concat([{
+                tag: 'h3',
+                html: 'Search Active Housing Records:'
+            },{
+                html: 'NOTE: By default the search only includes active housing records.  To search all records, including historic ones, pick \'default\' from the \'View\' drop-down menu at the bottom of the search panel.',
+                style: 'padding-bottom: 10px;'
+            },{
+                tag: 'div',
+                id: 'housingPanel_' + webpart.wrapperDivId
+            }]);
+
+            var el = Ext4.get(webpart.wrapperDivId);
+            Ext4.DomHelper.append(el, domSpec);
+
+            Ext4.create('LABKEY.ext4.SearchPanel', {
+                schemaName: 'study',
+                queryName: 'LocationReport',
+                title: 'Enclosure Search',
+                viewName: 'Search Panel',
+                metadata: {
+                    // TODO: not all of these are probably needed (this list is based on housingQueries), remove unneeded entries
+                    isTemp: {hidden: true},
+                    Id: {lookups: false},
+                    project: {lookups: false},
+                    Created: {hidden: true},
+                    CreatedBy: {hidden: true},
+                    Modified: {hidden: true},
+                    ModifiedBy: {hidden: true},
+                    objectid: {hidden: true},
+                    ts: {hidden: true},
+                    Dataset: {hidden: true},
+                    QCState: {hidden: true},
+                    created: {hidden: true},
+                    modified: {hidden: true},
+                    AnimalVisit: {hidden: true},
+                    EntityId: {hidden: true},
+                    Notes: {hidden: true},
+                    // will be generated on the fly in search panel, and also passed as query parameter into query
+                    onDate: {searchOnly: true, caption: 'On Date', type: 'date',
+                                defaultValue: Ext4.Date.format(new Date(), 'Y-m-d H:i:s'),
+                                queryParameter: true, parameterName: 'onDate'},
+                    location: {formatter : formatLocationSearchValue}
+                }
+            }).render('housingPanel_' + webpart.wrapperDivId);
+        },
+        failure: LDK.Utils.getErrorCallback(),
+        scope: this
+    });
+});
+
+</script>

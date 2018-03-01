@@ -1,0 +1,9 @@
+<view xmlns="http://labkey.org/data/xml/view">
+    <permissions>
+        <permission name="read"/>
+    </permissions>
+    <dependencies>
+        <dependency path="ldk.context"/>
+        <dependency path="/jbrowse/window/GenomeBrowserHelpWindow.js"/>
+    </dependencies>
+</view>

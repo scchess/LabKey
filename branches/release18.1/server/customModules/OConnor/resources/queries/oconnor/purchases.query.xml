@@ -1,0 +1,103 @@
+<query xmlns="http://labkey.org/data/xml/query">
+  <metadata>
+    <tables xmlns="http://labkey.org/data/xml">
+      <table tableName="purchases" tableDbType="TABLE">
+	<columns>
+      <column columnName="key">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="container">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="order_number">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="created">
+        <shownInInsertView>false</shownInInsertView>
+        <columnTitle>Requested Date</columnTitle>
+      </column>
+      <column columnName="modified">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="status">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="createdBy">
+        <shownInInsertView>false</shownInInsertView>
+                    <fk>
+              <fkDbSchema>core</fkDbSchema>
+              <fkTable>Users</fkTable>
+              <fkColumnName>userId</fkColumnName>
+            </fk>
+    	      </column>
+      <column columnName="placed_by">
+        <shownInInsertView>false</shownInInsertView>
+        <columnTitle>Requested By</columnTitle>
+        <displayWidth>50</displayWidth>
+
+      </column>
+      <column columnName="modifiedBy">
+        <shownInInsertView>false</shownInInsertView>
+            <fk>
+              <fkDbSchema>core</fkDbSchema>
+              <fkTable>Users</fkTable>
+              <fkColumnName>userId</fkColumnName>
+            </fk>
+      </column>
+      <column columnName="ordered_by">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="ordered_date">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="received_by">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="received_date">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="received_location">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="invoice_number">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="invoiced_date">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+      <column columnName="invoiced_by">
+        <shownInInsertView>false</shownInInsertView>
+      </column>
+<!-- define those columns with lookups that are visible in insert view -->
+      <column columnName="vendor">
+                    <fk>
+              <fkDbSchema>oconnor</fkDbSchema>
+              <fkTable>vendors</fkTable>
+              <fkColumnName>vendor</fkColumnName>
+            </fk>
+      </column>
+      <column columnName="grant_number">
+                    <fk>
+              <fkDbSchema>oconnor</fkDbSchema>
+              <fkTable>grants</fkTable>
+              <fkColumnName>id</fkColumnName>
+            </fk>
+      </column>
+      <column columnName="address">
+      <columnTitle>Deliver to:</columnTitle>
+            <fk>
+              <fkDbSchema>oconnor</fkDbSchema>
+              <fkTable>shipping</fkTable>
+              <fkColumnName>id</fkColumnName>
+            </fk>
+        
+      </column>
+	<column columnName="price">
+        <columnTitle>Unit Price</columnTitle>
+        <formatString>0.00</formatString>
+      </column>
+    </columns>
+      </table>
+    </tables>
+  </metadata>
+</query>

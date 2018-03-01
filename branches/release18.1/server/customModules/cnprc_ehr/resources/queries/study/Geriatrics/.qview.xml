@@ -1,0 +1,21 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="date"/>
+        <column name="groupName"/>
+        <column name="dead"/>
+        <column name="cl_comment"/>
+        <column name="rank"/>
+        <column name="rankDate"/>
+        <column name="cbcDate"/>
+        <column name="chemDate"/>
+        <column name="uaDate"/>
+        <column name="addedDate"/>
+        <column name="foDate"/>
+        <column name="bodyCondition"/>
+        <column name="abdominalScore"/>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

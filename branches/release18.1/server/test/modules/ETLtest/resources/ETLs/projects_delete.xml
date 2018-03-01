@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>Extended Table Test3 (delete)</name>
+    <description>Merge and delete rows from source to target</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="etltest" queryName="projects_delete" />
+            <destination schemaName="ehr" queryName="project" targetOption="merge">
+                <alternateKeys>
+                    <column name="project"/>
+                </alternateKeys>
+            </destination>
+        </transform>
+    </transforms>
+    <incrementalFilter className="ModifiedSinceFilterStrategy" timestampColumnName="modified">
+        <deletedRowsSource schemaName="etltest" queryName="projects_deletedRowsSource"
+                           deletedSourceKeyColumnName="project" timestampColumnName="modified" targetKeyColumnName="project"/>
+    </incrementalFilter>
+    <schedule>
+        <poll interval="15s" />
+    </schedule>
+</etl>

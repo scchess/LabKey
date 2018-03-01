@@ -1,0 +1,9 @@
+<view xmlns="http://labkey.org/data/xml/view" title="Import Sequence Data">
+    <dependencies>
+        <dependency path="laboratory.context"/>
+        <dependency path="SequenceAnalysis/sequenceAnalysis"/>
+        <dependency path="SequenceAnalysis/sequenceAnalysis.css"/>
+        <dependency path="SequenceAnalysis/panel/BaseSequencePanel.js"/>
+        <dependency path="SequenceAnalysis/panel/InstrumentImportPanel.js"/>
+    </dependencies>
+</view>

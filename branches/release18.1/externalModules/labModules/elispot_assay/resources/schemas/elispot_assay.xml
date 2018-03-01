@@ -1,0 +1,63 @@
+<tables xmlns="http://labkey.org/data/xml">
+    <table tableName="peptide_pools" tableDbType="TABLE">
+        <tableTitle>Peptide Pools</tableTitle>
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <titleColumn>pool_name</titleColumn>
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="pool_name"/>
+            <column columnName="category"/>
+            <column columnName="comments"/>
+            <column columnName="container"/>
+            <column columnName="createdby"/>
+            <column columnName="created"/>
+            <column columnName="modifiedby"/>
+            <column columnName="modified"/>
+        </columns>
+    </table>
+    <table tableName="assay_types" tableDbType="TABLE">
+        <tableTitle>ELISPOT Assay Types</tableTitle>
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="name"/>
+            <column columnName="description"/>
+            <column columnName="category"/>
+            <column columnName="createdby"/>
+            <column columnName="created"/>
+            <column columnName="modifiedby"/>
+            <column columnName="modified"/>
+        </columns>
+    </table>
+    <table tableName="peptide_pool_members" tableDbType="TABLE">
+        <tableTitle>Peptide Pool Members</tableTitle>
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <titleColumn>sequence</titleColumn>
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="poolid">
+                <columnTitle>Pool Name</columnTitle>
+                <fk>
+                    <fkDbSchema>elispot_assay</fkDbSchema>
+                    <fkTable>peptide_pools</fkTable>
+                    <fkColumnName>rowid</fkColumnName>
+                </fk>
+            </column>
+            <column columnName="sequence"/>
+            <column columnName="container"/>
+            <column columnName="createdby"/>
+            <column columnName="created"/>
+            <column columnName="modifiedby"/>
+            <column columnName="modified"/>
+        </columns>
+    </table>
+    <table tableName="instruments" tableDbType="TABLE">
+        <tableTitle>ELISPOT Assay Instruments</tableTitle>
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <pkColumnName>instrument</pkColumnName>
+        <columns>
+            <column columnName="instrument">
+            </column>
+        </columns>
+    </table>
+</tables>

@@ -1,0 +1,30 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="pairedWithId">
+            <properties>
+                <property name="columnTitle" value="Paired With"/>
+            </properties>
+        </column>
+        <column name="date">
+            <properties>
+                <property name="columnTitle" value="Start Date"/>
+            </properties>
+        </column>
+        <column name="endDate"/>
+        <column name="observation"/>
+        <column name="remark">
+            <properties>
+                <property name="columnTitle" value="Comment"/>
+            </properties>
+        </column>
+        <column name="timePaired">
+            <properties>
+                <property name="columnTitle" value="Duration (yy:mm:dd)"/>
+            </properties>
+        </column>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

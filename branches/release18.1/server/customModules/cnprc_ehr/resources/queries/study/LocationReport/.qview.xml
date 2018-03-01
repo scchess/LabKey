@@ -1,0 +1,116 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="pairingIndicator">
+            <properties>
+                <property name="columnTitle" value="Pairing"/>
+            </properties>
+        </column>
+        <column name="location">
+            <properties>
+                <property name="columnTitle" value="Location"/>
+            </properties>
+        </column>
+        <column name="room">
+            <properties>
+                <property name="columnTitle" value="Enclosure"/>
+            </properties>
+        </column>
+        <column name="cage"/>
+        <column name="cage_size">
+            <properties>
+                <property name="columnTitle" value="Cage Size"/>
+            </properties>
+        </column>
+        <column name="rate_class">
+            <properties>
+                <property name="columnTitle" value="Rate Class"/>
+            </properties>
+        </column>
+        <column name="species"/>
+        <column name="gender">
+            <properties>
+                <property name="columnTitle" value="Sex"/>
+            </properties>
+        </column>
+        <column name="age">
+            <properties>
+                <property name="columnTitle" value="Age (yy:MM:dd)"/>
+            </properties>
+        </column>
+        <column name="MostRecentWeight">
+            <properties>
+                <property name="columnTitle" value="Weight (kg)"/>
+            </properties>
+        </column>
+        <column name="date">
+            <properties>
+                <property name="columnTitle" value="Location Date"/>
+            </properties>
+        </column>
+        <column name="payor_ids">
+            <properties>
+                <property name="columnTitle" value="Payor ID"/>
+            </properties>
+        </column>
+        <column name="colonyCode">
+            <properties>
+                <property name="columnTitle" value="Colony Code"/>
+            </properties>
+        </column>
+        <column name="groupCode">
+            <properties>
+                <property name="columnTitle" value="Breeding Code"/>
+            </properties>
+        </column>
+        <column name="book">
+            <properties>
+                <property name="columnTitle" value="Breeding Book"/>
+            </properties>
+        </column>
+        <column name="primaryProject">
+            <properties>
+                <property name="columnTitle" value="Primary Project"/>
+            </properties>
+        </column>
+        <column name="secondaryProjects">
+            <properties>
+                <property name="columnTitle" value="Secondary Project(s)"/>
+            </properties>
+        </column>
+        <column name="values">
+            <properties>
+                <property name="columnTitle" value="Census Flag List"/>
+            </properties>
+        </column>
+        <column name="conNum">
+            <properties>
+                <property name="columnTitle" value="Pregnancy"/>
+            </properties>
+        </column>
+        <column name="pgComment">
+            <properties>
+                <property name="columnTitle" value="Comment"/>
+            </properties>
+        </column>
+        <column name="daysPregnant">
+            <properties>
+                <property name="columnTitle" value="Gest Days"/>
+            </properties>
+        </column>
+        <column name="conceptionDateStatus">
+            <properties>
+                <property name="columnTitle" value="Est"/>
+            </properties>
+        </column>
+        <column name="supervisor">
+            <properties>
+                <property name="columnTitle" value="Encl Supervisor"/>
+            </properties>
+        </column>
+    </columns>
+    <sorts>
+        <sort column="room" descending="false"/>
+        <sort column="cage" descending="false"/>
+    </sorts>
+</customView>

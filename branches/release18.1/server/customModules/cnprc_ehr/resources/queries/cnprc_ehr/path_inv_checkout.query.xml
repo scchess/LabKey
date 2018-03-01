@@ -1,0 +1,32 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="path_inv_checkout" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="path_inv_checkout_pk">
+                        <columnTitle>Checkout PK</columnTitle>
+                    </column>
+                    <column columnName="anseq_fk">
+                        <columnTitle>Pathology Inventory Key</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="media">
+                        <columnTitle>Media</columnTitle>
+                    </column>
+                    <column columnName="checkDate">
+                        <columnTitle>Check Date</columnTitle>
+                    </column>
+                    <column columnName="investigator">
+                        <columnTitle>Investigator</columnTitle>
+                    </column>
+                    <column columnName="comments">
+                        <columnTitle>Comment</columnTitle>
+                    </column>
+                    <column columnName="returnDate">
+                        <columnTitle>Return Date</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

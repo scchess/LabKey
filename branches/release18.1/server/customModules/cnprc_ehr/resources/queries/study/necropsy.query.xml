@@ -1,0 +1,79 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Necropsy" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Work Performed Date</columnTitle>
+                    </column>
+                    <column columnName="prPk">
+                        <columnTitle>Necropsy Image </columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>image_pathology</fkTable>
+                            <fkColumnName>prm_pk</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="performedBy">
+                        <columnTitle>Investigator</columnTitle>
+                    </column>
+                    <column columnName="accountId">
+                        <columnTitle>Account Id</columnTitle>
+                    </column>
+                    <column columnName="enddate">
+                        <columnTitle>Complete Date</columnTitle>
+                    </column>
+                    <column columnName="printDate">
+                        <columnTitle>Print Date</columnTitle>
+                    </column>
+                    <column columnName="approvedDate">
+                        <columnTitle>Approved Date</columnTitle>
+                    </column>
+                    <column columnName="pathologist">
+                        <columnTitle>Pathologist</columnTitle>
+                    </column>
+                    <column columnName="projectCode">
+                        <columnTitle>Project Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>project</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                            <fkDisplayColumnName>projectCode</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="reportType">
+                        <columnTitle>Report Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>pathology_report_types</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Title</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="mannerOfDeath">
+                        <columnTitle>Death Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>death_manner</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Title</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="remark">
+                        <columnTitle>Comments</columnTitle>
+                    </column>
+                    <column columnName="bcs">
+                        <columnTitle>Body Condition</columnTitle>
+                    </column>
+                    <column columnName="hydrationLevel">
+                        <columnTitle>Hydration Level</columnTitle>
+                    </column>
+                    <column columnName="assistant">
+                        <columnTitle>Resident</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

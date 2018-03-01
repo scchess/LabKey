@@ -1,0 +1,2496 @@
+{
+  "survey": {
+    "beforeLoad" : {
+      "fn": "function(callback, scope){ LABKEY.requiresScript('mpower/FieldControls.js', function(){LABKEY.mpower.Util.initStores(); callback.call(scope);}, this); }"
+    },
+    "start" : {
+      "description" : "<div style='text-align: justify'>The goal of the M POWER project is to better understand the experiences of men with prostate cancer. We will use the information we collect to help patients make better decisions about their prostate cancer care. Your responses will always be kept private and will be de-identified, so everything that you share will never be traceable to you. </div><p/><div style='text-align: justify'>Important Survey instructions: PLEASE READ<br/>This survey has 6 parts: Patient Characteristics, Clinical Diagnosis, Family History of Prostate Cancer, Treatment, Quality of Life and Lifestyle. It is VERY important that when you complete all 6 sections, you go to the final page and click save/ submit. Otherwise, your information will NOT be included.<p/><img src='{[LABKEY.contextPath]}/mpower/save_submit.png'><p/>It is important that you answer questions honestly and completely. Many of the questions are very personal, but they will help us understand the important issues that you face every day. Please do not fill out any questions that make you feel uncomfortable.<p/>Your participation is very important to us, and we believe that your experiences will help us to improve the prostate cancer experience for future generations. Thank you for contributing your time to help others with prostate cancer.<br/> Thank you!</div>",
+      "useDefaultLabel" : true
+    },
+    "sections": [
+      {
+        "title": "Patient Characteristics",
+        "description": "Be sure you complete all sections before you submit!",
+        "collapsible": true,
+        "defaultLabelWidth": 350,
+        "questions": [
+          {
+            "extConfig": {
+              "name"  : "DiagnosisStatus",
+              "fieldLabel": "Have you been diagnosed with prostate cancer?",
+              "xtype" : "combo",
+              "width" : 550,
+              "displayField"  : "Name",
+              "valueField"    : "Id",
+              "emptyText"     : "Select",
+              "forceSelection": false,
+              "editable"      : false,
+              "store"         : "mpower_diagnosis_status_store"
+            }
+          },{
+            "extConfig": {
+              "name"  : "BirthDate",
+              "xtype" : "lkdatepicker",
+              "fieldLabel"  : "What is your date of birth?",
+              "jsonType"    : "date",
+              "inputType"   : "text",
+              "width"       : 800
+            }
+          },{
+            "extConfig": {
+              "xtype": "checkboxgroup",
+              "width": 800,
+              "fieldLabel": "What is your race? Mark all that apply",
+              "vertical": true,
+              "columns": 1,
+              "defaults": {
+                "boxLabelAttrTpl": "style='width: 400px; padding: 0 3px 3px 3px;'",
+                "inputValue": true
+              },
+              "items": [
+                {
+                  "boxLabel": "White",
+                  "name": "RaceWhite"
+                },{
+                  "boxLabel": "Black or African American",
+                  "name": "RaceBlack"
+                },{
+                  "boxLabel": "American Indian or Alaska Native",
+                  "name": "RaceNativeAmerican"
+                },{
+                  "boxLabel": "Asian - A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam",
+                  "name": "RaceAsian"
+                },{
+                  "boxLabel": "Native Hawaiian or Other Pacific Islander",
+                  "name": "RaceHawaiian"
+                },{
+                  "boxLabel": "Other",
+                  "name": "RaceOther"
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name"  : "RaceHispanic",
+              "fieldLabel": "Are you Hispanic or Latino?",
+              "xtype" : "combo",
+              "width" : 430,
+              "queryMode"   : "local",
+              "displayField": "name",
+              "valueField"  : "value",
+              "emptyText"   : "Select",
+              "forceSelection": false,
+              "editable"  : false,
+              "store" : "mpower_yes_no_store"
+            }
+          },{
+            "extConfig": {
+              "fieldLabel": "Which group best describes your origin?",
+              "xtype": "fieldcontainer",
+              "name": "hispanic_origin_radiogroup",
+              "hidden": true,
+              "layout": "vbox",
+              "width": 800,
+              "defaults": {
+                "xtype": "radio",
+                "width": 300
+              },
+              "items": [
+                {
+                  "boxLabel": "Mexican, Mexican-American, or Chicano",
+                  "name": "HispanicOrigin",
+                  "inputValue": 1
+                },{
+                  "boxLabel": "Puerto Rican",
+                  "name": "HispanicOrigin",
+                  "inputValue": 2
+                },{
+                  "boxLabel": "Cuban or Cuban-American",
+                  "name": "HispanicOrigin",
+                  "inputValue": 3
+                },{
+                  "boxLabel": "Other",
+                  "name": "HispanicOrigin",
+                  "inputValue": 4
+                },{
+                  "xtype": "textfield",
+                  "name": "HispanicOriginOther",
+                  "hidden": true,
+                  "itemId": "hispanic_originOther",
+                  "emptyText": "Other, please specify",
+                  "fieldLabel": " ",
+                  "labelSeparator": "",
+                  "labelWidth": 12
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": [
+                  "RaceHispanic",
+                  "HispanicOrigin"
+                ],
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ me.setVisible(values['RaceHispanic']); if (cmp.name == 'HispanicOrigin'){ var el = me.getComponent('hispanic_originOther'); if (el) { el.setVisible(values['HispanicOrigin'] == 4); }} }} "
+              }
+            }
+          },{
+            "extConfig": {
+              "name": "ZipCode",
+              "fieldLabel": "What is the zip code where you currently live? Please type in the box.",
+              "xtype": "numberfield",
+              "minValue": 98001,
+              "maxValue": 99403,
+              "allowDecimals": false,
+              "width": 430
+            }
+          },
+          {
+            "extConfig": {
+              "fieldLabel": "When you were diagnosed, what was the highest level of education you had received?",
+              "xtype": "radiogroup",
+              "name": "education_status_radiogroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "items": [
+                {
+                  "boxLabel": "Some high school",
+                  "name": "EducationLevel",
+                  "inputValue": 1
+                },{
+                  "boxLabel": "High school graduate",
+                  "name": "EducationLevel",
+                  "inputValue": 2
+                },{
+                  "boxLabel": "Some college",
+                  "name": "EducationLevel",
+                  "inputValue": 3
+                },{
+                  "boxLabel": "Trade/technical/vocational training",
+                  "name": "EducationLevel",
+                  "inputValue": 4
+                },{
+                  "boxLabel": "College graduate",
+                  "name": "EducationLevel",
+                  "inputValue": 5
+                },{
+                  "boxLabel": "Some postgraduate work",
+                  "name": "EducationLevel",
+                  "inputValue": 6
+                },{
+                  "boxLabel": "Post graduate degree",
+                  "name": "EducationLevel",
+                  "inputValue": 7
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "marital_status_radiogroup",
+              "fieldLabel": "Are you married or in a long-term relationship?",
+              "xtype": "radiogroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "items": [
+                {
+                  "boxLabel": "Single (never married or partnered)",
+                  "name": "MaritalStatus",
+                  "inputValue": 1
+                },{
+                  "boxLabel": "Married or partnered",
+                  "name": "MaritalStatus",
+                  "inputValue": 2
+                },{
+                  "boxLabel": "Divorced",
+                  "name": "MaritalStatus",
+                  "inputValue": 3
+                },{
+                  "boxLabel": "Widowed",
+                  "name": "MaritalStatus",
+                  "inputValue": 4
+                },{
+                  "boxLabel": "Separated",
+                  "name": "MaritalStatus",
+                  "inputValue": 5
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "employment_status_radiogroup",
+              "fieldLabel": "Are you currently employed?",
+              "xtype": "radiogroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "defaults": {
+                "width": 300
+              },
+              "items": [
+                {
+                  "boxLabel": "Working full-time",
+                  "name": "EmploymentStatus",
+                  "inputValue": 1
+                },
+                {
+                  "boxLabel": "Working part-time",
+                  "name": "EmploymentStatus",
+                  "inputValue": 2
+                },
+                {
+                  "boxLabel": "Retired",
+                  "name": "EmploymentStatus",
+                  "inputValue": 3
+                },
+                {
+                  "boxLabel": "Unemployed",
+                  "name": "EmploymentStatus",
+                  "inputValue": 4
+                },
+                {
+                  "boxLabel": "Other",
+                  "name": "EmploymentStatus",
+                  "inputValue": 5
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "EmploymentStatusOther",
+                  "itemId": "employment_statusOther",
+                  "hidden": true,
+                  "emptyText": "Other, please specify",
+                  "fieldLabel": " ",
+                  "labelSeparator": "",
+                  "labelWidth": 12
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": "EmploymentStatus",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ var el = me.getComponent('employment_statusOther'); if (el) { el.setVisible(newValue === 5); } }}"
+              }
+            }
+          },{
+            "extConfig": {
+              "fieldLabel"  : "What is your current health insurance coverage?",
+              "xtype"       : "checkboxgroup",
+              "name"        : "insurance_coverage_checkgroup",
+              "width"       : 800,
+              "vertical"    : true,
+              "columns"     : 1,
+              "defaults": {
+                "width": 300
+              },
+              "items": [
+                {
+                  "boxLabel": "Commercial",
+                  "name": "insurance_coverage",
+                  "inputValue": "Commercial"
+                },{
+                  "name": "coverage_plan_commercial",
+                  "xtype": "combo",
+                  "width": 445,
+                  "fieldLabel": "What is your current plan?",
+                  "labelWidth": 187,
+                  "labelStyle": "padding-left: 17px;",
+                  "itemId": "insurance_coverageCommercial",
+                  "hidden": true,
+                  "queryMode": "local",
+                  "displayField": "value",
+                  "valueField": "value",
+                  "emptyText": "Select",
+                  "editable": false,
+                  "store": "mpower_commercial_insurance"
+                },{
+                  "boxLabel": "Medicare with Supplemental Insurance",
+                  "name": "insurance_coverage",
+                  "inputValue": "Medicare with Supplemental Insurance"
+                },{
+                  "boxLabel": "Medicare without Supplemental Insurance",
+                  "name": "insurance_coverage",
+                  "inputValue": "Medicare without Supplemental Insurance"
+                },{
+                  "boxLabel": "Medicaid",
+                  "name": "insurance_coverage",
+                  "inputValue": "Medicaid"
+                },{
+                  "boxLabel": "Military",
+                  "name": "insurance_coverage",
+                  "inputValue": "Military"
+                },{
+                  "name": "coverage_plan_military",
+                  "xtype": "combo",
+                  "width": 445,
+                  "fieldLabel": "What is your current plan?",
+                  "labelWidth": 187,
+                  "labelStyle": "padding-left: 17px;",
+                  "itemId": "insurance_coverageMilitary",
+                  "hidden": true,
+                  "queryMode": "local",
+                  "displayField": "value",
+                  "valueField": "value",
+                  "emptyText": "Select",
+                  "editable": false,
+                  "store": "mpower_military_insurance"
+                },{
+                  "boxLabel": "No insurance",
+                  "name": "insurance_coverage",
+                  "inputValue": "No insurance"
+                },{
+                  "boxLabel": "Other",
+                  "name": "insurance_coverage",
+                  "inputValue": "Other"
+                },{
+                  "name": "coverage_plan_other",
+                  "xtype": "textfield",
+                  "itemId": "insurance_coverageOther",
+                  "hidden": true,
+                  "emptyText": "Other, please specify",
+                  "fieldLabel": " ",
+                  "labelSeparator": "",
+                  "labelWidth": 12
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": "insurance_coverage",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ var el = me.getComponent(cmp.name + cmp.inputValue); if (el) { el.setVisible(newValue); } }}"
+              }
+            }
+          }
+        ],
+        "header": true
+      },{
+        "title": "Clinical Diagnosis",
+        "description": "Be sure you complete all sections before you submit!",
+        "header": true,
+        "collapsible": true,
+        "defaultLabelWidth": 350,
+        "questions": [
+          {
+            "extConfig": {
+              "name"      : "DiagnosisDate",
+              "xtype"     : "lkdatepicker",
+              "endYear"     : 2017,
+              "fieldLabel"  : "Approximately when were you first told that you had prostate cancer?",
+              "width"       : 800,
+              "hidden"      : true
+            },
+            "listeners": {
+              "change": {
+                "question": "DiagnosisStatus",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ Ext4.QuickTips.init(); me.setVisible(values['DiagnosisStatus'] != 3); }} "
+              }
+            }
+          },{
+            "extConfig": {
+              "fieldLabel": "This survey is for those that have been diagnosed with prostate cancer. Please return to our education pages to learn more about the disease.",
+              "labelStyle": "font-weight: bold;",
+              "labelWidth": 800,
+              "xtype": "displayfield",
+              "name": "no_diagnosis",
+              "hidden": true,
+              "width": 800
+            },
+            "listeners": {
+              "change": {
+                "question": "DiagnosisStatus",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ me.setVisible(values['DiagnosisStatus'] == 3); }} "
+              }
+            }
+          },{
+            "extConfig": {
+              "name": "PSALevelGroup",
+              "fieldLabel": "What was your PSA (prostate-specific antigen) level when you were diagnosed?",
+              "xtype": "radiogroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "items": [
+                {
+                  "boxLabel": "0-4 ng/mL",
+                  "name": "PSALevel",
+                  "inputValue": 1
+                },{
+                  "boxLabel": "4-10 ng/mL",
+                  "name": "PSALevel",
+                  "inputValue": 2
+                },{
+                  "boxLabel": "10-20 ng/mL",
+                  "name": "PSALevel",
+                  "inputValue": 3
+                },{
+                  "boxLabel": ">20 ng/mL",
+                  "name": "PSALevel",
+                  "inputValue": 4
+                },{
+                  "boxLabel": "Don't know or not sure",
+                  "name": "PSALevel",
+                  "inputValue": 5
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "CancerExtentGroup",
+              "fieldLabel": "What was the extent of your cancer at diagnosis? (stage)",
+              "xtype": "radiogroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "defaults": {
+                "boxLabelAttrTpl": "style='width: 400px;'"
+              },
+              "items": [
+                {
+                  "boxLabel": "Cancer is found in the prostate only",
+                  "name": "CancerExtent",
+                  "inputValue": 1
+                },{
+                  "boxLabel": "Cancer has spread outside of the prostate to local area (lymph nodes)",
+                  "name": "CancerExtent",
+                  "inputValue": 2
+                },{
+                  "boxLabel": "Cancer has spread outside of the prostate to distant areas, such as bones",
+                  "name": "CancerExtent",
+                  "inputValue": 3
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "GeneticTest",
+              "fieldLabel": "Have you ever had a genetic/ genomic test on your blood or tumor?",
+              "xtype" : "combo",
+              "width" : 430,
+              "displayField": "Name",
+              "valueField"  : "Id",
+              "emptyText"   : "Select",
+              "forceSelection": false,
+              "editable"    : false,
+              "store": "mpower_yes_no_other_store"
+            }
+          }
+        ]
+      },{
+        "title": "Family History of Prostate Cancer",
+        "description": "Be sure you complete all sections before you submit!",
+        "header": true,
+        "collapsible": true,
+        "defaultLabelWidth": 350,
+        "questions": [
+          {
+            "extConfig": {
+              "name"      : "relatives_with_prostate_cancer_radiogroup",
+              "fieldLabel": "Please list ONLY your blood relatives who have had PROSTATE cancer.",
+              "width"     : 800,
+              "xtype"     : "mpower_checkcontainer",
+              "items": [
+                {
+                  "boxLabel"  : "Brother (full, half)",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 1
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_1",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Children",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 3
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "labelStyle": "padding-left: 17px;",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_3",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Mother's father (grandfather)",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 5
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_5",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Mother's brother (uncle)",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 6
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_6",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Cousins on mother's side",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 7
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_7",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Father",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 8
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_8",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Father's father (grandfather)",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 9
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_9",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Father's brother (uncle)",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 10
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_10",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Cousins on father's side",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "inputValue": 11
+                },{
+                  "name"      : "relatives_with_prostate_cancer_age_diagnosis",
+                  "fieldLabel": "How old were they when they were diagnosed?",
+                  "xtype"     : "combo",
+                  "itemId"    : "relatives_with_prostate_cancer_11",
+                  "hidden"    : true
+                },{
+                  "boxLabel"  : "Additional family member, please specify",
+                  "name"      : "relatives_with_prostate_cancer",
+                  "submitValue"   : false,
+                  "inputValue"    : 12
+                },{
+                  "xtype": "fieldcontainer",
+                  "hidden": true,
+                  "defaults": {
+                    "labelWidth": 310
+                  },
+                  "itemId": "relatives_with_prostate_cancer_12",
+                  "items": [
+                    {
+                      "name"      : "additional_relationship_prostate",
+                      "fieldLabel": "How are they related to you?",
+                      "xtype"     : "textfield",
+                      "labelStyle": "padding-left: 17px;",
+                      "emptyText" : "Relationship"
+                    },{
+                      "xtype"     : "combo",
+                      "name"      : "additional_age_at_diagnosis_prostate",
+                      "labelStyle": "padding-left: 17px;",
+                      "store"     : "mpower_diagnosis_age_store",
+                      "displayField"  : "Name",
+                      "valueField"    : "Id",
+                      "emptyText"     : "Select",
+                      "fieldLabel"    : "How old were they when they were diagnosed?"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "No family history of prostate cancer/don't know",
+                  "name"      : "relatives_with_prostate_cancer_none",
+                  "inputValue": true
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": "relatives_with_prostate_cancer",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ var el = me.getComponent(cmp.name + '_' + cmp.inputValue); if (el) { el.setVisible(newValue); } }}"
+              }
+            }
+          },{
+            "extConfig": {
+              "xtype"  : "fieldcontainer",
+              "fieldLabel"  : "&nbsp;",
+              "labelWidth"  : 350,
+              "width"       : 800,
+              "items" : [
+                {
+                  "xtype"     : "mpower_familymember_prostatebtn",
+                  "targetCmp" : "item-relatives_with_prostate_cancer_radiogroup"
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name"      : "relatives_with_other_cancer_checkboxgroup",
+              "fieldLabel": "Please list ONLY your blood relatives who have had any other type of cancer.",
+              "width"     : 800,
+              "xtype"     : "mpower_checkcontainer",
+              "items": [
+                {
+                  "boxLabel"  : "Sister (full, half)",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 2
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_2",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },{
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Brother (full, half)",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 1
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_1",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },{
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Children",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 3
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_3",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },{
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Mother",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 4
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_4",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },
+                    {
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Mother's father (grandfather)",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 5
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_5",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },
+                    {
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Mother's brother (uncle)",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 6
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_6",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },
+                    {
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Father",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 8
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_8",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },{
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Father's father (grandfather)",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 9
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_9",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },{
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Father's brother (uncle)",
+                  "name"      : "relatives_with_other_cancer",
+                  "inputValue": 10
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_10",
+                  "items": [
+                    {
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "relatives_with_other_cancer_startlocation"
+                    },{
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel"  : "Additional family member, please specify",
+                  "name"      : "relatives_with_other_cancer",
+                  "submitValue" : false,
+                  "inputValue"  : 12
+                },{
+                  "xtype" : "mpower_cancerinfo",
+                  "hidden": true,
+                  "itemId": "relatives_with_other_cancer_12",
+                  "items": [
+                    {
+                      "xtype"     : "textfield",
+                      "name"      : "additional_relatives_with_other_cancer",
+                      "fieldLabel": "How are they related to you?",
+                      "emptyText" : "Relationship"
+                    },{
+                      "fieldLabel": "Where did the cancer start?",
+                      "name"      : "additional_relatives_with_other_cancer_startlocation"
+                    },{
+                      "fieldLabel": "How old were they when they were diagnosed?",
+                      "name"      : "additional_relatives_with_other_cancer_age_diagnosis",
+                      "store"     : "mpower_diagnosis_age_store"
+                    }
+                  ]
+                },{
+                  "boxLabel": "No family history of cancer/don't know",
+                  "name": "relatives_with_other_cancer_none",
+                  "inputValue": true
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": "relatives_with_other_cancer",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ var el = me.getComponent(cmp.name + '_' + cmp.inputValue); if (el) { el.setVisible(newValue); } }}"
+              }
+            }
+          },{
+            "extConfig": {
+              "xtype"  : "fieldcontainer",
+              "fieldLabel"  : "&nbsp;",
+              "labelWidth"  : 350,
+              "width"       : 800,
+              "items" : [
+                {
+                  "xtype"     : "mpower_familymember_cancerbtn",
+                  "targetCmp" : "item-relatives_with_other_cancer_checkboxgroup"
+                }
+              ]
+            }
+          }
+        ]
+      },{
+        "title"       : "Treatment",
+        "description" : "Be sure you complete all sections before you submit!",
+        "header"      : true,
+        "defaultLabelWidth" : 300,
+        "mainPanelWidth"    : 900,
+        "questions": [
+          {
+            "extConfig": {
+              "name": "treatment_status_radiogroup",
+              "fieldLabel": "Which of the following best describes the current state of your prostate cancer?",
+              "xtype": "radiogroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "defaults": {
+                "boxLabelAttrTpl": "style='width: 400px;'"
+              },
+              "items": [
+                {
+                  "boxLabel": "I have not made a decision about treatment yet",
+                  "name": "CurrentTreatmentState",
+                  "inputValue": 1
+                },{
+                  "boxLabel": "I am on active surveillance or watchful waiting <span title='A treatment plan that involves closely watching a patient_s condition but not giving any treatment unless there are changes in test results that show the condition is getting worse. Active surveillance may be used to avoid or delay the need for treatments such as radiation therapy or surgery, which can cause side effects or other problems. During active surveillance, certain exams and tests are done on a regular schedule (NCI Dictionary of Cancer Terms definition)'>[?]</span>",
+                  "name": "CurrentTreatmentState",
+                  "inputValue": 2
+                },{
+                  "boxLabel": "I had treatment (such as surgery or radiation) for my prostate cancer and my cancer has not come back",
+                  "name": "CurrentTreatmentState",
+                  "inputValue": 3
+                },{
+                  "boxLabel": "I had treatment for my prostate cancer and I am being treated because my PSA was rising",
+                  "name": "CurrentTreatmentState",
+                  "inputValue": 4
+                },{
+                  "boxLabel": "My prostate cancer spread outside of the prostate to other parts of my body, which is metastatic prostate cancer",
+                  "name": "CurrentTreatmentState",
+                  "inputValue": 5
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "TreatmentWithinYear",
+              "fieldLabel": "Did you have active treatment for your prostate cancer within one year after your original diagnosis?",
+              "xtype": "combo",
+              "width": 430,
+              "queryMode": "local",
+              "displayField": "name",
+              "valueField": "value",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store" : "mpower_yes_no_store"
+            }
+          },{
+            "extConfig": {
+              "name": "primary_clinician_radiogroup",
+              "fieldLabel": "Who was the primary clinician for your treatment for your prostate cancer?",
+              "xtype": "radiogroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "items": [
+                {
+                  "boxLabel": "Doctor (Medical Oncologist)",
+                  "name": "PrimaryClinician",
+                  "inputValue": 1
+                },
+                {
+                  "boxLabel": "Doctor (Urologist)",
+                  "name": "PrimaryClinician",
+                  "inputValue": 2
+                },
+                {
+                  "boxLabel": "Doctor (Surgeon)",
+                  "name": "PrimaryClinician",
+                  "inputValue": 3
+                },
+                {
+                  "boxLabel": "Doctor (Primary Care)",
+                  "name": "PrimaryClinician",
+                  "inputValue": 4
+                },
+                {
+                  "boxLabel": "Doctor (Radiation Oncologist)",
+                  "name": "PrimaryClinician",
+                  "inputValue": 5
+                },
+                {
+                  "boxLabel": "Nurse or other health professional",
+                  "name": "PrimaryClinician",
+                  "inputValue": 6
+                }
+              ]
+            }
+          },
+          {
+            "extConfig": {
+              "name": "treatment_types_checkboxgroup",
+              "fieldLabel": "What treatment(s) did you have for your prostate cancer? Select all that apply.",
+              "xtype": "checkboxgroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "defaults": {
+                "boxLabelAttrTpl": "style='width: 400px; padding: 0 3px 3px 3px;'"
+              },
+              "items": [
+                {
+                  "boxLabel": "Active surveillance",
+                  "name": "treatment_type_surveillance",
+                  "inputValue": "Active surveillance"
+                },
+                {
+                  "boxLabel": "Surgery",
+                  "name": "treatment_types",
+                  "inputValue"  : "Surgery",
+                  "submitValue" : false
+                },
+                {
+                  "xtype" : "fieldcontainer",
+                  "hidden": true,
+                  "width" : 445,
+                  "defaults": {
+                    "xtype": "checkbox",
+                    "fieldLabel": " ",
+                    "labelSeparator": "",
+                    "labelWidth": 15
+                  },
+                  "itemId": "treatment_typesSurgery",
+                  "items": [
+                    {
+                      "boxLabel": "Radical prostatectomy (prostate gland removal)",
+                      "name": "treatment_types_surgery",
+                      "inputValue": "Radical prostatectomy"
+                    },
+                    {
+                      "xtype": "fieldcontainer",
+                      "hidden": true,
+                      "itemId": "treatment_types_surgeryRadicalprostatectomy",
+                      "items": [
+                        {
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_surgery_date",
+                          "prefix": "Radical prostatectomy:",
+                          "fieldLabel": "Approximate date of treatment",
+                          "labelWidth": 210,
+                          "labelStyle": "padding-left: 17px;",
+                          "width"     : 450
+                        },
+                        {
+                          "xtype": "combo",
+                          "name": "type_radical_prostatectomy",
+                          "fieldLabel": "Type of surgery",
+                          "labelStyle": "padding-left: 17px;",
+                          "labelWidth": 117,
+                          "width": 445,
+                          "queryMode": "local",
+                          "displayField": "label",
+                          "valueField": "value",
+                          "emptyText": "Select",
+                          "forceSelection": false,
+                          "editable": false,
+                          "store": "mpower_surgery_type"
+                        }
+                      ]
+                    },
+                    {
+                      "boxLabel": "Orchiectomy (testicle removal)",
+                      "name": "treatment_types_surgery",
+                      "inputValue": "Orchiectomy"
+                    },
+                    {
+                      "xtype": "fieldcontainer",
+                      "hidden": true,
+                      "itemId": "treatment_types_surgeryOrchiectomy",
+                      "items": [
+                        {
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_surgery_date",
+                          "prefix": "Orchiectomy:",
+                          "fieldLabel": "Approximate date of treatment",
+                          "labelWidth": 210,
+                          "labelStyle": "padding-left: 17px;",
+                          "width"     : 450
+                        }
+                      ]
+                    },
+                    {
+                      "boxLabel": "Other surgery",
+                      "name": "treatment_types_surgery",
+                      "inputValue": "Other"
+                    },
+                    {
+                      "xtype": "fieldcontainer",
+                      "hidden": true,
+                      "itemId": "treatment_types_surgeryOther",
+                      "items": [
+                        {
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_surgery_date",
+                          "prefix": "Other:",
+                          "fieldLabel": "Approximate date of treatment",
+                          "labelWidth": 210,
+                          "labelStyle": "padding-left: 17px;",
+                          "width"     : 450
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "boxLabel": "Cryotherapy/cryoablation (placing needles in prostate to freeze prostate)",
+                  "name": "treatment_types",
+                  "inputValue": "Cryotherapy cryoablation"
+                },
+                {
+                  "xtype" : "fieldcontainer",
+                  "hidden": true,
+                  "width" : 445,
+                  "itemId": "treatment_typesCryotherapycryoablation",
+                  "defaults" : {
+                    "labelWidth"      : 75,
+                    "labelSeparator"  : "",
+                    "labelStyle"      : "padding-left: 17px;",
+                    "width"           : 425
+                  },
+                  "items": [
+                    {
+                      "xtype" : "checkbox",
+                      "name"  : "treatment_types_ongoing",
+                      "inputValue": "Cryotherapy cryoablation",
+                      "boxLabel"  : "Ongoing treatment",
+                      "fieldLabel"    : " ",
+                      "labelSeparator": "",
+                      "labelWidth"    : 15
+                    },{
+                      "xtype" : "displayfield",
+                      "fieldLabel" : "&nbsp;",
+                      "value" : "Approximate dates of treatment"
+                    },{
+                      "xtype" : "lkdatepicker",
+                      "endYear" : 2017,
+                      "prefix": "Cryotherapy cryoablation:",
+                      "name"  : "treatment_types_begin_date",
+                      "fieldLabel": "begin"
+                    },{
+                      "xtype" : "lkdatepicker",
+                      "endYear" : 2017,
+                      "prefix": "Cryotherapy cryoablation:",
+                      "itemId": "treatment_types_end_date",
+                      "name"  : "treatment_types_end_date",
+                      "fieldLabel": "end"
+                    }
+                  ]
+                },
+                {
+                  "boxLabel": "Radiation",
+                  "name": "treatment_types",
+                  "inputValue"  : "Radiation",
+                  "submitValue" : false
+                },
+                {
+
+                  "xtype"   : "fieldcontainer",
+                  "hidden"  : true,
+                  "width"   : 500,
+                  "defaults": {
+                    "xtype": "checkbox",
+                    "fieldLabel": " ",
+                    "labelSeparator": "",
+                    "labelWidth": 15
+                  },
+                  "itemId": "treatment_typesRadiation",
+                  "items": [
+                    {
+                      "boxLabel": "Brachytherapy (placing of radioactive seeds or rods in the prostate)",
+                      "name": "treatment_types_radiation",
+                      "inputValue": "Brachytherapy"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_types_radiationBrachytherapy",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "checkbox",
+                          "name"  : "treatment_types_radiation_ongoing",
+                          "boxLabel"  : "Ongoing treatment",
+                          "inputValue": "Brachytherapy",
+                          "fieldLabel"    : " ",
+                          "labelSeparator": "",
+                          "labelWidth"    : 15
+                        },{
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "Brachytherapy:",
+                          "name"  : "treatment_types_radiation_begin_date",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "Brachytherapy:",
+                          "name"  : "treatment_types_radiation_end_date",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },
+                    {
+                      "boxLabel": "External beam radiation",
+                      "name": "treatment_types_radiation",
+                      "inputValue": "External beam radiation"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_types_radiationExternalbeamradiation",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "checkbox",
+                          "name"  : "treatment_types_radiation_ongoing",
+                          "boxLabel"  : "Ongoing treatment",
+                          "inputValue": "External beam radiation",
+                          "fieldLabel"    : " ",
+                          "labelSeparator": "",
+                          "labelWidth"    : 15
+                        },{
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "External beam radiation:",
+                          "name"  : "treatment_types_radiation_begin_date",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "External beam radiation:",
+                          "name"  : "treatment_types_radiation_end_date",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },
+                    {
+                      "boxLabel": "Proton beam radiation",
+                      "name": "treatment_types_radiation",
+                      "inputValue": "Proton beam radiation"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_types_radiationProtonbeamradiation",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "checkbox",
+                          "name"  : "treatment_types_radiation_ongoing",
+                          "boxLabel"  : "Ongoing treatment",
+                          "inputValue": "Proton beam radiation",
+                          "fieldLabel"    : " ",
+                          "labelSeparator": "",
+                          "labelWidth"    : 15
+                        },{
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "Proton beam radiation:",
+                          "name"  : "treatment_types_radiation_begin_date",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "Proton beam radiation:",
+                          "name"  : "treatment_types_radiation_end_date",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },
+                    {
+                      "boxLabel": "Intensity-Modulated Radiation Therapy (IMRT)",
+                      "name": "treatment_types_radiation",
+                      "inputValue": "IMRT"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_types_radiationIMRT",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "checkbox",
+                          "name"  : "treatment_types_radiation_ongoing",
+                          "boxLabel"  : "Ongoing treatment",
+                          "inputValue": "IMRT",
+                          "fieldLabel"    : " ",
+                          "labelSeparator": "",
+                          "labelWidth"    : 15
+                        },{
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "IMRT:",
+                          "name"  : "treatment_types_radiation_begin_date",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "IMRT:",
+                          "name"  : "treatment_types_radiation_end_date",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },
+                    {
+                      "boxLabel": "Cyberknife",
+                      "name": "treatment_types_radiation",
+                      "inputValue": "Cyberknife"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_types_radiationCyberknife",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "checkbox",
+                          "name"  : "treatment_types_radiation_ongoing",
+                          "boxLabel"  : "Ongoing treatment",
+                          "inputValue": "Cyberknife",
+                          "fieldLabel"    : " ",
+                          "labelSeparator": "",
+                          "labelWidth"    : 15
+                        },{
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "Cyberknife:",
+                          "name"  : "treatment_types_radiation_begin_date",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "Cyberknife:",
+                          "name"  : "treatment_types_radiation_end_date",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },
+                    {
+                      "boxLabel": "Don't know",
+                      "name": "treatment_types_radiation",
+                      "inputValue": "Do not know"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_types_radiationDonotknow",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "checkbox",
+                          "name"  : "treatment_types_radiation_ongoing",
+                          "boxLabel"  : "Ongoing treatment",
+                          "inputValue": "Do not know",
+                          "fieldLabel"    : " ",
+                          "labelSeparator": "",
+                          "labelWidth"    : 15
+                        },{
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "Do not know:",
+                          "name"  : "treatment_types_radiation_begin_date",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "prefix": "Do not know:",
+                          "name"  : "treatment_types_radiation_end_date",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "boxLabel": "Medical Treatment",
+                  "name": "treatment_types",
+                  "inputValue"  : "Medical Treatment",
+                  "submitValue" : false
+                },
+                {
+                  "xtype"   : "fieldcontainer",
+                  "hidden"  : true,
+                  "width"   : 445,
+                  "defaults": {
+                    "fieldLabel": " ",
+                    "labelSeparator": "",
+                    "labelWidth": 15
+                  },
+                  "itemId": "treatment_typesMedicalTreatment",
+                  "items": [
+                    {
+                      "xtype": "displayfield",
+                      "value": "Hormonal Agents:"
+                    },
+                    {
+                      "xtype": "checkbox",
+                      "boxLabel": "Androgen (Hormone) Therapy <span title='Androgen inhibitors such as (Trelstar),  enzalutamide (Xtandi), ketoconazole, and abiraterone (Zytiga), LHRH agonists such as goserelin (Zoladex), histrelin (Vantas),leuprolide (Lupron), and triptorelin  or antiandrogens such as cyproterone acetate, flutamide, nilutamide, Casodex (bicalutamide).'>[?]</span>",
+                      "name": "treatment_types",
+                      "inputValue": "Androgen deprivation therapy"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_typesAndrogendeprivationtherapy",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_begin_date",
+                          "prefix": "Androgen deprivation therapy:",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_end_date",
+                          "prefix": "Androgen deprivation therapy:",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },
+                    {
+                      "xtype": "displayfield",
+                      "value": "Non Hormonal Agents:"
+                    },
+                    {
+                      "xtype": "checkbox",
+                      "boxLabel": "High intensity focused ultrasound",
+                      "name": "treatment_types",
+                      "inputValue": "High intensity focused ultrasound"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_typesHighintensityfocusedultrasound",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_begin_date",
+                          "prefix": "High intensity focused ultrasound:",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_end_date",
+                          "prefix": "High intensity focused ultrasound:",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },
+                    {
+                      "xtype": "checkbox",
+                      "boxLabel": "Radiopharmaceuticals (Ra-223; samarium, etc)",
+                      "name": "treatment_types",
+                      "inputValue": "Radiopharmaceuticals"
+                    },
+                    {
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_typesRadiopharmaceuticals",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_begin_date",
+                          "prefix": "Radiopharmaceuticals:",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_end_date",
+                          "prefix": "Radiopharmaceuticals:",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },{
+                      "xtype": "checkbox",
+                      "boxLabel": "Immunotherapy (sipuleucel-t; provenge, etc)",
+                      "name": "treatment_types",
+                      "inputValue": "Immunotherapy"
+                    },{
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_typesImmunotherapy",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_begin_date",
+                          "prefix": "Immunotherapy:",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_end_date",
+                          "prefix": "Immunotherapy:",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },{
+                      "xtype": "checkbox",
+                      "boxLabel": "Chemotherapy (docetaxel)",
+                      "name": "treatment_types",
+                      "inputValue": "Chemotherapy"
+                    },{
+                      "xtype" : "fieldcontainer",
+                      "hidden": true,
+                      "width" : 445,
+                      "layout": "vbox",
+                      "itemId": "treatment_typesChemotherapy",
+                      "defaults" : {
+                        "labelWidth"      : 75,
+                        "labelSeparator"  : "",
+                        "labelStyle"      : "padding-left: 17px;",
+                        "width"           : 425
+                      },
+                      "items": [
+                        {
+                          "xtype" : "displayfield",
+                          "fieldLabel" : "&nbsp;",
+                          "value" : "Approximate dates of treatment"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_begin_date",
+                          "prefix": "Chemotherapy:",
+                          "fieldLabel": "begin"
+                        },{
+                          "xtype" : "lkdatepicker",
+                          "endYear" : 2017,
+                          "name"  : "treatment_types_end_date",
+                          "prefix": "Chemotherapy:",
+                          "fieldLabel": "end"
+                        }
+                      ]
+                    },{
+                      "xtype": "checkbox",
+                      "boxLabel": "Not sure",
+                      "name": "treatment_types_not_sure",
+                      "inputValue": true
+                    },
+                    {
+                      "xtype": "checkbox",
+                      "boxLabel": "Other",
+                      "name": "treatment_types_medical_treatment",
+                      "inputValue"  : "Other",
+                      "submitValue" : false
+                    },
+                    {
+                      "xtype": "fieldcontainer",
+                      "hidden": true,
+                      "itemId": "treatment_types_medical_treatmentOther",
+                      "items": [
+                        {
+                          "xtype": "textfield",
+                          "name": "treatment_types_other",
+                          "emptyText": "Other, please specify",
+                          "fieldLabel": " ",
+                          "labelSeparator": "",
+                          "labelWidth": 12,
+                          "width": 300
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": [
+                  "treatment_types",
+                  "treatment_types_surgery",
+                  "treatment_types_radiation",
+                  "treatment_types_medical_treatment"
+                ],
+                "fn": "function(me, cmp, newValue, oldValue, values){ var els = Ext4.ComponentQuery.query('#' + cmp.name + cmp.inputValue.replace(/ /g, '')); if (els.length == 1){ els[0].setVisible(newValue);}}"
+              }
+            }
+          },{
+            "extConfig": {
+              "name": "CancerSpreadBeyondProstate",
+              "fieldLabel": "Has your prostate cancer spread outside of the prostate?",
+              "xtype": "combo",
+              "width": 430,
+              "queryMode": "local",
+              "displayField": "name",
+              "valueField": "value",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store" : "mpower_yes_no_store"
+            }
+          },{
+            "extConfig": {
+              "fieldLabel": "Where has it spread to? Please mark all that apply",
+              "xtype": "fieldcontainer",
+              "name": "prostate_spread_location_radiogroup",
+              "hidden": true,
+              "layout": "vbox",
+              "width": 800,
+              "defaults": {
+                "xtype": "checkbox",
+                "width": 300
+              },
+              "items": [
+                {
+                  "boxLabel": "Lymph nodes",
+                  "name": "SpreadToLymphs",
+                  "inputValue": true
+                },{
+                  "boxLabel": "Bones",
+                  "name": "SpreadToBones",
+                  "inputValue": true
+                },{
+                  "boxLabel": "Other organs",
+                  "name": "SpreadToOrgans",
+                  "inputValue": true
+                },{
+                  "xtype"   : "textfield",
+                  "name"    : "OrgansSpreadTo",
+                  "hidden"  : true,
+                  "itemId"  : "prostate_spread_locationOther",
+                  "emptyText"   : "Other, please specify",
+                  "fieldLabel"  : " ",
+                  "labelSeparator": "",
+                  "labelWidth"  : 10
+                },{
+                  "boxLabel": "Don't know",
+                  "name": "SpreadToDontKnow",
+                  "inputValue": true
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": [
+                  "CancerSpreadBeyondProstate",
+                  "SpreadToOrgans"
+                ],
+                "fn": "function(me, cmp, newValue, oldValue, values){ console.log(values); if (me){ me.setVisible(values['CancerSpreadBeyondProstate']); if (cmp.name == 'SpreadToOrgans'){ var el = me.getComponent('prostate_spread_locationOther'); if (el) { el.setVisible(values['SpreadToOrgans']); }} }} "
+              }
+            }
+          },{
+            "extConfig": {
+              "name": "TreatmentSatisfaction",
+              "fieldLabel": "Overall, how satisfied are you with the treatment(s) you received for your prostate cancer?",
+              "xtype": "combo",
+              "width": 800,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store"   : "mpower_satisfaction_store"
+            }
+          }
+        ]
+      },{
+        "title": "Quality of Life",
+        "description": "Be sure you complete all sections before you submit!",
+        "header": true,
+        "collapsible": true,
+        "defaultLabelWidth": 350,
+        "questions": [
+          {
+            "extConfig": {
+              "name": "FourWeekFrequencyUrineLeaking",
+              "fieldLabel"  : "Over the past 4 weeks, how often have you leaked urine?",
+              "xtype" : "combo",
+              "width" : 550,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store"   : "mpower_urine_leak_store"
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekUrineControl",
+              "fieldLabel": "Which of the following best describes your urinary control during the last 4 weeks?",
+              "xtype": "combo",
+              "width": 550,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store" : "mpower_urine_control_store"
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekDiaperUse",
+              "fieldLabel": "How many pads or adult diapers per day did you usually use to control leakage during the last 4 weeks?",
+              "xtype": "combo",
+              "width": 550,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store" : "mpower_diaper_use_store"
+            }
+          },{
+            "extConfig": {
+              "fieldLabel"  : "How big a problem, if any, has each of the following been for you during the last 4 weeks?",
+              "xtype"       : "mpower_combocontainer",
+              "items": [
+                {
+                  "name"      : "FourWeekProblemUrineLeaking",
+                  "fieldLabel": "Dripping or leaking urine"
+                },{
+                  "name"      : "FourWeekProblemUrinationPain",
+                  "fieldLabel": "Pain or burning on urination"
+                },{
+                  "name"      : "FourWeekProblemUrinationBleeding",
+                  "fieldLabel": "Bleeding with urination"
+                },{
+                  "name"      : "FourWeekProblemUrinationWeakStream",
+                  "fieldLabel": "Weak urine stream or incomplete emptying"
+                },{
+                  "name"      : "FourWeekProblemUrinationFrequently",
+                  "fieldLabel": "Need to urinate frequently during the day"
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekProblemUrinationOverall",
+              "fieldLabel": "Overall, how big a problem has your urinary function been for you during the last 4 weeks?",
+              "xtype": "combo",
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store" : "mpower_problem_scale_store"
+            }
+          },{
+            "extConfig": {
+              "fieldLabel"  : "How big a problem, if any, has each of the following been for you?",
+              "xtype"       : "mpower_combocontainer",
+              "items": [
+                {
+                  "name"      : "ProblemBowelUrgency",
+                  "fieldLabel": "Urgency to have a bowel movement"
+                },{
+                  "name"      : "ProblemBowelFrequency",
+                  "fieldLabel": "Increased frequency of bowel movements"
+                },{
+                  "name"      : "ProblemStoolControl",
+                  "fieldLabel": "Losing control of your stools"
+                },{
+                  "name"      : "ProblemStoolBlood",
+                  "fieldLabel": "Bloody stools"
+                },{
+                  "name"      : "ProblemRectalPain",
+                  "fieldLabel": "Abdominal/ Pelvic/ Rectal pain"
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekProblemBowel",
+              "fieldLabel": "Overall, how big a problem have your bowel habits been for you during the last 4 weeks?",
+              "xtype": "combo",
+              "width": 550,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store": "mpower_problem_scale_store"
+            }
+          },{
+            "extConfig": {
+              "fieldLabel"  : "How would you rate each of the following during the last 4 weeks?",
+              "xtype"       : "mpower_combocontainer",
+              "items": [
+                {
+                  "name"      : "FourWeekAbilityErection",
+                  "fieldLabel": "Your ability to have an erection",
+                  "store"     : "mpower_standard_scale_store"
+                },{
+                  "name"      : "FourWeekAbilityOrgasm",
+                  "fieldLabel": "Your ability to reach orgasm (climax)",
+                  "store"     : "mpower_standard_scale_store"
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekQualityErection",
+              "fieldLabel": "How would you describe the usual QUALITY of your erections during the last 4 weeks?",
+              "xtype": "combo",
+              "width": 550,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store": "mpower_erection_quality_store"
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekFrequencyErection",
+              "fieldLabel": "How would you describe the FREQUENCY of your erections during the last 4 weeks?",
+              "xtype": "combo",
+              "width": 550,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store" : "mpower_erection_frequency_store"
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekSexualFunction",
+              "fieldLabel": "Overall, how would you rate your ability to function sexually during the last 4 weeks?",
+              "xtype": "combo",
+              "width": 550,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store": "mpower_standard_scale_store"
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekSexualProblem",
+              "fieldLabel": "Overall, how big a problem has your sexual function or lack of sexual function been for you during the last 4 weeks?",
+              "xtype"     : "combo",
+              "width"     : 550,
+              "displayField": "Name",
+              "valueField"  : "Id",
+              "emptyText"   : "Select",
+              "forceSelection": false,
+              "editable"  : false,
+              "store"     : "mpower_problem_scale_store"
+            }
+          },{
+            "extConfig": {
+              "fieldLabel"  : "How big a problem during the last 4 weeks, if any, has each of the following been for you?",
+              "xtype"       : "mpower_combocontainer",
+              "items": [
+                {
+                  "name"      : "FourWeekProblemHotFlash",
+                  "fieldLabel": "Hot flashes"
+                },{
+                  "name"      : "FourWeekProblemBreast",
+                  "fieldLabel": "Breast tenderness/enlargement"
+                },{
+                  "name"      : "FourWeekProblemDepression",
+                  "fieldLabel": "Feeling depressed"
+                },{
+                  "name"      : "FourWeekProblemEnergy",
+                  "fieldLabel": "Lack of energy"
+                },{
+                  "name"      : "FourWeekProblemWeight",
+                  "fieldLabel": "Changes in body weight"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "title": "Lifestyle",
+        "description": "Be sure you complete all sections before you submit!",
+        "header": true,
+        "collapsible": true,
+        "defaultLabelWidth": 350,
+        "questions": [
+          {
+            "extConfig": {
+              "name": "prior_health_conditions_checkboxgroup",
+              "fieldLabel": "Did you have any other health conditions before or during your prostate cancer diagnosis?",
+              "xtype": "checkboxgroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "defaults": {
+                "boxLabelAttrTpl": "style='width: 400px; padding: 0 3px 3px 3px;'"
+              },
+              "items": [
+                {
+                  "boxLabel": "Arthritis (rheumatoid and osteoarthritis)",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Arthritis"
+                },
+                {
+                  "boxLabel": "Osteoporosis",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Osteoporosis"
+                },
+                {
+                  "boxLabel": "Asthma",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Asthma"
+                },
+                {
+                  "boxLabel": "Chronic obstructive pulmonary disease (COPD), acquired respiratory distress syndrome (ARDS), or emphysema",
+                  "name": "prior_health_conditions",
+                  "inputValue": "COPD, ARDS, or emphysema"
+                },
+                {
+                  "boxLabel": "Angina",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Angina"
+                },
+                {
+                  "boxLabel": "Congestive heart failure (or heart disease)",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Congestive heart failure"
+                },
+                {
+                  "boxLabel": "Heart attack (myocardial infarct)",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Heart attack"
+                },
+                {
+                  "boxLabel": "Neurological disease (such as multiple sclerosis or Parkinson's)",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Neurological disease"
+                },
+                {
+                  "boxLabel": "Stroke or TIA",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Stroke"
+                },
+                {
+                  "boxLabel": "Peripheral vascular disease",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Peripheral vascular disease"
+                },
+                {
+                  "boxLabel": "Diabetes types I and II",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Diabetes"
+                },
+                {
+                  "boxLabel": "Upper gastrointestinal disease (ulcer, hernia, reflux)",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Upper gastrointestinal disease"
+                },
+                {
+                  "boxLabel": "Depression",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Depression"
+                },
+                {
+                  "boxLabel": "Anxiety or panic disorders",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Anxiety or panic disorders"
+                },
+                {
+                  "boxLabel": "Visual impairment (such as cataracts, glaucoma, macular degeneration)",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Visual impairment"
+                },
+                {
+                  "boxLabel": "Hearing impairment (very hard of hearing, even with hearing aids)",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Hearing impairment"
+                },
+                {
+                  "boxLabel": "Degenerative disc disease (back disease, spinal stenosis, or severe chronic back pain)",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Degenerative disc disease"
+                },
+                {
+                  "boxLabel": "Obesity and/or body mass index of 30 and above. Check <a href='http://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm' target='_blank'>here</a>.",
+                  "name": "prior_health_conditions",
+                  "inputValue": "Obesity"
+                },                {
+                  "boxLabel": "Other health problems",
+                  "name": "prior_health_conditions_other_note",
+                  "inputValue": "Other health problems"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "prior_health_conditions_other",
+                  "hidden": true,
+                  "itemId": "prior_health_conditions_other_noteOther health problems",
+                  "emptyText": "Other health problems, please specify",
+                  "fieldLabel": " ",
+                  "labelSeparator": "",
+                  "labelWidth": 37
+                },{
+                  "boxLabel": "Cancer",
+                  "name": "prior_health_conditions_cancer",
+                  "inputValue"  : "Cancer"
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": [
+                  "prior_health_conditions_other_note"
+                ],
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (cmp.name == 'prior_health_conditions_other_note'){ var el = me.getComponent(cmp.name + cmp.inputValue); if (el) { el.setVisible(newValue); } }} "
+              }
+            }
+          },{
+            "extConfig": {
+              "fieldLabel": " ",
+              "xtype": "fieldcontainer",
+              "name": "prior_health_cancer_checkboxgroup",
+              "hidden": true,
+              "layout": "vbox",
+              "width": 800,
+              "defaults": {
+                "xtype": "checkbox",
+                "fieldLabel": " ",
+                "labelSeparator": "",
+                "labelWidth": 20,
+                "width": 300
+              },
+              "items": [
+                {
+                  "xtype": "displayfield",
+                  "value": "What type of cancer?"
+                },
+                {
+                  "boxLabel": "Leukemia (acute or chronic)",
+                  "name": "prior_health_cancer",
+                  "inputValue": "Leukemia"
+                },
+                {
+                  "boxLabel": "Malignant lymphoma",
+                  "name": "prior_health_cancer",
+                  "inputValue": "Malignant lymphoma"
+                },
+                {
+                  "boxLabel": "Other solid tumor",
+                  "name": "prior_health_cancer_tumor_note",
+                  "inputValue": "Other solid tumor"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "prior_health_cancer_tumor",
+                  "hidden": true,
+                  "itemId": "prior_health_cancer_tumor_noteOther solid tumor",
+                  "emptyText": "Other solid tumor, please specify",
+                  "fieldLabel": " ",
+                  "labelSeparator": "",
+                  "labelWidth": 37
+                },
+                {
+                  "boxLabel": "Other cancer",
+                  "name": "prior_health_cancer_other_note",
+                  "inputValue": "Other cancer"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "prior_health_cancer_other",
+                  "hidden": true,
+                  "itemId": "prior_health_cancer_other_noteOther cancer",
+                  "emptyText": "Other cancer, please specify",
+                  "fieldLabel": " ",
+                  "labelSeparator": "",
+                  "labelWidth": 37
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": [
+                  "prior_health_conditions_cancer",
+                  "prior_health_cancer_tumor_note",
+                  "prior_health_cancer_other_note"
+                ],
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ var vals = values['prior_health_conditions_cancer']; me.setVisible(vals && (vals == 'Cancer' || vals.indexOf('Cancer') > -1)); } if (cmp.name == 'prior_health_cancer_tumor_note' || cmp.name == 'prior_health_cancer_other_note'){ var el = me.getComponent(cmp.name + cmp.inputValue); if (el) { el.setVisible(newValue); } }} "
+              }
+            }
+          },
+          {
+            "extConfig": {
+              "name": "complementary_treatments_checkboxgroup",
+              "fieldLabel": "Did you use any complementary or alternative medicine treatments since you were diagnosed with prostate cancer? Select any that apply",
+              "xtype": "checkboxgroup",
+              "width": 800,
+              "vertical": true,
+              "columns": 1,
+              "defaults": {
+                "boxLabelAttrTpl": "style='width: 400px; padding: 0 3px 3px 3px;'"
+              },
+              "items": [
+                {
+                  "boxLabel": "Special diets such as low fat or mostly vegetarian diet",
+                  "name": "AlternateTherapySpecialDiet"
+                },{
+                  "boxLabel": "Herbs or dietary supplements (such as saw palmetto, lycopene, supplements or selenium)",
+                  "name": "AlternateTherapyDietSupplement"
+                },{
+                  "boxLabel": "High dose vitamins or mega vitamins (such as vitamin E), DO NOT include 1-a-day multivitamins",
+                  "name": "AlternateTherapyVitamin"
+                },{
+                  "boxLabel": "Homeopathy",
+                  "name": "AlternateTherapyHomeopathy"
+                },{
+                  "boxLabel": "Movement or physical therapies such as yoga, tai chi, massage, chiropractic therapy",
+                  "name": "AlternateTherapyPhysical"
+                },{
+                  "boxLabel": "Oriental therapies such as acupuncture, acupressure Qigong, or Shiatsu",
+                  "name": "AlternateTherapyOriental"
+                },{
+                  "boxLabel": "Mental health counseling or psychotherapy",
+                  "name": "AlternateTherapyPsychotherapy"
+                },{
+                  "boxLabel": "Personal Prayer",
+                  "name": "AlternateTherapyPrayer"
+                },{
+                  "boxLabel": "Faith healing, laying on of hands, or any other spiritual or religious group experience",
+                  "name": "AlternateTherapyFaith"
+                },{
+                  "boxLabel": "Mind/body therapies such as guided imagery/visualization, biofeedback, meditation, relaxation techniques, hypnosis/hypnotherapy, energy healing, therapeutic touch, or music therapy",
+                  "name": "AlternateTherapyMind"
+                },{
+                  "boxLabel": "Other",
+                  "name": "complementary_treatments"
+                },{
+                  "xtype": "textfield",
+                  "name": "AlternateTherapyOther",
+                  "hidden": true,
+                  "itemId": "complementary_treatmentsOther",
+                  "width": 445,
+                  "emptyText": "Other, please specify",
+                  "fieldLabel": " ",
+                  "labelSeparator": "",
+                  "labelWidth": 12
+                },{
+                  "boxLabel": "Did not use any of these types of therapies",
+                  "name": "AlternateTherapyNone"
+                }
+              ]
+            },
+            "listeners": {
+              "change": {
+                "question": "complementary_treatments",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ var el = me.getComponent('complementary_treatmentsOther'); if (el) { el.setVisible(newValue); } }}"
+              }
+            }
+          },{
+            "extConfig": {
+              "name": "Cigarettes",
+              "fieldLabel": "Do you smoke cigarettes?",
+              "xtype": "combo",
+              "width": 430,
+              "queryMode": "local",
+              "displayField": "name",
+              "valueField": "value",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store" : "mpower_yes_no_store"
+            }
+          },{
+            "extConfig": {
+              "name": "CigarettesPerDayBeforeDiagnosis",
+              "fieldLabel": "Approximately how many cigarettes did you smoke per day before you were diagnosed with prostate cancer?",
+              "xtype": "numberfield",
+              "minValue": 0,
+              "allowDecimals": false,
+              "width": 430,
+              "hidden": true
+            },
+            "listeners": {
+              "change": {
+                "question": "Cigarettes",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ me.setVisible(values['Cigarettes']); }} "
+              }
+            }
+          },{
+            "extConfig": {
+              "name": "CigarettesPerDayCurrently",
+              "fieldLabel": "Approximately how many cigarettes per day do you currently smoke?",
+              "xtype": "numberfield",
+              "minValue": 0,
+              "allowDecimals": false,
+              "width": 430,
+              "hidden": true
+            },
+            "listeners": {
+              "change": {
+                "question": "Cigarettes",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ me.setVisible(values['Cigarettes']); }} "
+              }
+            }
+          },
+          {
+            "extConfig": {
+              "name": "YearsOfCigaretteUse",
+              "fieldLabel": "In total, how many years have you smoked at least 1 cigarette a day for a least a year? (Do not include periods when you did not smoke)",
+              "xtype": "numberfield",
+              "minValue": 0,
+              "allowDecimals": false,
+              "width": 430,
+              "hidden": true
+            },
+            "listeners": {
+              "change": {
+                "question": "Cigarettes",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ me.setVisible(values['Cigarettes']); }} "
+              }
+            }
+          },
+          {
+            "extConfig": {
+              "name": "Alcohol",
+              "fieldLabel": "Do you drink alcohol?",
+              "xtype": "combo",
+              "width": 430,
+              "queryMode": "local",
+              "displayField": "name",
+              "valueField": "value",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store" : "mpower_yes_no_store"
+            }
+          },
+          {
+            "extConfig": {
+              "name": "AlcoholPerDayBeforeDiagnosis",
+              "fieldLabel": "Approximately how many alcoholic beverages did you drink per week before you were diagnosed with prostate cancer?",
+              "xtype": "numberfield",
+              "minValue": 0,
+              "allowDecimals": false,
+              "width": 430,
+              "hidden": true
+            },
+            "listeners": {
+              "change": {
+                "question": "Alcohol",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ me.setVisible(values['Alcohol']); }} "
+              }
+            }
+          },{
+            "extConfig": {
+              "name": "AlcoholPerDayCurrently",
+              "fieldLabel": "Approximately how many alcoholic beverages do you currently drink per week?",
+              "xtype": "numberfield",
+              "minValue": 0,
+              "allowDecimals": false,
+              "width": 430,
+              "hidden": true
+            },
+            "listeners": {
+              "change": {
+                "question": "Alcohol",
+                "fn": "function(me, cmp, newValue, oldValue, values){ if (me){ me.setVisible(values['Alcohol']); }} "
+              }
+            }
+          },{
+            "extConfig": {
+              "fieldLabel": "What is your current height?",
+              "xtype": "fieldcontainer",
+              "layout": "hbox",
+              "width": 800,
+              "items": [
+                {
+                  "name": "HeightFeet",
+                  "xtype": "combo",
+                  "width": 65,
+                  "queryMode": "local",
+                  "displayField": "label",
+                  "valueField": "value",
+                  "emptyText": "Feet",
+                  "forceSelection": false,
+                  "editable": false,
+                  "store": {
+                    "fields": [
+                      "value",
+                      "label"
+                    ],
+                    "data": [
+                      {
+                        "value": "4",
+                        "label": "4'"
+                      },{
+                        "value": "5",
+                        "label": "5'"
+                      },{
+                        "value": "6",
+                        "label": "6'"
+                      },{
+                        "value": "7",
+                        "label": "7'"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "xtype": "label",
+                  "width": 10
+                },
+                {
+                  "name": "HeightInches",
+                  "xtype": "combo",
+                  "width": 65,
+                  "queryMode": "local",
+                  "displayField": "label",
+                  "valueField": "value",
+                  "emptyText": "Inches",
+                  "forceSelection": false,
+                  "editable": false,
+                  "store": {
+                    "fields": [
+                      "value",
+                      "label"
+                    ],
+                    "data": [
+                      {
+                        "value": "0",
+                        "label": "0''"
+                      },{
+                        "value": "1",
+                        "label": "1''"
+                      },{
+                        "value": "2",
+                        "label": "2''"
+                      },{
+                        "value": "3",
+                        "label": "3''"
+                      },{
+                        "value": "4",
+                        "label": "4''"
+                      },{
+                        "value": "5",
+                        "label": "5''"
+                      },{
+                        "value": "6",
+                        "label": "6''"
+                      },{
+                        "value": "7",
+                        "label": "7''"
+                      },{
+                        "value": "8",
+                        "label": "8''"
+                      },{
+                        "value": "9",
+                        "label": "9''"
+                      },{
+                        "value": "10",
+                        "label": "10''"
+                      },{
+                        "value": "11",
+                        "label": "11''"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },{
+            "extConfig": {
+              "name": "Weight",
+              "fieldLabel": "What is your current weight (pounds)?",
+              "xtype": "numberfield",
+              "minValue": 0,
+              "allowDecimals": false,
+              "width": 430
+            }
+          },{
+            "extConfig": {
+              "name": "FourWeekDaysOfExercise",
+              "fieldLabel": "On average, over the past 4 weeks, on how many days a week do you usually exercise enough to work up a sweat (include brisk walking or more strenuous activity)?",
+              "xtype": "combo",
+              "displayField": "Name",
+              "valueField": "Id",
+              "forceSelection": false,
+              "editable": false,
+              "width": 550,
+              "store": "mpower_days_of_exercise_store"
+            }
+          },{
+            "extConfig": {
+              "name": "AttendedProstateSupportGroup",
+              "fieldLabel": "Have you ever attended a prostate support group?",
+              "xtype": "combo",
+              "width": 550,
+              "displayField": "Name",
+              "valueField": "Id",
+              "emptyText": "Select",
+              "forceSelection": false,
+              "editable": false,
+              "store": "mpower_attend_support_group_store"
+            }
+          },{
+            "extConfig": {
+              "name"      : "ProstateCancerExperience",
+              "fieldLabel": "Is there anything else you want to tell us about your prostate cancer experience?",
+              "xtype"     : "textarea",
+              "width"     : 800,
+              "height"    : 150
+            }
+          }
+        ]
+      }
+    ],
+    "showCounts": false,
+    "layout": "card"
+  }
+}

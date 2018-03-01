@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="sequenceAnalysisPipelineRegistry" class="org.labkey.api.pipeline.TaskPipelineRegistrar">
+        <property name="factoryImpls">
+            <list>
+                <bean class="org.labkey.sequenceanalysis.pipeline.SequenceAlignmentTask$Factory">
+                    <!--<property name="location" value="sequenceAnalysis" />-->
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.PrepareAlignerIndexesTask$Factory">
+                    <!--<property name="location" value="sequenceAnalysis" />-->
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.AlignmentInitTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.SequenceAnalysisTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.ReadsetInitTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.AlignmentImportInitTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.AlignmentImportTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.AlignmentNormalizationTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="false" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.AlignmentAnalysisInitTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.AlignmentAnalysisWorkTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.AlignmentAnalysisRemoteWorkTask$Factory">
+                    <property name="join" value="false" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.AlignmentAnalysisCleanupTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.IlluminaImportTask$Factory">
+                    <property name="location" value="webserver" />
+                    <!--<property name="join" value="true" />-->
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.IlluminaReadsetCreationTask$Factory">
+                    <property name="location" value="webserver" />
+                    <!--<property name="join" value="true" />-->
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.SequenceNormalizationTask$Factory">
+                    <!--<property name="location" value="sequenceAnalysis" />-->
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.ReadsetCreationTask$Factory">
+                    <property name="location" value="webserver" />
+                    <property name="join" value="true" />
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.ImportFastaSequencesTask$Factory">
+                    <property name="location" value="webserver" />
+                    <!--<property name="join" value="true" />-->
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.CreateReferenceLibraryTask$Factory">
+                    <property name="location" value="webserver" />
+                    <!--<property name="join" value="true" />-->
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.CacheAlignerIndexesTask$Factory">
+                    <property name="location" value="webserver" />
+                    <!--<property name="join" value="true" />-->
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.NcbiGenomeImportTask$Factory">
+
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.SequenceConcatTask$Factory">
+
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerInitTask$Factory">
+
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerWebserverTask$Factory">
+
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerRemoteTask$Factory">
+
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerFinalTask$Factory">
+
+                </bean>
+                <bean class="org.labkey.sequenceanalysis.pipeline.ImportGenomeTrackTask$Factory">
+                    <property name="location" value="webserver" />
+                </bean>
+            </list>
+        </property>
+        <property name="pipelines">
+            <list>
+                <bean class="org.labkey.api.pipeline.TaskPipelineSettings">
+                    <constructor-arg type="java.lang.Class" value="org.labkey.sequenceanalysis.pipeline.ReferenceLibraryPipelineJob"/>
+                    <property name="taskProgressionSpec">
+                        <list>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.CreateReferenceLibraryTask</value>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.CacheAlignerIndexesTask</value>
+                        </list>
+                    </property>
+                </bean>
+                <bean class="org.labkey.api.pipeline.TaskPipelineSettings">
+                    <constructor-arg type="java.lang.Class" value="org.labkey.sequenceanalysis.pipeline.ImportFastaSequencesPipelineJob"/>
+                    <property name="taskProgressionSpec">
+                        <list>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.ImportFastaSequencesTask</value>
+                        </list>
+                    </property>
+                </bean>
+                <bean class="org.labkey.api.pipeline.TaskPipelineSettings">
+                    <constructor-arg type="java.lang.Class" value="org.labkey.sequenceanalysis.pipeline.ImportGenomeTrackPipelineJob"/>
+                    <property name="taskProgressionSpec">
+                        <list>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.ImportGenomeTrackTask</value>
+                        </list>
+                    </property>
+                </bean>
+                <bean class="org.labkey.api.pipeline.TaskPipelineSettings">
+                    <constructor-arg type="java.lang.Class" value="org.labkey.sequenceanalysis.pipeline.NcbiGenomeImportPipelineJob" />
+                    <property name="taskProgressionSpec">
+                        <list>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.NcbiGenomeImportTask</value>
+                        </list>
+                    </property>
+                </bean>
+                <bean class="org.labkey.api.pipeline.TaskPipelineSettings">
+                    <constructor-arg type="java.lang.Class" value="org.labkey.sequenceanalysis.pipeline.SequenceConcatPipelineJob" />
+                    <property name="taskProgressionSpec">
+                        <list>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.SequenceConcatTask</value>
+                        </list>
+                    </property>
+                </bean>
+                <bean class="org.labkey.api.pipeline.TaskPipelineSettings">
+                    <constructor-arg type="java.lang.Class" value="org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerJob" />
+                    <property name="taskProgressionSpec">
+                        <list>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerInitTask</value>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerRemoteTask</value>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerWebserverTask</value>
+                            <ref bean="xarGeneratorJoin"/>
+                            <value type="java.lang.Class">org.labkey.sequenceanalysis.pipeline.SequenceOutputHandlerFinalTask</value>
+                        </list>
+                    </property>
+                </bean>
+                <bean class="org.labkey.api.pipeline.file.FileAnalysisTaskPipelineSettings">
+                    <constructor-arg value="sequenceOutputImportPipeline"/>
+                    <property name="analyzeURL" value="/sequenceAnalysis/sequenceOutputImport.view" />
+                    <property name="description" value="Import selected files as sequence outputs."/>
+                    <property name="protocolName" value="Sequence Output Import" />
+                    <property name="protocolFactoryName" value="sequenceOutputImportPipeline"/>
+                    <property name="defaultDisplayState" value="enabled"/>
+                    <property name="initialInputExt" ref="sequenceOutputFileType" />
+                    <property name="taskProgressionSpec">
+                        <list>
+
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <!-- This is intended to force registration of the SequencePipelineServer and also PipelineSteps -->
+    <bean id="sequencePipelineStartup" class="org.labkey.sequenceanalysis.PipelineStartup">
+
+    </bean>
+
+    <bean id="xarGeneratorJoin" class="org.labkey.api.exp.pipeline.XarGeneratorFactorySettings">
+        <constructor-arg value="xarGeneratorJoin"/>
+        <!--<property name="outputExt" value=".search.xar.xml"/>-->
+        <property name="join" value="true" />
+    </bean>
+
+    <bean id="sequenceOutputFileType" class="org.labkey.sequenceanalysis.util.SequenceOutputFileType" />
+
+</beans>

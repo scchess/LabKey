@@ -1,0 +1,23 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="date"/>
+        <column name="projectCode"/>
+        <column name="hydrationLevel"/>
+        <column name="mannerOfDeath"/>
+        <column name="bcs"/>
+        <column name="prPk/Id"/>
+        <column name="remark"/>
+        <column name="performedBy"/>
+        <column name="accountId"/>
+        <column name="enddate"/>
+        <column name="printDate"/>
+        <column name="approvedDate"/>
+        <column name="pathologist"/>
+        <column name="assistant"/>
+        <column name="reportType"/>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

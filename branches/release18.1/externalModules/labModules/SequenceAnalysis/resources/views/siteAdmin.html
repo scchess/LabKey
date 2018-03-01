@@ -1,0 +1,72 @@
+<script type="text/javascript">
+    Ext4.onReady(function(){
+        if (LABKEY.Security.currentContainer.path != '/' && LABKEY.Security.currentContainer.path != '/Shared'){
+            Ext4.Msg.alert('Error', 'This page can only be viewed from the site root', function(){
+                window.location = LABKEY.ActionURL.buildURL('project', 'home');
+            }, this);
+        }
+        else
+        {
+            var webpart = <%=webpartContext%>;
+            Ext4.create('Ext.panel.Panel', {
+                border: false,
+                defaults: {
+                    border: false
+                },
+                bodyStyle: 'padding: 5px;margin-bottom:10px;',
+                items: [{
+                    html: 'The majority of this module\'s settings are controlled through the primary DISCVR Admin page, which can be found here: ' +  '<a href="' + LABKEY.ActionURL.buildURL('laboratory', 'siteLabSettings', '/') + '">DISCVR Site Admin</a>.',
+                    style: 'padding-bottom: 10px;'
+                },{
+                    html: '<h3>Installation of Sequence Tools</h3>'
+                },{
+                    html: 'DISCVR-Seq performs multiple functions, including management of data and analysis pipelines.  The latter requires many external tools, such as sequence aligners.<br><br>' +
+                        'Tools can be installed manually; however, we have created a bash script to facilitate installation of the core tools.  You can <b><a target="_blank" href="https://cpas:cpas@hedgehog.fhcrc.org/tor/stedi/trunk/externalModules/labModules/SequenceAnalysis/pipeline_code/sequence_tools_install.sh">download this script from subversion here</a></b>, using the username/password: cpas/cpas.  It can be executed using a command like:<br><br>' +
+                        'bash sequence_tools_install.sh -d /usr/local/labkey/ -u labkey | tee sequence_tools_install.log<br><br>' +
+                        'The command above will install the various tools into /usr/local/labkey/bin, using the user \'labkey\'.<br><br>'
+                },{
+                    html: '<h3>Installation of Sequence Tools</h3>'
+                },{
+                    html: 'Most production servers also configure the pipeline to execute on a separate remote server, in order to offset the load of these jobs.  This is not strictly required for smaller analyses, but any jobs approaching eukaryotic genome scale data will likely require this.  The analysis jobs expect to run on a linux server (too many tools require this).<br><br>' +
+                        'This relies on core LabKey configuration.  Please read the following to install and configure a remote pipeline server.  Note: you can omit the documentation about installing proteomics tools (LabKey\'s pipeline originated from the proteomics world).<br>' +
+                            '<ul><li><a href="https://www.labkey.org/wiki/home/Documentation/page.view?name=installConfigureEnterprisePipeline">Install/Configure Enterprise Pipeline</a></li>' +
+                            '<li><a href="https://www.labkey.org/wiki/home/Documentation/page.view?name=configureRemoteServer">Configure Remote Server</a></li></ul>' +
+                            'Beyond the core configuration, you will need to perform several steps for DISCVR-Seq:' +
+                            '<ul><li>By default, all of the DISCVR-Seq\'s tasks will run locally (on the location \'webserver\'). This is so the module works out of the box on a given server. Changing this is done using a file comparable to the ms2Config.xml described in the \'Configure Remote Server\' link above. You will need to create the file \'sequenceanalysisConfig.xml\' in the /configs folder where your LK server is installed (i.e. /usr/local/labkey/configs/). <b><a href="https://cpas:cpas@hedgehog.fhcrc.org/tor/stedi/trunk/externalModules/labModules/SequenceAnalysis/tools/pipeline_config/sequenceanalysisConfig.xml">Click here to view an example config file with comments</a></b>. (use the username/password: cpas/cpas).  You will need to do this on both the webserver and remote server.</li>' +
+                            '<li>You will also need to configure the pipelineConfig.xml file on the remote server.  <b><a href="https://cpas:cpas@hedgehog.fhcrc.org/tor/stedi/trunk/externalModules/labModules/SequenceAnalysis/tools/pipeline_config/pipelineConfig_remote.xml">Click here to view an example with comments.</a></b>  Please note that you will need to configure the host name of the remote server to match the name you use in sequenceanalysisConfig.xml</li></ul>'
+                },{
+                    html: '<h3>Sequence Pipeline Validation</h3>'
+                },{
+                    style: 'padding-bottom:10px;',
+                    html: 'This page provide helpers to ensure the sequence module\'s pipeline is configured correctly.  These are automated tests that will attempt to perform several sequence analysis and import pipeline jobs that exercise most aspects of the pipeline.  If you have configured the sequence pipeline and installed the external tools, you must then perform one additional step to enable these tests.  Have your site admin modify the tomcat startup script and include the following additional params in the CATALINA_OPTIONS setting:<br><br>' +
+                        '-DsequencePipelineEnabled=true<br>' +
+                        'This is typically added to the init script used to start tomcat, usually /etc/init.d/tomcat on a linux server.<br><br>' +
+                        'Note: this is not required to use the pipeline - just for these tests.  Please see the <b><a href="https://www.labkey.org/wiki/home/Documentation/page.view?name=configWebappMemory">documentation on configuring webapp memory</a></b>, which is analogous to the setting you need to add.  Once you have done this, click the links below to run the tests:'
+                },{
+                    xtype: 'ldk-linkbutton',
+                    linkCls: 'labkey-text-link',
+                    text: 'Run Sequence Analysis Test 1',
+                    href: LABKEY.ActionURL.buildURL('junit', 'run', '/', {testCase: 'org.labkey.sequenceanalysis.SequenceIntegrationTests$SequenceAnalysisPipelineTestCase1', skipTestCleanup: 1})
+                },{
+                    xtype: 'ldk-linkbutton',
+                    linkCls: 'labkey-text-link',
+                    text: 'Run Sequence Analysis Test 2',
+                    href: LABKEY.ActionURL.buildURL('junit', 'run', '/', {testCase: 'org.labkey.sequenceanalysis.SequenceIntegrationTests$SequenceAnalysisPipelineTestCase2', skipTestCleanup: 1})
+                },{
+                    xtype: 'ldk-linkbutton',
+                    linkCls: 'labkey-text-link',
+                    text: 'Run Sequence Import Test',
+                    href: LABKEY.ActionURL.buildURL('junit', 'run', '/', {testCase: 'org.labkey.sequenceanalysis.SequenceIntegrationTests$SequenceImportPipelineTestCase', skipTestCleanup: 1})
+                },{
+                    xtype: 'ldk-linkbutton',
+                    linkCls: 'labkey-text-link',
+                    text: 'Run Sequence Output Test',
+                    href: LABKEY.ActionURL.buildURL('junit', 'run', '/', {testCase: 'org.labkey.sequenceanalysis.OutputIntegrationTests$VariantProcessingTest', skipTestCleanup: 1})
+                },{
+                    style: 'margin-top:10px;margin-bottom:10px;',
+                    html: 'If tests fail, please check your site log file for additional information.  Note: if you did not enable the startup param, the tests will pass without actually exercising the pipeline (this is by design).  However, your site log file should contain the line "Sequence pipeline is not enabled on this server, so some tests will be skipped"<br>'
+                }]
+            }).render(webpart.wrapperDivId);
+        }
+    });
+</script>

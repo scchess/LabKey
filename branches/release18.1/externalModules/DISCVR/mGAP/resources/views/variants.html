@@ -1,0 +1,25 @@
+<script type="text/javascript">
+
+    Ext4.onReady(function(){
+        var webpart = <%=webpartContext%>;
+        var childEl = jQuery('#' + webpart.wrapperDivId + ' > div.wp');
+        childEl.attr('id', webpart.wrapperDivId + '-wp');
+        LDK.Utils.getReadOnlyQWP({
+            frame: 'none',
+            title: 'Variant Catalog Releases',
+            schemaName: 'mgap',
+            queryName: 'variantCatalogReleases',
+            maxRows: 50,
+            showRecordSelectors: false,
+            showDetailsColumn: false,
+            buttonBar: {position: 'none', includeStandardButtons: false, items: []}
+        }).render(childEl.attr('id'));
+    });
+
+</script>
+
+One aim of this project is to generate high quality catalogs of reference variants for rhesus macaques.  The variant catalogs below are generated from joint genotyping of our cohort of high-depth whole-genome sequencing data, <a href="<%=contextPath%><%=containerPath%>/mgap-dataProcessing.view">using a modified version of the GATK Best Practice Variant Discovery Pipeline</a>.  Each release is available either as a direct download (comparable to the dbSNP human resource bundles), or these data can be explored through our genome browser using the links below.
+<p/>
+<a onclick="JBrowse.window.GenomeBrowserHelpWindow.buttonHandler(event);">**Click here for instructions on using the genome browser</a>
+<p/>
+<div class="wp" style="min-height: 50px;min-width: 200px;"></div>

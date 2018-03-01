@@ -1,0 +1,317 @@
+<div id='intervalForm'></div>
+
+<script type="text/javascript">
+Ext4.onReady(function(){
+    Ext4.define('datasetModel',{
+        extend : 'Ext.data.Model',
+        fields : [
+            { name : 'Label', type : 'string' },
+            { name : 'DataSetId', type : 'int'}
+        ]
+    });
+
+    this.dataStore = Ext4.create('Ext.data.Store', {
+        model : 'datasetModel',
+        sorters : {property : 'Label', direction : 'ASC'}
+    });
+
+    var dataCombo1 = Ext4.create('Ext.form.field.ComboBox',{
+        name : 'datasetCombo',
+        queryMode : 'local',
+        store: this.dataStore,
+        valueField : 'Label',
+        displayField : 'Label',
+        labelWidth : 200,
+        labelSeparator: '',
+        fieldLabel : 'Please choose a dataset',
+        editable: false
+    });
+
+    var dataCombo2 = Ext4.create('Ext.form.field.ComboBox',{
+        name : 'datasetCombo',
+        queryMode : 'local',
+        store: this.dataStore,
+        valueField : 'Label',
+        displayField : 'Label',
+        labelWidth : 200,
+        labelSeparator: '',
+        fieldLabel : 'Please choose a dataset',
+        editable: false
+    });
+
+    LABKEY.Query.selectRows({
+        schemaName : 'study',
+        queryName : 'Datasets',
+        success : function(details){
+            this.dataStore.loadData(details.rows);
+        },
+        scope : this
+    });
+
+    var BGVthreshold = 0; // set on change
+    var BGVthresholdField = Ext4.create('Ext.form.NumberField', {
+        name: 'BGVthreshold',
+        maxValue: 1000,
+        minValue: 0,
+        emptyText: '0',
+        hideTrigger: true,
+        listeners: {
+            'change': function(field, newVal, oldVal) {
+                BGVthreshold = newVal;
+            }
+        }
+    });
+
+    var doubleCheckSQL = function(BGVthreshold) {
+        var sql = 'SELECT \
+                        Mice.Cage, \
+                        DataSet.MouseId, \
+                        DataSet.BGV AS "Most Recent BGV Value", \
+                        DataSet.Date AS "Date of recent BGV value", \
+                        Mice."DateIn" AS "DOB", \
+                        null AS "Date", \
+                        null AS "BGV", \
+                        null AS "Notes" \
+                    FROM \
+                        study."' + dataCombo1.getValue() + '" AS DataSet, \
+                        study."Mice" AS Mice, \
+                        (SELECT \
+                            SourceDataSet.MouseId AS mid, \
+                            MAX(SourceDataSet.Date) AS md \
+                        FROM study."' + dataCombo1.getValue() + '" AS SourceDataSet \
+                        WHERE ';
+        sql = sql + 'BGV > ' + BGVthreshold + ' ';
+        if (allMice1 == false)
+            sql = sql + ' AND Treatment IS NOT NULL ';
+        sql = sql +    ' GROUP BY MouseId) AS MaxDate \
+                    WHERE \
+                        DataSet.MouseId = mid AND DataSet.Date = md AND DataSet.MouseId = Mice.MouseId;';
+        return sql;
+    };
+
+    var allMice1 = true;
+    var doubleCheckReport = Ext4.create('Ext.form.FormPanel', {
+        title: 'Double Check report',
+        border: false,
+        width: 450,
+        height: 200,
+        bodyPadding: 10,
+        itemId: 'intervalFormId',
+        name: 'intervalFormId',
+        items: [
+            dataCombo1,
+        {
+            xtype: 'radio',
+            labelAlign: 'top',
+            fieldLabel: 'Show runs that have been uploaded, approved, or processed',
+            boxLabel: 'Include all living mice in the report',
+            id: 'radio1',
+            name: 'dcMiceState',
+            inputValue: 'allMice',
+            checked: true,
+            handler: function(item, state) {
+                if (state)
+                    allMice1 = true;
+            }
+        },{
+            xtype: 'radio',
+            hideLabel: true,
+            boxLabel: 'Include only enrolled mice in the report',
+            id: 'radio2',
+            name: 'dcMiceState',
+            inputValue: 'enrolledMice',
+            handler: function(item, state) {
+                if (state)
+                    allMice1 = false;
+            }
+        },{
+            xtype: 'fieldcontainer',
+            hideLabel: true,
+            layout: 'hbox',
+            items: [{
+                xtype: 'displayfield',
+                value: 'Please enter a BGV threshold value&nbsp;&nbsp;'
+            },
+            BGVthresholdField
+            ]
+        }],
+        buttonAlign: 'right',
+        buttons: [
+            {
+                formBind: true,
+                text: 'Clear',
+                handler: function(){
+                    dataCombo1.select('');
+                    BGVthresholdField.reset();
+                }
+            },{
+                formBind: true,
+                text: 'Generate report',
+                handler: function(){
+                    if (dataCombo1.getValue() == null) {
+                        Ext4.MessageBox.alert('Invalid Input', 'Please select a DataSet to continue.');
+                        return true;
+                    }
+
+                    LABKEY.Query.executeSql({
+                        schemaName: 'study',
+                        saveInSession: true,
+                        sql:  doubleCheckSQL(BGVthreshold),
+                        success : function(r) {
+
+                            console.log(r);
+                            var wp = new LABKEY.QueryWebPart({
+                                schemaName  : 'study',
+                                queryName   : r.queryName,
+                                frame       : 'none',
+                                renderTo    : intervalForm,
+                                showDetailsColumn       : false,
+                                showUpdateColumn        : false,
+                                showRecordSelectors     : false
+                            });
+                            wp.render(intervalForm);
+                        }
+                    });
+                }
+            }
+        ]
+    });
+
+    // a parent panel to have a border outside of the buttons
+    var doubleCheckReportParent = Ext4.create('Ext.form.FormPanel', {
+        border: 1,
+        bodyPadding: 5,
+        items: [ doubleCheckReport ]
+    });
+
+    var BGVTreatmentSQL = function() {
+        var sql = 'SELECT \
+                            Mice.Cage, \
+                            DataSet.MouseId, \
+                            DataSet.Treatment AS "Treatment Group", \
+                            Mice."DateIn" AS "DOB", \
+                            DataSet."Treatment Type", \
+                                CASE (Mice.StartDate) \
+                                    WHEN NULL THEN NULL \
+                                    ELSE timestampdiff(\'SQL_TSI_DAY\', Mice.StartDate, now() ) \
+                                END AS "Day of Treatment", \
+                            Weight AS "Recent Weight", \
+                            null AS "Date", \
+                            null AS "Weight", \
+                            null AS "BGV", \
+                            null AS "Drug 1", \
+                            null AS "Drug 2", \
+                            null AS "Drug 3", \
+                            null AS "Notes" \
+                        FROM \
+                            study."' + dataCombo2.getValue() + '" AS DataSet, \
+                            study."Mice" AS Mice, \
+                            (SELECT \
+                                MouseId AS mid, \
+                                MAX(Date) AS md \
+                            FROM study."' + dataCombo2.getValue() + '" \
+                            WHERE Weight > 0 ';
+        if (allMice2 == false)
+            sql = sql + ' AND Treatment IS NOT NULL ';
+        sql = sql +    ' GROUP BY MouseId) AS MaxDate \
+                        WHERE \
+                            DataSet.MouseId = mid AND DataSet.Date = md AND DataSet.MouseId = Mice.MouseId;';
+        return sql;
+    };
+
+    var allMice2 = true;
+    var BGVTreatmentReport = Ext4.create('Ext.form.FormPanel', {
+        title: 'BGV/Treatment report',
+        border: true,
+        width: 450,
+        height: 200,
+        bodyPadding: 10,
+        border: 0,
+        itemId: 'BGVTreatmentReportId',
+        name: 'BGVTreatmentReportId',
+        items: [
+            dataCombo2,
+            {
+                xtype: 'radio',
+                labelAlign: 'top',
+                fieldLabel: 'Show runs that have been uploaded, approved, or processed',
+                boxLabel: 'Include all living mice in the report',
+                id: 'radio3',
+                name: 'miceState',
+                inputValue: '1',
+                checked: true,
+                handler: function(item, state) {
+                    if (state)
+                        allMice2 = true;
+                }
+            },{
+                xtype: 'radio',
+                hideLabel: true,
+                boxLabel: 'Include only enrolled mice in the report',
+                name: 'miceState',
+                id: 'radio4',
+                inputValue: '2',
+                handler: function(item, state) {
+                    if (state)
+                        allMice2 = false;
+                }
+            }],
+        buttonAlign: 'right',
+        buttons: [
+            {
+                formBind: true,
+                text: 'Clear',
+                handler: function(){
+                    dataCombo2.select('');
+                }
+            },{
+                formBind: true,
+                text: 'Generate report',
+                handler: function(){
+                    if (dataCombo2.getValue() == null) {
+                        Ext4.MessageBox.alert('Invalid Input', 'Please select a DataSet to continue.');
+                        return true;
+                    }
+
+                    LABKEY.Query.executeSql({
+                        schemaName: 'study',
+                        saveInSession: true,
+                        sql:  BGVTreatmentSQL(),
+                        success : function(r) {
+
+                            console.log(r);
+                            var wp = new LABKEY.QueryWebPart({
+                                schemaName  : 'study',
+                                queryName   : r.queryName,
+                                frame       : 'none',
+                                renderTo    : intervalForm,
+                                showDetailsColumn       : false,
+                                showUpdateColumn        : false,
+                                showRecordSelectors     : false
+                            });
+                            wp.render(intervalForm);
+                        }
+                    });
+                }
+            }
+        ]
+    });
+
+    var BGVTreatmentReportParent = Ext4.create('Ext.form.FormPanel', {
+        border: 1,
+        bodyPadding: 5,
+        items: [ BGVTreatmentReport ]
+    });
+
+    Ext4.create('Ext.form.FormPanel', {
+        renderTo: 'intervalForm',
+        width: 925,
+        layout: 'column',
+        border: 0,
+        items: [
+            doubleCheckReportParent,
+            BGVTreatmentReportParent
+        ]
+    });
+});
+</script>

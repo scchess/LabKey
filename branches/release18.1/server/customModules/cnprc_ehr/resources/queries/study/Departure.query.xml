@@ -1,0 +1,36 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Departure" tableDbType="TABLE">
+                <tableUrl />
+                <insertUrl />
+                <importUrl />
+                <updateUrl />
+                <deleteUrl />
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Date Out</columnTitle>
+                    </column>
+                    <column columnName="relocType">
+                        <columnTitle>Relocation Type</columnTitle>
+                    </column>
+                    <column columnName="destination">
+                        <columnTitle>Relocated To</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>source</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="remark">
+                        <columnTitle>Sale Comment</columnTitle>
+                    </column>
+                    <column columnName="nextRelocType">
+                        <columnTitle>Current Location/Status</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

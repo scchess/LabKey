@@ -1,0 +1,47 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Experiments" tableDbType="TABLE">
+                <tableTitle>Experiments</tableTitle>
+                <description>This query identifies experiment records.</description>
+                <buttonBarOptions position="both" includeStandardButtons="true">
+                    <item text="Bulk Edit" requiresSelection="true" requiresSelectionMinCount="2">
+                        <onClick>
+                            var url = LABKEY.ActionURL.buildURL('query', 'updateQueryRows.view', null, {
+                                schemaName: dataRegion.schemaName,
+                                'query.queryName': dataRegion.queryName,
+                                dataRegionSelectionKey: dataRegion.selectionKey
+                            });
+                            var form = dataRegion.form;
+                            if (form &amp;&amp; verifySelected.call(this, form, url, 'POST', 'rows')) {
+                                submitForm(form);
+                            }
+                            return false;
+                        </onClick>
+                    </item>
+                    <item text="My Experiments" insertPosition="end" requiresSelection="false">
+                        <onClick>
+                            var displayName = LABKEY.Security.currentUser.displayName;
+                            var viewFilter = dataRegionName + '.viewName';
+                            var createdFilter = dataRegionName + '.CreatedBy/DisplayName~eq';
+                            var myJsonObject = {};
+                            myJsonObject[createdFilter] = displayName;
+                            myJsonObject[viewFilter] = 'BlankExperiments';
+                            window.location = LABKEY.ActionURL.buildURL("project", "begin",
+                                (LABKEY.ActionURL.getContainer()), myJsonObject);
+                        </onClick>
+                    </item>
+                    <item text="All Experiments" insertPosition="end" requiresSelection="false">
+                        <onClick>
+                            var viewFilter = dataRegionName + '.viewName';
+                            var myJsonObject = {};
+                            myJsonObject[viewFilter] = 'default';
+                            window.location = LABKEY.ActionURL.buildURL("project", "begin",
+                                (LABKEY.ActionURL.getContainer()), myJsonObject);
+                        </onClick>
+                    </item>
+                </buttonBarOptions>
+            </table>
+        </tables>
+    </metadata>
+</query>

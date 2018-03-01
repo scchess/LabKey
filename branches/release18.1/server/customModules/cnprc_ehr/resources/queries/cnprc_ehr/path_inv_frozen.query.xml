@@ -1,0 +1,37 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="path_inv_frozen" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="path_inv_frozen_pk">
+                        <columnTitle>Frozen PK</columnTitle>
+                    </column>
+                    <column columnName="anseq_fk">
+                        <columnTitle>Pathology Inventory Key</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="shelf">
+                        <columnTitle>Shelf</columnTitle>
+                    </column>
+                    <column columnName="drawer">
+                        <columnTitle>Drawer</columnTitle>
+                    </column>
+                    <column columnName="box">
+                        <columnTitle>Box</columnTitle>
+                    </column>
+                    <column columnName="comments">
+                        <columnTitle>Comment</columnTitle>
+                    </column>
+                    <column columnName="tissue">
+                        <columnTitle>Tissue</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>tissue</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

@@ -1,0 +1,15 @@
+apply plugin: "java"
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url "${artifactory_contextUrl}/libs-release"
+    }
+}
+
+dependencies {
+    runtime subprojects.collect {
+        owner.project(it.path)
+    }
+}

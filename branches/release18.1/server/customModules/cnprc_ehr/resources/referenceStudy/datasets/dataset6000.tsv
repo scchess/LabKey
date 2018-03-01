@@ -1,0 +1,5 @@
+"Id"	"date"	"seq_pk"	"remark"	"total_wbc"	"rbc"	"hgb"	"hct"	"mcv"	"mch"	"mchc"	"platelets"	"plas_prot"	"fibrogen"	"neut_band"	"neut_band_per"	"neut_seg"	"neut_seg_per"	"lymphocyte"	"lymphocyte_per"	"monocyte"	"monocyte_per"	"eosinophil"	"basophil"	"basophil_per"	"QCStateLabel"	"objectId"
+"TEST2950014"	"2015-04-21 00:00"	""	""	"21.1"	"4.01"	"11.01"	"30.01"	"70.01"	"21.1"	"30.01"	"3.01"	"8.01"	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ae"
+"TEST9118022"	"2015-04-21 00:00"	""	""	"22.1"	"5.01"	"12.01"	"31.01"	"71.01"	"22.1"	"31.01"	"4.01"	"9.01"	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9af"
+"TEST1441142"	"2012-07-17 00:00"	""	""	"23.1"	"6.01"	"13.01"	"32.01"	"72.01"	"23.1"	"32.01"	"5.01"	"10.01"	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ag"
+"TEST3224553"	"2015-05-01 00:00"	""	""	"24.1"	"7.01"	"14.01"	"33.01"	"73.01"	"24.1"	"33.01"	"6.01"	"11.01"	""	""	""	""	""	""	""	""	""	""	""	""	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ah"

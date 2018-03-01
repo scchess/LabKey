@@ -1,0 +1,21 @@
+dn: mail=tester1@test.labkey.local,dc=test,dc=labkey,dc=local
+objectclass: inetOrgPerson
+cn: Tester 1
+sn: tester1
+uid: tester1
+userpassword: yeahforDocker1
+homephone: 555-111-2222
+mail: tester1@test.labkey.local
+description: swell guy
+ou: Test Team
+
+dn: mail=dev1@test.labkey.local,dc=test,dc=labkey,dc=local
+objectclass: inetOrgPerson
+cn: Developer 1
+sn: dev1
+uid: dev1
+userpassword: yeahforDocker2
+homephone: 555-111-2223
+mail: dev1@test.labkey.local
+description: swell gal
+ou: Dev Team

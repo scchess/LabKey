@@ -1,0 +1,245 @@
+<script type="text/javascript">
+
+Ext4.onReady(function(){
+    var webpart = <%=webpartContext%>;
+
+    var qwpDiv = Ext4.DomHelper.insertAfter(webpart.wrapperDivId, {
+        tag: 'div',
+        id: 'qwp_' + Ext4.id()
+    });
+
+    var analysisIds = LABKEY.ActionURL.getParameter('analysisIds');
+    if (!analysisIds){
+        Ext4.create('Ext.window.Window', {
+            title: 'Choose Lineage(s)',
+            bodyStyle: 'padding: 5px;',
+            width: 500,
+            items: [{
+                html: 'Because you did not select specific analyses, you can issue a search to find subjects with specific lineages(s).  Once this search returns, you can generate a table showing the combined genotypes of this cohort.  The total number of matching analysis will be shown on the panel below.',
+                border: false,
+                style: 'padding-bottom: 10px;'
+            }, {
+                xtype: 'checkcombo',
+                fieldLabel: 'Lineages',
+                itemId: 'lineageField',
+                multiSelect: true,
+                displayField: 'lineage',
+                valueField: 'lineage',
+                queryMode: 'local',
+                triggerAction: 'all',
+                store: {
+                    type: 'labkey-store',
+                    autoLoad: true,
+                    containerPath: Laboratory.Utils.getQueryContainerPath(),
+                    schemaName: 'sequenceanalysis',
+                    sql: 'SELECT distinct lineage as lineage from sequenceanalysis.ref_nt_sequences'
+                },
+                width: 400
+            },{
+                xtype: 'ldk-numberfield',
+                fieldLabel: 'Min Pct of Locus',
+                itemId: 'locusPct',
+                minValue: 0,
+                maxValue: 1,
+                value: 0.25,
+                width: 400
+            }],
+            buttons: [{
+                text: 'Submit',
+                handler: function (btn){
+                    var win = btn.up('window');
+                    var lineages = win.down('#lineageField').getValue();
+                    var minPct = win.down('#locusPct').getValue();
+                    if (!lineages){
+                        Ext4.Msg.alert('Error', 'Must Pick Lineages');
+                        return;
+                    }
+
+                    Ext4.Msg.wait('Loading...');
+                    LABKEY.Query.selectDistinctRows({
+                        method: 'POST',
+                        containerPath: Laboratory.Utils.getQueryContainerPath(),
+                        schemaName: 'sequenceanalysis',
+                        queryName: 'alignment_summary_by_lineage',
+                        filterArray: [
+                            LABKEY.Filter.create('lineages', lineages.join(';'), LABKEY.Filter.Types.IN),
+                            LABKEY.Filter.create('percent_from_locus', minPct, LABKEY.Filter.Types.GTE)
+                        ],
+                        column: 'analysis_id',
+                        scope: this,
+                        success: function(results){
+                            Ext4.Msg.hide();
+
+                            if (Ext4.isEmpty(results.values)){
+                                Ext4.Msg.alert('Error', 'No matching rows found');
+                            }
+                            else {
+
+                                if (results.length < 100){
+                                    window.location = LABKEY.ActionURL.buildURL('sequenceanalysis', 'lineagePivot', null, {analysisIds: results.values.join(';')})
+                                }
+                                else {
+                                    var newForm = Ext4.DomHelper.append(document.getElementsByTagName('body')[0],
+                                            '<form method="POST" action="' + LABKEY.ActionURL.buildURL("sequenceanalysis", "lineagePivot", null) + '">' +
+                                            '<input type="hidden" name="analysisIds" value="' + results.values.join(';') + '" />' +
+                                            '</form>');
+                                    newForm.submit();
+                                }
+                            }
+                        },
+                        failure: LDK.Utils.getErrorCallback()
+                    })
+                }
+            }]
+        }).show();
+
+        return;
+    }
+
+    analysisIds = analysisIds.split(';');
+
+    Ext4.QuickTips.init();
+    Ext4.create('Ext.form.Panel', {
+        border: false,
+        width: 550,
+        qwpDiv: qwpDiv,
+        style: 'margin-bottom: 20px;',
+        defaults: {
+            border: false,
+            labelWidth: 180,
+            width: 550
+        },
+        items: [{
+            html: 'This page allows you to build a pivot table of allele results for the selected analyses, by lineage.  You can use the fields below to limit the lineages that are shown.',
+            style: 'padding-bottom: 10px'
+        },{
+            html: 'Total analyses selected: ' + analysisIds.length,
+            style: 'padding-bottom: 10px'
+        },{
+            xtype: 'checkcombo',
+            fieldLabel: 'Category',
+            multiSelect: true,
+            itemId: 'category',
+            store:  {
+                type: 'labkey-store',
+                schemaName: 'sequenceanalysis',
+                sql: 'SELECT distinct category as expr FROM sequenceanalysis.ref_nt_sequences WHERE category is not null',
+                autoLoad: true
+            },
+            displayField: 'expr',
+            valueField: 'expr'
+        },{
+            xtype: 'checkcombo',
+            fieldLabel: 'Species',
+            multiSelect: true,
+            itemId: 'species',
+            store:  {
+                type: 'labkey-store',
+                schemaName: 'sequenceanalysis',
+                sql: 'SELECT distinct species as expr FROM sequenceanalysis.ref_nt_sequences WHERE species is not null',
+                autoLoad: true
+            },
+            displayField: 'expr',
+            valueField: 'expr'
+        },{
+            xtype: 'checkcombo',
+            fieldLabel: 'Locus',
+            multiSelect: true,
+            itemId: 'locus',
+            store:  {
+                type: 'labkey-store',
+                schemaName: 'sequenceanalysis',
+                sql: 'SELECT distinct locus as expr FROM sequenceanalysis.ref_nt_sequences WHERE locus is not null',
+                autoLoad: true
+            },
+            displayField: 'expr',
+            valueField: 'expr'
+        },{
+            xtype: 'ldk-numberfield',
+            fieldLabel: 'Min Pct From Locus',
+            minValue: 0,
+            maxValue: 100,
+            itemId: 'minPct',
+            value: 0.25
+        },{
+            xtype: 'checkbox',
+            fieldLabel: 'Restrict To Lineages Present In Animals?',
+            checked: true,
+            itemId: 'restrict'
+        },{
+            itemId: 'appendHaplotypes',
+            xtype: 'checkcombo',
+            fieldLabel: 'Append Haplotype Definitions?',
+            multiSelect: true,
+            store:  {
+                type: 'labkey-store',
+                schemaName: 'sequenceanalysis',
+                sql: 'SELECT distinct haplotype.type as expr FROM sequenceanalysis.haplotype_sequences WHERE haplotype.type is not null',
+                autoLoad: true
+            },
+            displayField: 'expr',
+            valueField: 'expr'
+        }],
+        dockedItems: {
+            xtype: 'toolbar',
+            dock: 'bottom',
+            ui: 'footer',
+            items: [{
+                xtype: 'tbfill'
+            },{
+                xtype: 'button',
+                text: 'Submit',
+                handler: function(btn){
+                    btn.up('panel').onSubmit();
+                }
+            }]
+        },
+        onSubmit: function(){
+            var category = this.down('#category').getValue();
+            var species = this.down('#species').getValue();
+            var locus = this.down('#locus').getValue();
+            var minPct = this.down('#minPct').getValue();
+            var restrict = this.down('#restrict').getValue();
+            var appendHaplotypes = this.down('#appendHaplotypes').getValue();
+
+            var lineageSql = '(SELECT DISTINCT s.lineages FROM sequenceanalysis.alignment_summary_by_lineage s ' +
+                    'WHERE s.analysis_id IN (' + analysisIds.join(',') + ')' +
+                    (minPct ? ' GROUP BY s.analysis_id, s.lineages HAVING sum(s.percent_from_locus) > ' + minPct : '') + ')';
+
+            var title = 'Results';
+            var sql = 'SELECT t.analysis_id, t.readset, t.lineages, CASE WHEN analysis_id IS NULL THEN \'X\' WHEN sum(t.percent_from_locus) = 0 THEN null ELSE CAST(sum(t.percent_from_locus) AS VARCHAR) END as percent_from_locus FROM (SELECT a.analysis_id, a.analysis_id.readset.name as readset, a.lineages, a.percent_from_locus ' +
+                'FROM sequenceanalysis.alignment_summary_by_lineage a ' +
+                //'WHERE a.analysis_id IN (' + analysisIds.join(',') + ') ' +
+                (appendHaplotypes ? ' UNION ALL ' +
+                        ' SELECT null as analysis_id, hs.haplotype as readset, hs.name as lineages, 1.0 as percent_from_locus ' +
+                        ' FROM sequenceanalysis.haplotype_sequences hs WHERE hs.haplotype IN (SELECT distinct hs2.haplotype FROM sequenceanalysis.haplotype_sequences hs2 WHERE hs2.type = \'Lineage\' AND hs2.name IN (' + lineageSql + ') AND (hs2.haplotype.type IN (\'' + appendHaplotypes.join('\',\'') + '\')) ' + ')'
+                : '') +
+                ') t ' +
+                ' GROUP BY t.analysis_id, t.readset, t.lineages ' +
+                (minPct ? ' HAVING sum(t.percent_from_locus) > ' + minPct : '') +
+                ' PIVOT percent_from_locus BY lineages in (SELECT DISTINCT r.lineage FROM sequenceanalysis.ref_nt_sequences r ' +
+                ' WHERE r.lineage is not null ' +
+                    (species ? 'AND (r.species IN (\'' + species.join('\',\'') + '\')) ' : '') +
+                    (locus ? 'AND (r.locus IN (\'' + locus.join('\',\'') + '\')) ' : '') +
+                    (category ? 'AND (r.category IN (\'' + category.join('\',\'') + '\')) ' : '') +
+                    (restrict ? 'AND (r.lineage IN ' + lineageSql + ')' : '') +
+                ' ORDER BY r.lineage) ';
+
+            //console.log(sql);
+            var config = {
+                frame: 'portal',
+                renderTo: this.qwpDiv.id,
+                schemaName: 'sequenceanalysis',
+                sql: sql,
+                filterArray: [LABKEY.Filter.create('analysis_id', [''].concat(analysisIds).join(';'), LABKEY.Filter.Types.EQUALS_ONE_OF)],
+                title: title
+            };
+
+            LDK.Utils.getReadOnlyQWP(config).render(this.qwpDiv.id);
+        }
+
+    }).render(webpart.wrapperDivId);
+
+});
+
+</script>

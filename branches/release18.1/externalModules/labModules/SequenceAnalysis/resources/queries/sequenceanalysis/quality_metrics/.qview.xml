@@ -1,0 +1,18 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+   <columns>
+       <!--<column name="rowid" />-->
+       <column name="dataid" />
+       <column name="category" />
+       <column name="metricname" />
+       <column name="metricvalue" />
+       <!--<column name="qualvalue" />-->
+       <column name="readset" />
+       <column name="analysis_id" />
+       <column name="runid" />
+   </columns>
+   <sorts>
+       <sort column="dataid/Name"/>
+       <sort column="category"/>
+       <sort column="metricname"/>
+   </sorts>
+</customView>

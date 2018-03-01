@@ -1,0 +1,9 @@
+<view xmlns="http://labkey.org/data/xml/view">
+    <dependencies>
+        <dependency path="elisa/iavielisa"/>
+        <dependency path="elisa/plate.js"/>
+        <dependency path="elisa/runview.js"/>
+        <dependency path="elisa/copytostudy.js"/>
+        <dependency path="FileUploadField.js"/>
+    </dependencies>
+</view>

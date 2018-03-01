@@ -1,0 +1,23 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="DemographicsMostRecentTB" tableDbType="NOT_IN_DB">
+                <tableTitle>Flags</tableTitle>
+                <columns>
+                    <column columnName="Id">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="mostRecentTBDate">
+                        <formatString>Date</formatString>
+                        <url>/query/executeQuery.view?schemaName=study&amp;
+                            query.queryName=tb&amp;
+                            query.Id~eq=${Id}&amp;
+                            query.Date~eq=${MostRecentTBDate}
+                        </url>
+                        <columnTitle>Most Recent TB Date</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

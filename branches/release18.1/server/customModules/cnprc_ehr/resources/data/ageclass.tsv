@@ -1,0 +1,37 @@
+label	ageclass	gender	species	min	max
+Infant	1	M	CMO	0	0.5
+Juvenile	2	M	CMO	0.5	3.5
+Adult	3	M	CMO	3.5	15
+Geriatric	4	M	CMO	15
+Infant	1	F	CMO	0	0.5
+Juvenile	2	F	CMO	0.5	3.5
+Adult	3	F	CMO	3.5	15
+Geriatric	4	F	CMO	15
+Infant	1	U	CMO	0	0.5
+Juvenile	2	U	CMO	0.5	3.5
+Adult	3	U	CMO	3.5	15
+Geriatric	4	U	CMO	15
+Infant	1	M	MCY	0	0.5
+Juvenile	2	M	MCY	0.5	3.5
+Adult	3	M	MCY	3.5	15
+Geriatric	4	M	MCY	15
+Infant	1	F	MCY	0	0.5
+Juvenile	2	F	MCY	0.5	3.5
+Adult	3	F	MCY	3.5	15
+Geriatric	4	F	MCY	15
+Infant	1	U	MCY	0	0.5
+Juvenile	2	U	MCY	0.5	3.5
+Adult	3	U	MCY	3.5	15
+Geriatric	4	U	MCY	15
+Infant	1	M	MMU	0	0.5
+Juvenile	2	M	MMU	0.5	3.5
+Adult	3	M	MMU	3.5	15
+Geriatric	4	M	MMU	15
+Infant	1	F	MMU	0	0.5
+Juvenile	2	F	MMU	0.5	3.5
+Adult	3	F	MMU	3.5	15
+Geriatric	4	F	MMU	15
+Infant	1	U	MMU	0	0.5
+Juvenile	2	U	MMU	0.5	3.5
+Adult	3	U	MMU	3.5	15
+Geriatric	4	U	MMU	15

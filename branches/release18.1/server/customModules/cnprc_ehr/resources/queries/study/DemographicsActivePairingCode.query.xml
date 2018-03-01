@@ -1,0 +1,21 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="DemographicsActivePairingCode" tableDbType="NOT_IN_DB">
+                <columns>
+                    <column columnName="date">
+                        <formatString>Date</formatString>
+                    </column>
+                    <column columnName="observation">
+                        <fk>
+                            <fkDisplayColumnName useRawValue="true"/>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>behavior_codes</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

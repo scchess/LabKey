@@ -1,0 +1,7 @@
+From: pingwww@edi.fhcrc.org
+To: mbellew@fhcrc.org, matthew+text@bellew.net
+Subject:  ERROR contacting edi.fhcrc.org
+Importance: High
+
+Please check the server status.
+http://edi.fhcrc.org/EDI/home.jsp

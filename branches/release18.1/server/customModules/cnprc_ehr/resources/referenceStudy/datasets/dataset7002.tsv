@@ -1,0 +1,5 @@
+"id"	"date"	"inventoryType"	"projectCode"	"tissueType"	"QCStateLabel"	"objectId"
+"125-12347"	"2011-07-21 00:00"	"Necropsy"	""	"C"	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ae"
+"TEST1441142"	"2014-05-21 00:00"	"Necropsy"	""	"A"	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9af"
+"TEST2950014"	"2015-07-21 00:00"	"Biopsy"	""	"A"	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ag"
+"TEST3224553"	"2015-07-20 00:00"	"Necropsy"	""	"A"	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ah"

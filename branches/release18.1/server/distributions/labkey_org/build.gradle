@@ -1,0 +1,28 @@
+import org.labkey.gradle.plugin.Distribution
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+
+apply plugin: 'org.labkey.distribution'
+
+Distribution.inheritDependencies(project, ":server:distributions:pro")
+
+dist.description = "Distribution of modules for the labkey.org LabKey Server instance"
+
+BuildUtils.addModuleDistributionDependencies(project, [":server:modules:mothership",
+                                                       ":server:customModules:interactiveTutorial",
+                                                       ":server:optionalModules:redcap",
+                                                       ":server:optionalModules:cdisc_ODM",
+                                                       ":server:optionalModules:buildReports",
+                                                       ":server:optionalModules:serviceTools"])
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName='labkey.org'
+            dist.includeTarGZArchive=true
+            dist.extraFileIdentifier='-LabkeyOrg'
+        }
+)

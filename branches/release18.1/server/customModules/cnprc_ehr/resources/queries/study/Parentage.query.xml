@@ -1,0 +1,33 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="parentage" tableDbType="TABLE">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="parent">
+                        <columnTitle>Parent</columnTitle>
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="date">
+                        <columnTitle>Date</columnTitle>
+                    </column>
+                    <column columnName="oldParent">
+                        <columnTitle>Old Parent</columnTitle>
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="relationship">
+                        <columnTitle>Relationship</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

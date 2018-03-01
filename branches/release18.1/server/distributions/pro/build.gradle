@@ -1,0 +1,27 @@
+import org.labkey.gradle.plugin.Distribution
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+
+apply plugin: 'org.labkey.distribution'
+
+Distribution.inheritDependencies(project, ":server:distributions:community")
+
+BuildUtils.addModuleDistributionDependencies(project, [":server:optionalModules:cas",
+                                                       ":server:optionalModules:duo",
+                                                       ":server:optionalModules:premium",
+                                                       ":server:optionalModules:oauth",
+                                                       ":server:optionalModules:saml"])
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName='pro'
+            dist.includeTarGZArchive=true
+            dist.includeWindowsInstaller=true
+            dist.includeZipArchive=true
+            dist.extraFileIdentifier='-professional'
+        }
+)

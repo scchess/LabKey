@@ -1,0 +1,65 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="virology" tableDbType="NOT_IN_DB" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id">
+                        <url>/ehr/participantView.view?participantId=${Id}</url>
+                        <columnTitle>Animal ID</columnTitle>
+                    </column>
+                    <column columnName="sampleDate">
+                        <columnTitle>Sample Date</columnTitle>
+                    </column>
+                    <column columnName="testDoneDate">
+                        <columnTitle>Test Date</columnTitle>
+                        <formatString>DateTime</formatString>
+                    </column>
+                    <column columnName="virus">
+                        <columnTitle>Virus Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>test_type_virus_mapping</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="target">
+                        <columnTitle>Target Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>test_type_target_mapping</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="method">
+                        <columnTitle>Test Method</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>test_type_method_mapping</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="results">
+                        <columnTitle>Result</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>virology_result_blend</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="sampleType">
+                        <columnTitle>Sample Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>virology_sample_type</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

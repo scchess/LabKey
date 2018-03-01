@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>Arrivals</name>
+    <description>Arrival data</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc" queryName="q_arrival" />
+            <destination schemaName="study" queryName="arrival" bulkLoad="true" batchSize="500" targetOption="merge">
+                <columnTransforms>
+                    <column source="AN_ACQ_DATE" target="date"/>
+                </columnTransforms>
+                <alternateKeys>
+                    <column name="objectid"/>
+                </alternateKeys>
+            </destination>
+        </transform>
+    </transforms>
+    <incrementalFilter className="ModifiedSinceFilterStrategy" timestampColumnName="date_time">
+        <deletedRowsSource schemaName="cnprcSrc" queryName="q_arrival_delete" timestampColumnName="date_time" deletedSourceKeyColumnName="objectid" targetKeyColumnName="objectid"/>
+    </incrementalFilter>
+    <schedule>
+        <poll interval="60m" />
+    </schedule>
+</etl>

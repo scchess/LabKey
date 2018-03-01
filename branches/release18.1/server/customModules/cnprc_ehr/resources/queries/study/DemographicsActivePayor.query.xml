@@ -1,0 +1,22 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="DemographicsActivePayor" tableDbType="NOT_IN_DB">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="currentPayorDate"/>
+                    <column columnName="payor_ids">
+                        <url>/query/executeQuery.view?schemaName=study&amp;query.queryName=payor_assignments&amp;query.viewName=Animals%20By%20Payor&amp;query.payor_id~eq=${payor_ids}</url>
+                        <fk>
+                            <fkDisplayColumnName useRawValue="true"/>
+                            <fkFolderPath>/CNPRC/Core Facilities/Billing</fkFolderPath>
+                            <fkDbSchema>cnprc_billing</fkDbSchema>
+                            <fkTable>project_charge</fkTable>
+                            <fkColumnName>payor_id</fkColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

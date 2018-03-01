@@ -1,0 +1,18 @@
+<folderType xmlns="http://labkey.org/data/xml/folderType">
+    <name>OC Experiment Workbook</name>
+    <description>Only used for experiment creation</description>
+    <preferredWebParts>
+    	<webPart>
+            <name>Files</name>
+            <location>body</location>
+        </webPart>
+    </preferredWebParts>
+    <modules>
+        <moduleName>Pipeline</moduleName>
+        <moduleName>Query</moduleName>
+        <moduleName>Core</moduleName>
+        <moduleName>oconnor</moduleName>
+    </modules>
+    <defaultModule>Core</defaultModule>
+    <workbookType>true</workbookType>
+</folderType>

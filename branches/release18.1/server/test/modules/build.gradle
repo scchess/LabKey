@@ -1,0 +1,39 @@
+
+subprojects { Project p ->
+    if (p.getProjectDir().exists())
+    {
+        apply plugin: 'java'
+        if (p.file("src").exists())
+            apply plugin: 'org.labkey.module'
+        else
+            apply plugin: 'org.labkey.fileModule'
+    }
+}
+
+task('build', group: 'Build', description: "Build all module files for subprojects",
+    {
+        subprojects.each { Project p ->
+            if (p.getProjectDir().exists())
+                dependsOn(p.tasks.module)
+        }
+    }
+)
+
+task('deploy', group: 'Deploy', description: "Deploy all test module files",
+    {
+        subprojects.each { Project p ->
+            if (p.projectDir.exists())
+                dependsOn(p.tasks.deployModule)
+        }
+        dependsOn(project.tasks.build)
+    }
+)
+
+task('clean', group: 'Clean', description: 'Clean all build directories for subprojects',
+    {
+        subprojects.each { Project p ->
+            if (p.projectDir.exists())
+                dependsOn(p.tasks.clean)
+        }
+    }
+)

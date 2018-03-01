@@ -1,0 +1,9 @@
+NETWORK	PROTOCOL	LAB	PTID	VISIT	DRAWDT	ASSAYTYP	ASSAYKIT	RESULT	COPIES_ML	Band1-GP36	Band2-GP140	Band3-P31	Band4-GP160	Band5-P24	Band6-GP41	CTRL_Band	HIV-1 Interpretation	HIV-2 Interpretation	TESTDT	COMMENT
+HVTN	999	HV	100000001	100	10/1/2016	Geenius	211	HIV NEGATIVE	5.0	-	-	-	-	-	-	+	Negative	Negative	10/3/2016	Comment from visit 1.
+HVTN	999	HV	100000001	101	10/7/2016	Geenius	211	HIV-2 INDETERMINATE	5.1	+	-	-	-	-	-	+	Negative	Indeterminate	10/10/2016	Comment from visit 2. 5.1 ml taken.
+HVTN	999	HV	100000001	102	10/14/2016	Geenius	211	HIV-1 INDETERMINATE	5.8	-	-	+	-	+	-	+	Indeterminate	Negative	10/15/2016	Comment from visit 3, 5.8 ml results unclear.
+HVTN	999	HV	100000001	103	10/21/2016	Geenius	211	HIV INDETERMINATE	4.9	+	-	+	-	+	-	+	Indeterminate	Indeterminate	1/21/2016	Comment from visit 4.
+HVTN	999	HV	100000001	104	10/25/2016	Geenius	211	HIV-1 POSITIVE	5.2	-	-	-	+	-	+	+	Positive	Negative	10/26/2016	Comment from visit 5.
+HVTN	999	HV	100000001	105	11/1/2016	Geenius	211	HIV-2 POSITIVE	5.5	+	+	-	-	-	-	+	Negative	Positive	11/3/2016	Comment from visit 6.
+HVTN	999	HV	100000001	106	11/7/2016	Geenius	211	HIV-2 POSITIVE (with HIV-1 cross reactivity)	6.3	+	+	-	+	+	-	+	Positive	Positive	11/10/2016	Comment from visit 7.
+HVTN	999	HV	100000001	107	11/15/2016	Geenius	211	HIV POSITIVE UNTYPABLE	6.4	+	+	+	+	+	+	+	Positive	Positive	11/17/2016	Comment from visit 8. Both results positive. 6.4ml taken.

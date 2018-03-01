@@ -1,0 +1,110 @@
+<script type="text/javascript">
+
+    Ext4.onReady(function(){
+
+        var webpart = <%=webpartContext%>;
+        Ext4.create('Ext.panel.Panel', {
+            border: false,
+            defaults: {
+                border: false
+            },
+            items: [{
+                html: 'Loading...'
+            }],
+            listeners: {
+                render: function(panel){
+                    SequenceAnalysis.Utils.getDataItems({
+                        success: function(resp){
+                            var items = resp.results || {};
+                            var config = {
+                                xtype: 'ldk-navpanel',
+                                width: 550,
+                                sections: [{
+                                    header: 'Data Import & Analysis',
+                                    items: [
+                                        {renderer: function(){
+                                            return {
+                                                xtype: 'ldk-linkbutton',
+                                                text: 'Plan Sequence Run (Create Readsets)',
+                                                linkCls: 'labkey-text-link-noarrow',
+                                                style: LDK.panel.NavPanel.ITEM_STYLE_DEFAULT + ';margin-left: 2px;',
+                                                handler: function(btn){
+                                                    var el = btn.up('button');
+                                                    Ext4.create('Laboratory.window.WorkbookCreationWindow', {
+                                                        urlParams: {
+                                                            schemaName: 'sequenceanalysis',
+                                                            queryName: 'sequence_readsets'
+                                                        },
+                                                        controller: 'query',
+                                                        action: 'importData',
+                                                        title: 'Create Readsets'
+                                                    }).show();
+                                                }
+                                            }
+                                        }},
+                                        {renderer: function() {
+                                            return {
+                                                xtype: 'ldk-linkbutton',
+                                                text: 'Upload/Import Sequence Data',
+                                                linkCls: 'labkey-text-link-noarrow',
+                                                style: LDK.panel.NavPanel.ITEM_STYLE_DEFAULT + ';margin-left: 2px;',
+                                                handler: function (btn) {
+                                                    var el = btn.up('button');
+                                                    Ext4.create('Laboratory.window.WorkbookCreationWindow', {
+                                                        urlParams: null,
+                                                        controller: 'pipeline',
+                                                        action: 'browse',
+                                                        title: 'Upload Files / Start Analysis'
+                                                    }).show();
+                                                }
+                                            }
+                                        }},
+                                        {name: 'View Pipeline Jobs', url: LABKEY.ActionURL.buildURL("pipeline-status", "showList.view"), renderer: 'linkWithoutLabel'}
+                                    ]
+                                }]
+                            };
+
+                            if (items.summary.length){
+                                config.sections.push({
+                                    header: 'Data Summary',
+                                    items: items.summary
+                                });
+                            }
+
+                            if (items.data.length){
+                                config.sections.push({
+                                    header: 'Browse Results',
+                                    items: items.data
+                                });
+                            }
+
+                            if (items.references.length){
+                                config.sections.push({
+                                    header: 'References',
+                                    items: items.references
+                                });
+                            }
+
+                            if (items.misc.length){
+                                config.sections.push({
+                                    header: 'Misc',
+                                    items: items.misc
+                                });
+                            }
+
+                            Ext4.create('LDK.panel.NavPanel', config);
+
+                            panel.removeAll();
+                            panel.add([config, {
+                                style: 'padding: 5px;padding-top: 0px;text-align: center',
+                                html: 'Powered By DISCVR-Seq.  <a href="https://github.com/bbimber/discvr-seq/wiki">Click here to learn more.</a>'
+                            }]);
+                        },
+                        failure: LDK.Utils.getErrorCallback(),
+                        scope: this
+                    });
+                }
+            }
+        }).render(webpart.wrapperDivId);
+    });
+</script>

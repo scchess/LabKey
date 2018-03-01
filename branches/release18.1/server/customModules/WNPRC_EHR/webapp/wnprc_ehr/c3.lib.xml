@@ -1,0 +1,9 @@
+<libraries xmlns="http://labkey.org/clientLibrary/xml/">
+    <library>
+        <script path="/wnprc_ehr/c3-0.4.10/c3.min.js"/>
+        <script path="/wnprc_ehr/c3-0.4.10/c3.min.css"/>
+    </library>
+    <dependencies>
+        <dependency path="/vis/visDependencies"/>
+    </dependencies>
+</libraries>

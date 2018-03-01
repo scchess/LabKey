@@ -1,0 +1,402 @@
+<?xml version="1.0" ?>
+<project name="LabKey installer" default="build" basedir=".">
+
+    <property name="script.name" value="labkey_installer.nsi"/>
+    <property name="script.path" location="${basedir}/${script.name}" />
+
+    <!-- The name of the LabKey installers are set in the installer setup script defined below; this property much
+    match the value defined in that script. -->
+    <property name="dist_sub.dir" value="standard" />
+    <property name="project.root" location="${basedir}/../.." />
+    <property name="dist.dir" location="${project.root}/dist" />
+    <property name="installer.dir" location="${dist.dir}/${dist_sub.dir}"/>
+    <property name="build.dir" location="${project.root}/build"/>
+    <property name="installer.build.dir" location="${project.root}/build/installer"/>
+    <property name="apidocs.build.dir" location="${project.root}/build/client-api/javascript/docs"/>
+    <property name="xsddocs.build.dir" location="${project.root}/build/client-api/xml-schemas/docs"/>
+    <property name="nsis.basedir" location="${basedir}/nsis2.46" />
+    <property name="extjs.dir" location="${project.root}/server/api/webapp/ext-3.4.1" />
+
+    <condition property="buildInstallerExes" value="true">
+        <not><isset property="skip.windowsInstaller"/></not>
+    </condition>
+
+    <target name="init">
+        <!-- See if TeamCity has a product version -->
+        <condition property="product.version" value="${teamcity.product.version}" else="DevBuild">
+            <isset property="teamcity.product.version" />
+        </condition>
+
+        <!-- See if TeamCity has set a build number -->
+        <property environment="installerEnv" />
+        <condition property="VcsRevision" value="${installerEnv.BUILD_NUMBER}">
+            <isset property="installerEnv.BUILD_NUMBER" />
+        </condition>
+
+        <!-- Then try to grab one from SVN -->
+        <property file="${build.dir}/svn.properties" />
+
+        <!-- Otherwise, set a reasonable value in case we're building from a source distribution instead of SVN -->
+        <property name="VcsRevision" value="NotFromSVN" />
+
+        <property name="extraFileIdentifier" value="" />
+        <property name="labkey.version" value="${product.version}-${VcsRevision}" />
+        <property name="versionPrefix" value="LabKey${labkey.version}${extraFileIdentifier}" />
+    </target>
+
+    <target name="build" depends="init">
+        <antcall target="clean" />
+        <antcall target="installers" />
+        <antcall target="archives" />
+        <antcall target="extramodules" />
+        <antcall target="extrafiles" inheritrefs="true"/>
+        <echo message="Installers and archives built to ${installer.dir}."/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${installer.dir}" />
+    </target>
+
+    <target name="prepare" depends="init">
+        <mkdir dir="${installer.dir}" />
+        
+        <mkdir dir="${installer.build.dir}" />
+
+        <copy todir="${installer.build.dir}" overwrite="true">
+            <fileset file="${project.root}/webapps/labkey.xml"/>
+            <filterset begintoken="@@" endtoken="@@">
+                <filter token="jdbcURL" value="jdbc:postgresql://localhost/labkey"/>
+                <filter token="jdbcDriverClassName" value="org.postgresql.Driver"/>
+            </filterset>
+        </copy>
+    </target>
+
+    <target name="installers" depends="installer-withjre" if="buildInstallerExes">
+        <copy file="${installer.build.dir}/Setup_includeJRE.exe"
+              tofile="${installer.dir}/${versionPrefix}-Setup.exe" />
+    </target>
+
+    <target name="installer-withjre" depends="prepare" if="buildInstallerExes">
+        <echo message="Starting NSIS builder with script ${script.path}" />
+        <condition property="teamcity.product.version" value="Dev">
+            <not><isset property="teamcity.product.version"/></not>
+        </condition>
+        <exec dir="${basedir}" executable="${nsis.basedir}/makensis.exe" failonerror="true" osfamily="windows">
+            <arg value='/DPRODUCT_VERSION="${teamcity.product.version}"'/>
+            <arg value='/DPRODUCT_REVISION="${VcsRevision}"'/>
+            <arg value="${script.path}"/>
+        </exec>
+        <exec dir="${basedir}" executable="makensis" failonerror="true" osfamily="unix">
+            <arg value='-DPRODUCT_VERSION="${teamcity.product.version}"'/>
+            <arg value='-DPRODUCT_REVISION="${VcsRevision}"'/>
+            <arg value="${script.path}"/>
+        </exec>
+    </target>
+
+    <target name="pipeline-configs" depends="init">
+        <echo message="Packaging up pipeline configuration files" />
+
+        <zip destfile="${dist.dir}/LabKey${labkey.version}-PipelineConfig.zip" >
+            <zipfileset dir="${project.root}/server/configs/config-remote" prefix="remote"/>
+            <zipfileset dir="${project.root}/server/configs/config-cluster" prefix="cluster"/>
+            <zipfileset dir="${project.root}/server/configs/config-webserver" prefix="webserver"/>
+        </zip>
+
+        <tar tarfile="${dist.dir}/LabKey${labkey.version}-PipelineConfig.tar.gz" longfile="gnu" compression="gzip">
+            <tarfileset dir="${project.root}/server/configs/config-remote" prefix="remote">
+                <exclude name="**/*.bat" />
+                <exclude name="**/*.exe" />
+            </tarfileset>
+            <tarfileset dir="${project.root}/server/configs/config-cluster" prefix="cluster"/>
+            <tarfileset dir="${project.root}/server/configs/config-webserver" prefix="webserver"/>
+        </tar>
+    </target>
+
+    <target name="client-apis" depends="init">
+        <echo message="Packaging up Client APIs" />
+
+        <ant inheritall="false" antfile="${basedir}/../../remoteapi/java/build.xml" target="dist">
+            <property name="labkey.version" value="${labkey.version}" />
+        </ant>
+        <ant inheritall="false" antfile="${basedir}/../../remoteapi/sas/build.xml" target="dist">
+            <property name="labkey.version" value="${labkey.version}" />
+        </ant>
+
+        <ant antfile="${basedir}/../build.xml" target="clientapi_docs" inheritall="false"/>
+        <mkdir dir="${dist.dir}/client-api/javascript" />
+        <zip destfile="${dist.dir}/client-api/javascript/LabKey${labkey.version}-ClientAPI-JavaScript-Docs.zip" update="true">
+            <zipfileset prefix="LabKey${labkey.version}-ClientAPI-JavaScript-Docs" dir="${apidocs.build.dir}" />
+        </zip>
+
+        <ant antfile="${basedir}/../build.xml" target="xsd_doc" inheritall="false"/>
+        <mkdir dir="${dist.dir}/client-api/XML" />
+        <zip destfile="${dist.dir}/client-api/XML/LabKey${labkey.version}-ClientAPI-XMLSchema-Docs.zip" update="true">
+            <zipfileset prefix="LabKey${labkey.version}-ClientAPI-XMLSchema-Docs" dir="${xsddocs.build.dir}" />
+        </zip>
+
+        <!-- Create a stable file name so that TeamCity can serve it up directly through its own UI -->
+        <zip destfile="${dist.dir}/TeamCity-ClientAPI-JavaScript-Docs.zip" update="true">
+            <zipfileset dir="${apidocs.build.dir}" />
+        </zip>
+
+        <!-- Create a stable file name so that TeamCity can serve it up directly through its own UI -->
+        <zip destfile="${dist.dir}/TeamCity-ClientAPI-XMLSchema-Docs.zip" update="true">
+            <zipfileset dir="${xsddocs.build.dir}" />
+        </zip>
+
+        <tar destfile="${dist.dir}/client-api/javascript/LabKey${labkey.version}-ClientAPI-JavaScript-Docs.tar.gz" longfile="gnu" compression="gzip">
+            <tarfileset prefix="LabKey${labkey.version}-ClientAPI-JavaScript-Docs" dir="${apidocs.build.dir}" />
+        </tar>
+        <tar destfile="${dist.dir}/client-api/XML/LabKey${labkey.version}-ClientAPI-XMLSchema-Docs.tar.gz" longfile="gnu" compression="gzip">
+            <tarfileset prefix="LabKey${labkey.version}-ClientAPI-XMLSchema-Docs" dir="${xsddocs.build.dir}" />
+        </tar>
+    </target>
+
+    <target name="archives" depends="bin-tarball,bin-zip" />
+
+    <target name="examplefiles" depends="examplefiles-zip,examplefiles-tarball" />
+
+    <target name="archive_source" depends="src-tarball,src-zip"/>
+
+    <target name="extramodules" depends="extramodules-zip, extramodules-tarball"/>
+
+    <target name="extramodules-zip" depends="prepare" if="package.modules">
+        <zip destfile="${installer.dir}/${versionPrefix}-ExtraModules.zip">
+            <zipfileset dir="${build.dir}/distModules" prefix="${versionPrefix}-bin/modules">
+                <include name="*.module" />
+                <exclude name="CDS.module" />
+            </zipfileset>
+        </zip>
+    </target>
+
+    <target name="extramodules-tarball" depends="prepare" if="package.modules">
+        <tar tarfile="${installer.dir}/${versionPrefix}-ExtraModules.tar.gz" longfile="gnu" compression="gzip">
+            <tarfileset dir="${build.dir}/distModules" prefix="${versionPrefix}-bin/modules">
+                <include name="*.module" />
+                <exclude name="CDS.module" />
+            </tarfileset>
+        </tar>
+    </target>
+
+    <target name="examplefiles-zip" depends="prepare">
+        <zip destfile="${dist.dir}/ExampleFiles.zip" >
+            <zipfileset dir="${project.root}/sampledata/GettingStarted" prefix="ExampleFiles"/>
+        </zip>
+        <zip destfile="${dist.dir}/XarTutorial.zip" >
+            <zipfileset dir="${project.root}/sampledata/xarfiles/XarTutorial" prefix="XarTutorial"/>
+        </zip>
+    </target>
+
+    <target name="examplefiles-tarball" depends="prepare">
+        <tar tarfile="${dist.dir}/ExampleFiles.tar.gz" longfile="gnu" compression="gzip">
+            <tarfileset dir="${project.root}/sampledata/GettingStarted" prefix="ExampleFiles"/>
+        </tar>
+        <tar tarfile="${dist.dir}/XarTutorial.tar.gz" longfile="gnu" compression="gzip">
+            <tarfileset dir="${project.root}/sampledata/xarfiles/XarTutorial" prefix="XarTutorial"/>
+        </tar>
+    </target>
+
+    <target name="check-extrafiles">
+        <condition property="extra.files.specified" value="true">
+            <isreference refid="extra.files"/>
+        </condition>
+    </target>
+    <target name="extrafiles" depends="check-extrafiles" if="extra.files.specified">
+        <copy todir="${installer.dir}">
+            <fileset refid="extra.files" />
+        </copy>
+    </target>
+
+    <target name="bin-tarball" depends="prepare" unless="skip.tarGZDistribution">
+        <copy file="${basedir}/archivedata/manual-upgrade.sh" todir="${installer.build.dir}" />
+        <echo file="${installer.build.dir}/VERSION" append="false">${labkey.version}</echo>
+        <fixcrlf srcdir="${installer.build.dir}" includes="manual-upgrade.sh VERSION" eol="unix" />
+
+        <tar tarfile="${installer.dir}/${versionPrefix}-bin.tar.gz" longfile="gnu" compression="gzip" >
+            <tarfileset dir="${build.dir}/staging/labkeyWebapp" prefix="${versionPrefix}-bin/labkeywebapp">
+                <exclude name="WEB-INF/classes/distribution"/>
+            </tarfileset>
+            <tarfileset dir="${build.dir}/distModules" prefix="${versionPrefix}-bin/modules">
+                <include name="*.module" />
+            </tarfileset>
+            <tarfileset dir="${build.dir}/distExtra" prefix="${versionPrefix}-bin/" erroronmissingdir="false">
+                <include name="**/*"/>
+            </tarfileset>
+            <tarfileset dir="${project.root}/external/lib/tomcat" prefix="${versionPrefix}-bin/tomcat-lib">
+                <include name="*.jar" />
+            </tarfileset>
+            <!-- Include the msInspect JAR, which is cross-platform, but only if includeMassSpecBinaries property is set and directory exists -->
+            <!-- See https://www.labkey.org/wiki/home/Documentation/page.view?name=proteomicsBinaries -->
+            <tarfileset dir="${project.root}/external/windows/msinspect" prefix="${versionPrefix}-bin/bin" erroronmissingdir="false">
+                <include name="**/*.jar" if="includeMassSpecBinaries"/>
+                <exclude name="**/.svn"/>
+            </tarfileset>
+            <tarfileset file="${build.dir}/labkeyBootstrap*.jar" prefix="${versionPrefix}-bin/tomcat-lib"/>
+            <tarfileset dir="${build.dir}/deploy/pipelineLib" prefix="${versionPrefix}-bin/pipeline-lib"/>
+            <tarfileset file="${installer.build.dir}/manual-upgrade.sh" prefix="${versionPrefix}-bin" mode="744"/>
+            <tarfileset file="${basedir}/archivedata/README.txt" prefix="${versionPrefix}-bin"/>
+            <tarfileset file="${installer.build.dir}/VERSION" prefix="${versionPrefix}-bin"/>
+            <tarfileset file="${installer.build.dir}/labkey.xml" prefix="${versionPrefix}-bin"/>
+        </tar>
+    </target>
+
+    <target name="bin-zip" depends="prepare" unless="skip.zipDistribution">
+        <echo file="${installer.build.dir}/VERSION" append="false">${labkey.version}</echo>
+        <zip destfile="${installer.dir}/${versionPrefix}-bin.zip">
+            <zipfileset dir="${build.dir}/staging/labkeyWebapp" prefix="${versionPrefix}-bin/labkeywebapp">
+                <exclude name="WEB-INF/classes/distribution"/>
+            </zipfileset>
+            <zipfileset dir="${build.dir}/distModules" prefix="${versionPrefix}-bin/modules">
+                <include name="*.module"/>
+            </zipfileset>
+            <zipfileset dir="${build.dir}/distExtra" prefix="${versionPrefix}-bin/" erroronmissingdir="false">
+                <include name="**/*"/>
+            </zipfileset>
+            <zipfileset dir="${project.root}/external/lib/tomcat" prefix="${versionPrefix}-bin/tomcat-lib">
+                <include name="*.jar"/>
+            </zipfileset>
+            <zipfileset file="${build.dir}/labkeyBootstrap.jar" prefix="${versionPrefix}-bin/tomcat-lib"/>
+            <zipfileset dir="${build.dir}/deploy/pipelineLib" prefix="${versionPrefix}-bin/pipeline-lib"/>
+            <zipfileset dir="${project.root}/external/windows/core" prefix="${versionPrefix}-bin/bin">
+                <include name="**/*"/>
+                <exclude name="**/.svn"/>
+            </zipfileset>
+
+            <!-- Mass spectrometry binaries are included ONLY if includeMassSpecBinaries property is set and directories exist -->
+            <zipfileset dir="${project.root}/external/windows/tpp" prefix="${versionPrefix}-bin/bin" erroronmissingdir="false">
+                <include name="**/*" if="includeMassSpecBinaries"/>
+                <exclude name="**/.svn"/>
+            </zipfileset>
+            <zipfileset dir="${project.root}/external/windows/comet" prefix="${versionPrefix}-bin/bin" erroronmissingdir="false">
+                <include name="**/*" if="includeMassSpecBinaries"/>
+                <exclude name="**/.svn"/>
+            </zipfileset>
+            <zipfileset dir="${project.root}/external/windows/msinspect" prefix="${versionPrefix}-bin/bin" erroronmissingdir="false">
+                <include name="**/*" if="includeMassSpecBinaries"/>
+                <exclude name="**/.svn"/>
+            </zipfileset>
+            <zipfileset dir="${project.root}/external/windows/labkey" prefix="${versionPrefix}-bin/bin" erroronmissingdir="false">
+                <include name="**/*" if="includeMassSpecBinaries"/>
+                <exclude name="**/.svn"/>
+            </zipfileset>
+            <zipfileset dir="${project.root}/external/windows/pwiz" prefix="${versionPrefix}-bin/bin" erroronmissingdir="false">
+                <include name="**/*" if="includeMassSpecBinaries"/>
+                <exclude name="**/.svn"/>
+            </zipfileset>
+
+            <zipfileset file="${basedir}/archivedata/README.txt" prefix="${versionPrefix}-bin"/>
+            <zipfileset file="${installer.build.dir}/VERSION" prefix="${versionPrefix}-bin"/>
+            <zipfileset file="${installer.build.dir}/labkey.xml" prefix="${versionPrefix}-bin"/>
+        </zip>
+    </target>
+
+    <!-- performs the inverse of 'bin-tarball': extracts to the build/staging area -->
+    <target name="bin-untar" depends="init">
+      <property name="archive.pattern" location="${dist.dir}/${dist_sub.dir}/*-bin.tar.gz"/>
+      <fileset id="archive.fileset" file="${archive.pattern}"/>
+      <fail message="distribution archive matching pattern ${archive.pattern} doesn't exist or matched more than one archive: ${toString:archive.fileset}">
+          <condition>
+              <not><resourcecount refid="archive.fileset" count="1"/></not>
+          </condition>
+      </fail>
+      <property name="fileName" value="${toString:archive.fileset}"/>
+      <echo message="extracting ${fileName} to ${build.dir}/staging..."/>
+
+      <script language="javascript">
+          var fileName = project.getProperty("fileName");
+          project.setProperty("archiveDir", fileName.substring(0, fileName.length - 7));
+      </script>
+
+      <property name="dist.archive" location="${dist.dir}/${dist_sub.dir}/${fileName}" />
+
+      <mkdir dir="${build.dir}/staging/labkeyWebapp"/>
+      <mkdir dir="${build.dir}/staging/modules"/>
+      <mkdir dir="${build.dir}/deploy/pipelineLib"/>
+
+      <untar dest="${build.dir}/staging" compression="gzip">
+        <fileset refid="archive.fileset"/>
+        <patternset>
+          <include name="${archiveDir}/labkeywebapp/**" />
+        </patternset>
+        <mapper type="glob" from="${archiveDir}/labkeywebapp/*" to="labkeyWebapp/*"/>
+      </untar>
+      <untar dest="${build.dir}/staging" compression="gzip">
+        <fileset refid="archive.fileset"/>
+        <patternset>
+          <include name="${archiveDir}/modules/**" />
+        </patternset>
+        <mapper type="glob" from="${archiveDir}/*" to="*"/>
+      </untar>
+      <untar dest="${build.dir}" compression="gzip">
+        <fileset refid="archive.fileset"/>
+        <patternset>
+          <include name="${archiveDir}/tomcat-lib/labkeyBootstrap.jar" />
+        </patternset>
+        <mapper type="glob" from="${archiveDir}/tomcat-lib/*" to="*"/>
+      </untar>
+      <untar dest="${build.dir}/deploy/pipelineLib" compression="gzip">
+        <fileset refid="archive.fileset"/>
+        <patternset>
+          <include name="${archiveDir}/pipeline-lib/**" />
+        </patternset>
+        <mapper type="glob" from="${archiveDir}/pipeline-lib/*" to="*"/>
+      </untar>
+    </target>
+
+    <patternset id="src.fileset">
+        <exclude name="**/.svn/**"/>
+        <exclude name="**/**.old"/>
+        <exclude name="build/**"/>
+        <exclude name="remoteAPI/axis-1_4/**"/>
+        <exclude name="dist/**"/>
+        <exclude name="**/.gwt-cache/**"/>
+        <exclude name="intellijBuild/**"/>
+        <exclude name="archive/**"/>
+        <exclude name="docs/**"/>
+        <exclude name="external/lib/**/*.zip"/>
+        <exclude name="external/lib/**/junit-src.*.jar"/>
+        <exclude name="external/lib/client/**"/>
+        <exclude name="server/installer/3rdparty/**"/>
+        <exclude name="server/installer/nsis/**"/>
+        <exclude name="sampledata/**"/>
+        <exclude name="server/test/lib/**.zip"/>
+        <exclude name="server/test/selenium.log"/>
+        <exclude name="server/test/selenium.log.lck"/>
+        <exclude name="server/test/remainingTests.txt"/>
+        <exclude name="server/config.properties"/>
+        <exclude name="server/LabKey.iws"/>
+        <exclude name="webapps/CPL/**"/>
+        <exclude name="${extjs.dir}/src/**"/>
+    </patternset>
+
+    <target name="src-zip" depends="prepare">
+        <zip destfile="${dist.dir}/LabKey${labkey.version}-src.zip">
+            <zipfileset dir="${project.root}">
+                <patternset refid="src.fileset"/>
+            </zipfileset>
+        </zip>
+    </target>
+
+    <target name="src-tarball" depends="prepare">
+        <tar destfile="${dist.dir}/LabKey${labkey.version}-src.tar.gz" longfile="gnu" compression="gzip">
+            <tarfileset dir="${project.root}" >
+                <patternset refid="src.fileset"/>
+            </tarfileset>
+        </tar>
+    </target>
+
+    <target name="src-zip-verify" depends="src-zip">
+        <delete failonerror="false" dir="${dist.dir}/LabKey${labkey.version}-src"/>
+        <unzip src="${dist.dir}/LabKey${labkey.version}-src.zip" dest="${dist.dir}/LabKey${labkey.version}-src"/>
+        <ant inheritall="false"
+             antfile="${dist.dir}/LabKey${labkey.version}-src/server/build.xml"
+             target="pick_pg"/>
+        <ant inheritall="false"
+             antfile="${dist.dir}/LabKey${labkey.version}-src/server/build.xml"
+             target="clean"/>
+        <ant inheritall="false"
+             antfile="${dist.dir}/LabKey${labkey.version}-src/server/build.xml"
+             target="dist_standard"/>
+        <delete failonerror="false" dir="${dist.dir}/LabKey${labkey.version}-src"/>
+    </target>
+</project>

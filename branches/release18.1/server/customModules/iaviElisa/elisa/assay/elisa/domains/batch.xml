@@ -1,0 +1,48 @@
+<ap:domain xmlns:exp="http://cpas.fhcrc.org/exp/xml" xmlns:ap="http://labkey.org/study/assay/xml">
+  <exp:PropertyDescriptor>
+    <exp:PropertyURI></exp:PropertyURI>
+    <exp:Name>Date</exp:Name>
+    <exp:Description>Used with ParticipantID to identify subject and timepoint for assay.</exp:Description>
+    <exp:RangeURI>http://www.w3.org/2001/XMLSchema#dateTime</exp:RangeURI>
+  </exp:PropertyDescriptor>
+  <exp:PropertyDescriptor>
+    <exp:PropertyURI></exp:PropertyURI>
+    <exp:Name>Repeat</exp:Name>
+    <exp:Description>Is this a repeat of a previous batch?</exp:Description>
+    <exp:RangeURI>http://www.w3.org/2001/XMLSchema#boolean</exp:RangeURI>
+  </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>UploadComplete</exp:Name>
+      <exp:Description>Are we done adding data to this batch</exp:Description>
+      <exp:Hidden>true</exp:Hidden>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#boolean</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>Complete</exp:Name>
+      <exp:Description>Have we completed the entire wizard</exp:Description>
+      <exp:Hidden>true</exp:Hidden>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#boolean</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>ReviewComplete</exp:Name>
+      <exp:Description>Has all the data been reviewed</exp:Description>
+      <exp:Hidden>true</exp:Hidden>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#boolean</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>Antibody</exp:Name>
+      <exp:Description>Which antibody is this ELISA measuring</exp:Description>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#string</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>TargetStudy</exp:Name>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#string</exp:RangeURI>
+    </exp:PropertyDescriptor>
+</ap:domain>
+
+

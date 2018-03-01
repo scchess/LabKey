@@ -1,0 +1,131 @@
+
+.result-case-section {
+    padding-bottom: 15px;
+}
+
+.result-table {
+    border: solid #C0C0C0 1px;
+    border-collapse: collapse;
+}
+
+.result-case-summary {
+    vertical-align: top;
+    width: 125px;
+}
+
+.result-case-determ {
+    vertical-align: top;
+    width: 190px;
+}
+
+.result-case-padding {
+    padding-bottom: 10px;
+}
+
+.result-band-cell {
+    border: solid #C0C0C0 1px;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.result-visit-no {
+    font-weight: bold;
+    color: #303030;
+    text-align: center;
+    padding-left: 20px;
+    width: 85px;
+}
+
+.result-visit-data {
+    padding: 20px;
+}
+
+.result-visit-no, .result-visit-data {
+    border: solid #C0C0C0 0px;
+    border-width: 1px 0;
+}
+
+.result-other-cases td, div.result-other-cases {
+    font-weight:bold;
+    color:red;
+}
+
+.result-no-data {
+    font-size:larger;
+    font-style:italic;
+}
+
+.result-field-header {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.result-field-maxwidth {
+    max-width: 625px;
+}
+
+.result-value {
+    padding: 0 10px;
+}
+
+.result-field-label {
+    font-weight: bold;
+    color: #303030;
+}
+
+.result-assay-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #303030;
+    padding-bottom: 5px;
+}
+
+.result-spacer {
+    border-bottom: solid #C0C0C0 1px;
+    margin: 8px auto;
+}
+
+.adj-combo input {
+    padding: 0;
+}
+
+.manage-settings-label {
+    display: inline-block;
+    width: 260px;
+}
+
+.manage-admin-header {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.manage-settings-note {
+    padding-bottom: 5px;
+    font-style: italic;
+}
+
+.manage-settings-form .x4-panel-body {
+    border: solid #B4B4B4 1px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+.determ-case-combo {
+    margin-bottom: 25px;
+}
+
+.determ-form-header {
+    font-weight: bold;
+}
+
+.determ-form-label {
+    display: inline-block;
+    width: 100px;
+    padding-bottom: 5px;
+}
+
+.determ-form-spacer {
+    padding-top: 10px;
+}

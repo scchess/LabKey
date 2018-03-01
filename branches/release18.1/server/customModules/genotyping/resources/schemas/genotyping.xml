@@ -1,0 +1,274 @@
+<tables xmlns="http://labkey.org/data/xml">
+  <table tableName="Runs" tableDbType="TABLE">
+    <titleColumn>RowId</titleColumn>
+    <columns>
+      <column columnName="RowId">
+        <url>/genotyping/run.view?run=${RowId}</url>
+        <columnTitle>Run</columnTitle>
+      </column>
+      <column columnName="MetaDataId"/>
+      <column columnName="Container"/>
+      <column columnName="CreatedBy"/>
+      <column columnName="Created"/>
+      <column columnName="Path"/>
+      <column columnName="FileName"/>
+      <column columnName="Status"/>
+      <column columnName="Platform"/>
+    </columns>
+  </table>
+  <table tableName="Analyses" tableDbType="TABLE">
+    <titleColumn>RowId</titleColumn>
+    <columns>
+      <column columnName="RowId">
+        <url>/genotyping/analysis.view?analysis=${RowId}</url>
+        <columnTitle>Analysis</columnTitle>
+      </column>
+      <column columnName="Run">
+        <url>/genotyping/run.view?run=${Run}</url>
+      </column>
+      <column columnName="CreatedBy"/>
+      <column columnName="Created"/>
+      <column columnName="Description"/>
+      <column columnName="Path"/>
+      <column columnName="FileName"/>
+      <column columnName="SequenceDictionary"/>
+      <column columnName="SequencesView"/>
+      <column columnName="Status"/>
+    </columns>
+  </table>
+  <table tableName="Matches" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+        <isHidden>true</isHidden>
+      </column>
+      <column columnName="Analysis">
+        <url>/genotyping/analysis.view?analysis=${Analysis}</url>
+      </column>
+      <column columnName="SampleId"/>
+      <column columnName="Reads">
+        <url>/genotyping/matchReads.view?analysis=${Analysis}&amp;match=${RowId}</url>
+      </column>
+      <column columnName="Percent">
+        <formatString>0.0%</formatString>
+      </column>
+      <column columnName="AverageLength">
+        <formatString>0.0</formatString>
+      </column>
+      <column columnName="PosReads"/>
+      <column columnName="NegReads"/>
+      <column columnName="PosExtReads"/>
+      <column columnName="NegExtReads">
+        <displayWidth>65</displayWidth>
+      </column>
+      <column columnName="ParentId"/>
+      <column columnName="Alleles" wrappedColumnName="RowId">
+        <isUnselectable>true</isUnselectable>
+        <fk>
+          <fkDbSchema>genotyping</fkDbSchema>
+          <fkTable>AllelesJunction</fkTable>
+          <fkColumnName>MatchId</fkColumnName>
+          <fkMultiValued>junction</fkMultiValued>
+          <fkJunctionLookup>SequenceId</fkJunctionLookup>
+        </fk>
+      </column>
+    </columns>
+  </table>
+  <table tableName="ReadsJunction" tableDbType="TABLE">
+    <columns>
+      <column columnName="MatchId"/>
+      <column columnName="ReadId"/>
+    </columns>
+  </table>
+  <table tableName="AllelesJunction" tableDbType="TABLE">
+    <columns>
+      <column columnName="Analysis"/>
+      <column columnName="MatchId"/>
+      <column columnName="SequenceId"/>
+    </columns>
+  </table>
+  <table tableName="AnalysisSamples" tableDbType="TABLE">
+    <columns>
+      <column columnName="Analysis"/>
+      <column columnName="SampleId"/>
+    </columns>
+  </table>
+  <table tableName="Reads" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+        <isHidden>true</isHidden>
+      </column>
+      <column columnName="Run"/>
+      <column columnName="Name"/>
+      <column columnName="Mid">
+        <isHidden>true</isHidden>
+      </column>          
+      <column columnName="SampleId"/>
+      <column columnName="Sequence"/>
+      <column columnName="Quality"/>
+    </columns>
+  </table>
+  <table tableName="Dictionaries" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId"/>
+      <column columnName="Container"/>
+      <column columnName="CreatedBy"/>
+      <column columnName="Created"/>
+    </columns>
+  </table>
+  <table tableName="Sequences" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+        <isHidden>true</isHidden>
+      </column>
+      <column columnName="Dictionary"/>
+      <column columnName="Uid"/>
+      <column columnName="AlleleName">
+        <!--ns:url>/genotyping/sequence.view?sequence=${RowId}</url-->
+      </column>
+      <column columnName="Initials"/>
+      <column columnName="GenbankId"/>
+      <column columnName="ExptNumber"/>
+      <column columnName="Comments"/>
+      <column columnName="Locus"/>
+      <column columnName="Species"/>
+      <column columnName="Origin"/>
+      <column columnName="Sequence"/>
+      <column columnName="Previousname"/>
+      <column columnName="LastEdit"/>
+      <column columnName="Version"/>
+      <column columnName="ModifiedBy"/>
+      <column columnName="Translation"/>
+      <column columnName="Type"/>
+      <column columnName="IpdAccession"/>
+      <column columnName="Reference"/>
+      <column columnName="Region"/>
+      <column columnName="Id"/>
+      <column columnName="Variant"/>
+      <column columnName="UploadId"/>
+      <column columnName="FullLength"/>
+      <column columnName="AlleleFamily"/>
+    </columns>
+  </table>
+  <table tableName="SequenceFiles" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+        <isHidden>true</isHidden>
+      </column>
+      <column columnName="Run"/>
+      <column columnName="DataId">
+          <fk>
+              <fkDbSchema>exp</fkDbSchema>
+              <fkTable>data</fkTable>
+              <fkColumnName>RowId</fkColumnName>
+          </fk>
+      </column>
+      <column columnName="SampleId"/>
+      <column columnName="ReadCount"/>
+      <column columnName="PoolNum"/>
+    </columns>
+  </table>
+  <table tableName="IlluminaTemplates" tableDbType="TABLE">
+    <columns>
+      <column columnName="Name"/>
+      <column columnName="Json"/>
+      <column columnName="Editable"/>
+      <column columnName="CreatedBy"/>
+      <column columnName="Created"/>
+      <column columnName="ModifiedBy"/>
+      <column columnName="Modified"/>
+    </columns>
+  </table>
+  <table tableName="Haplotype" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+        <isHidden>true</isHidden>
+      </column>
+      <column columnName="Container"/>
+      <column columnName="Name"/>
+      <column columnName="Type"/>
+      <column columnName="Lsid"/>
+      <column columnName="CreatedBy"/>
+      <column columnName="Created"/>
+      <column columnName="ModifiedBy"/>
+      <column columnName="Modified"/>
+      <column columnName="SpeciesId">
+        <fk>
+            <fkDbSchema>genotyping</fkDbSchema>
+            <fkTable>Species</fkTable>
+            <fkColumnName>RowId</fkColumnName>
+        </fk>
+      </column>
+    </columns>
+  </table>
+  <table tableName="Animal" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+          <isHidden>true</isHidden>
+      </column>
+      <column columnName="Container"/>
+      <column columnName="LabAnimalId"/>
+      <column columnName="ClientAnimalId"/>
+      <column columnName="Lsid"/>
+      <column columnName="CreatedBy"/>
+      <column columnName="Created"/>
+      <column columnName="ModifiedBy"/>
+      <column columnName="Modified"/>
+      <column columnName="SpeciesId">
+        <fk>
+          <fkDbSchema>genotyping</fkDbSchema>
+          <fkTable>Species</fkTable>
+          <fkColumnName>RowId</fkColumnName>
+        </fk>
+      </column>
+    </columns>
+  </table>
+    <table tableName="Species" tableDbType="TABLE">
+      <columns>
+        <column columnName="RowId">
+          <isHidden>true</isHidden>
+          <isKeyField>true</isKeyField>
+        </column>
+        <column columnName="Name"/>
+        <column columnName="FullName"/>
+      </columns>
+    </table>
+  <table tableName="AnimalAnalysis" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+          <isHidden>true</isHidden>
+      </column>
+      <column columnName="AnimalId">
+        <columnTitle>Animal</columnTitle>
+      </column>
+      <column columnName="RunId">
+        <columnTitle>Run</columnTitle>
+      </column>
+      <column columnName="TotalReads"/>
+      <column columnName="IdentifiedReads"/>
+      <column columnName="Enabled"/>
+      <column columnName="CreatedBy"/>
+      <column columnName="Created"/>
+      <column columnName="ModifiedBy"/>
+      <column columnName="Modified"/>
+    </columns>
+  </table>
+  <table tableName="AnimalHaplotypeAssignment" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+          <isHidden>true</isHidden>
+      </column>
+      <column columnName="AnimalAnalysisId">
+          <columnTitle>AnimalAnalysis</columnTitle>
+      </column>
+      <column columnName="HaplotypeId">
+          <columnTitle>Haplotype</columnTitle>
+      </column>
+      <column columnName="CreatedBy"/>
+      <column columnName="Created"/>
+      <column columnName="ModifiedBy"/>
+      <column columnName="Modified"/>
+      <column columnName="DiploidNumber"/>
+      <column columnName="DiploidNumberInferred"/>
+    </columns>
+  </table>
+</tables>

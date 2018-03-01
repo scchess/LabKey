@@ -1,0 +1,33 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="protocol"/>
+        <column name="originalProtocol"/>
+        <column name="title"/>
+        <column name="protocolBeginDate"/>
+        <column name="protocolEndDate"/>
+        <column name="ciPersonId"/>
+        <column name="piPersonId"/>
+        <column name="approved"/>
+        <column name="committeeResponseDate "/>
+        <column name="sp1Code"/>
+        <column name="sp1InitialAllowed"/>
+        <column name="sp1TotallAllowed"/>
+        <column name="sp2Code"/>
+        <column name="sp2InitialAllowed"/>
+        <column name="sp2TotallAllowed"/>
+        <column name="animalAlertThreshold"/>
+        <column name="aidsRelated"/>
+        <column name="phsRelated"/>
+        <column name="primateProject"/>
+        <column name="protocolPainCategory"/>
+        <column name="pairingExemption"/>
+        <column name="foodExemption"/>
+        <column name="studyComment"/>
+        <column name="renewProtocol"/>
+        <column name="protocolNumberYear"/>
+        <column name="projectType"/>
+    </columns>
+    <sorts>
+        <sort column="protocol" descending="true" />
+    </sorts>
+</customView>

@@ -1,0 +1,63 @@
+<query xmlns="http://labkey.org/data/xml/query">
+  <metadata>
+    <tables xmlns="http://labkey.org/data/xml">
+      <table tableName="simple_experiment" tableDbType="NOT_IN_DB">
+        <!-- define button bar parameters -->
+        <buttonBarOptions position="top" includeStandardButtons="false">
+          <item text="Delete Experiment(s)">
+            <originalText>Delete</originalText>
+          </item>
+          <item text="Print">
+            <originalText>Print</originalText>
+          </item>
+          <item text="Export Experiments">
+            <originalText>Export</originalText>
+          </item>
+          <item text="Experiments Per Page">
+            <originalText>Paging</originalText>
+          </item>
+        </buttonBarOptions>
+        <!-- define hidden columns and lookup for columns in grid view -->
+        <columns>
+          <column columnName="key">
+          <isHidden>true</isHidden>
+            <shownInDetailsView>false</shownInDetailsView>
+            <shownInUpdateView>false</shownInUpdateView>
+          </column>
+          <column columnName="container">
+            <isHidden>true</isHidden>
+            <shownInInsertView>false</shownInInsertView>
+            <shownInUpdateView>false</shownInUpdateView>
+            <shownInDetailsView>false</shownInDetailsView>
+          </column>
+          <column columnName="expNumber">
+            <shownInInsertView>false</shownInInsertView>
+            <shownInUpdateView>false</shownInUpdateView>
+            <columnTitle>Experiment Number (click for linked files)</columnTitle>
+            <url>/oconnor/experiments_files.view?experimentId=${expNumber}</url>
+            
+          </column>
+          <column columnName="modified">
+            <isHidden>true</isHidden>
+            <shownInInsertView>false</shownInInsertView>
+            <shownInUpdateView>false</shownInUpdateView>
+            <shownInDetailsView>false</shownInDetailsView>
+          </column>
+          <!-- define titles for columns in grid view -->
+          <column columnName="created">
+            <columnTitle>Date Created</columnTitle>
+          </column>
+          <column columnName="expDescription">
+            <columnTitle>Description</columnTitle>
+          </column>
+          <column columnName="expParent">
+            <columnTitle>Parent Experiment</columnTitle>
+          </column>
+          <column columnName="expType">
+            <columnTitle>Experiment Type</columnTitle>
+          </column>
+        </columns>
+      </table>
+    </tables>
+  </metadata>
+</query>

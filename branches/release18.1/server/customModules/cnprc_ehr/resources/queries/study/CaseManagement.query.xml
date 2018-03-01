@@ -1,0 +1,36 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="CaseManagement" tableDbType="NOT_IN_DB" useColumnOrder="true">
+                <tableUrl />
+                <insertUrl/>
+                <importUrl/>
+                <updateUrl>/cnprc_ehr/requestDetails.view?</updateUrl>
+                <deleteUrl/>
+                <columns>
+                    <column columnName="p">
+                        <columnTitle>Plan</columnTitle>
+                    </column>
+                    <column columnName="confirm">
+                        <url>/cnprc_ehr/confirmObservation.view?id=${Id}</url>
+                    </column>
+                    <column columnName="meds">
+                        <columnTitle>Current Meds</columnTitle>
+                        <url>/query/executeQuery.view?
+                            schemaName=study&amp;
+                            query.queryName=treatmentOrdersActive&amp;
+                            query.id~eq=${Id}</url>
+                    </column>
+                    <column columnName="p2">
+                        <columnTitle>P2 (last entered)</columnTitle>
+                    </column>
+                    <column columnName="remark">
+                        <columnTitle>Remark (Last)</columnTitle>
+                    </column>
+                    <column columnName="id/history">
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

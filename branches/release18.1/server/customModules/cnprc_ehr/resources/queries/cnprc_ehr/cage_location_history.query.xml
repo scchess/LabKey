@@ -1,0 +1,23 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="cage_location_history" tableDbType="TABLE">
+                <columns>
+                    <column columnName="location">
+                        <!--<fk>-->
+                            <!--<fkDbSchema>ehr_lookups</fkDbSchema>-->
+                            <!--<fkTable>cage</fkTable>-->
+                            <!--<fkColumnName>location</fkColumnName>-->
+                        <!--</fk>-->
+                    </column>
+                    <column columnName="location_history_pk"/>
+                    <column columnName="cage_size"/>
+                    <column columnName="rate_class"/>
+                    <column columnName="from_date"/>
+                    <column columnName="to_date"/>
+                    <column columnName="file_status"/>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

@@ -1,0 +1,31 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="aa_snps_by_position" tableDbType="TABLE">
+                <tableTitle>AA SNPs By Position</tableTitle>
+                <javaCustomizer class="org.labkey.laboratory.query.LaboratoryTableCustomizer" />
+                <columns>
+                    <column columnName="key">
+                        <isKeyField>true</isKeyField>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="q_aas">
+                        <columnTitle>Query AAs</columnTitle>
+                    </column>
+                    <column columnName="readcount">
+                        <columnTitle>Read Count</columnTitle>
+                    </column>
+                    <column columnName="q_non_ref_aas">
+                        <columnTitle>Query Non-Ref AAs</columnTitle>
+                    </column>
+                    <column columnName="synon_fraction">
+                        <columnTitle>Fraction of Reads With Synonymous Mutations</columnTitle>
+                    </column>
+                    <column columnName="indel_fraction">
+                        <columnTitle>Fraction of Reads With Indels</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

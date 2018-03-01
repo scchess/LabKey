@@ -1,0 +1,61 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="ProjectAssignmentHistory" tableDbType="NOT_IN_DB" useColumnOrder="true">
+                <javaCustomizer class="org.labkey.cnprc_ehr.table.CNPRC_ProjectAssignmentCustomizer" />
+                <tableUrl />
+                <insertUrl />
+                <importUrl />
+                <updateUrl />
+                <deleteUrl />
+                <columns>
+                    <column columnName="Id">
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>Id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="date">
+                        <formatString>Date</formatString>
+                        <columnTitle>Assign Date</columnTitle>
+                    </column>
+                    <column columnName="enddate">
+                        <columnTitle>Release Date</columnTitle>
+                        <isHidden>false</isHidden>
+                        <shownInInsertView>true</shownInInsertView>
+                        <shownInDetailsView>true</shownInDetailsView>
+                        <formatString>Date</formatString>
+                    </column>
+                    <column columnName="projectCode">
+                        <columnTitle>Project Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>project</fkTable>
+                            <fkColumnName>projectCode</fkColumnName>
+                            <fkDisplayColumnName>projectCode</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="assignmentStatus">
+                        <columnTitle>Assignment Status</columnTitle>
+                    </column>
+                    <column columnName="pi_name">
+                        <columnTitle>PI Name</columnTitle>
+                    </column>
+                    <column columnName="title"/>
+
+                    <column columnName="protocol">
+                        <columnTitle>Protocol</columnTitle>
+                    </column>
+                    <column columnName="unitCode">
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>center_unit</fkTable>
+                            <fkColumnName>center_unit_code</fkColumnName>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

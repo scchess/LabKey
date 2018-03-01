@@ -1,0 +1,252 @@
+<tables xmlns="http://labkey.org/data/xml">
+    <table tableName="peptideGroup" tableDbType="TABLE">
+        <updateUrl></updateUrl>
+        <insertUrl></insertUrl>
+        <deleteUrl></deleteUrl>
+        <columns>
+            <column columnName="peptide_group_id">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="container"/>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+
+            <column columnName="name"/>
+            <column columnName="seq_ref"/>
+            <column columnName="pathogen"/>
+            <column columnName="clade"/>
+            <column columnName="groupType"/>
+            <column columnName="alignRef"/>
+        </columns>
+    </table>
+    <table tableName="peptidePool" tableDbType="TABLE">
+        <columns>
+            <column columnName="peptide_pool_id">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="container"/>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+
+            <column columnName="name"/>
+            <column columnName="comment"/>
+            <column columnName="poolType"/>
+            <column columnName="archived"/>
+            <column columnName="parent_pool_id"/>
+            <column columnName="matrix_peptide_pool_id"/>
+        </columns>
+    </table>
+    <table tableName="peptide" tableDbType="TABLE">
+        <columns>
+            <column columnName="peptide_id">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="container"/>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+
+            <column columnName="peptide_sequence"/>
+            <column columnName="proteinCategory"/>
+            <column columnName="amino_acid_start_pos"/>
+            <column columnName="amino_acid_end_pos"/>
+            <column columnName="sequence_length"/>
+            <column columnName="child"/>
+            <column columnName="parent"/>
+            <column columnName="src_file_name"/>
+            <column columnName="storage_location"/>
+            <column columnName="optimalEpitopeList"/>
+            <column columnName="hla_restriction"/>
+            <column columnName="peptide_flag"/>
+            <column columnName="peptide_notes"/>
+        </columns>
+    </table>
+    <table tableName="peptidePoolAssignment" tableDbType="TABLE" hidden="false">
+        <columns>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+
+            <column columnName="peptide_pool_assignment_id"/>
+            <column columnName="peptide_pool_id"/>
+            <column columnName="peptide_id"/>
+        </columns>
+    </table>
+    <table tableName="peptideGroupAssignment" tableDbType="TABLE" hidden="false">
+        <columns>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+
+            <column columnName="peptide_group_assignment_id"/>
+            <column columnName="peptide_group_id"/>
+            <column columnName="peptide_id_in_group"/>
+            <column columnName="peptide_id"/>
+        </columns>
+    </table>
+    <table tableName="freezer" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowId">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="entityId"/>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="name"/>
+            <column columnName="description"/>
+        </columns>
+    </table>
+    <table tableName="shelf" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowId">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="entityId"/>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="name"/>
+            <column columnName="description"/>
+        </columns>
+    </table>
+    <table tableName="rack" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowId">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="entityId"/>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="name"/>
+            <column columnName="description"/>
+        </columns>
+    </table>
+    <table tableName="drawer" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowId">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="entityId"/>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="name"/>
+            <column columnName="description"/>
+        </columns>
+    </table>
+    <table tableName="box" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowId">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="entityId"/>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="name"/>
+            <column columnName="description"/>
+        </columns>
+    </table>
+    <table tableName="vial" tableDbType="TABLE">
+        <columns>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="peptideId">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="rcPoolId"/>
+            <column columnName="storageCondition"/>
+            <column columnName="thawCycles"/>
+            <column columnName="freezer"/>
+            <column columnName="shelf"/>
+            <column columnName="rack"/>
+            <column columnName="drawer"/>
+            <column columnName="box"/>
+            <column columnName="slot"/>
+            <column columnName="checkedOut"/>
+            <column columnName="used"/>
+            <column columnName="owner"/>
+            <column columnName="concentration"/>
+        </columns>
+    </table>
+    <table tableName="boxLocation" tableDbType="TABLE">
+        <columns>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="identifier">
+                <isKeyField>true</isKeyField>
+            </column>
+            <column columnName="label"/>
+        </columns>
+    </table>
+    <table tableName="lotAssignment" tableDbType="TABLE">
+        <columns>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="peptideId"/>
+            <column columnName="lotNumber"/>
+        </columns>
+    </table>
+    <table tableName="rcPool" tableDbType="TABLE">
+        <columns>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+            <column columnName="entityid"/>
+
+            <column columnName="rowid"/>
+            <column columnName="vialCount"/>
+            <column columnName="lotNumber"/>
+        </columns>
+    </table>
+    <table tableName="rcPoolAssignment" tableDbType="TABLE">
+        <columns>
+            <column columnName="created"/>
+            <column columnName="createdBy"/>
+            <column columnName="modified"/>
+            <column columnName="modifiedBy"/>
+            <column columnName="container"/>
+
+            <column columnName="peptideId"/>
+            <column columnName="rcPoolId"/>
+        </columns>
+    </table>
+</tables>

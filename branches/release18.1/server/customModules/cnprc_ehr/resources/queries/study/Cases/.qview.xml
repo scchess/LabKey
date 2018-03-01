@@ -1,0 +1,14 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id" />
+        <column name="date" />
+        <column name="problem" />
+        <column name="enddate" />
+        <column name="category" />
+        <column name="admitType" />
+        <column name="remark" />
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

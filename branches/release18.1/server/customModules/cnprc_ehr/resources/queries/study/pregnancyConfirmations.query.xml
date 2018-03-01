@@ -1,0 +1,72 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="pregnancyConfirmations" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id">
+                        <columnTitle>Female Id</columnTitle>
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>Id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="conception">
+                        <columnTitle>Conception Date</columnTitle>
+                    </column>
+                    <column columnName="femaleSpecies"/>
+                    <column columnName="offspringId">
+                        <columnTitle>Offspring</columnTitle>
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>Id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="offspringSex">
+                        <columnTitle>Sex</columnTitle>
+                    </column>
+                    <column columnName="BRType">
+                        <columnTitle>Breeding Type</columnTitle>
+                    </column>
+                    <column columnName="offspringSpecies"/>
+                    <column columnName="sire">
+                        <columnTitle>Sire</columnTitle>
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>Id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="femaleGeneticsVerify">
+                        <columnTitle>Dam Verify</columnTitle>
+                    </column>
+                    <column columnName="maleGeneticsVerify">
+                        <columnTitle>Sire Verify</columnTitle>
+                    </column>
+                    <column columnName="gestationDays"/>
+                    <column columnName="conceptionDateStatus">
+                        <columnTitle>Est</columnTitle>
+                    </column>
+                    <column columnName="termDate">
+                        <columnTitle>Term Date</columnTitle>
+                    </column>
+                    <column columnName="deliveryType"/>
+                    <column columnName="offspringLocationDate">
+                        <columnTitle>Location Date</columnTitle>
+                    </column>
+                    <column columnName="offspringLocation">
+                        <columnTitle>Offspring Last or Current Location</columnTitle>
+                    </column>
+                    <column columnName="deathType">
+                        <columnTitle>Death Type</columnTitle>
+                    </column>
+                    <column columnName="PGComment">
+                        <columnTitle>PG Comment</columnTitle>
+                    </column>
+                    <column columnName="termComment"/>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

@@ -1,0 +1,126 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Birth" tableDbType="TABLE" useColumnOrder="true">
+                <tableUrl />
+                <insertUrl />
+                <importUrl />
+                <updateUrl />
+                <deleteUrl />
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Birth Date</columnTitle>
+                    </column>
+                    <column columnName="date_type">
+                        <columnTitle>Date Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>birth_date_type</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Title</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="birth_viability">
+                        <columnTitle>Birth Viability</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>birth_viability</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="room">
+                        <columnTitle>Birth Room</columnTitle>
+                        <shownInInsertView>true</shownInInsertView>
+                        <shownInUpdateView>true</shownInUpdateView>
+                        <isHidden>false</isHidden>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>rooms</fkTable>
+                            <fkColumnName>room</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="cage">
+                        <columnTitle>Birth Cage</columnTitle>
+                        <shownInInsertView>true</shownInInsertView>
+                        <shownInUpdateView>true</shownInUpdateView>
+                        <isHidden>false</isHidden>
+                        <url>/EHR/cageDetails.view?
+                            room=${room}&amp;
+                            cage=${cage}
+                        </url>
+                    </column>
+                    <column columnName="dam">
+                        <columnTitle>Dam</columnTitle>
+                        <url>/ehr/participantView.view?participantId=${dam}</url>
+                        <isMvEnabled>true</isMvEnabled>
+                    </column>
+                    <column columnName="gender">
+                        <columnTitle>Sex</columnTitle>
+                    </column>
+                    <column columnName="weight">
+                        <columnTitle>Weight</columnTitle>
+                    </column>
+                    <column columnName="wdate">
+                        <columnTitle>Weight Date</columnTitle>
+                    </column>
+                    <column columnName="type">
+                        <columnTitle>Birth Type</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>birth_type</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="species">
+                        <columnTitle>Species</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>species_codes</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="geographic_origin">
+                        <columnTitle>Geographic Origin</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>geographic_origins</fkTable>
+                            <fkColumnName>meaning</fkColumnName>
+                            <fkDisplayColumnName>description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="sire">
+                        <columnTitle>Sire</columnTitle>
+                        <url>/ehr/participantView.view?participantId=${sire}</url>
+                        <isMvEnabled>true</isMvEnabled>
+                    </column>
+                    <column columnName="cond">
+                        <columnTitle>Condition</columnTitle>
+                    </column>
+                    <column columnName="origin">
+                        <columnTitle>Origin</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>source</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="parentid">
+                    </column>
+                    <column columnName="estimated">
+                        <columnTitle>Birthdate Is Estimated?</columnTitle>
+                    </column>
+                    <column columnName="conception">
+                        <columnTitle>Conception</columnTitle>
+                    </column>
+                    <column columnName="conceptionDateStatus">
+                        <datatype>varchar</datatype>
+                        <columnTitle>Conception Date Status</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

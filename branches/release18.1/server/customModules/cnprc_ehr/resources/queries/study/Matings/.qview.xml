@@ -1,0 +1,16 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id"/>
+        <column name="date"/>
+        <column name="male"/>
+        <column name="hours"/>
+        <column name="cycleDay"/>
+        <column name="cycleStartDate"/>
+        <column name="locationOverride"/>
+        <column name="weekendBreeding"/>
+        <column name="weekendBreedingState"/>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Test" pattern="src[server-test]:*..*||src[server-test_uiTest]:*..*" />
+</component>

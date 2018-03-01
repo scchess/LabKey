@@ -1,0 +1,25 @@
+value	description	sort_order
+Vis	Visual check - visual assessment is needed, wound and location entered as text	1
+Sts	Suture check - suture check is needed, wound and location entered as text	2
+Bdg	Bandage check or change	3
+R/C - Sample Needed	Rectal Culture, sample needed	4
+R/C - Results Pending	Rectal Culture, results pending	5
+SS - Sample Needed	Stool Sample, sample needed	6
+SS - Results Pending	Stool Sample, results pending	7
+Nova	Stat chemistry needed	8
+PS	Pain Score, Separate post-op monitoring sheet needs to be completed	9
+Email	Indicate that an email was sent or received, may be to anyone, or any group	10
+U/S	Ultrasound needed	11
+X-ray	X-ray needed	12
+CBC	CBC needed	13
+Chem	Chemistry panel needed	14
+Lab	Text box to indicate that one, or more, of the lab tests above were ordered, but not received	15
+WT	Weight check needed	16
+Tb	TB reading due	17
+Shig screen	Rectal Culture needed for outdoor to indoor housing transition	18
+Access to D/C	Assess animal for discharge	19
+Sedate	Indicates animal must be sedated	20
+Vet RecRvw	 Indicates vet need to assess animal and review record	21
+Perm	 	22
+Pull Tag	 	23
+Other	Text field needed for entry of additional instructions	24

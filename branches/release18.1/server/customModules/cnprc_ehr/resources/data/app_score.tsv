@@ -1,0 +1,7 @@
+value	description	sort_order
+G	Good	1
+F	Fair	2
+P	Poor	3
+F/G	Fair/Good	4
+F/P	Fair/Poor	5
+A	Anorexia	6

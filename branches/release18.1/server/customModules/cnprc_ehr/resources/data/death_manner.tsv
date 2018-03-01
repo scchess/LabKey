@@ -1,0 +1,15 @@
+value	title	category	description	sort_order	date_disabled
+A	Experimental Accident
+D	Spontaneous Death
+FD	Fetal Death
+FL	Fetal Delivery, Live In-Utero 
+FN	Found at Necropsy
+FX	Live, Term, Euthanized at Birth
+K	Medical Cull
+M	Medical Cull, Diagnostic
+ND	Neonatal Death
+NT	No Tissue
+S	Surgical Cull
+X	Experimental Design
+KI	Possible Medical Cull, In Utero				2015-04-17 00:00:00.0
+SB	Still Birth				2011-02-09 00:00:00.0

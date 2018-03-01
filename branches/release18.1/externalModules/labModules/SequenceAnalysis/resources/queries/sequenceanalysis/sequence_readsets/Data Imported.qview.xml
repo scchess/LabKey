@@ -1,0 +1,8 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView" canOverride="true">
+   <sorts>
+       <sort column="rowid" descending="true"/>
+   </sorts>
+    <filters>
+        <filter column="totalFiles" operator="gt" value="0"/>
+    </filters>
+</customView>

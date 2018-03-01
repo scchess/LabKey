@@ -1,0 +1,27 @@
+{
+    "containerId":"@@CONTAINERID@@",
+    "containerPath":"@@CONTAINERPATH@@",
+    "userId":@@USERID@@,
+    "baseUrl":"@@BASEURL@@",
+    "protocolName":"@@PROTOCOLNAME@@",
+    "protocolDescription":"This is a sequence pipeline alignment test",
+    "pipeline, protocol name":"@@PROTOCOLNAME@@",
+    "deleteIntermediateFiles":false,
+    "debugMode":false,
+    "saveProtocol":false,
+    "fastqProcessing": "",
+    "referenceLibraryCreation": "Virus",
+	"referenceLibraryCreation.Virus.subset":"SIVmac239_Test",
+    "copyGenomeLocally": false,
+
+    "analysis.SBT.minPctToImport":0,
+	"analysis.SBT.onlyImportPairs":false,
+	"analysis.SBT.minAvgDipQual":25,
+	"analysis.SBT.minAvgSnpQual":17,
+	"analysis.SBT.minIndelQual":20,
+	"analysis.SBT.minQual":17,
+    "analysis.Virus.minAvgDipQual":25,
+    "analysis.Virus.minAvgSnpQual":17,
+    "analysis.Virus.minIndelQual":20,
+    "analysis.Virus.minQual":17
+}

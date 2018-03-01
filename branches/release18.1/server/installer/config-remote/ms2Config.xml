@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="ms2PipelineOverrides" class="org.labkey.api.pipeline.TaskPipelineRegistrar">
+        <property name="factories">
+            <list>
+                <!-- This reference and its related bean below enable RAW to mzXML conversion -->
+                <ref bean="mzxmlConverterOverride"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Enable Thermo RAW to mzXML conversion using msConvert. -->
+    <bean id="mzxmlConverterOverride" class="org.labkey.api.pipeline.cmd.ConvertTaskFactorySettings">
+        <constructor-arg value="mzxmlConverter"/>
+        <property name="cloneName" value="mzxmlConverter"/>
+        <property name="commands">
+            <list>
+                <ref bean="msConvertCommandOverride"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Configuration to customize behavior of msConvert -->
+    <bean id="msConvertCommandOverride" class="org.labkey.api.pipeline.cmd.CommandTaskFactorySettings">
+        <constructor-arg value="msConvertCommand"/>
+        <property name="cloneName" value="msConvertCommand"/>
+        <!-- Run msconvert on a remote server named "mzxmlconvert" -->
+        <property name="location" value="mzxmlconvert"/>
+    </bean>
+
+
+</beans>

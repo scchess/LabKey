@@ -1,0 +1,14 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView" containerFilter="CurrentAndSubfolders" canOverride="true">
+    <columns>
+        <column name="Status" />
+        <column name="Info" />
+        <column name="Description" />
+        <column name="ActiveHostName"/>
+        <column name="Created" />
+        <column name="CreatedBy" />
+        <column name="Folder"/>
+    </columns>
+    <sorts>
+        <sort column="Created" descending="true"/>
+    </sorts>
+</customView>

@@ -1,0 +1,1074 @@
+
+<style type="text/css">
+    .labkey-wizard-frame {border-spacing:0;border:5px solid #e0e6ea;width:100%;padding:0;}
+    .labkey-wizard-header {
+        padding: 3px 3px 5px; margin:0;background-color: #e0e6ea;font-family:Arial, Verdana, sans-serif;font-size:14pt; font-weight:bold;color:black;}
+    .labkey-wizard-step {font-size:11pt;color:#808080;padding:3px}
+    .labkey-wizard-header .selected {color:black}
+    .x-form-check-wrap {display:inline-block;width:100px}
+    .badWell {background-color:crimson}
+</style>
+
+<div id="buttonBar" ></div>
+        <br>
+<table class="labkey-wizard-frame">
+    <tr >
+        <td class="labkey-wizard-header">Upload Data</td><td class="labkey-wizard-header labkey-wizard-step" style="text-align:right">
+            <span class="labkey-wizard-step selected" id="stepTitle0">1. Enter Batch Information</span>|
+            <span class="labkey-wizard-step" id="stepTitle1">2. Upload Files</span>|
+            <span class="labkey-wizard-step" id="stepTitle2">3. Review Results</span>|
+        <span class="labkey-wizard-step" id="stepTitle3">4. Finish</span>
+    </td>
+    </tr>
+        <tr>
+        <td colspan="2" style="padding:5px">
+            <div id="wizard_content" style="height:400;overflow:scroll">
+<table id="batch_info" style="display:block">
+  <tr>
+    <td class='labkey-form-label' style="background:white">Batch Name:</td>
+    <td>
+      <div id='batch_name_div'>
+        <span class='extContainer x-form-field-wrap'>
+          <input id='batch_name_input' type='text' value=''>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class='labkey-form-label' style="background:white">Sample Date:</td>
+    <td>
+      <div id='batch_date_div'>
+        <span class='extContainer x-form-field-wrap'>
+          <input id='batch_date_input' type='text' value=''>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class='labkey-form-label' style="background:white">Repeat Batch?</td>
+    <td>
+      <div id='batch_repeat_div'>
+        <span class='extContainer x-form-field-wrap'>
+          <input id='batch_repeat_input' type='checkbox' value=''>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <!--
+  <tr>
+    <td class='labkey-form-label'>Created:</td>
+    <td>
+      <span id='batch_createdBy_span'></span><br>
+      <span id='batch_created_span'></span>
+    </td>
+  </tr>
+  <tr>
+    <td class='labkey-form-label'>Modified:</td>
+    <td>
+      <span id='batch_modifiedBy_span'></span><br>
+      <span id='batch_modified_span'></span>
+    </td>
+  </tr>
+  -->
+    <tr>
+      <td class='labkey-form-label' style="background:white">Antibody:</td>
+      <td id="antibody_span">
+      </td>
+    </tr>
+    <tr>
+      <td class='labkey-form-label' style="background:white">Target Study:</td>
+      <td style="white-space:nowrap;">
+          <span id="targetStudy_span"></span> <span id="createStudy_span"></span>
+      </td>
+    </tr>
+  <!--
+  <tr><td class='labkey-form-label'>Number of Runs:</td><td><div id='batch_runCount_div'>0</div></td></tr>
+  -->
+  <tr>
+    <td class='labkey-form-label'>Comments:</td>
+    <td>
+      <div id='batch_comments_div'>
+        <span class='extContainer x-form-field-wrap'>
+          <input id='batch_comments_input' type='textarea' value='' rows='4' cols='60'>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<p>
+
+
+
+<form id="upload_form" enctype="multipart/form-data" method="POST">
+          <div id="fileUploadField"></div>
+</form>
+<div id='runs_div'>
+    <div>Highlight replicates with values that differ by more than <span id="percentDiff_span"></span>%</div>
+</div>
+                
+<div id="finish_div" ></div>
+</div>
+<p>
+    <a id="prev_button" href='javascript:void(0)' onclick='prevStep();return false;' class='labkey-disabled-button'>
+      <span>&lt;&nbsp;Prev</span>
+    </a>
+    <a id="next_button" href='javascript:void(0)' onclick='nextStep();return false;' class='labkey-button'>
+      <span>Next&nbsp;></span>
+    </a>
+    <a id="finish_button" style="visibility:hidden;" href='javascript:void(0)' onclick='finish();return false;' class='labkey-button'>
+      <span>Finish</span>
+    </a>
+</p>
+</td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+function prevStep()
+{
+    var step = wizardSteps[currentStep];
+    step.prev();
+}
+
+function nextStep()
+{
+    var step = wizardSteps[currentStep];
+    step.next();
+}
+function stepComplete(oldStep, newStep)
+{
+    Ext.get("stepTitle" + oldStep).removeClass("selected");
+    Ext.get("stepTitle" + newStep).addClass("selected");
+    if (newStep == 0)
+        Ext.get("prev_button").replaceClass("labkey-button", "labkey-disabled-button");
+    else
+        Ext.get("prev_button").replaceClass("labkey-disabled-button", "labkey-button");
+
+    if (newStep == wizardSteps.length - 1)
+        Ext.get("next_button").replaceClass("labkey-button", "labkey-disabled-button");
+    else
+        Ext.get("next_button").replaceClass("labkey-disabled-button", "labkey-button");
+
+    currentStep = newStep;
+}
+
+function finish() {
+    if (copyCount > 0 && Ext.getDom("copy_form"))
+        Ext.getDom("copy_form").submit();
+    else
+        window.location = LABKEY.ActionURL.buildURL("assay", "assayData", null, {rowId:LABKEY.page.assay.id})
+}
+
+var wizardSteps = [
+    {
+        next: function() {
+            saveBatch(function () {
+                Ext.get("batch_info").setStyle("display", "none");
+                Ext.get("runs_div").setStyle("display", "");
+                Ext.get("upload_form").show(); //This form doesn't re-layout properly so we just hide & show rather than taking out of the flow
+                showPlates();
+                stepComplete(0,1);
+            });
+        },
+        prev: Ext.emptyFn
+    },
+    {
+        next: function() {
+            LABKEY.page.batch.properties.UploadComplete = true;
+            setDirty(true);
+            saveBatch(function () {
+                Ext.get("upload_form").hide();
+                review();
+                stepComplete(1, 2);
+            });
+        },
+        prev: function() {
+            Ext.get("runs_div").setStyle("display", "none");
+            Ext.get("upload_form").hide();
+            Ext.get("batch_info").setStyle("display", "block");
+            stepComplete(1, 0);
+        }
+    },
+    {
+        next: function() {
+            LABKEY.page.batch.properties.ReviewComplete = true;
+            setDirty(true);
+            saveBatch(function ()
+            {
+                Ext.get("finish_div").setStyle("display", "");
+                Ext.get("finish_button").show();
+                Ext.get("runs_div").setStyle("display", "none");
+                renderCopyToStudy("finish_div");
+
+                stepComplete(2, 3);
+            });
+        },
+        prev: function() {
+            Ext.get("upload_form").show();
+            showPlates();
+            stepComplete(2, 1);
+        }
+    },
+    {
+        next: Ext.emptyFn,
+        prev: function() {
+            Ext.get("runs_div").setStyle("display", "");
+            Ext.get("finish_div").setStyle("display", "none");
+            Ext.get("finish_button").hide();
+            stepComplete(3, 2);
+        }
+    }
+];
+var currentStep = 0;
+
+function getDilutionValue(dilution)
+{
+    if (typeof dilution == "number")
+        return dilution;
+    
+    if (dilution.match(/^1:\d*$/))
+        return +(dilution.substr(2));
+
+    return null;
+}
+
+function setDirty(dirty) {
+  LABKEY.setDirty(dirty);
+  var save_btns = Ext.DomQuery.select("a:has(span:contains(Save))");
+  if (LABKEY.isDirty()) {
+    Ext.each(save_btns, function (item, index) {
+        Ext.get(item).replaceClass('labkey-disabled-button', 'labkey-button');
+    });
+  }
+  else {
+    Ext.each(save_btns, function (item, index) {
+        Ext.get(item).replaceClass('labkey-button', 'labkey-disabled-button');
+    });
+  }
+}
+
+var msgBox;
+function showMessage(msg)
+{
+    if (msgBox)
+        msgBox.updateText(msg);
+    else
+        msgBox = Ext.MessageBox.wait(msg, "IAVI Elisa");
+};
+
+function hideMessage()
+{
+    if (msgBox)
+    {
+        msgBox.hide();
+        msgBox = null;
+    }
+}
+
+var targetStudyName;
+
+function init()
+{
+    showButtonBar(LABKEY.page.assay);
+
+    Ext.get("runs_div").setStyle("display", "none");
+    Ext.get("upload_form").hide(); //Just show and hide in place due to layout problems
+  new Ext.form.TextField({
+    listeners: {
+      'change': function (field, newValue, oldValue) {
+        LABKEY.page.batch.name = newValue;
+        setDirty(true);
+      }
+    },
+    applyTo: 'batch_name_input',
+    id: 'batch_name_field',
+    width: 200
+  });
+
+  getDateField({
+    listeners: {
+      'change': function (field, newValue, oldValue) {
+        LABKEY.page.batch.properties["Date"] = newValue;
+          //This date is copied into every data row at creation time so need to update here
+          for (var i = 0; i < LABKEY.page.batch.runs.length; i++)
+          {
+              var run = LABKEY.page.batch.runs[i];
+              for (var j = 0; j < run.dataRows.length; j++)
+                run.dataRows[j].Date = newValue;
+          }
+        setDirty(true);
+      }
+    },
+    applyTo: 'batch_date_input',
+    id: 'batch_date_field'
+  });
+
+  new Ext.form.Checkbox({
+    listeners: {
+      'check': function (field, checked) {
+        if (LABKEY.page.batch.properties["Repeat"] != checked) {
+          LABKEY.page.batch.properties["Repeat"] = checked;
+          setDirty(true);
+        }
+      }
+    },
+    applyTo: 'batch_repeat_input',
+    id: 'batch_repeat_field'
+  });
+
+  new Ext.form.TextArea({
+    listeners: {
+      'change': function (field, newValue, oldValue) {
+        LABKEY.page.batch.comment = newValue;
+        setDirty(true);
+      }
+    },
+    applyTo: 'batch_comments_input',
+    id: 'batch_comments_field',
+    width: 350,
+    height: 80
+  });
+
+LABKEY.Query.selectRows({schemaName:'study', queryName:'StudyProperties', columns:'Label,Container', containerFilter:'AllFolders',
+        successCallback:function(results) {
+            var options = [];
+            for (var i = 0; i < results.rows.length; i++)
+            {
+                var container = results.rows[i].Container;
+                var label = results.rows[i].Label;
+                options.push([container, label ]);
+                if (container == LABKEY.page.batch.properties.TargetStudy)
+                    targetStudyName = label;
+            }
+
+            new Ext.form.ComboBox({
+                store:options,
+                value:LABKEY.page.batch.properties.TargetStudy,
+                renderTo:'targetStudy_span',
+                trigger:'all',
+                listeners: {
+                    "change":      function (field, newValue, oldValue) {
+                        LABKEY.page.batch.properties.TargetStudy = newValue;
+                        for (var i = 0; i < options.length; i++)
+                            if (options[i][0] == newValue)
+                                targetStudyName = options[i][1];
+                        setDirty(true);
+                    }
+                  }
+
+            })
+        }});
+
+    configCreateStudy("createStudy_span");
+
+    if (null == LABKEY.page.batch.properties.Antibody)
+        LABKEY.page.batch.properties.Antibody = "gp120";
+    new Ext.form.ComboBox({
+        store:["gp41", "gp120"],
+        value:LABKEY.page.batch.properties.Antibody,
+        renderTo:'antibody_span',
+        trigger:'all',
+        listeners: {
+            change: function (field, newValue, oldValue) {
+                LABKEY.page.batch.properties.Antibody = newValue;
+                setDirty(true);
+            }
+        }
+    });
+
+    new Ext.form.NumberField({
+        renderTo:'percentDiff_span',
+        value:IaviElisa.percentDiffCutoff  * 100,
+        allowDecimals:false,
+        minValue:1,
+        listeners: {
+            change: function(field, newValue, oldValue)
+            {
+                IaviElisa.percentDiffCutoff = newValue / 100;
+                renderBatch();
+            }
+        }
+    });
+
+    //Attach the ext elements and event handlers
+    var form = new Ext.form.BasicForm(
+      Ext.get("upload_form"), {
+      fileUpload: true,
+      frame: false,
+      url: LABKEY.ActionURL.buildURL('assay', 'assayFileUpload'),
+      listeners: {
+        "actioncomplete": function (f, action) {
+          handleNewFileUpload(f, action);
+        },
+        "actionfailed": function (f, action) {
+          handleNewFileUpload(f, action);
+        }
+      }
+    });
+
+    new Ext.form.FileUploadField({
+      renderTo: "fileUploadField",
+      buttonText: "Upload New File...",
+      buttonOnly: true,
+      buttonCfg: {
+        cls: "labkey-button"
+      },
+      listeners: {
+        "fileselected": function (fb, v) {
+          form.submit();
+            showMessage("Uploading file");
+        }
+      }
+    });
+
+    Ext.QuickTips.init();
+    ensureBatch();
+    backgroundLoadPlates();
+    renderBatch();
+}
+
+function backgroundLoadPlates()
+{
+    function loadOnePlate(data, index)
+    {
+        if (data.name.match(/.*\.xls$/i))
+            data.getContent({
+                format:'jsonTSV',
+                successCallback:function(content)
+                {
+                    data.content = content;
+                    loadPlateData(data, index);
+                },
+                failureCallback:function()
+                {
+                    hideMessage();
+                    alert("Failed retrieving data");
+                }
+            })
+        else
+          data.getContent({
+            successCallback: function (content) {
+              data.content = content;
+              loadPlateData(data, index);
+            },
+              failureCallback:function()
+              {
+                  hideMessage();
+                  alert("Failed retrieving data");
+              }
+
+          });
+    }
+    
+    var runGroup = LABKEY.page.batch;
+    for (var i = 0; i < runGroup.runs.length; i++)
+    {
+      var run = runGroup.runs[i];
+      if (null != run.dataInputs && run.dataInputs.length > 0)
+      {
+          var data = run.dataInputs[0];
+          loadOnePlate(data, i);
+      }
+    }
+
+}
+
+function handleNewFileUpload(form, action)
+{
+    if (action && action.result && action.result.id) {
+        showMessage("Loading Plate Data");
+        var data = new LABKEY.Exp.Data(action.result);
+        if (data.name.match(/.*\.xls$/i))
+            data.getContent({
+                format:'jsonTSV',
+                successCallback:function(content)
+                {
+                    data.content = content;
+                    loadPlateData(data);
+                },
+                failureCallback:function()
+                {
+                    hideMessage();
+                    alert("Failed retrieving data");
+                }
+            })
+        else
+          data.getContent({
+            successCallback: function (content) {
+              data.content = content;
+              loadPlateData(data);
+            },
+              failureCallback:function()
+              {
+                  hideMessage();
+                  alert("Failed retrieving data");
+              }
+
+          });
+    }
+    else
+        hideMessage();
+}
+
+var xlLayout =  {
+    plateDataStart:{row:36, col:1},
+    layoutRegionStart:{row:6, col:0},
+    fieldGroup:{row:0, col:0},
+    layout:{row:5, col:0},
+    plateId:{row:34,col:0},
+    participantIds:[{row:3,col:1}, {row:9,col:1}, {row:15,col:1}, {row:21,col:1}]
+};
+
+function loadPlateData(data, startIndex)
+{
+    var content = data.content;
+    data.content = null; //Don't want to post this back!
+    var sheet;
+    if (typeof content == "object")
+        sheet = content.sheets[0].data;
+    else
+    {
+        sheet = [];
+        content = content.replace(/(?:\r\n)|(?:\r)/gm, "\n");
+        var lines = content.split("\n");
+        for (var l = 0; l < lines.length; l++)
+            sheet.push(lines[l].split("\t"));
+    }
+
+    showMessage("Processing Plate Data");
+    if (/##BLOCKS/.test(getCell({row:0, col:0})))    //Old layout from SoftMax
+    {
+        var plate = new LABKEY.Assay.Elisa.Plate(LABKEY.Assay.Elisa.TextPlateLayout);
+        plate.extractWellValues(sheet, 3, 2);
+        computeTiters(plate, true);
+        if (null != startIndex)
+        {
+            var run = LABKEY.page.batch.runs[startIndex];
+            renderRun(run, plate, true);
+            hideMessage();
+        }
+        else
+        {
+            var run = addRunForPlate(plate, data, true);
+            var runIndex = LABKEY.page.batch.runs.length - 1;
+            showMessage("Saving Batch");
+            LABKEY.Experiment.saveBatch({
+              assayId : LABKEY.page.assay.id,
+              batch : LABKEY.page.batch,
+              successCallback : function (batch, response) {
+                LABKEY.page.batch = batch;
+                LABKEY.Assay.Elisa.RunView.getView(LABKEY.page.batch.runs[runIndex], plate, true);
+                renderBatch();
+              },
+                failureCallback: function(response)
+                {
+                    hideMessage();
+                    alert("Save batch failed.");
+                }
+            });
+        }
+    }
+    else if (getCell(xlLayout.fieldGroup) == "Field Group" && getCell(xlLayout.layout) == "Layout") //Single sheet biotek layout
+    {
+        var plate = new LABKEY.Assay.Elisa.Plate(LABKEY.Assay.Elisa.ExcelPlateLayout);
+        var layoutRow = findHeaderRow(1);
+        loadPlateMetaData(plate, layoutRow);
+        loadPlateValues(plate, findHeaderRow(layoutRow + 1));
+        plate.id = getCell(xlLayout.plateId);
+        computeTiters(plate);
+        if (null != startIndex)
+        {
+            var run = LABKEY.page.batch.runs[startIndex];
+            renderRun(run, plate);
+            hideMessage();
+        }
+        else
+        {
+            var run = addRunForPlate(plate, data);
+            var runIndex = LABKEY.page.batch.runs.length - 1;
+            LABKEY.Experiment.saveBatch({
+              assayId : LABKEY.page.assay.id,
+              batch : LABKEY.page.batch,
+              successCallback : function (batch, response) {
+                LABKEY.page.batch = batch;
+                LABKEY.Assay.Elisa.RunView.getView(LABKEY.page.batch.runs[runIndex], plate, false);
+                renderBatch();
+              },
+                failureCallback: function(response)
+                {
+                    hideMessage();
+                    alert("Save batch failed.");
+                }
+            });
+        }
+    }
+    else //Multisheet layout
+    {
+        var plates = [];
+
+        var startRow = -1;
+        do
+        {
+            showMessage("Processing Plate " + (plates.length + 1))
+            var metaDataRow = findHeaderRow(startRow+1);
+            if (null === metaDataRow)
+            {
+                if (startRow == -1)
+                    alert("File format unexpected, couldn't find plate layout");
+                break;
+            }
+
+            var plateDataRow = findHeaderRow(metaDataRow + 1);
+            if (null === plateDataRow)
+            {
+                alert("File format unexpected, couldn't find plate layout after row " + (metaDataRow + 1));
+                break;
+            }
+
+            var plateSummaryRow = findHeaderRow(plateDataRow + 1);
+
+
+            var plate = new LABKEY.Assay.Elisa.Plate(LABKEY.Assay.Elisa.ExcelPlateLayout);
+            loadPlateMetaData(plate, metaDataRow);
+            loadPlateValues(plate, plateDataRow);
+            computeTiters(plate);
+
+            plates.push(plate);
+
+            startRow = plateSummaryRow;
+        }
+        while (startRow != null)
+
+        if (null != startIndex)
+        {
+            for (var p = 0; p < plates.length; p++)
+            {
+                plate = plates[p];
+                renderRun(LABKEY.page.batch.runs[p + startIndex], plate, false);
+            }
+            hideMessage();
+        }
+        else
+        {
+            for (var p = 0; p < plates.length; p++)
+            {
+                plate = plates[p];
+                var run = addRunForPlate(plate, p == 0 ? data : null, false); //Only save the data for the first run
+            }
+
+            //Here we save the batch, then rendezvous with the batch that comes back, building the views
+            //We don't want to reload/reparse the data file..
+            showMessage("Saving");
+            LABKEY.Experiment.saveBatch({
+              assayId : LABKEY.page.assay.id,
+              batch : LABKEY.page.batch,
+              successCallback : function (batch, response) {
+                LABKEY.page.batch = batch;
+                  showMessage("Updating View");
+                  createRunViews(plates);
+                  renderBatch();
+              },
+                failureCallback: function(response)
+                {
+                    hideMessage();
+                    console.log(response);
+                    alert("Save batch failed.");
+                }
+            });
+        }
+
+    }
+
+    function addRunForPlate(plate, data, includeBlanks)
+    {
+        var run = new LABKEY.Exp.Run();
+        var index = LABKEY.page.batch.runs.push(run) - 1;
+        run.name = plate.id ? plate.id : "plate." + index;
+        run.dataRows = [];
+        for (var d = 0; d < plate.dilutions.length; d++)
+            setRunDilution(run, d, plate.dilutions[d]);
+
+        for (var s = 0; s < plate.samples.length; s++)
+        {
+            if (!includeBlanks && (plate.samples[s] == null || plate.samples[s] == ""))
+                continue;
+
+            run.dataRows.push({ParticipantID:plate.samples[s], Date:LABKEY.page.batch.properties.Date, Titer:plate.titers[s], TiterOORIndicator:plate.titerOORIndicators[s], SampleIndex:s});
+        }
+        if (data)
+            run.dataInputs[0] = data;
+
+        return run;
+    }
+
+    function createRunViews(plates)
+    {
+        for (var p = 0; p < plates.length; p++)
+        {
+            plate = plates[p];
+            run = LABKEY.page.batch.runs[p];
+            LABKEY.Assay.Elisa.RunView.getView(run, plate, false);
+            //plateView.render("runs_div");
+        }
+    }
+    
+    function computeTiters(plate, includeBlanks)
+    {
+        plate.titers = new Array(plate.samples.length);
+        plate.titerOORIndicators = new Array(plate.samples.length);
+        for (var i = 0; i < plate.samples.length; i++)
+        {
+            var sample = plate.samples[i];
+            if (!includeBlanks && (sample == null || sample == ""))
+                continue;
+
+            //Compute background. Try to find "matched" negative controls, but if not, just use all negative controls...
+            var backgroundWells = plate.collectMatches({sampleIndex:i, wellType:"Negative Control"});
+            if (!backgroundWells || backgroundWells.wells.length == 0)
+                backgroundWells = plate.collectMatches({wellType:"Negative Control"});
+
+            var bg = backgroundWells.mean();
+
+            var lastWells = plate.collectMatches({wellType:"Sample", sampleIndex:i, dilution:plate.dilutions[0]});
+            var found = false;
+            for (var d = 0; d < plate.dilutions.length - 1; d++)
+            {
+                var foregroundWells = plate.collectMatches({wellType:"Sample", sampleIndex:i, dilution:plate.dilutions[d]});
+                var fg = foregroundWells.mean();
+                var percentDiff = foregroundWells.percentDiff();
+                for (var w = 0; w < foregroundWells.wells.length; w++)
+                {
+                    foregroundWells.wells[w].adjustedMean = fg - bg;
+                    foregroundWells.wells[w].percentDiff = percentDiff;
+                }
+                
+                if (!found && fg - bg < plate.cutoff)
+                {
+                    found = true;
+                    if (d > 0)
+                        plate.titers[i] = getDilutionValue(plate.dilutions[d - 1]);
+                    else
+                    {
+                        plate.titers[i] = getDilutionValue(plate.dilutions[d]);
+                        plate.titerOORIndicators = "<";
+                    }
+                    for (var w = 0; w < lastWells.wells.length; w++)
+                        lastWells.wells[w].highlight = true;
+                    //lastWells.eachWell(function (well) {well.highlight = true});
+                }
+                lastWells = foregroundWells;
+            }
+            if (!found)
+            {
+                plate.titers[i] = getDilutionValue(plate.dilutions[plate.dilutions.length - 2]); //Last one is actually for background so use second from last
+                plate.titerOORIndicators[i] = ">";
+            }
+        }
+    }
+    
+    function loadPlateMetaData(plate, metaDataRow)
+    {
+        var metaDataStart = {row:metaDataRow + 1, col:1};
+        for (var r = 0; r < plate.wells.length; r++)
+        {
+            if (r % 2 == 0)
+            {
+                var sampleId1 = getCell(metaDataStart, r * 3 + 2, 0);
+                var sampleId2 = getCell(metaDataStart, (r + 1) * 3 + 2, 0);
+                if (sampleId1 == sampleId2)
+                    plate.samples[r / 2] = sampleId1;
+                else
+                    alert("Inconsistent samples on rows " + (metaDataStart.row + r * 3 + 3) + " and " + (metaDataStart.row + (r + 1) * 3 + 3));
+            }
+            for (var c = 0; c < plate.wells[0].length; c++)
+            {
+                var firstDilution = null;
+
+                var dilutionText = getCell(metaDataStart, r * 3 + 1, c);
+                if (dilutionText == null || dilutionText == "")
+                    continue;
+                if (typeof dilutionText == "number" || /^\d+$/.test(dilutionText))
+                    dilutionText = "1:" + dilutionText;
+
+                plate.wells[r][c].dilution = dilutionText;
+                if (null == firstDilution)
+                {
+                    firstDilution = dilutionText;
+                    plate.dilutions[c] = dilutionText;
+                }
+                else if (dilutionText != firstDilution)
+                    alert("Inconsistent dilutions in column " + (c + 1) + " for plate on row " + metaDataStart.row )
+            }
+        }
+    }
+
+    function loadPlateValues(plate, plateDataRow)
+    {
+        plate.extractWellValues(sheet, plateDataRow + 1, 1);
+    }
+
+    function findHeaderRow(startRow)
+    {
+        if (startRow === null)
+            return null;
+
+        for (var r = startRow; r < sheet.length; r++)
+            if (isHeaderRow(r))
+                return r;
+
+        return null;
+    }
+
+    function isHeaderRow(row)
+    {
+        for (var c = 1; c <=12; c++)
+            if (sheet[row][c] != "" + c)
+                return false;
+
+        return true;
+    }
+
+    function getCell(startLoc, offsetRow, offsetCol)
+    {
+        var row = startLoc.row, col = startLoc.col;
+        if (arguments.length > 1)
+            row += offsetRow;
+        if (arguments.length > 2)
+            col += offsetCol;
+
+        return sheet[row][col];
+    }
+}
+
+function ensureBatch()
+{
+    if (!LABKEY.page.batch.runs)
+        LABKEY.page.batch.runs = [];
+
+    if (!LABKEY.page.batch.properties["Date"])
+    {
+        LABKEY.page.batch.properties["Date"] = new Date().clearTime();
+        setDirty(true);
+    }
+}
+
+function saveBatch(successFn, failFn)
+{
+  if (!LABKEY.isDirty())
+  {
+      if (successFn)
+        successFn(LABKEY.page.batch, null);
+      return;
+  }
+
+    if (arguments.length < 2)
+    {
+        failFn = function (batch, response) {
+            hideMessage();
+            alert("Save batch failed.");
+        }
+    }
+
+    function wrapSuccess(fn) {
+        return function(batch, response)
+        {
+            LABKEY.page.batch = batch;
+            setDirty(false);
+            if (fn)
+                fn(batch, response);
+        }
+    }
+
+    LABKEY.Experiment.saveBatch({
+      assayId : LABKEY.page.assay.id,
+      batch : LABKEY.page.batch,
+      successCallback :wrapSuccess(successFn),
+      failureCallback:failFn
+    });
+}
+
+function updateIfPresent(el, content)
+{
+    var target = Ext.fly(el);
+    if (target)
+        target.update(content);
+}
+
+function renderBatch()
+{
+  ensureBatch();
+
+  var runGroup = LABKEY.page.batch;
+  Ext.getCmp('batch_name_field').setValue(runGroup.name);
+  Ext.getCmp('batch_date_field').setValue(runGroup.properties["Date"]);
+  Ext.getCmp('batch_repeat_field').setValue(runGroup.properties["Repeat"]);
+
+    updateIfPresent('batch_created_span', runGroup.created);
+  updateIfPresent('batch_createdBy_span',runGroup.createdBy);
+  updateIfPresent('batch_modified_span',runGroup.modified);
+  updateIfPresent('batch_modifiedBy_span', runGroup.modifiedBy);
+  Ext.getCmp('batch_comments_field').setValue(runGroup.comment);
+  //var runCount = runGroup.rows ? runGroup.rows.length : 0;
+  //Ext.fly('batch_runCount_div').update(runCount);
+
+    Ext.QuickTips.init();
+  for (var i = 0; i < runGroup.runs.length; i++)
+  {
+    var run = runGroup.runs[i];
+    renderRun(run);
+  }
+    hideMessage();
+}
+
+function review()
+{
+    var runGroup = LABKEY.page.batch;
+    for (var i = 0; i < runGroup.runs.length; i++)
+    {
+      var run = runGroup.runs[i];
+        var runView = LABKEY.Assay.Elisa.RunView.getView(run);
+        setDefaultApproved(run, runView.getPlate());
+        runView.setSummaryMode(true);
+        runView.update();
+    }
+}
+
+function setDefaultApproved(run, plate)
+{
+    function findDilutionIndex(plate, titer)
+    {
+        for (var i = 0; i < plate.dilutions.length; i++)
+            if (getDilutionValue(plate.dilutions[i]) == titer)
+                return i;
+
+        return null;
+    }
+
+    for (var resultIndex = 0; resultIndex < run.dataRows.length; resultIndex++)
+    {
+        var result = run.dataRows[resultIndex];
+        var percentDiffText = (IaviElisa.percentDiffCutoff * 100) + "%";
+        if (result.ParticipantID && result.ParticipantID != "")
+        {
+            //find the dilution we stored as a result & check to see whether it or surrounding dilutions are a problem
+            var dilutionIndex = findDilutionIndex(plate, result.Titer);
+            if (null == dilutionIndex)
+                continue;
+            var titerWells = plate.collectMatches({sampleIndex:result.SampleIndex, wellType:"Sample", dilution:plate.dilutions[dilutionIndex]});
+            var priorWells = dilutionIndex == 0 ? null : plate.collectMatches({sampleIndex:result.SampleIndex, wellType:"Sample",  dilution:plate.dilutions[dilutionIndex - 1]});
+            var nextWells = (dilutionIndex >= plate.dilutions - 2) ? null : plate.collectMatches({sampleIndex:result.SampleIndex, wellType:"Sample", dilution:plate.dilutions[dilutionIndex + 1]});
+
+            if (titerWells.wells[0].percentDiff > IaviElisa.percentDiffCutoff
+                    || (priorWells != null && priorWells.wells.length && priorWells.wells[0].percentDiff > IaviElisa.percentDiffCutoff)
+                    || (nextWells != null && nextWells.wells.length && nextWells.wells[0].percentDiff > IaviElisa.percentDiffCutoff))
+            {
+                result.Note = "Replicates differ by more than cutoff of " + percentDiffText;
+                result.Status = "Rejected";
+            }
+            else
+                result.Status = "Approved";
+        }
+    }
+}
+
+function showPlates()
+{
+    var runGroup = LABKEY.page.batch;
+    for (var i = 0; i < runGroup.runs.length; i++)
+    {
+      var run = runGroup.runs[i];
+        var runView = LABKEY.Assay.Elisa.RunView.getView(run);
+        runView.setSummaryMode(false);
+        runView.update();
+    }
+}
+
+function renderRun(run, plate, editable)
+{
+    var runView = LABKEY.Assay.Elisa.RunView.getView(run, plate, editable);
+    runView.render("runs_div");
+}
+
+
+function promptDelete(runId)
+{
+  var run = getRunById(runId);
+  Ext.Msg.confirm("Delete '" + run.name + "'?",
+      "Are you sure you want to delete " + run.name + "?",
+      function (buttonId) {
+        if (buttonId == "yes")
+          deleteRun(run);
+      });
+}
+
+function deleteRun(run)
+{
+    var runView = LABKEY.Assay.Elisa.RunView.getView(run);
+    runView.destroy();
+
+  var index = LABKEY.page.batch.runs.indexOf(run);
+  delete LABKEY.page.batch.runs[index];
+
+  setDirty(true);
+  saveBatch();
+}
+
+function getRunById(runId)
+{
+  var runGroup = LABKEY.page.batch;
+  var run = null;
+  for (var i = 0; i < runGroup.runs.length; i++)
+  {
+    if (runGroup.runs[i].id == runId)
+    {
+      run = runGroup.runs[i];
+      break;
+    }
+  }
+
+  if (!run)
+    throw new Error("couldn't find run " + runId);
+  return run;
+}
+
+function getRunDilution(run, dilutionIndex)
+{
+  if (dilutionIndex < 0 || dilutionIndex > 11)
+    throw new Error("dilutionIndex out of range: " + dilutionIndex);
+  return run.properties["Dilution" + dilutionIndex];
+}
+
+function setRunDilution(run, dilutionIndex, newValue)
+{
+  if (dilutionIndex < 0 || dilutionIndex > 11)
+    throw new Error("dilutionIndex out of range: " + dilutionIndex);
+  if (run.properties["Dilution" + dilutionIndex] != newValue) {
+    run.properties["Dilution" + dilutionIndex] = newValue;
+  }
+}
+
+function getParticipant(run, dataIndex)
+{
+  if (dataIndex < 0 || dataIndex > 3)
+    throw new Error("dataIndex out of range: " + dataIndex);
+  if (dataIndex >= run.dataRows.length)
+    return null;
+  return run.dataRows[dataIndex].ParticipantID;
+}
+
+function setParticipant(run, dataIndex, newValue)
+{
+  if (dataIndex < 0 || dataIndex > 3)
+    throw new Error("dataIndex out of range: " + dataIndex);
+  if (run.dataRows[dataIndex].ParticipantID != newValue) {
+    setDirty(true);
+    run.dataRows[dataIndex].ParticipantID = newValue;
+  }
+}
+
+
+Ext.onReady(function () {
+    init();
+})
+</script>

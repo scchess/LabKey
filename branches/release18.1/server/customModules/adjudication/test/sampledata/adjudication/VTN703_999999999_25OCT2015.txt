@@ -1,0 +1,9 @@
+NETWORK	PROTOCOL	LAB	PTID	VISIT	DRAWDT	ASSAYTYP	ASSAYKIT	RESULT	COPIES_ML	Band1-GP36	Band2-GP140	Band3-P31	Band4-GP160	Band5-P24	Band6-GP41	CTRL_Band	HIV-1 Interpretation	HIV-2 Interpretation	TESTDT	COMMENT
+HVTN	999	HV	123456785	100	1/1/2015	Geenius	211	HIV NEGATIVE		-	-	-	-	-	-	+	Negative	Negative	2/5/2015	
+HVTN	999	HV	123456789	101	1/1/2015	Geenius	211	HIV-2 INDETERMINATE		+	-	-	-	-	-	+	Negative	Indeterminate	2/5/2015	
+HVTN	999	HV	123456789	102	1/1/2015	Geenius	211	HIV-1 INDETERMINATE		-	-	+	-	+	-	+	Indeterminate	Negative	2/5/2015	
+HVTN	999	HV	123456789	103	1/1/2015	Geenius	211	HIV INDETERMINATE		+	-	+	-	+	-	+	Indeterminate	Indeterminate	2/5/2015	
+HVTN	999	HV	123456789	104	1/1/2015	Geenius	211	HIV-1 POSITIVE		-	-	-	+	-	+	+	Positive	Negative	2/5/2015	
+HVTN	999	HV	123456789	105	1/1/2015	Geenius	211	HIV-2 POSITIVE		+	+	-	-	-	-	+	Negative	Positive	2/5/2015	
+HVTN	999	HV	123456789	106	1/1/2015	Geenius	211	HIV-2 POSITIVE (with HIV-1 cross reactivity)		+	+	-	+	+	-	+	Positive	Positive	2/5/2015	
+HVTN	999	HV	123456789	107	1/1/2015	Geenius	211	HIV POSITIVE UNTYPABLE		+	+	+	+	+	+	+	Positive	Positive	2/5/2015	

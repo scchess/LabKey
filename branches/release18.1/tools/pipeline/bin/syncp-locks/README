@@ -1,0 +1,15 @@
+syncp-locks directory
+------------------------------------------------------------------------------
+
+This directory contains the lock files for the perls script syncp.pl,
+a script for synchronously copying files from shared storage to cluster
+nodes.  This helps avoid the problem of dozens of cluster nodes trying
+to copy files from the same directory at once.
+
+---------------------------------
+Notes
+---------------------------------
+1. syncp.pl is written to create the files it needs.
+2. If, however, multiple users are going to use syncp.pl, then:
+	- all users must have write access to the 'counter' file.
+	- all users must have read access to the 'lock#' files.

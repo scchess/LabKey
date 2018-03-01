@@ -1,0 +1,75 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Cycle" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="sire">
+                        <columnTitle>Sire</columnTitle>
+                        <url>/ehr/participantView.view?participantId=${sire}</url>
+                    </column>
+                    <column columnName="date">
+                        <columnTitle>Cycle Start Date</columnTitle>
+                    </column>
+                    <column columnName="estGestStartDate">
+                        <columnTitle>Est. Gestation Start Date</columnTitle>
+                    </column>
+                    <column columnName="daysAndHoursString">
+                        <columnTitle>Days and Hours String</columnTitle>
+                    </column>
+                    <column columnName="locationOverride">
+                        <columnTitle>Location Override</columnTitle>
+                    </column>
+                    <column columnName="weekendBreeding">
+                        <columnTitle>Weekend Breeding</columnTitle>
+                    </column>
+                    <column columnName="methodOne">
+                        <columnTitle>Method One</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>preg_det_method</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="gestDayOne">
+                        <columnTitle>Gest. Day One</columnTitle>
+                    </column>
+                    <column columnName="schedStatusOne">
+                        <columnTitle>Schedule Status One</columnTitle>
+                    </column>
+                    <column columnName="methodTwo">
+                        <columnTitle>Method Two</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>preg_det_method</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="gestDayTwo">
+                        <columnTitle>Gest. Day Two</columnTitle>
+                    </column>
+                    <column columnName="schedStatusTwo">
+                        <columnTitle>Schedule Status Two</columnTitle>
+                    </column>
+                    <column columnName="methodThree">
+                        <columnTitle>Method Three</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>preg_det_method</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="gestDayThree">
+                        <columnTitle>Gest. Day Three</columnTitle>
+                    </column>
+                    <column columnName="schedStatusThree">
+                        <columnTitle>Schedule Status Two</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

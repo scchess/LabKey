@@ -1,0 +1,11 @@
+<div id="queryTestDiv1"></div>
+<script type="text/javascript">
+    +function(){
+        new LABKEY.QueryWebPart({
+            renderTo: 'queryTestDiv1',
+            title: 'My Query Web Part',
+            schemaName: 'core',
+            queryName: 'SiteUsers'
+        });
+    }();
+</script>

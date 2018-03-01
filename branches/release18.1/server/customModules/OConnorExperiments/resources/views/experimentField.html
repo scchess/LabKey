@@ -1,0 +1,188 @@
+<div id="navTrailAncestors"></div>
+<div id="dashPanel"></div>
+
+<div>
+    <span id="createdSpan"></span>
+    [<a href="<%=contextPath%>/ocexp<%=containerPath%>/history.view">history</a>]
+</div>
+
+<div id="errorBox">
+    <p id="errorText" class="labkey-error"></p>
+</div>
+
+<script type="text/javascript">
+    var initPanel = function(data){
+        if (data.rows.length > 0) {
+            var experimentData = data.rows[0];
+            var createdString = 'Created ' + experimentData.Created + ' by ' + experimentData['CreatedBy/DisplayName'];
+            var description = experimentData.Description;
+            var parentExperiments = experimentData['ParentExperiments/ExperimentNumber'];
+            var parentLinks = [];
+            for (var index = 0; index < parentExperiments.length; index++) {
+                parentLinks.push({title: 'Parent ' + parentExperiments[index], url: "<%=contextPath%>/project<%=containerPath%>/../" + parentExperiments[index] + "/begin.view"});
+            }
+            // Set the navtrail and page title
+            LABKEY.NavTrail.setTrail("Experiment " + LABKEY.container.title, parentLinks, "Experiment " + LABKEY.container.title);
+            var experimentTypeId = experimentData.ExperimentTypeId;
+            var changeCallback = function(name, newValue, oldValue, failureCb, scope){
+                experimentData[name] = newValue;
+                LABKEY.ocexp.internal.Experiment.saveExperiment({
+                    experiment: experimentData,
+                    success: function(){
+                        document.getElementById('errorText').innerHTML = "";
+                        LABKEY.Utils.signalWebDriverTest("experimentDataSave", "success");
+                    },
+                    invalid: function(msg) {
+                        document.getElementById('errorText').innerHTML = Ext4.util.Format.htmlEncode(msg);
+                        LABKEY.Utils.signalWebDriverTest("experimentDataSave", "invalid");
+                    }
+                });
+            };
+
+            document.getElementById('createdSpan').textContent = createdString;
+
+            var experimentTypeStore = Ext4.create('LABKEY.ext4.data.Store', {
+                columns : ['Name', 'RowId', 'Enabled'],
+                schemaName : 'OConnorExperiments',
+                queryName : 'ExperimentType',
+                containerPath : LABKEY.container.parentPath, // the workbook parent container's path
+                autoLoad : true,
+                sort : 'Name',
+                supressErrorAlert: true,
+                listeners: {
+                    scope: this,
+                    load: function() {
+                        experimentTypeCombo.suspendEvents(false);
+                        experimentTypeCombo.setValue(experimentData.ExperimentTypeId);
+                        experimentTypeCombo.resumeEvents();
+                    }
+                },
+                filters: [
+                    function(item) {
+                        return item.data.RowId == experimentData.ExperimentTypeId || item.data.Enabled;
+                    }
+                ]
+
+            });
+            var experimentTypeCombo = Ext4.create('Ext.form.field.ComboBox', {
+                store: experimentTypeStore,
+                valueField: 'RowId',
+                displayField: 'Name',
+                width: 450,
+                labelWidth: 110,
+                fieldLabel: 'Experiment Type',
+                tpl: Ext4.create('Ext.XTemplate',
+                        '<tpl for=".">'+
+                                  '<div class="' + Ext4.baseCSSPrefix + 'boundlist-item">'+
+                                      '<div class="list-item">{Name:htmlEncode()}&nbsp;</div>'+
+                                  '</div>'+
+                              '</tpl>'
+                    ),
+                queryMode: 'local',
+                listeners: {
+                    scope: this,
+                    change: function(combo, newValue, oldValue) {
+                        if (!isNaN(newValue)) changeCallback('ExperimentTypeId', newValue, oldValue);
+                    }
+                }
+            });
+
+            var parentExperimentsText = Ext4.create('LABKEY.ocexp.internal.InPlaceText', {
+                flex: 1,
+                labelWidth: 130,
+                margin: '0 10 0 5',
+                fieldLabel: 'Parent Experiments',
+                value: parentExperiments,
+                listeners: {
+                    scope: this,
+                    change: function(cmp, newValue, oldValue){
+                        changeCallback('ParentExperiments/ExperimentNumber', newValue, oldValue);
+                    }
+                }
+            });
+            var grantStore = Ext4.create('LABKEY.ext4.data.Store', {
+                columns : ['Key', 'Id', 'title'],
+                schemaName : 'oconnor',
+                queryName : 'Grants',
+                containerPath : LABKEY.container.path.split('/')[1], // the project path
+                filterArray: [ LABKEY.Filter.create('Enabled', 'true')],
+                autoLoad : true,
+                supressErrorAlert: true,
+                listeners: {
+                    scope: this,
+                    load: function() {
+                        grantCombo.suspendEvents(false);
+                        grantCombo.setValue(experimentData.GrantId);
+                        grantCombo.resumeEvents();
+                    }
+                }
+            });
+            var grantCombo = Ext4.create('Ext.form.field.ComboBox', {
+                store: grantStore,
+                valueField: 'key',
+                width: 450,
+                labelWidth: 45,
+                fieldLabel: 'Grant',
+                tpl: Ext4.create('Ext.XTemplate',
+                        '<tpl for=".">'+
+                                  '<div class="' + Ext4.baseCSSPrefix + 'boundlist-item">'+
+                                      '<div class="list-item">{id:htmlEncode()} - {title:htmlEncode()}&nbsp;</div>'+
+                                  '</div>'+
+                              '</tpl>'
+                    ),
+                displayTpl: Ext4.create('Ext.XTemplate',
+                        '<tpl for=".">',
+                            '{id:htmlEncode()} - {title:htmlEncode()}',
+                        '</tpl>'
+                        ),
+                listeners: {
+                    scope: this,
+                    change: function(combo, newValue, oldValue) {
+                        changeCallback('GrantId', newValue, oldValue);
+                    }
+                }
+            });
+            var horizontalPanel = Ext4.create('Ext.container.Container', {
+                border: false,
+                frame: false,
+                layout: 'hbox',
+                items: [experimentTypeCombo, parentExperimentsText, grantCombo]
+            });
+            var description = Ext4.create('LABKEY.ocexp.internal.InPlaceTextArea', {
+                fieldLabel: 'Description',
+                height: 75,
+                labelWidth: 110,
+                flex: 1,
+                value: description,
+                listeners: {
+                    scope: this,
+                    change: function(cmp, newValue, oldValue){
+                        changeCallback('Description', newValue, oldValue);
+                    }
+                }
+            });
+            var descriptionPanel = Ext4.create('Ext.container.Container', {
+                border: false,
+                frame: false,
+                margin: '5 0 0 0',
+                layout: 'hbox',
+                items: [description]
+            });
+            var mainPanel = Ext4.create('Ext.form.Panel', {
+                border: false,
+                frame: false,
+                renderTo: 'dashPanel',
+                bodyStyle:'background-color: transparent;',
+                items: [descriptionPanel, horizontalPanel]
+            });
+        }
+    };
+
+    LABKEY.requiresExt4ClientAPI(function(){
+        LABKEY.ocexp.internal.Experiment.getExperiment({
+            requiredVersion: 8.3,
+            success: initPanel
+        });
+    });
+</script>
+

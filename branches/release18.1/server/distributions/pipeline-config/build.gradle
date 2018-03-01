@@ -1,0 +1,10 @@
+import org.labkey.gradle.task.PipelineConfigDistribution
+import org.labkey.gradle.util.GroupNames
+
+dist.description="Configurations for an external pipeline server for use with a LabKey Server installation"
+
+project.task("distribution",
+    group: GroupNames.DISTRIBUTION,
+    type: PipelineConfigDistribution,
+    description: "Create a distribution of the pipeline configs"
+)

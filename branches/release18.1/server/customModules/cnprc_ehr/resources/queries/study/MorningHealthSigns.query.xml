@@ -1,0 +1,24 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Morning Health Signs" tableDbType="NOT_IN_DB" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Observation Date</columnTitle>
+                        <formatString>MM/dd/yy a</formatString>
+                    </column>
+                    <column columnName="location">
+                        <columnTitle>Location</columnTitle>
+                    </column>
+                    <column columnName="observation">
+                        <columnTitle>Observation</columnTitle>
+                        <displayColumnFactory>
+                            <className>org.labkey.cnprc_ehr.table.MorningHealthSignsDisplayColumnFactory</className>
+                        </displayColumnFactory>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

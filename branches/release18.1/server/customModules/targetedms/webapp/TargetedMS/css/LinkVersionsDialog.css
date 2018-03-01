@@ -1,0 +1,25 @@
+
+.link-version-exists .x4-grid-cell {
+    font-weight: bold;
+}
+
+.link-version-footer {
+    font-style: italic;
+    font-size: 13px;
+}
+
+.link-version-footer span {
+    font-weight: bold;
+}
+
+.link-version-grid .x4-grid-body {
+    border-top-color: transparent;
+}
+
+.link-version-grid .x4-column-header-inner {
+    background-color: #E0E6EA;
+}
+
+.fa-times {
+    cursor: pointer;
+}

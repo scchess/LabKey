@@ -1,0 +1,82 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id/DemographicsHolds/holdFlags"/>
+        <column name="Id/DemographicsActivePairingCode/observation">
+            <properties>
+                <property name="columnTitle" value="Pair Code"/>
+            </properties>
+        </column>
+        <column name="Id/curLocation/Location"/>
+        <column name="Id/curLocation/cageSize"/>
+        <column name="Id/curLocation/rateClass"/>
+        <column name="Id">
+            <properties>
+                <property name="columnTitle" value="Animal Id"/>
+            </properties>
+        </column>
+        <column name="species/code"/>
+        <column name="Id/age/yearsAndMonthsAndDays">
+            <properties>
+                <property name="columnTitle" value="Age (yy:mm:dd)"/>
+            </properties>
+        </column>
+        <column name="Id/MostRecentWeight/MostRecentWeight"/>
+        <column name="Id/curLocation/Date">
+            <properties>
+                <property name="columnTitle" value="Location Date"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePayor/payor_ids"/>
+        <column name="Id/DemographicsActiveColony/colonyCode">
+            <properties> <!-- This should probably be done at the query.xml level -->
+                <property name="columnTitle" value="Colony Code"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveBreedingGroup/groupCode">
+            <properties>
+                <property name="columnTitle" value="Breeding Code"/>
+            </properties>
+        </column>
+        <column name="Id/breedingRoster/book">
+            <properties>
+                <property name="columnTitle" value="Breeding Book"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/primaryProject"/>
+        <column name="Id/DemographicsActiveAssignment/secondaryProjects"/>
+        <column name="Id/flagList/values">
+            <properties>
+                <property name="columnTitle" value="Census Flag List"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/conNum">
+            <properties>
+                <property name="columnTitle" value="Pregnancy"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/termComment"/>
+        <column name="Id/DemographicsActivePregnancy/PGComment"/>
+        <column name="Id/DemographicsActivePregnancy/daysPregnant">
+            <properties>
+                <property name="columnTitle" value="Gest Days"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/conceptionDateStatus">
+            <properties>
+                <property name="columnTitle" value="Est"/>
+            </properties>
+        </column>
+        <column name="Id/curLocation/supervisor">
+            <properties>
+                <property name="columnTitle" value="Encl Supervisor"/>
+            </properties>
+        </column>
+    </columns>
+    <filters>
+        <filter column="Id/DemographicsActivePregnancy/daysPregnant" operator="isnonblank"/>
+        <filter column="Id/curLocation/Id" operator="isnonblank"/>
+    </filters>
+    <sorts>
+        <sort column="Id" descending="false"/>
+    </sorts>
+</customView>

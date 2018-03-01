@@ -1,0 +1,113 @@
+<script type="text/javascript">
+
+Ext4.onReady(function (){
+    var analysisId = LABKEY.ActionURL.getParameter('id');
+
+    if (!analysisId){
+        alert('Must Provide Analysis Id');
+        return;
+    }
+
+        var webpart = <%=webpartContext%>;
+
+        Ext4.get(webpart.wrapperDivId).update(
+            '<div id="analysisDetails_'+webpart.wrapperDivId+'"></div>' +
+            '<div style="margin-bottom: 10px;"></div>' +
+            '<div id="sampleDetails_'+webpart.wrapperDivId+'"></div>' +
+            '<div style="margin-bottom: 10px;"></div>' +
+            //'<div id="analysisNav_'+webpart.wrapperDivId+'"></div>' +
+            //'<br>' +
+            '<div id="qualityMetrics_'+webpart.wrapperDivId+'"></div>' +
+            '<div style="margin-bottom: 10px;"></div>' +
+            '<div id="readsetDiv_'+webpart.wrapperDivId+'"/>'
+        );
+
+    Ext4.create('LDK.panel.DetailsPanel', {
+        title: 'Analysis Run Details:',
+        showBackBtn: false,
+        renderTo: 'analysisDetails_'+webpart.wrapperDivId,
+        store: {
+            schemaName: 'sequenceanalysis',
+            queryName: 'sequence_analyses',
+            viewName: 'Detailed',
+            filterArray: [LABKEY.Filter.create('rowid', analysisId, LABKEY.Filter.Types.EQUAL)]
+        },
+        detailsConfig: {
+            buttons: [{
+                text: 'More Actions',
+                menu: [{
+                    text: 'Edit Analysis Details',
+                    href: LABKEY.ActionURL.buildURL('ldk', 'manageRecord', null, {schemaName: 'sequenceanalysis', queryName: 'sequence_analyses', keyField: 'rowid', key: analysisId}) + '&returnUrl=' + LDK.Utils.getSrcURL()
+                }]
+            }]
+        }
+    });
+
+    LABKEY.Query.selectRows({
+        schemaName: 'sequenceanalysis',
+        queryName: 'sequence_analyses',
+        columns: 'rowid,readset,runid,runid/name',
+        filterArray: [LABKEY.Filter.create('rowid', analysisId, LABKEY.Filter.Types.EQUAL)],
+        scope: this,
+        successCallback: onSuccess
+    });
+
+    LDK.Utils.getReadOnlyQWP({
+        title: 'Quality Metrics',
+        schemaName: 'sequenceanalysis',
+        queryName: 'quality_metrics',
+        maxRows: 20,
+        containerPath: Laboratory.Utils.getQueryContainerPath(),
+        columns: 'fileid,metricname,metricvalue,qualvalue,comment,workbook,readset,runid',
+        filterArray: [LABKEY.Filter.create('analysis_id', analysisId, LABKEY.Filter.Types.EQUAL)]
+    }).render('qualityMetrics_'+webpart.wrapperDivId);
+
+
+    function onSuccess(data){
+        if (!data.rows.length)
+            return;
+
+        var row = data.rows[0];
+        if (row.readset){
+            var panel = Ext4.create('LDK.panel.DetailsPanel', {
+                title: 'Readset Details:',
+                showBackBtn: false,
+                renderTo: 'sampleDetails_' + webpart.wrapperDivId,
+                store: {
+                    containerPath: Laboratory.Utils.getQueryContainerPath(),
+                    schemaName: 'sequenceanalysis',
+                    queryName: 'sequence_readsets',
+                    filterArray: [LABKEY.Filter.create('rowid', row.readset, LABKEY.Filter.Types.EQUAL)]
+                },
+                detailsConfig: {
+                    buttons: [{
+                        text: 'More Actions',
+                        menu: [{
+                            text: 'Edit Readset Details',
+                            href: LABKEY.ActionURL.buildURL('ldk', 'manageRecord', null, {schemaName: 'sequenceanalysis', queryName: 'sequence_readsets', keyField: 'rowid', key: row.readset}) + '&returnUrl=' + LDK.Utils.getSrcURL()
+                        }]
+                    }]
+                }
+            });
+        }
+
+        if (row['runid/name']){
+            LABKEY.Query.selectRows({
+                schemaName: 'pipeline',
+                queryName: 'job',
+                containerPath: Laboratory.Utils.getQueryContainerPath(),
+                columns: '*',
+                filterArray: [LABKEY.Filter.create('description', row['runid/name'], LABKEY.Filter.Types.EQUAL)],
+                scope: this,
+                successCallback: function(results){
+                    if(results && results.rows && results.rows[0]){
+                        var jobId = results.rows[0].RowId;
+
+                    }
+                }
+            });
+        }
+    }
+});
+
+</script>

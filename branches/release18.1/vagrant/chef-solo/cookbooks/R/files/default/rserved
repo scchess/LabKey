@@ -1,0 +1,44 @@
+#! /bin/sh -e
+#### BEGIN INIT INFO
+# Provides: rserved
+# Required-Start: rserved start
+# Required-Stop: rserved stop
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Description: Debian init script for Rserve
+# execution
+### END INIT INFO
+#
+
+case "$1" in
+    start)
+        echo 'Starting up Rserve'
+        start-stop-daemon --start --oknodo --name Rserve --exec /usr/bin/R -- CMD Rserve --vanilla > /var/log/rserve 2>&1
+
+        # fix for bug described at https://github.com/s-u/Rserve/issues/4
+        # change all R temp directories to be owned by the connection user
+        chown rserve /tmp/Rtmp*
+
+    ;;
+
+    stop)
+        echo 'Shuting down Rserve'
+        start-stop-daemon --stop --oknodo --name Rserve
+    ;;
+
+    force-reload|restart)
+        $0 stop
+        $0 start
+    ;;
+
+    status)
+        start-stop-daemon --status --name Rserve
+    ;;
+
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+    ;;
+esac
+
+exit 0

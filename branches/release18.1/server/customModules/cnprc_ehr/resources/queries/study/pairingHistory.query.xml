@@ -1,0 +1,20 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="pairings" tableDbType="TABLE" useColumnOrder="true">
+                <javaCustomizer class="org.labkey.cnprc_ehr.table.CNPRC_PairingCustomizer" />
+                <columns>
+                    <column columnName="observation">
+                        <columnTitle>Behavior Code</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>behavior_codes</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName useRawValue="true"/>
+                        </fk>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

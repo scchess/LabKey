@@ -1,0 +1,83 @@
+/* Custom formatting on Ext4 grids */
+
+/* allows text wrapping in rows of the grid */
+.ldk-wrap-text .x4-grid-cell-inner {
+    white-space: normal !important;
+}
+
+.ldk-wrap-text .x4-grid-row-over .x4-grid-cell-inner {
+    white-space: normal; !important;
+}
+
+/* provide slight padding around text and headers */
+.ldk-grid .x4-grid-cell {
+    padding: 4px 0;
+}
+
+.x4-reset .x4-grid-row-focused .x4-grid-cell .labkey-grid-cell-invalid {
+    background-color: #f29c8d !important;
+}
+
+
+/* For the button icon in TabbedReportPanel */
+span.closeicon {
+    background-position: 0 0 !important;
+    height: 15px !important; width: 15px !important;
+}
+
+/* For the tabs in TabbedReportPanel */
+.ldk-tabbed-report-panel .x4-tab-default-top {
+    border-bottom: 1px solid transparent;
+}
+.ldk-report-filter-options .x4-panel-header {
+    background-color: transparent;
+}
+.ldk-total-message-header, .ldk-report-filter-options .x4-panel-header-text-container-default {
+    color: #333333;
+    font-weight: bold;
+}
+
+/* Possibly also add header padding? */
+/*.ldk-grid .x4-column-header {*/
+    /**/
+/*}*/
+
+
+/* end of grid styles */
+
+
+/* this restores the rounded edges to a webpart when rendered inside an Ext4 panel */
+div.ldk-wp table.labkey-wp {
+    border-collapse: separate !important;
+}
+
+.ldk-clickable:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* NOTE: intended to fix width cropping problem with tooltips.  See below:
+  http://stackoverflow.com/questions/15834689/extjs-4-2-tooltips-not-wide-enough-to-see-contents
+*/
+.x4-tip {
+    width: auto !important;
+    max-width: 800px;
+}
+.x4-tip-body {
+    width: auto !important;
+    max-width: 800px;
+}
+.x4-tip-body span {
+    width: auto !important;
+    max-width: 800px;
+}
+
+div.ldk-tooltip {
+    font-size: 13px;
+    color: black;
+}
+
+div.ldk-tooltip-light {
+    font-size: 10px;
+    color: grey;
+}

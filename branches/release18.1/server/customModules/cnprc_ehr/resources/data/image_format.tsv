@@ -1,0 +1,8 @@
+name	extension	mime_type	description
+zoomify	pff	image/jpeg	Zoomify image format
+jpeg	jpg	image/jpeg	Jpeg image format
+jpeg	jpe	image/jpeg	Jpeg image format
+tiff	tif	image/tiff	Tag image file format
+bmp	bmp	image/bmp	Bitmap image format
+gif	gif	image/gif	GIF image format
+nef	nef	image/nef	Nikon raw image format

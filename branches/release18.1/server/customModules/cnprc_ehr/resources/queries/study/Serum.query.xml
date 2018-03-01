@@ -1,0 +1,27 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="serum" tableDbType="TABLE">
+                <insertUrl />
+                <importUrl />
+                <updateUrl />
+                <deleteUrl />
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>Sample Date</columnTitle>
+                    </column>
+                    <column columnName="locationBox">
+                        <columnTitle>Box Number</columnTitle>
+                    </column>
+                    <column columnName="locationSlot">
+                        <columnTitle>Slot Number</columnTitle>
+                    </column>
+                    <column columnName="viralPrecautionFlag">
+                        <columnTitle>Viral Precaution Indicator</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

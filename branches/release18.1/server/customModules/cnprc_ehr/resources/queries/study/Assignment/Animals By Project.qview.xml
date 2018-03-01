@@ -1,0 +1,102 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="Id/birth/species">
+            <properties>
+                <property name="columnTitle" value="Species"/>
+            </properties>
+        </column>
+        <column name="Id">
+            <properties>
+                <property name="columnTitle" value="Animal ID"/>
+            </properties>
+        </column>
+        <column name="Id/demographics/gender">
+            <properties>
+                <property name="columnTitle" value="Sex"/>
+            </properties>
+        </column>
+        <column name="Id/age/yearsAndMonthsAndDays">
+            <properties>
+                <property name="columnTitle" value="Age (yy:mm:dd)"/>
+            </properties>
+        </column>
+        <column name="Id/MostRecentWeight/MostRecentWeight">
+            <properties>
+                <property name="columnTitle" value="Weight (kg)"/>
+            </properties>
+        </column>
+        <column name="Id/curLocation/location">
+            <properties>
+                <property name="columnTitle" value="Location"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/primaryProjectDate">
+            <properties>
+                <property name="columnTitle" value="Primary Proj Assn Date"/>
+            </properties>
+        </column>
+        <column name="projectCode">
+            <properties>
+                <property name="columnTitle" value="Searched Project"/>
+            </properties>
+        </column>
+        <column name="assignmentStatus">
+            <properties>
+                <property name="columnTitle" value="Project Assn Type"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/primaryProject">
+            <properties>
+                <property name="columnTitle" value="Current Project"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveAssignment/secondaryProjects">
+            <properties>
+                <property name="columnTitle" value="Secondary Project(s)"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePayor/payor_ids">
+            <properties>
+                <property name="columnTitle" value="Payor"/>
+            </properties>
+        </column>
+        <column name="Id/flagList/values">
+            <properties>
+                <property name="columnTitle" value="Census Flags"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveColony/colonyCode">
+            <properties>
+                <property name="columnTitle" value="Colony Code"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActiveBreedingGroup/groupCode">
+            <properties>
+                <property name="columnTitle" value="Breeding Code"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/conNum">
+            <properties>
+                <property name="columnTitle" value="Pregnancy"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/daysPregnant">
+            <properties>
+                <property name="columnTitle" value="Gest Days"/>
+            </properties>
+        </column>
+        <column name="Id/DemographicsActivePregnancy/conceptionDateStatus">
+            <properties>
+                <property name="columnTitle" value="Preg Estimate"/>
+            </properties>
+        </column>
+    </columns>
+    <filters>
+        <filter column="Id/demographics/calculated_status" operator="eq" value="Alive"/>
+        <filter column="enddate" operator="isblank"/>
+        <!--<filter column="assignmentStatus" operator="eq" value="P"/>-->
+    </filters>
+    <sorts>
+        <sort column="date" descending="false"/>
+    </sorts>
+</customView>

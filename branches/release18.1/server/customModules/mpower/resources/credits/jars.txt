@@ -1,0 +1,4 @@
+{table}
+Filename|Component|Version|Source|License|LabKey Dev|Purpose
+json-simple-1.1.jar|json-simple|1.1|{link:json-simple|http://code.google.com/p/json-simple/}|{link:The Apache Software License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt}|arauch|A simple Java toolkit for JSON
+{table}

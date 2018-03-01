@@ -1,0 +1,3 @@
+From: pingwww@edi.fhcrc.org
+To: mbellew@fhcrc.org, matthew+text@bellew.net
+Subject: OK edi.fhcrc.org server is up

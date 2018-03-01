@@ -1,0 +1,9 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+<!--
+    Defines a custom view on the active_grants query. Used to generate pulldown menu for popup that displays when reordering products.
+-->
+    <columns>
+        <column name="id"/>
+        <column name="grant_description"/>
+    </columns>
+</customView>

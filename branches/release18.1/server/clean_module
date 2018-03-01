@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ "$1" == "" ]
+    then 
+    	echo "usage: $0 {module name}"
+    	exit
+fi
+
+MODULE=$1
+
+if [ -d ../build/deploy/labkeyWebapp/$MODULE ]	
+	then 
+	echo "rm -rf ../build/deploy/labkeyWebapp/$MODULE"
+	rm -rf ../build/deploy/labkeyWebapp/$MODULE
+fi
+if [ -d ../build/deploy/modules/$MODULE ]	
+	then 
+	echo "rm -rf ../build/deploy/modules/$MODULE"
+	rm -rf ../build/deploy/modules/$MODULE
+fi
+if [ -f ../build/deploy/modules/$MODULE.module ]	
+	then 
+	echo "rm ../build/deploy/modules/$MODULE.module"
+	rm ../build/deploy/modules/$MODULE.module
+fi
+if [ -d ../build/modules/$MODULE ]	
+	then 
+	echo "rm -rf ../build/modules/$MODULE"
+	rm -rf ../build/modules/$MODULE
+fi

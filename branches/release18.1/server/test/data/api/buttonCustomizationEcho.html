@@ -1,0 +1,11 @@
+<div id="params"></div>
+<script type="text/javascript">
+    var html = "";
+    var parameters = LABKEY.ActionURL.getParameters();
+    for (var p in parameters) {
+        if (parameters.hasOwnProperty(p)) {
+            html += p + ": " + parameters[p] + "<br>";
+        }
+    }
+    document.getElementById("params").innerHTML = html;
+</script>

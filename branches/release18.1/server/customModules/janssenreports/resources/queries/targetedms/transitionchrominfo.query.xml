@@ -1,0 +1,13 @@
+<tables xmlns="http://labkey.org/data/xml">
+    <table tableName="" tableDbType="TABLE">
+        <columns>
+            <column columnName="TransitionId">
+                <fk>
+                    <fkColumnName>Id</fkColumnName>
+                    <fkDbSchema>targetedms</fkDbSchema>
+                    <fkTable>transition</fkTable>
+                </fk>
+            </column>
+        </columns>
+    </table>
+</tables>

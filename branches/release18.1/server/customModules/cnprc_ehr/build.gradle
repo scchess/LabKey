@@ -1,0 +1,35 @@
+import org.labkey.gradle.util.BuildUtils
+
+repositories
+        {
+            flatDir dirs: project(":externalModules:labModules:LDK").file("lib")
+        }
+dependencies
+        {
+            BuildUtils.addLabKeyDependency(project: project, config: "compile", depProjectPath: ":server:customModules:ehr", depProjectConfig: "apiCompile")
+            BuildUtils.addLabKeyDependency(project: project, config: "compile", depProjectPath: ":externalModules:labModules:LDK")
+        }
+
+tasks.module.dependsOn(project(":externalModules:labModules:LDK").tasks.module)
+
+task('metadataStudyArchive', type: Zip, group: "Data", description: "Assemble study archive with dataset metadata") {
+    archiveName 'cnprc_study_metadata.zip'
+    destinationDir = project.file("${project.labkey.explodedModuleDir}/archives")
+    from("resources/referenceStudy/") {
+        include "study.xml"
+        include "datasets/*"
+        exclude "datasets/*.tsv"
+    }
+}
+project.tasks.module.dependsOn(project.tasks.metadataStudyArchive)
+
+task('datasetStudyArchive', type: Zip, group: "Data", description: "Assemble study archive with dataset data") {
+    archiveName 'cnprc_study.zip'
+    destinationDir = project.file("${project.labkey.explodedModuleDir}/archives")
+    from("resources/referenceStudy/") {
+        include "study.xml"
+        include "datasets/*"
+    }
+}
+
+project.tasks.module.dependsOn(project.tasks.datasetStudyArchive)

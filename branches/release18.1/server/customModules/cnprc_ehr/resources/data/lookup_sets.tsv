@@ -1,0 +1,74 @@
+setname	label	keyfield	titleColumn
+AcquisitionType	Acquisition Types	Value	Description
+assignment_status	Assignment Status	value
+birth_date_type	Birth Date Type	value	Title
+birth_type	Birth Type Field Values	value
+death_manner	Death Manner	value
+drug_categories	Drug Category Field Values	value
+project_type	Center Project Types	value
+tb_site	TB Site	value
+tb_test_type	TB Test Type	value
+behavior_codes	Behavior Codes	value
+breeding_group	Breeding Group	value
+social_codes	Social Codes	value
+nursing_assign_types	SNursing Assignment Types	value
+breeding_obs_codes	Breeding Observation Codes	value
+preg_det_method	Pregnancy Determination Method	value
+preg_det_result	Pregnancy Determination Result	value
+pathology_report_types	Pathology Report Type	value
+conception_term_date_status	Conception Term Date Status	value
+preg_type	Pregnancy Type	value
+virology_target	Virology Target	value
+virology_labs	Virology Labs	value
+virology_purpose	Virology Purpose	value
+virology_result	Virology Result	value
+virology_sample_type	Virology Sample Type	value
+virology_test_method	Virology Test Method	value
+viruses	Viruses	value
+vaccination_codes	Vaccination Codes	value
+protocol_types	Protocol Types
+bigRear	Rearing Conditions	value
+rearing	Rearing Codes	value
+general_obs_types	General Observation Types	value
+geriatric_ranking	Geriatric Rankings Types	value
+admit_type	Admit Type	value
+snomed_qualifiers	SNOMED Qualifiers	value
+time_units	SNOMED Time Units	value
+flag_codes	Flag Codes	value
+rd_asthma_age_category	RD Age Category	value
+rd_treatment_category	RD Treatment Category	value
+image_modality_type	Image Modality Type	value
+image_subject_type	Image Subject Type	value
+conception_colony_code	Conception Colony Codes	value
+birth_viability	Birth Viability	value
+pathology_inv_type	Pathology Inventory Type	value
+tissue_type	Tissue Type	value
+fdb_sample_types	FreezerDB Sample Types	value
+fdb_cell_types	FreezerDB Cell Types	value
+fdb_group	FreezerDB Group	value
+tissue	Tissue	value
+fdb_approach	FreezerDB Approach	value
+key_status 	Key Status 	value
+key_assignment_status	Assignment Status	value
+organs	Organs	value
+colony_codes	Colony Codes	value
+test_type_method_mapping	Test Type Method Mapping	value
+test_type_target_mapping	Test Type Target Mapping	value
+test_type_virus_mapping	Test Type Virus Mapping	value
+virology_result_blend	Virology Result Blend	value
+housing_reason	Housing Reason Field Values	value
+app_score	Appetite Score	value
+hyd_score	Hyd Score	value
+stool_score	Stool Score	value
+plan_today	Categories for today's Plan - used in Primate Med Hospital, Outpatient, & Post-Op worksheets	value
+plan_short_term	Categories for short term Plan - used in Primate Med Hospital, Outpatient & Post-Op worksheets	value
+plan_long_term	Categories for long term Plan - used in Primate Med LTOP worksheet	value
+plan_this_month	Categories for this month's Plan - used in Primate Med LTOP worksheet	value
+clinremarks_category	Clinremarks Category Field Values	value
+harvest_codes	Harvest Codes	value
+birthplace_status	Birthplace Status	value
+observation_areas	Observation Areas	value
+confirmationIndicator	Confirmation Indicator	Value	Title
+hydrationCondition	Hydration Condition	Value	Title
+appetiteCondition	Appetite Condition	Value	Title
+stoolCondition	Stool Condition	Value	Title

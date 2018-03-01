@@ -1,0 +1,3 @@
+id	order_pk	client_fk	billingContact_fk	reportContact_fk	purchaseOrder	orderDate	requestNumber	billingDate	reportDate	isHideComment	comments	chargeId	accountId	orderClosedDate	project	enteredBy	invoiceNumber	createdBy	modified	modifiedBy	container
+ORD100	100	100	100	100	prchsordr1	2016-01-01	rqstnmbr1	2016-01-02	2016-01-03	true	Order comment 1	chg1	accnt1	2016-01-04		usr1	invcnbr1	rond	2016-10-11 13:22:49.240	rond	PDL
+ORD101	101	100	100	100	prchsordr2	2016-01-01	rqstnmbr1	2016-01-02	2016-01-03	false	Order comment 1	chg2	accnt2	2016-01-04		usr1	invcnbr1	rond	2016-10-11 13:16:46.547	rond	PDL

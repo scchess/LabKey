@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protein_summary xmlns="http://regis-web.systemsbiology.net/protXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sashimi.sourceforge.net/schema_revision/protXML/protXML_v3.xsd" summary_xml="c:/pipeline-test/testing/xtandem/X Search/test1.work/test1.pep-prot.xml">
+<protein_summary_header reference_database="../../databases/Bovine_mini.fasta" residue_substitution_list="I -> L" source_files="c:/pipeline-test/testing/xtandem/X Search/test1.work/test1.pep.xml" source_files_alt="c:/pipeline-test/testing/xtandem/X Search/test1.work/test1.pep.xml" min_peptide_probability="0.20" min_peptide_weight="0.50" num_predicted_correct_prots="20.9" num_input_1_spectra="11" num_input_2_spectra="127" num_input_3_spectra="57" num_input_4_spectra="0" num_input_5_spectra="0" initial_min_peptide_prob="0.05" total_no_spectrum_ids="132.0" sample_enzyme="trypsin">
+<program_details analysis="proteinprophet" time="Sat Mar 01 13:23:19 200" version=" Insilicos_LabKey_C++ (TPP v3.4 SQUALL rev.0, Build 200712121623(Win32))">
+<proteinprophet_details  occam_flag="Y" groups_flag="Y" degen_flag="Y" nsp_flag="Y" initial_peptide_wt_iters="2" nsp_distribution_iters="2" final_peptide_wt_iters="1" run_options="XML NOPLOT">
+      <nsp_information neighboring_bin_smoothing="Y">
+         <nsp_distribution bin_no="0" nsp_lower_bound_incl="0.00" nsp_upper_bound_incl="0.00" pos_freq="0.081" neg_freq="0.610" pos_to_neg_ratio="0.13"/>
+         <nsp_distribution bin_no="1" nsp_lower_bound_excl="0.00" nsp_upper_bound_incl="0.03" pos_freq="0.033" neg_freq="0.139" pos_to_neg_ratio="0.24"/>
+         <nsp_distribution bin_no="2" nsp_lower_bound_excl="0.03" nsp_upper_bound_incl="0.06" pos_freq="0.021" neg_freq="0.016" pos_to_neg_ratio="1.28"/>
+         <nsp_distribution bin_no="3" nsp_lower_bound_excl="0.06" nsp_upper_bound_incl="0.30" pos_freq="0.047" neg_freq="0.022" pos_to_neg_ratio="2.11"/>
+         <nsp_distribution bin_no="4" nsp_lower_bound_excl="0.30" nsp_upper_bound_incl="2.14" pos_freq="0.137" neg_freq="0.039" pos_to_neg_ratio="3.51"/>
+         <nsp_distribution bin_no="5" nsp_lower_bound_excl="2.14" nsp_upper_bound_incl="3.06" pos_freq="0.164" neg_freq="0.051" pos_to_neg_ratio="3.23" alt_pos_to_neg_ratio="3.51"/>
+         <nsp_distribution bin_no="6" nsp_lower_bound_excl="3.06" nsp_upper_bound_incl="11.08" pos_freq="0.241" neg_freq="0.055" pos_to_neg_ratio="4.36"/>
+         <nsp_distribution bin_no="7" nsp_lower_bound_excl="11.08" nsp_upper_bound_excl="inf" pos_freq="0.276" neg_freq="0.067" pos_to_neg_ratio="4.11" alt_pos_to_neg_ratio="4.36"/>
+      </nsp_information>
+      <ni_information>
+      </ni_information>
+      <protein_summary_data_filter min_probability="0.00" sensitivity="1.000" false_positive_error_rate="0.772" predicted_num_correct="21" predicted_num_incorrect="71" />
+      <protein_summary_data_filter min_probability="0.10" sensitivity="1.000" false_positive_error_rate="0.089" predicted_num_correct="21" predicted_num_incorrect="2" />
+      <protein_summary_data_filter min_probability="0.20" sensitivity="1.000" false_positive_error_rate="0.089" predicted_num_correct="21" predicted_num_incorrect="2" />
+      <protein_summary_data_filter min_probability="0.30" sensitivity="1.000" false_positive_error_rate="0.089" predicted_num_correct="21" predicted_num_incorrect="2" />
+      <protein_summary_data_filter min_probability="0.40" sensitivity="0.985" false_positive_error_rate="0.062" predicted_num_correct="21" predicted_num_incorrect="1" />
+      <protein_summary_data_filter min_probability="0.50" sensitivity="0.985" false_positive_error_rate="0.062" predicted_num_correct="21" predicted_num_incorrect="1" />
+      <protein_summary_data_filter min_probability="0.60" sensitivity="0.959" false_positive_error_rate="0.044" predicted_num_correct="20" predicted_num_incorrect="1" />
+      <protein_summary_data_filter min_probability="0.70" sensitivity="0.929" false_positive_error_rate="0.027" predicted_num_correct="19" predicted_num_incorrect="1" />
+      <protein_summary_data_filter min_probability="0.80" sensitivity="0.858" false_positive_error_rate="0.001" predicted_num_correct="18" predicted_num_incorrect="0" />
+      <protein_summary_data_filter min_probability="0.90" sensitivity="0.858" false_positive_error_rate="0.001" predicted_num_correct="18" predicted_num_incorrect="0" />
+      <protein_summary_data_filter min_probability="0.95" sensitivity="0.858" false_positive_error_rate="0.001" predicted_num_correct="18" predicted_num_incorrect="0" />
+      <protein_summary_data_filter min_probability="0.96" sensitivity="0.858" false_positive_error_rate="0.001" predicted_num_correct="18" predicted_num_incorrect="0" />
+      <protein_summary_data_filter min_probability="0.97" sensitivity="0.858" false_positive_error_rate="0.001" predicted_num_correct="18" predicted_num_incorrect="0" />
+      <protein_summary_data_filter min_probability="0.98" sensitivity="0.858" false_positive_error_rate="0.001" predicted_num_correct="18" predicted_num_incorrect="0" />
+      <protein_summary_data_filter min_probability="0.99" sensitivity="0.811" false_positive_error_rate="0.001" predicted_num_correct="17" predicted_num_incorrect="0" />
+      <protein_summary_data_filter min_probability="1.00" sensitivity="0.668" false_positive_error_rate="0.000" predicted_num_correct="14" predicted_num_incorrect="0" />
+</proteinprophet_details>
+</program_details>
+</protein_summary_header>
+<dataset_derivation generation_no="0">
+</dataset_derivation>
+<protein_group group_number="1" probability="1.0000">
+      <protein protein_name="18protmix|P00006|CYC_BOVIN" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="48.1" unique_stripped_peptides="GITWGEETLMEYLENPKK+MIFAGIK+TGPNLHGLFGR+TGQAPGFSYTDANK" group_sibling_id="a" total_number_peptides="2" pct_spectrum_ids="1.62">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="TGPNLHGLFGR" charge="2" initial_probability="0.9974" nsp_adjusted_probability="0.9993" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.00" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1167.6149">
+            <peptide_parent_protein protein_name="IPI:IPI00465315.6|SWISS-PROT:P99999|REFSEQ:NP_061820"/>
+         </peptide>
+         <peptide peptide_sequence="TGQAPGFSYTDANK" charge="2" initial_probability="0.9969" nsp_adjusted_probability="0.9991" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="1.00" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1455.6630">
+         </peptide>
+         <peptide peptide_sequence="GITWGEETLMEYLENPKK" charge="3" initial_probability="0.0908" nsp_adjusted_probability="0.0908" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="1.99" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.09" is_contributing_evidence="N" calc_neutral_pep_mass="2137.0402">
+         </peptide>
+         <peptide peptide_sequence="MIFAGIK" charge="1" initial_probability="0.0582" nsp_adjusted_probability="0.0582" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.99" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="778.4411">
+            <peptide_parent_protein protein_name="IPI:IPI00382716.1|ENSEMBL:ENSP00000334247"/>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="2" probability="1.0000">
+      <protein protein_name="18protmix|P00432|CATA_BOVIN" n_indistinguishable_proteins="2" probability="1.0000" percent_coverage="13.0" unique_stripped_peptides="FNSANDDNVTQVR+GAGAFGYFEVTHDITR+GPLLVQDVVFTDEMAHFDR+LFAYPDTHR+NLSVEDAAR" group_sibling_id="a" total_number_peptides="6" pct_spectrum_ids="4.51">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="6protmix|P00432|CATA_BOVIN">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="GAGAFGYFEVTHDITR" charge="2" initial_probability="0.9986" nsp_adjusted_probability="0.9997" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.95" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1739.8267">
+         </peptide>
+         <peptide peptide_sequence="GPLLVQDVVFTDEMAHFDR" charge="3" initial_probability="0.9988" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="4.95" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2188.0623">
+         </peptide>
+         <peptide peptide_sequence="GAGAFGYFEVTHDITR" charge="3" initial_probability="0.9979" nsp_adjusted_probability="0.9995" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.95" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1739.8267">
+         </peptide>
+         <peptide peptide_sequence="FNSANDDNVTQVR" charge="2" initial_probability="0.9972" nsp_adjusted_probability="0.9994" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.95" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1478.6750">
+         </peptide>
+         <peptide peptide_sequence="NLSVEDAAR" charge="2" initial_probability="0.9965" nsp_adjusted_probability="0.9992" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="4.96" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="973.4829">
+         </peptide>
+         <peptide peptide_sequence="LFAYPDTHR" charge="2" initial_probability="0.9841" nsp_adjusted_probability="0.9963" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="4.97" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="Y" calc_neutral_pep_mass="1118.5509">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="3" probability="1.0000">
+      <protein protein_name="18protmix|P00489|PHS2_RABIT" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="19.5" unique_stripped_peptides="ARPEFTLPVHFYGR+AWEVTVK+EIWGVEPSR+FAAYLER+GLAGVENVTELK+GLAGVENVTELKK+LPAPDEKIP+MSLVEEGAVK+VAAAFPGDVDR+VFADYEEYVK+VHINPNSLFDVQVK+VIPAADLSEQISTAGTEASGTGNMK+VLVDLER+VLYPNDNFFEGK+YEFGIFNQK+YGNPWEK" group_sibling_id="a" total_number_peptides="17" pct_spectrum_ids="11.98">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GLAGVENVTELK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.74" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1228.6663">
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="VHINPNSLFDVQVK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" peptide_group_designator="b" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="14.73" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1608.8624">
+         </peptide>
+         <peptide peptide_sequence="MSLVEEGAVK" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.74" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1061.5427">
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="VFADYEEYVK" charge="2" initial_probability="0.9987" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="14.73" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1261.5867">
+         </peptide>
+         <peptide peptide_sequence="VIPAADLSEQISTAGTEASGTGNMK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9997" peptide_group_designator="a" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.74" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2447.1850">
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="YEFGIFNQK" charge="2" initial_probability="0.9985" nsp_adjusted_probability="0.9997" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.74" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1144.5553">
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="ARPEFTLPVHFYGR" charge="3" initial_probability="0.9988" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="14.73" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1688.8787">
+         </peptide>
+         <peptide peptide_sequence="EIWGVEPSR" charge="2" initial_probability="0.9981" nsp_adjusted_probability="0.9996" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.74" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1071.5349">
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="VIPAADLSEQISTAGTEASGTGNMK" charge="3" initial_probability="0.9977" nsp_adjusted_probability="0.9995" peptide_group_designator="a" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.74" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2447.1850">
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="FAAYLER" charge="2" initial_probability="0.9953" nsp_adjusted_probability="0.9989" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.74" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="868.4443">
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="VAAAFPGDVDR" charge="2" initial_probability="0.9881" nsp_adjusted_probability="0.9972" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.75" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="1116.5564">
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="YGNPWEK" charge="2" initial_probability="0.9796" nsp_adjusted_probability="0.9952" weight="0.98" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.77" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="Y" calc_neutral_pep_mass="892.4079">
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+            <peptide_parent_protein protein_name="IPI:IPI00787186.1|TREMBL:Q6P1L4"/>
+         </peptide>
+         <peptide peptide_sequence="VLYPNDNFFEGK" charge="2" initial_probability="0.9388" nsp_adjusted_probability="0.9853" weight="0.98" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.81" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.94" is_contributing_evidence="Y" calc_neutral_pep_mass="1441.6878">
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+         </peptide>
+         <peptide peptide_sequence="GLAGVENVTELKK" charge="2" initial_probability="0.9229" nsp_adjusted_probability="0.9812" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="14.82" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.92" is_contributing_evidence="Y" calc_neutral_pep_mass="1356.7613">
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="VHINPNSLFDVQVK" charge="3" initial_probability="0.8447" nsp_adjusted_probability="0.9595" peptide_group_designator="b" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="14.88" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.84" is_contributing_evidence="Y" calc_neutral_pep_mass="1608.8624">
+         </peptide>
+         <peptide peptide_sequence="VLVDLER" charge="2" initial_probability="0.8256" nsp_adjusted_probability="0.9538" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="14.90" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.83" is_contributing_evidence="Y" calc_neutral_pep_mass="842.4862">
+         </peptide>
+         <peptide peptide_sequence="LPAPDEKIP" charge="2" initial_probability="0.3768" nsp_adjusted_probability="0.3768" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="15.35" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.38" is_contributing_evidence="Y" calc_neutral_pep_mass="978.5386">
+         </peptide>
+         <peptide peptide_sequence="AWEVTVK" charge="2" initial_probability="0.0935" nsp_adjusted_probability="0.0935" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="15.73" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.09" is_contributing_evidence="N" calc_neutral_pep_mass="831.4491">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="4" probability="1.0000">
+      <protein protein_name="18protmix|P00634|PPB_ECOLI" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="47.7" unique_stripped_peptides="AAGLATGNVSTAELQDATPAALVAHVTSR+APGLTQALNTK+DGAVMVMSYGNSEEDSQEHTGSQLR+DHPTILEMAK+EGNTLVIVTADHAHASQIVAPDTK+GIDALPLTGQYTHYALNKK+GSITEQLLNAR+IAAYGPHAANVVGLTDQTDLFYTMK+NDSVPTLAQMTDK+NYAEGAGGFFK+TFAETATAGEWQGK+TGKPDYVTDSAASATAWSTGVK+TPEMPVLENR" group_sibling_id="a" total_number_peptides="16" pct_spectrum_ids="11.33">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="TFAETATAGEWQGK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" peptide_group_designator="b" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1495.6943">
+         </peptide>
+         <peptide peptide_sequence="NYAEGAGGFFK" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1159.5298">
+         </peptide>
+         <peptide peptide_sequence="TGKPDYVTDSAASATAWSTGVK" charge="2" initial_probability="0.9987" nsp_adjusted_probability="0.9997" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2212.0648">
+         </peptide>
+         <peptide peptide_sequence="TPEMPVLENR" charge="2" initial_probability="0.9986" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1184.5860">
+         </peptide>
+         <peptide peptide_sequence="EGNTLVIVTADHAHASQIVAPDTK" charge="3" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2486.2765">
+         </peptide>
+         <peptide peptide_sequence="TGKPDYVTDSAASATAWSTGVK" charge="3" initial_probability="0.9989" nsp_adjusted_probability="0.9997" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="2" exp_tot_instances="2.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2212.0648">
+         </peptide>
+         <peptide peptide_sequence="NDSVPTLAQMTDK" charge="2" initial_probability="0.9983" nsp_adjusted_probability="0.9996" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1418.6711">
+         </peptide>
+         <peptide peptide_sequence="GSITEQLLNAR" charge="2" initial_probability="0.9978" nsp_adjusted_probability="0.9995" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1200.6463">
+         </peptide>
+         <peptide peptide_sequence="APGLTQALNTK" charge="2" initial_probability="0.9974" nsp_adjusted_probability="0.9994" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1112.6190">
+         </peptide>
+         <peptide peptide_sequence="DGAVMVMSYGNSEEDSQEHTGSQLR" charge="3" initial_probability="0.9969" nsp_adjusted_probability="0.9993" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2726.1548">
+         </peptide>
+         <peptide peptide_sequence="GIDALPLTGQYTHYALNKK" charge="3" initial_probability="0.9964" nsp_adjusted_probability="0.9992" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2102.1160">
+         </peptide>
+         <peptide peptide_sequence="IAAYGPHAANVVGLTDQTDLFYTMK" charge="3" initial_probability="0.9953" nsp_adjusted_probability="0.9989" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="12.97" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2695.3316">
+         </peptide>
+         <peptide peptide_sequence="AAGLATGNVSTAELQDATPAALVAHVTSR" charge="3" initial_probability="0.9665" nsp_adjusted_probability="0.9921" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="13.00" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.97" is_contributing_evidence="Y" calc_neutral_pep_mass="2791.4464">
+         </peptide>
+         <peptide peptide_sequence="DHPTILEMAK" charge="2" initial_probability="0.7322" nsp_adjusted_probability="0.9226" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="13.23" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.73" is_contributing_evidence="Y" calc_neutral_pep_mass="1153.5801">
+         </peptide>
+         <peptide peptide_sequence="TFAETATAGEWQGK" charge="3" initial_probability="0.2931" nsp_adjusted_probability="0.2931" peptide_group_designator="b" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="13.67" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.29" is_contributing_evidence="Y" calc_neutral_pep_mass="1495.6943">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="5" probability="1.0000">
+      <protein protein_name="18protmix|P00722|BGAL_ECOLI" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="18.4" unique_stripped_peptides="APLDNDIGVSEATR+FNDDFSR+GDFQFNISR+HQQQFFQFR+IDPNAWVER+IENGLLLLNGKPLLIR+LAAHPPFASWR+LAVMVLR+LNVENPKLWSAEIPNLYR+LSGQTIEVTSEYLFR+LWSAEIPNLYR+TMITDSLAVVLQR+VDEDQPFPAVPK+VVQPNATAWSEAGHISAWQQWR+WSDGSYLEDQDMWR+YSQQQLMETSHR" group_sibling_id="a" total_number_peptides="19" pct_spectrum_ids="13.38">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="LAAHPPFASWR" charge="3" initial_probability="0.9990" nsp_adjusted_probability="0.9998" peptide_group_designator="b" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.61" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1251.6513">
+         </peptide>
+         <peptide peptide_sequence="APLDNDIGVSEATR" charge="2" initial_probability="0.9985" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1456.7158">
+         </peptide>
+         <peptide peptide_sequence="HQQQFFQFR" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" peptide_group_designator="d" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.61" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1264.6101">
+         </peptide>
+         <peptide peptide_sequence="IDPNAWVER" charge="2" initial_probability="0.9986" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1098.5458">
+         </peptide>
+         <peptide peptide_sequence="LSGQTIEVTSEYLFR" charge="2" initial_probability="0.9986" nsp_adjusted_probability="0.9997" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1741.8887">
+         </peptide>
+         <peptide peptide_sequence="LWSAEIPNLYR" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.61" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1360.7139">
+         </peptide>
+         <peptide peptide_sequence="TMITDSLAVVLQR" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.61" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1445.7912">
+         </peptide>
+         <peptide peptide_sequence="LSGQTIEVTSEYLFR" charge="3" initial_probability="0.9989" nsp_adjusted_probability="0.9997" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.61" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1741.8887">
+         </peptide>
+         <peptide peptide_sequence="WSDGSYLEDQDMWR" charge="2" initial_probability="0.9984" nsp_adjusted_probability="0.9996" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1786.7257">
+         </peptide>
+         <peptide peptide_sequence="IENGLLLLNGKPLLIR" charge="2" initial_probability="0.9980" nsp_adjusted_probability="0.9995" peptide_group_designator="c" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1775.1033">
+         </peptide>
+         <peptide peptide_sequence="VDEDQPFPAVPK" charge="2" initial_probability="0.9979" nsp_adjusted_probability="0.9995" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1340.6612">
+         </peptide>
+         <peptide peptide_sequence="LAAHPPFASWR" charge="2" initial_probability="0.9942" nsp_adjusted_probability="0.9987" peptide_group_designator="b" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="1251.6513">
+         </peptide>
+         <peptide peptide_sequence="FNDDFSR" charge="2" initial_probability="0.9935" nsp_adjusted_probability="0.9985" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="899.3773">
+         </peptide>
+         <peptide peptide_sequence="GDFQFNISR" charge="2" initial_probability="0.9920" nsp_adjusted_probability="0.9982" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.62" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="1082.5145">
+         </peptide>
+         <peptide peptide_sequence="IENGLLLLNGKPLLIR" charge="3" initial_probability="0.9756" nsp_adjusted_probability="0.9943" peptide_group_designator="c" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.64" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="Y" calc_neutral_pep_mass="1775.1033">
+         </peptide>
+         <peptide peptide_sequence="LAVMVLR" charge="2" initial_probability="0.9566" nsp_adjusted_probability="0.9897" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.66" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.96" is_contributing_evidence="Y" calc_neutral_pep_mass="800.4942">
+         </peptide>
+         <peptide peptide_sequence="YSQQQLMETSHR" charge="3" initial_probability="0.8333" nsp_adjusted_probability="0.9561" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.78" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.83" is_contributing_evidence="Y" calc_neutral_pep_mass="1506.6885">
+         </peptide>
+         <peptide peptide_sequence="HQQQFFQFR" charge="3" initial_probability="0.6243" nsp_adjusted_probability="0.8787" peptide_group_designator="d" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="16.99" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.62" is_contributing_evidence="Y" calc_neutral_pep_mass="1264.6101">
+         </peptide>
+         <peptide peptide_sequence="VVQPNATAWSEAGHISAWQQWR" charge="3" initial_probability="0.2596" nsp_adjusted_probability="0.2596" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="17.35" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.26" is_contributing_evidence="Y" calc_neutral_pep_mass="2521.2251">
+         </peptide>
+         <peptide peptide_sequence="LNVENPKLWSAEIPNLYR" charge="3" initial_probability="0.0532" nsp_adjusted_probability="0.0532" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="17.61" n_sibling_peptides_bin="7" n_instances="1" exp_tot_instances="0.05" is_contributing_evidence="N" calc_neutral_pep_mass="2155.1426">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="6" probability="1.0000">
+      <protein protein_name="18protmix|P00921|CAH2_BOVIN" n_indistinguishable_proteins="2" probability="1.0000" percent_coverage="24.7" unique_stripped_peptides="AVVQDPALKPLALVYGEATSR+DGPLTGTYR+EPISVSSQQMLK+VLDALDSIK+YAAELHLVHWNTK" group_sibling_id="a" total_number_peptides="7" pct_spectrum_ids="5.09">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="6protmix|P00921|CAH2_BOVIN">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="VLDALDSIK" charge="2" initial_probability="0.9974" nsp_adjusted_probability="0.9994" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.79" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="972.5492">
+         </peptide>
+         <peptide peptide_sequence="AVVQDPALKPLALVYGEATSR" charge="3" initial_probability="0.9935" nsp_adjusted_probability="0.9985" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.79" n_sibling_peptides_bin="6" n_instances="3" exp_tot_instances="2.92" is_contributing_evidence="Y" calc_neutral_pep_mass="2197.2107">
+         </peptide>
+         <peptide peptide_sequence="YAAELHLVHWNTK" charge="3" initial_probability="0.9859" nsp_adjusted_probability="0.9967" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="3.80" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="1580.8100">
+         </peptide>
+         <peptide peptide_sequence="DGPLTGTYR" charge="2" initial_probability="0.9778" nsp_adjusted_probability="0.9948" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="Y" calc_neutral_pep_mass="978.4771">
+         </peptide>
+         <peptide peptide_sequence="EPISVSSQQMLK" charge="2" initial_probability="0.8347" nsp_adjusted_probability="0.9565" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.95" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.83" is_contributing_evidence="Y" calc_neutral_pep_mass="1345.6912">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="7" probability="1.0000">
+      <protein protein_name="18protmix|P00946|MANA_ECOLI" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="22.8" unique_stripped_peptides="GSQQLQLKPGESAFIAANESPVTVK+LINSVQNYAWGSK+TALTELYGMENPSSQPMAELWMGAHPK+VQNAAGDIVSLR+YIDIPELVANVK" group_sibling_id="a" total_number_peptides="4" pct_spectrum_ids="3.13">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="VQNAAGDIVSLR" charge="2" initial_probability="0.9987" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.13" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1241.6728">
+         </peptide>
+         <peptide peptide_sequence="YIDIPELVANVK" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.13" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1372.7602">
+         </peptide>
+         <peptide peptide_sequence="GSQQLQLKPGESAFIAANESPVTVK" charge="3" initial_probability="0.9982" nsp_adjusted_probability="0.9996" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.13" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2598.3653">
+         </peptide>
+         <peptide peptide_sequence="LINSVQNYAWGSK" charge="2" initial_probability="0.9965" nsp_adjusted_probability="0.9992" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.13" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1478.7518">
+         </peptide>
+         <peptide peptide_sequence="TALTELYGMENPSSQPMAELWMGAHPK" charge="3" initial_probability="0.1349" nsp_adjusted_probability="0.1349" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="3.99" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.13" is_contributing_evidence="N" calc_neutral_pep_mass="2988.3820">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="8" probability="1.0000">
+      <protein protein_name="18protmix|P02602|MLE1_RABIT" n_indistinguishable_proteins="2" probability="1.0000" percent_coverage="16.1" unique_stripped_peptides="ITLSQVGDVLR+VLGNPSNEEMNAK" group_sibling_id="a" total_number_peptides="2" pct_spectrum_ids="1.51">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="cont|P02603|MLE3_RABIT">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="ITLSQVGDVLR" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.00" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1199.6874">
+         </peptide>
+         <peptide peptide_sequence="VLGNPSNEEMNAK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.99" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1401.6558">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="9" probability="1.0000">
+      <protein protein_name="18protmix|P02754|LACB_BOVIN" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="27.0" unique_stripped_peptides="ALPMHIR+TPEVDDEALEK+VLVLDTDYKK+VYVEELKPTPEGDLEILLQK" group_sibling_id="a" total_number_peptides="4" pct_spectrum_ids="2.43">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="TPEVDDEALEK" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="2.21" n_sibling_peptides_bin="5" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1244.5772">
+         </peptide>
+         <peptide peptide_sequence="VLVLDTDYKK" charge="2" initial_probability="0.9977" nsp_adjusted_probability="0.9993" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="2.21" n_sibling_peptides_bin="5" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1192.6703">
+         </peptide>
+         <peptide peptide_sequence="ALPMHIR" charge="2" initial_probability="0.9969" nsp_adjusted_probability="0.9991" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="2.21" n_sibling_peptides_bin="5" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="836.4691">
+         </peptide>
+         <peptide peptide_sequence="VYVEELKPTPEGDLEILLQK" charge="3" initial_probability="0.2122" nsp_adjusted_probability="0.2122" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="2.99" n_sibling_peptides_bin="5" n_instances="1" exp_tot_instances="0.21" is_contributing_evidence="Y" calc_neutral_pep_mass="2312.2515">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="10" probability="1.0000">
+      <protein protein_name="18protmix|P02769|ALBU_BOVIN" n_indistinguishable_proteins="2" probability="1.0000" percent_coverage="15.5" unique_stripped_peptides="AEFVEVTK+DAFLGSFLYEYSR+HLVDEPQNLIK+KQTALVELLK+LGEYGFQNALIVR+LVNELTEFAK+LVVSTQTALA+TVMENFVAFVDK+YLYEIAR" group_sibling_id="a" total_number_peptides="10" pct_spectrum_ids="7.43">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="6protmix|P02769|ALBU_BOVIN">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="DAFLGSFLYEYSR" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1566.7355">
+         </peptide>
+         <peptide peptide_sequence="HLVDEPQNLIK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1304.7089">
+         </peptide>
+         <peptide peptide_sequence="LGEYGFQNALIVR" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1478.7882">
+         </peptide>
+         <peptide peptide_sequence="LVNELTEFAK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1162.6234">
+         </peptide>
+         <peptide peptide_sequence="LVVSTQTALA" charge="2" initial_probability="0.9987" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1001.5757">
+         </peptide>
+         <peptide peptide_sequence="YLYEIAR" charge="2" initial_probability="0.9983" nsp_adjusted_probability="0.9996" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="8.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="926.4862">
+         </peptide>
+         <peptide peptide_sequence="TVMENFVAFVDK" charge="2" initial_probability="0.9937" nsp_adjusted_probability="0.9985" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="1398.6853">
+         </peptide>
+         <peptide peptide_sequence="AEFVEVTK" charge="2" initial_probability="0.9931" nsp_adjusted_probability="0.9984" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.81" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="921.4807">
+         </peptide>
+         <peptide peptide_sequence="HLVDEPQNLIK" charge="3" initial_probability="0.9562" nsp_adjusted_probability="0.9896" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.85" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.96" is_contributing_evidence="Y" calc_neutral_pep_mass="1304.7089">
+         </peptide>
+         <peptide peptide_sequence="KQTALVELLK" charge="2" initial_probability="0.8771" nsp_adjusted_probability="0.9689" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.93" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.88" is_contributing_evidence="Y" calc_neutral_pep_mass="1141.7071">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="11" probability="1.0000">
+      <protein protein_name="18protmix|P06278|AMY_BACLI" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="18.4" unique_stripped_peptides="DINVYGDVVINHK+EGDSSVANSGLAALITDGPGGAK+ESGYPQVFYGDMYGTK+GGADATEDVTAVEVDPADR+LQNDSAYLAEHGITAVWIPPAYK" group_sibling_id="a" total_number_peptides="6" pct_spectrum_ids="4.49">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GGADATEDVTAVEVDPADR" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.93" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1886.8494">
+         </peptide>
+         <peptide peptide_sequence="DINVYGDVVINHK" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.93" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1484.7623">
+         </peptide>
+         <peptide peptide_sequence="EGDSSVANSGLAALITDGPGGAK" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.93" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2086.0178">
+         </peptide>
+         <peptide peptide_sequence="ESGYPQVFYGDMYGTK" charge="2" initial_probability="0.9987" nsp_adjusted_probability="0.9997" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.93" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1840.7978">
+         </peptide>
+         <peptide peptide_sequence="EGDSSVANSGLAALITDGPGGAK" charge="3" initial_probability="0.9828" nsp_adjusted_probability="0.9960" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.94" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="Y" calc_neutral_pep_mass="2086.0178">
+         </peptide>
+         <peptide peptide_sequence="LQNDSAYLAEHGITAVWIPPAYK" charge="3" initial_probability="0.9469" nsp_adjusted_probability="0.9873" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="4.98" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.95" is_contributing_evidence="Y" calc_neutral_pep_mass="2556.3013">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="12" probability="1.0000">
+      <protein protein_name="18protmix|P46406|G3P_RABIT" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="30.7" unique_stripped_peptides="AITIFQER+GAAQNIIPASTGAAK+RVIISAPSADAPMFVMGVNHEK+VIHDHFGIVEGLMTTVHAITATQK+VIISAPSADAPMFVMGVNHEK+VVDLMVHMASKE+WGDAGAEYVVESTGVFTTMEK" group_sibling_id="a" total_number_peptides="11" pct_spectrum_ids="6.44">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="VVDLMVHMASKE" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="6.26" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1357.6734">
+         </peptide>
+         <peptide peptide_sequence="AITIFQER" charge="2" initial_probability="0.9979" nsp_adjusted_probability="0.9995" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="6.26" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="976.5342">
+         </peptide>
+         <peptide peptide_sequence="RVIISAPSADAPMFVMGVNHEK" charge="3" initial_probability="0.9977" nsp_adjusted_probability="0.9995" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="6.26" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2368.2032">
+            <peptide_parent_protein protein_name="IPI:IPI00219018.7|SWISS-PROT:P04406|REFSEQ:NP_002037"/>
+            <peptide_parent_protein protein_name="IPI:IPI00219018.7|SWISS-PROT:P04406|REFSEQ:NP_002037"/>
+            <peptide_parent_protein protein_name="IPI:IPI00788737.1|VEGA:OTTHUMP00000166332"/>
+            <peptide_parent_protein protein_name="IPI:IPI00789134.1|VEGA:OTTHUMP00000174433"/>
+            <peptide_parent_protein protein_name="IPI:IPI00794605.1|VEGA:OTTHUMP00000166340"/>
+            <peptide_parent_protein protein_name="IPI:IPI00795257.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00797221.1"/>
+         </peptide>
+         <peptide peptide_sequence="VIHDHFGIVEGLMTTVHAITATQK" charge="3" initial_probability="0.9931" nsp_adjusted_probability="0.9984" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="6.26" n_sibling_peptides_bin="6" n_instances="3" exp_tot_instances="2.23" is_contributing_evidence="Y" calc_neutral_pep_mass="2617.3686">
+         </peptide>
+         <peptide peptide_sequence="GAAQNIIPASTGAAK" charge="2" initial_probability="0.9917" nsp_adjusted_probability="0.9981" peptide_group_designator="b" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="6.27" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="1368.7361">
+         </peptide>
+         <peptide peptide_sequence="VVDLMVHMASKE" charge="3" initial_probability="0.9883" nsp_adjusted_probability="0.9973" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="6.27" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="Y" calc_neutral_pep_mass="1357.6734">
+         </peptide>
+         <peptide peptide_sequence="VIISAPSADAPMFVMGVNHEK" charge="2" initial_probability="0.5539" nsp_adjusted_probability="0.8441" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="6.71" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.55" is_contributing_evidence="Y" calc_neutral_pep_mass="2212.1020">
+            <peptide_parent_protein protein_name="IPI:IPI00219018.7|SWISS-PROT:P04406|REFSEQ:NP_002037"/>
+            <peptide_parent_protein protein_name="IPI:IPI00219018.7|SWISS-PROT:P04406|REFSEQ:NP_002037"/>
+            <peptide_parent_protein protein_name="IPI:IPI00788737.1|VEGA:OTTHUMP00000166332"/>
+            <peptide_parent_protein protein_name="IPI:IPI00789134.1|VEGA:OTTHUMP00000174433"/>
+            <peptide_parent_protein protein_name="IPI:IPI00794605.1|VEGA:OTTHUMP00000166340"/>
+            <peptide_parent_protein protein_name="IPI:IPI00795257.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00797221.1"/>
+         </peptide>
+         <peptide peptide_sequence="WGDAGAEYVVESTGVFTTMEK" charge="2" initial_probability="0.3993" nsp_adjusted_probability="0.3993" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="6.86" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.40" is_contributing_evidence="Y" calc_neutral_pep_mass="2276.0307">
+            <peptide_parent_protein protein_name="IPI:IPI00219018.7|SWISS-PROT:P04406|REFSEQ:NP_002037"/>
+            <peptide_parent_protein protein_name="IPI:IPI00219018.7|SWISS-PROT:P04406|REFSEQ:NP_002037"/>
+            <peptide_parent_protein protein_name="IPI:IPI00788737.1|VEGA:OTTHUMP00000166332"/>
+            <peptide_parent_protein protein_name="IPI:IPI00789134.1|VEGA:OTTHUMP00000174433"/>
+            <peptide_parent_protein protein_name="IPI:IPI00794605.1|VEGA:OTTHUMP00000166340"/>
+            <peptide_parent_protein protein_name="IPI:IPI00795257.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00797221.1"/>
+         </peptide>
+         <peptide peptide_sequence="GAAQNIIPASTGAAK" charge="3" initial_probability="0.3460" nsp_adjusted_probability="0.3460" peptide_group_designator="b" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="6.91" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.35" is_contributing_evidence="Y" calc_neutral_pep_mass="1368.7361">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="13" probability="1.0000">
+      <protein protein_name="18protmix|Q29443|TRFE_BOVIN" n_indistinguishable_proteins="3" probability="1.0000" percent_coverage="18.5" unique_stripped_peptides="DNPQTHYYAVAVVK+ELPDPQESIQR+GDVAFVK+GEADAMSLDGGYLYIAGK+GYLAVAVVK+HSTVFDNLPNPEDR+IMKGEADAMSLDGGYLYIAGK+TAGWNIPMGLLYSK+TSDANINWNNLK+TYDSYLGDDYVR+YYGYTGAFR" group_sibling_id="a" total_number_peptides="10" pct_spectrum_ids="7.15">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="6protmix|Q29443|TRFE_BOVIN">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="7sensmix|Q29443|TRFE_BOVIN">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="GEADAMSLDGGYLYIAGK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.31" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1829.8506">
+         </peptide>
+         <peptide peptide_sequence="GYLAVAVVK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.31" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="918.5539">
+         </peptide>
+         <peptide peptide_sequence="TYDSYLGDDYVR" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9998" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.31" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1465.6361">
+         </peptide>
+         <peptide peptide_sequence="GYLAVAVVK" charge="1" initial_probability="0.9986" nsp_adjusted_probability="0.9997" peptide_group_designator="a" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.31" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="918.5539">
+         </peptide>
+         <peptide peptide_sequence="TSDANINWNNLK" charge="2" initial_probability="0.9971" nsp_adjusted_probability="0.9993" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.31" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1388.6684">
+         </peptide>
+         <peptide peptide_sequence="TAGWNIPMGLLYSK" charge="2" initial_probability="0.9964" nsp_adjusted_probability="0.9992" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.31" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1549.7963">
+         </peptide>
+         <peptide peptide_sequence="YYGYTGAFR" charge="2" initial_probability="0.9668" nsp_adjusted_probability="0.9922" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="8.35" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.97" is_contributing_evidence="Y" calc_neutral_pep_mass="1096.4978">
+         </peptide>
+         <peptide peptide_sequence="IMKGEADAMSLDGGYLYIAGK" charge="3" initial_probability="0.9437" nsp_adjusted_probability="0.9865" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.36" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.94" is_contributing_evidence="Y" calc_neutral_pep_mass="2202.0701">
+         </peptide>
+         <peptide peptide_sequence="ELPDPQESIQR" charge="2" initial_probability="0.8768" nsp_adjusted_probability="0.9688" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="8.43" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.88" is_contributing_evidence="Y" calc_neutral_pep_mass="1310.6466">
+         </peptide>
+         <peptide peptide_sequence="GDVAFVK" charge="1" initial_probability="0.5393" nsp_adjusted_probability="0.8361" weight="1.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="8.77" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.54" is_contributing_evidence="Y" calc_neutral_pep_mass="734.3963">
+         </peptide>
+         <peptide peptide_sequence="DNPQTHYYAVAVVK" charge="3" initial_probability="0.0804" nsp_adjusted_probability="0.0804" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="9.31" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.08" is_contributing_evidence="N" calc_neutral_pep_mass="1603.7995">
+         </peptide>
+         <peptide peptide_sequence="HSTVFDNLPNPEDR" charge="3" initial_probability="0.0520" nsp_adjusted_probability="0.0520" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="9.31" n_sibling_peptides_bin="6" n_instances="1" exp_tot_instances="0.05" is_contributing_evidence="N" calc_neutral_pep_mass="1639.7590">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="14" probability="1.0000">
+      <protein protein_name="cont|P00761|TRYP_PIG" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="12.1" unique_stripped_peptides="LGEHNIDVLEGNEQFINAAK+VATVSLPR" group_sibling_id="a" total_number_peptides="2" pct_spectrum_ids="1.51">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="VATVSLPR" charge="2" initial_probability="0.9957" nsp_adjusted_probability="0.9988" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="1.00" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="841.5022">
+         </peptide>
+         <peptide peptide_sequence="LGEHNIDVLEGNEQFINAAK" charge="3" initial_probability="0.9952" nsp_adjusted_probability="0.9986" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="1.00" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2210.0968">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="15" pseudo_name="1" probability="1.0000">
+      <protein protein_name="18protmix|ATBOG|actin" n_indistinguishable_proteins="7" probability="0.7488" percent_coverage="12.0" unique_stripped_peptides="EITALAPSTMK+SYELPDGQVITIGNER+VAPEEHPTLLTEAPLNPK" group_sibling_id="a" total_number_peptides="0" pct_spectrum_ids="0.79">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00515047.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00816229.1|TREMBL:Q13707">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="EITALAPSTMK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9997" weight="0.25" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="2.38" n_sibling_peptides_bin="5" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1160.6111">
+         </peptide>
+         <peptide peptide_sequence="SYELPDGQVITIGNER" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="2.38" n_sibling_peptides_bin="5" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1789.8846">
+         </peptide>
+         <peptide peptide_sequence="VAPEEHPTLLTEAPLNPK" charge="3" initial_probability="0.8710" nsp_adjusted_probability="0.9595" peptide_group_designator="a" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="2.51" n_sibling_peptides_bin="5" n_instances="1" exp_tot_instances="0.87" is_contributing_evidence="N" calc_neutral_pep_mass="1955.0364">
+         </peptide>
+         <peptide peptide_sequence="VAPEEHPTLLTEAPLNPK" charge="2" initial_probability="0.5095" nsp_adjusted_probability="0.7848" peptide_group_designator="a" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="2.87" n_sibling_peptides_bin="5" n_instances="1" exp_tot_instances="0.51" is_contributing_evidence="N" calc_neutral_pep_mass="1955.0364">
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00414057.2" n_indistinguishable_proteins="1" probability="0.6233" percent_coverage="11.4" unique_stripped_peptides="EITALAPSTMK+VAPEEHPTLLTEAPLNPK" group_sibling_id="b" total_number_peptides="0" subsuming_protein_entry="18protmix|ATBOG|actin IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604 IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091 IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150 IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606 IPI:IPI00515047.1 IPI:IPI00816229.1|TREMBL:Q13707" pct_spectrum_ids="0.54">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="EITALAPSTMK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9997" weight="0.25" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.38" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1160.6111">
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021439.1|SWISS-PROT:P60709|REFSEQ:NP_001092"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021439.1|SWISS-PROT:P60709|REFSEQ:NP_001092"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021440.1|SWISS-PROT:P63261|REFSEQ:NP_001605"/>
+            <peptide_parent_protein protein_name="IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150"/>
+            <peptide_parent_protein protein_name="IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606"/>
+            <peptide_parent_protein protein_name="IPI:IPI00444605.1|TREMBL:Q6ZSQ4"/>
+            <peptide_parent_protein protein_name="IPI:IPI00514530.4"/>
+            <peptide_parent_protein protein_name="IPI:IPI00515047.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00794523.2"/>
+            <peptide_parent_protein protein_name="IPI:IPI00816229.1|TREMBL:Q13707"/>
+         </peptide>
+         <peptide peptide_sequence="VAPEEHPTLLTEAPLNPK" charge="3" initial_probability="0.8710" nsp_adjusted_probability="0.9595" peptide_group_designator="a" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.51" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.87" is_contributing_evidence="N" calc_neutral_pep_mass="1955.0364">
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091"/>
+            <peptide_parent_protein protein_name="IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150"/>
+            <peptide_parent_protein protein_name="IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606"/>
+            <peptide_parent_protein protein_name="IPI:IPI00515047.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00645534.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00816229.1|TREMBL:Q13707"/>
+         </peptide>
+         <peptide peptide_sequence="VAPEEHPTLLTEAPLNPK" charge="2" initial_probability="0.5095" nsp_adjusted_probability="0.7848" peptide_group_designator="a" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.87" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.51" is_contributing_evidence="N" calc_neutral_pep_mass="1955.0364">
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091"/>
+            <peptide_parent_protein protein_name="IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150"/>
+            <peptide_parent_protein protein_name="IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606"/>
+            <peptide_parent_protein protein_name="IPI:IPI00515047.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00645534.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00816229.1|TREMBL:Q13707"/>
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00021439.1|SWISS-PROT:P60709|REFSEQ:NP_001092" n_indistinguishable_proteins="4" probability="0.4999" percent_coverage="10.7" unique_stripped_peptides="EITALAPSTMK+SYELPDGQVITIGNER" group_sibling_id="c" total_number_peptides="0" subsuming_protein_entry="18protmix|ATBOG|actin IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604 IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091 IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150 IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606 IPI:IPI00515047.1 IPI:IPI00816229.1|TREMBL:Q13707" pct_spectrum_ids="0.44">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00021440.1|SWISS-PROT:P63261|REFSEQ:NP_001605">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00514530.4">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00794523.2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="EITALAPSTMK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9997" weight="0.25" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.00" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1160.6111">
+         </peptide>
+         <peptide peptide_sequence="SYELPDGQVITIGNER" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9997" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.00" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1789.8846">
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00645534.1" n_indistinguishable_proteins="1" probability="0.4978" percent_coverage="11.9" unique_stripped_peptides="VAPEEHPTLLTEAPLNPK" group_sibling_id="d" total_number_peptides="0" subsuming_protein_entry="18protmix|ATBOG|actin IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604 IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091 IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150 IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606 IPI:IPI00515047.1 IPI:IPI00816229.1|TREMBL:Q13707" pct_spectrum_ids="0.35">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="VAPEEHPTLLTEAPLNPK" charge="3" initial_probability="0.8710" nsp_adjusted_probability="0.9595" peptide_group_designator="a" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.51" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.87" is_contributing_evidence="N" calc_neutral_pep_mass="1955.0364">
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091"/>
+            <peptide_parent_protein protein_name="IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150"/>
+            <peptide_parent_protein protein_name="IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606"/>
+            <peptide_parent_protein protein_name="IPI:IPI00414057.2"/>
+            <peptide_parent_protein protein_name="IPI:IPI00515047.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00816229.1|TREMBL:Q13707"/>
+         </peptide>
+         <peptide peptide_sequence="VAPEEHPTLLTEAPLNPK" charge="2" initial_probability="0.5095" nsp_adjusted_probability="0.7848" peptide_group_designator="a" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.87" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.51" is_contributing_evidence="N" calc_neutral_pep_mass="1955.0364">
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091"/>
+            <peptide_parent_protein protein_name="IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150"/>
+            <peptide_parent_protein protein_name="IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606"/>
+            <peptide_parent_protein protein_name="IPI:IPI00414057.2"/>
+            <peptide_parent_protein protein_name="IPI:IPI00515047.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00816229.1|TREMBL:Q13707"/>
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00003269.1|REFSEQ:NP_001017992" n_indistinguishable_proteins="3" probability="0.3306" percent_coverage="4.3" unique_stripped_peptides="SYELPDGQVITIGNER" group_sibling_id="e" total_number_peptides="0" subsuming_protein_entry="18protmix|ATBOG|actin IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604 IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091 IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150 IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606 IPI:IPI00515047.1 IPI:IPI00816229.1|TREMBL:Q13707" pct_spectrum_ids="0.25">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00555900.1|REFSEQ:NP_001017421">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00739539.2|REFSEQ:XP_001130062">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="SYELPDGQVITIGNER" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9918" weight="0.33" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1789.8846">
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00444605.1|TREMBL:Q6ZSQ4" n_indistinguishable_proteins="1" probability="0.2478" percent_coverage="5.1" unique_stripped_peptides="EITALAPSTMK" group_sibling_id="f" total_number_peptides="0" subsuming_protein_entry="18protmix|ATBOG|actin IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604 IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091 IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150 IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606 IPI:IPI00515047.1 IPI:IPI00816229.1|TREMBL:Q13707" pct_spectrum_ids="0.19">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="EITALAPSTMK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9911" weight="0.25" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1160.6111">
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="18protmix|ATBOG|actin"/>
+            <peptide_parent_protein protein_name="IPI:IPI00008603.1|SWISS-PROT:P62736|REFSEQ:NP_001604"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021428.1|SWISS-PROT:P68133|REFSEQ:NP_001091"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021439.1|SWISS-PROT:P60709|REFSEQ:NP_001092"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021439.1|SWISS-PROT:P60709|REFSEQ:NP_001092"/>
+            <peptide_parent_protein protein_name="IPI:IPI00021440.1|SWISS-PROT:P63261|REFSEQ:NP_001605"/>
+            <peptide_parent_protein protein_name="IPI:IPI00023006.1|SWISS-PROT:P68032|REFSEQ:NP_005150"/>
+            <peptide_parent_protein protein_name="IPI:IPI00025416.3|SWISS-PROT:P63267|REFSEQ:NP_001606"/>
+            <peptide_parent_protein protein_name="IPI:IPI00414057.2"/>
+            <peptide_parent_protein protein_name="IPI:IPI00514530.4"/>
+            <peptide_parent_protein protein_name="IPI:IPI00515047.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00794523.2"/>
+            <peptide_parent_protein protein_name="IPI:IPI00816229.1|TREMBL:Q13707"/>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="16" pseudo_name="2" probability="0.9999">
+      <protein protein_name="IPI:IPI00179330.6|REFSEQ:NP_002945" n_indistinguishable_proteins="28" probability="0.9996" percent_coverage="32.8" unique_stripped_peptides="TITLEVEPSDTIENVK+TLSDYNIQK" group_sibling_id="a" total_number_peptides="2" pct_spectrum_ids="1.40">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00456429.3|SWISS-PROT:P62987|REFSEQ:NP_001029102;NP_003324">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00654754.1|TREMBL:Q49A90">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00719280.2|REFSEQ:NP_061828">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00743241.1|ENSEMBL:ENSP00000365977">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00743650.1|ENSEMBL:ENSP00000365976">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00744274.1|ENSEMBL:ENSP00000365975">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00783060.1|SWISS-PROT:P62988">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00784990.2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00787573.1|REFSEQ:XP_001132949">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00789107.1|VEGA:OTTHUMP00000169805">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00789823.1|VEGA:OTTHUMP00000169807">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00790633.1|VEGA:OTTHUMP00000169820">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00792139.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00792712.1|VEGA:OTTHUMP00000169806">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00793330.1|VEGA:OTTHUMP00000169809">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00793729.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00793810.1|VEGA:OTTHUMP00000169812">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00794211.1|VEGA:OTTHUMP00000169814">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00794925.1|VEGA:OTTHUMP00000169810">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00795527.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00796007.1|VEGA:OTTHUMP00000169819">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00796600.1|VEGA:OTTHUMP00000169818">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00797400.1|VEGA:OTTHUMP00000169817">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00797482.1|VEGA:OTTHUMP00000041646">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00798127.1|REFSEQ:NP_066289">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00798155.2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="cont|UBIQ_HUMAN">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="TLSDYNIQK" charge="2" initial_probability="0.9957" nsp_adjusted_probability="0.9988" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.87" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="1080.5451">
+         </peptide>
+         <peptide peptide_sequence="TITLEVEPSDTIENVK" charge="2" initial_probability="0.8699" nsp_adjusted_probability="0.9592" weight="0.99" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="1.00" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.87" is_contributing_evidence="Y" calc_neutral_pep_mass="1786.9200">
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00397808.3|REFSEQ:XP_371330;XP_945786" n_indistinguishable_proteins="2" probability="0.0065" unique_stripped_peptides="TLSDYNIQK" group_sibling_id="b" total_number_peptides="0" subsuming_protein_entry="IPI:IPI00179330.6|REFSEQ:NP_002945 IPI:IPI00456429.3|SWISS-PROT:P62987|REFSEQ:NP_001029102;NP_003324 IPI:IPI00654754.1|TREMBL:Q49A90 IPI:IPI00719280.2|REFSEQ:NP_061828 IPI:IPI00743241.1|ENSEMBL:ENSP00000365977 IPI:IPI00743650.1|ENSEMBL:ENSP00000365976 IPI:IPI00744274.1|ENSEMBL:ENSP00000365975 IPI:IPI00783060.1|SWISS-PROT:P62988 IPI:IPI00784990.2 IPI:IPI00787573.1|REFSEQ:XP_001132949 IPI:IPI00789107.1|VEGA:OTTHUMP00000169805 IPI:IPI00789823.1|VEGA:OTTHUMP00000169807 IPI:IPI00790633.1|VEGA:OTTHUMP00000169820 IPI:IPI00792139.1 IPI:IPI00792712.1|VEGA:OTTHUMP00000169806 IPI:IPI00793330.1|VEGA:OTTHUMP00000169809 IPI:IPI00793729.1 IPI:IPI00793810.1|VEGA:OTTHUMP00000169812 IPI:IPI00794211.1|VEGA:OTTHUMP00000169814 IPI:IPI00794925.1|VEGA:OTTHUMP00000169810 IPI:IPI00795527.1 IPI:IPI00796007.1|VEGA:OTTHUMP00000169819 IPI:IPI00796600.1|VEGA:OTTHUMP00000169818 IPI:IPI00797400.1|VEGA:OTTHUMP00000169817 IPI:IPI00797482.1|VEGA:OTTHUMP00000041646 IPI:IPI00798127.1|REFSEQ:NP_066289 IPI:IPI00798155.2 cont|UBIQ_HUMAN" pct_spectrum_ids="0.01">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00783778.1|SWISS-PROT:P62979">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="TLSDYNIQK" charge="2" initial_probability="0.9957" nsp_adjusted_probability="0.9686" weight="0.01" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1080.5451">
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00418813.2" n_indistinguishable_proteins="2" probability="0.0031" unique_stripped_peptides="TITLEVEPSDTIENVK" group_sibling_id="c" total_number_peptides="0" subsuming_protein_entry="IPI:IPI00179330.6|REFSEQ:NP_002945 IPI:IPI00456429.3|SWISS-PROT:P62987|REFSEQ:NP_001029102;NP_003324 IPI:IPI00654754.1|TREMBL:Q49A90 IPI:IPI00719280.2|REFSEQ:NP_061828 IPI:IPI00743241.1|ENSEMBL:ENSP00000365977 IPI:IPI00743650.1|ENSEMBL:ENSP00000365976 IPI:IPI00744274.1|ENSEMBL:ENSP00000365975 IPI:IPI00783060.1|SWISS-PROT:P62988 IPI:IPI00784990.2 IPI:IPI00787573.1|REFSEQ:XP_001132949 IPI:IPI00789107.1|VEGA:OTTHUMP00000169805 IPI:IPI00789823.1|VEGA:OTTHUMP00000169807 IPI:IPI00790633.1|VEGA:OTTHUMP00000169820 IPI:IPI00792139.1 IPI:IPI00792712.1|VEGA:OTTHUMP00000169806 IPI:IPI00793330.1|VEGA:OTTHUMP00000169809 IPI:IPI00793729.1 IPI:IPI00793810.1|VEGA:OTTHUMP00000169812 IPI:IPI00794211.1|VEGA:OTTHUMP00000169814 IPI:IPI00794925.1|VEGA:OTTHUMP00000169810 IPI:IPI00795527.1 IPI:IPI00796007.1|VEGA:OTTHUMP00000169819 IPI:IPI00796600.1|VEGA:OTTHUMP00000169818 IPI:IPI00797400.1|VEGA:OTTHUMP00000169817 IPI:IPI00797482.1|VEGA:OTTHUMP00000041646 IPI:IPI00798127.1|REFSEQ:NP_066289 IPI:IPI00798155.2 cont|UBIQ_HUMAN" pct_spectrum_ids="0.00">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00794205.1|VEGA:OTTHUMP00000180737">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="TITLEVEPSDTIENVK" charge="2" initial_probability="0.8699" nsp_adjusted_probability="0.4712" weight="0.01" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.87" is_contributing_evidence="N" calc_neutral_pep_mass="1786.9200">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="17" probability="0.9911">
+      <protein protein_name="18protmix|P02666|CASB_BOVIN" n_indistinguishable_proteins="1" probability="0.9911" percent_coverage="3.1" unique_stripped_peptides="GPFPIIV" group_sibling_id="a" total_number_peptides="1" pct_spectrum_ids="0.76">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GPFPIIV" charge="1" initial_probability="0.9988" nsp_adjusted_probability="0.9911" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="741.4425">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="18" probability="0.9859">
+      <protein protein_name="18protmix|GAPDH_6D" n_indistinguishable_proteins="1" probability="0.9859" percent_coverage="13.3" unique_stripped_peptides="VGVDGFGR" group_sibling_id="a" total_number_peptides="1" pct_spectrum_ids="0.76">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="VGVDGFGR" charge="2" initial_probability="0.9981" nsp_adjusted_probability="0.9859" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="Y" calc_neutral_pep_mass="805.4083">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="19" probability="0.7526">
+      <protein protein_name="18protmix|P02188|MYG_HORSE" n_indistinguishable_proteins="1" probability="0.7526" percent_coverage="5.2" unique_stripped_peptides="YKELGFQG" group_sibling_id="a" total_number_peptides="1" pct_spectrum_ids="0.73">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="YKELGFQG" charge="2" initial_probability="0.9580" nsp_adjusted_probability="0.7526" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.96" is_contributing_evidence="Y" calc_neutral_pep_mass="940.4654">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="20" probability="0.7218">
+      <protein protein_name="18protmix|P01012|OVAL_CHICK" n_indistinguishable_proteins="1" probability="0.7218" percent_coverage="4.9" unique_stripped_peptides="VTEQESKPVQMMYQIGLFR" group_sibling_id="a" total_number_peptides="1" pct_spectrum_ids="0.72">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="VTEQESKPVQMMYQIGLFR" charge="3" initial_probability="0.9511" nsp_adjusted_probability="0.7218" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.95" is_contributing_evidence="Y" calc_neutral_pep_mass="2283.1392">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="21" probability="0.6350">
+      <protein protein_name="IPI:IPI00216236.3|SWISS-PROT:P48788|REFSEQ:NP_003273" n_indistinguishable_proteins="2" probability="0.6350" percent_coverage="4.4" unique_stripped_peptides="MSADAMLK" group_sibling_id="a" total_number_peptides="1" pct_spectrum_ids="0.70">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00657955.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="MSADAMLK" charge="2" initial_probability="0.9289" nsp_adjusted_probability="0.6350" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.93" is_contributing_evidence="Y" calc_neutral_pep_mass="865.4038">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="22" probability="0.5497">
+      <protein protein_name="IPI:IPI00178146.3|SWISS-PROT:O75764|REFSEQ:NP_003187" n_indistinguishable_proteins="1" probability="0.5497" percent_coverage="2.0" unique_stripped_peptides="EVVSLAK" group_sibling_id="a" total_number_peptides="1" pct_spectrum_ids="0.68">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="EVVSLAK" charge="1" initial_probability="0.9016" nsp_adjusted_probability="0.5497" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.90" is_contributing_evidence="Y" calc_neutral_pep_mass="744.4382">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="23" probability="0.3091">
+      <protein protein_name="IPI:IPI00442171.4|REFSEQ:NP_006027" n_indistinguishable_proteins="3" probability="0.3091" percent_coverage="2.1" unique_stripped_peptides="NCPFQLCSPIRPPK" group_sibling_id="a" total_number_peptides="1" pct_spectrum_ids="0.58">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00619908.2|REFSEQ:NP_001035844">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00816365.1|TREMBL:O43163">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="NCPFQLCSPIRPPK" charge="3" initial_probability="0.7705" nsp_adjusted_probability="0.3091" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.77" is_contributing_evidence="Y" calc_neutral_pep_mass="1598.8061">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="24" probability="0.0000">
+      <protein protein_name="7sensmix|P02787|TRFE_HUMAN" n_indistinguishable_proteins="3" probability="0.0000" unique_stripped_peptides="GDVAFVK" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|Q29443|TRFE_BOVIN 6protmix|Q29443|TRFE_BOVIN 7sensmix|Q29443|TRFE_BOVIN">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00022463.1|SWISS-PROT:P02787|REFSEQ:NP_001054">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00798430.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="GDVAFVK" charge="1" initial_probability="0.5393" nsp_adjusted_probability="0.1349" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.54" is_contributing_evidence="N" calc_neutral_pep_mass="734.3963">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="25" probability="0.0000">
+      <protein protein_name="IPI:IPI00002564.3|SWISS-PROT:P18887|REFSEQ:NP_006288" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="IVCSQPYSK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="IVCSQPYSK" charge="2" initial_probability="0.0931" nsp_adjusted_probability="0.0135" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.09" is_contributing_evidence="N" calc_neutral_pep_mass="1023.5059">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="26" probability="0.0000">
+      <protein protein_name="IPI:IPI00007145.4" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="LNNGGSDSPCDLK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00479368.1|SWISS-PROT:Q7L804|REFSEQ:NP_055719">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="LNNGGSDSPCDLK" charge="2" initial_probability="0.0971" nsp_adjusted_probability="0.0141" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.10" is_contributing_evidence="N" calc_neutral_pep_mass="1318.5823">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="27" probability="0.0000">
+      <protein protein_name="IPI:IPI00009126.1|SWISS-PROT:Q9Y614|REFSEQ:NP_006677" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="WTLVGHELLNTEAPLK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="WTLVGHELLNTEAPLK" charge="2" initial_probability="0.0901" nsp_adjusted_probability="0.0130" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.09" is_contributing_evidence="N" calc_neutral_pep_mass="1819.9832">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="28" probability="0.0000">
+      <protein protein_name="IPI:IPI00014138.1" n_indistinguishable_proteins="3" probability="0.0000" unique_stripped_peptides="HPACMLPPHLR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00641693.2|ENSEMBL:ENSP00000252999">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00783665.2|SWISS-PROT:O15230|REFSEQ:NP_005551">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="HPACMLPPHLR" charge="2" initial_probability="0.5445" nsp_adjusted_probability="0.1374" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.54" is_contributing_evidence="N" calc_neutral_pep_mass="1270.6427">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="29" probability="0.0000">
+      <protein protein_name="IPI:IPI00015526.3|SWISS-PROT:Q9H9B1-1|REFSEQ:NP_079033" n_indistinguishable_proteins="4" probability="0.0000" unique_stripped_peptides="TPSAFPQTPAAPPATLGEGSADTEDRK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00216443.4|SWISS-PROT:Q9H9B1-3">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00384472.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00645334.3|SWISS-PROT:Q9H9B1-2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="TPSAFPQTPAAPPATLGEGSADTEDRK" charge="3" initial_probability="0.0625" nsp_adjusted_probability="0.0088" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="2711.3039">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="30" probability="0.0000">
+      <protein protein_name="IPI:IPI00019690.5|REFSEQ:NP_055939" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="GHLEIALLEK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GHLEIALLEK" charge="2" initial_probability="0.3256" nsp_adjusted_probability="0.0604" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.33" is_contributing_evidence="N" calc_neutral_pep_mass="1121.6445">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="31" probability="0.0000">
+      <protein protein_name="IPI:IPI00021817.1|SWISS-PROT:P04070|REFSEQ:NP_000303" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="EIFQNVDDTLAFWSK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00790031.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="EIFQNVDDTLAFWSK" charge="2" initial_probability="0.2218" nsp_adjusted_probability="0.0366" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.22" is_contributing_evidence="N" calc_neutral_pep_mass="1793.8625">
+<modification_info modified_peptide="E[111]IFQNVDDTLAFWSK">
+<mod_aminoacid_mass position="1" mass="111.031993"/>
+</modification_info>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="32" probability="0.0000">
+      <protein protein_name="IPI:IPI00022325.3|SWISS-PROT:O14511-4|REFSEQ:NP_053586" n_indistinguishable_proteins="6" probability="0.0000" unique_stripped_peptides="SYDSYYYPAAGPGPRR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00217570.1|SWISS-PROT:O14511-2|REFSEQ:NP_053584">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00217571.1|SWISS-PROT:O14511-3|REFSEQ:NP_053585">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00217573.1|SWISS-PROT:O14511-7">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00217574.1|SWISS-PROT:O14511-8">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00477848.1|SWISS-PROT:O14511-1|REFSEQ:NP_004874">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="SYDSYYYPAAGPGPRR" charge="2" initial_probability="0.3250" nsp_adjusted_probability="0.0603" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.32" is_contributing_evidence="N" calc_neutral_pep_mass="1818.8325">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="33" probability="0.0000">
+      <protein protein_name="IPI:IPI00022434.2" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="YLYEIAR" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|P02769|ALBU_BOVIN 6protmix|P02769|ALBU_BOVIN">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00745872.2|SWISS-PROT:P02768-1|REFSEQ:NP_000468">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="YLYEIAR" charge="2" initial_probability="0.9983" nsp_adjusted_probability="0.9874" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="926.4862">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="34" probability="0.0000">
+      <protein protein_name="IPI:IPI00025310.1|SWISS-PROT:O75362|REFSEQ:NP_006517" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="NQDTEDALLTADSAQTK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="NQDTEDALLTADSAQTK" charge="2" initial_probability="0.4939" nsp_adjusted_probability="0.1151" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.49" is_contributing_evidence="N" calc_neutral_pep_mass="1819.8436">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="35" probability="0.0000">
+      <protein protein_name="IPI:IPI00025477.4|SWISS-PROT:Q00975-1|REFSEQ:NP_000709" n_indistinguishable_proteins="5" probability="0.0000" unique_stripped_peptides="GPSLSADMDGAPSSAVGPGLPPGEGPTGCR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00220431.1|SWISS-PROT:Q00975-2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00642867.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00643852.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00645750.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="GPSLSADMDGAPSSAVGPGLPPGEGPTGCR" charge="3" initial_probability="0.1707" nsp_adjusted_probability="0.0267" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.17" is_contributing_evidence="N" calc_neutral_pep_mass="2736.2483">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="36" probability="0.0000">
+      <protein protein_name="IPI:IPI00026133.1|SWISS-PROT:P49190|REFSEQ:NP_005039" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="TPPCGSRR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="TPPCGSRR" charge="2" initial_probability="0.0883" nsp_adjusted_probability="0.0127" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.09" is_contributing_evidence="N" calc_neutral_pep_mass="872.4287">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="37" probability="0.0000">
+      <protein protein_name="IPI:IPI00026827.2|TREMBL:Q4VAU3" n_indistinguishable_proteins="3" probability="0.0000" unique_stripped_peptides="RSVAAGGGGGSGK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00790637.1|SWISS-PROT:P47902-1|REFSEQ:NP_001795">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00795021.1|SWISS-PROT:P47902-2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="RSVAAGGGGGSGK" charge="2" initial_probability="0.0606" nsp_adjusted_probability="0.0085" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="1059.5421">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="38" probability="0.0000">
+      <protein protein_name="IPI:IPI00027720.1|SWISS-PROT:P16233|REFSEQ:NP_000927" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="VTGHILVSLFGNK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="VTGHILVSLFGNK" charge="2" initial_probability="0.0697" nsp_adjusted_probability="0.0099" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.07" is_contributing_evidence="N" calc_neutral_pep_mass="1383.7874">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="39" probability="0.0000">
+      <protein protein_name="IPI:IPI00032541.1|SWISS-PROT:P78386|REFSEQ:NP_002274" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="GLTGFGSR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GLTGFGSR" charge="1" initial_probability="0.5887" nsp_adjusted_probability="0.1602" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.59" is_contributing_evidence="N" calc_neutral_pep_mass="793.4083">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="40" probability="0.0000">
+      <protein protein_name="IPI:IPI00046309.4|SWISS-PROT:Q5KSL6|REFSEQ:NP_001013764" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="QNNTAIVSVILK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="QNNTAIVSVILK" charge="2" initial_probability="0.1154" nsp_adjusted_probability="0.0171" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.12" is_contributing_evidence="N" calc_neutral_pep_mass="1298.7558">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="41" probability="0.0000">
+      <protein protein_name="IPI:IPI00102918.1|SWISS-PROT:Q8WXE1-2|REFSEQ:NP_115542" n_indistinguishable_proteins="5" probability="0.0000" unique_stripped_peptides="DGDPAEGGR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00103517.1|SWISS-PROT:Q8WXE1-1|REFSEQ:NP_569055">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00413576.1|SWISS-PROT:Q8WXE1-3">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00413577.2|SWISS-PROT:Q8WXE1-4">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00797145.1|VEGA:OTTHUMP00000171040">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="DGDPAEGGR" charge="2" initial_probability="0.5591" nsp_adjusted_probability="0.1446" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.56" is_contributing_evidence="N" calc_neutral_pep_mass="872.3624">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="42" probability="0.0000">
+      <protein protein_name="IPI:IPI00103075.1|SWISS-PROT:Q8WV99-1|REFSEQ:NP_620157" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="MEFPDLGAHCSEPSCQR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00743841.1|SWISS-PROT:Q8WV99-2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="MEFPDLGAHCSEPSCQR" charge="3" initial_probability="0.0588" nsp_adjusted_probability="0.0083" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="1905.7808">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="43" probability="0.0000">
+      <protein protein_name="IPI:IPI00153032.1|REFSEQ:NP_116249" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="IQMINGSDLPK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00747786.2|TREMBL:Q96JX8|H-INV:HIT000016314">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="IQMINGSDLPK" charge="2" initial_probability="0.0890" nsp_adjusted_probability="0.0129" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.09" is_contributing_evidence="N" calc_neutral_pep_mass="1214.6329">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="44" probability="0.0000">
+      <protein protein_name="IPI:IPI00158248.3|SWISS-PROT:Q13163-1|REFSEQ:NP_660143" n_indistinguishable_proteins="6" probability="0.0000" unique_stripped_peptides="IAVAVVK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00185860.4|SWISS-PROT:Q13163-3">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00219607.2|SWISS-PROT:Q13163-2|REFSEQ:NP_002748">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00375287.4">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00793897.1|VEGA:OTTHUMP00000070794">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00794558.1|VEGA:OTTHUMP00000070796">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="IAVAVVK" charge="1" initial_probability="0.4999" nsp_adjusted_probability="0.1175" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.50" is_contributing_evidence="N" calc_neutral_pep_mass="698.4691">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="45" probability="0.0000">
+      <protein protein_name="IPI:IPI00166121.2|REFSEQ:NP_653319" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="LSQVPDPPDNMNLAK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="LSQVPDPPDNMNLAK" charge="3" initial_probability="0.1132" nsp_adjusted_probability="0.0167" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.11" is_contributing_evidence="N" calc_neutral_pep_mass="1637.8083">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="46" probability="0.0000">
+      <protein protein_name="IPI:IPI00167391.3|REFSEQ:NP_689637" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="GITSAFPTTASSEPDWR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GITSAFPTTASSEPDWR" charge="2" initial_probability="0.2367" nsp_adjusted_probability="0.0397" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.24" is_contributing_evidence="N" calc_neutral_pep_mass="1821.8533">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="47" probability="0.0000">
+      <protein protein_name="IPI:IPI00169121.1|SWISS-PROT:Q8NGT0|REFSEQ:NP_001001956" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="HLPNR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="HLPNR" charge="1" initial_probability="0.1618" nsp_adjusted_probability="0.0251" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.16" is_contributing_evidence="N" calc_neutral_pep_mass="635.3503">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="48" probability="0.0000">
+      <protein protein_name="IPI:IPI00187082.1" n_indistinguishable_proteins="3" probability="0.0000" unique_stripped_peptides="AMDSNGLSDPYVK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00431791.1|REFSEQ:NP_078993">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00436228.1|REFSEQ:NP_001002796">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="AMDSNGLSDPYVK" charge="2" initial_probability="0.1682" nsp_adjusted_probability="0.0262" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.17" is_contributing_evidence="N" calc_neutral_pep_mass="1395.6340">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="49" probability="0.0000">
+      <protein protein_name="IPI:IPI00216070.3|SWISS-PROT:P05976|REFSEQ:NP_524144" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="ITLSQVGDVLR" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|P02602|MLE1_RABIT cont|P02603|MLE3_RABIT">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00220332.8|SWISS-PROT:P06741|REFSEQ:NP_524146">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="ITLSQVGDVLR" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9925" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1199.6874">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="50" probability="0.0000">
+      <protein protein_name="IPI:IPI00216791.2" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="QGASPLPQGAQSR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="QGASPLPQGAQSR" charge="3" initial_probability="0.0671" nsp_adjusted_probability="0.0095" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.07" is_contributing_evidence="N" calc_neutral_pep_mass="1278.6317">
+<modification_info modified_peptide="Q[111]GASPLPQGAQSR">
+<mod_aminoacid_mass position="1" mass="111.032078"/>
+</modification_info>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="51" probability="0.0000">
+      <protein protein_name="IPI:IPI00217612.2|REFSEQ:NP_775104" n_indistinguishable_proteins="3" probability="0.0000" unique_stripped_peptides="CLVALLGSENDGTK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00478637.3">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00743000.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="CLVALLGSENDGTK" charge="3" initial_probability="0.0627" nsp_adjusted_probability="0.0088" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="1418.7075">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="52" probability="0.0000">
+      <protein protein_name="IPI:IPI00218040.1|SWISS-PROT:P13497-3" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="LPLAAPR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00719138.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="LPLAAPR" charge="1" initial_probability="0.1555" nsp_adjusted_probability="0.0240" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.16" is_contributing_evidence="N" calc_neutral_pep_mass="736.4596">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="53" probability="0.0000">
+      <protein protein_name="IPI:IPI00218414.5|SWISS-PROT:P00918|REFSEQ:NP_000058" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="YAAELHLVHWNTK" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|P00921|CAH2_BOVIN 6protmix|P00921|CAH2_BOVIN">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="YAAELHLVHWNTK" charge="3" initial_probability="0.9859" nsp_adjusted_probability="0.9032" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="N" calc_neutral_pep_mass="1580.8100">
+            <peptide_parent_protein protein_name="18protmix|P00921|CAH2_BOVIN"/>
+            <peptide_parent_protein protein_name="18protmix|P00921|CAH2_BOVIN"/>
+            <peptide_parent_protein protein_name="6protmix|P00921|CAH2_BOVIN"/>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="54" probability="0.0000">
+      <protein protein_name="IPI:IPI00219018.7|SWISS-PROT:P04406|REFSEQ:NP_002037" n_indistinguishable_proteins="6" probability="0.0000" unique_stripped_peptides="RVIISAPSADAPMFVMGVNHEK+VIISAPSADAPMFVMGVNHEK+WGDAGAEYVVESTGVFTTMEK" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|P46406|G3P_RABIT">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00788737.1|VEGA:OTTHUMP00000166332">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00789134.1|VEGA:OTTHUMP00000174433">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00794605.1|VEGA:OTTHUMP00000166340">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00795257.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00797221.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="RVIISAPSADAPMFVMGVNHEK" charge="3" initial_probability="0.9977" nsp_adjusted_probability="0.9830" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="2368.2032">
+         </peptide>
+         <peptide peptide_sequence="VIISAPSADAPMFVMGVNHEK" charge="2" initial_probability="0.5539" nsp_adjusted_probability="0.1420" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.55" is_contributing_evidence="N" calc_neutral_pep_mass="2212.1020">
+         </peptide>
+         <peptide peptide_sequence="WGDAGAEYVVESTGVFTTMEK" charge="2" initial_probability="0.3993" nsp_adjusted_probability="0.0814" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.40" is_contributing_evidence="N" calc_neutral_pep_mass="2276.0307">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="55" probability="0.0000">
+      <protein protein_name="IPI:IPI00291186.6|REFSEQ:NP_620172" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="VSILSFISLTGVVFLIR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00798087.1|TREMBL:Q05C37;Q08AH9">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="VSILSFISLTGVVFLIR" charge="3" initial_probability="0.3855" nsp_adjusted_probability="0.0771" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.39" is_contributing_evidence="N" calc_neutral_pep_mass="1863.1234">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="56" probability="0.0000">
+      <protein protein_name="IPI:IPI00291306.3|SWISS-PROT:O95294-1|REFSEQ:NP_004649" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="SPEWQMCHSIPVSHIR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00796392.1|VEGA:OTTHUMP00000169358">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="SPEWQMCHSIPVSHIR" charge="3" initial_probability="0.3754" nsp_adjusted_probability="0.0742" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.38" is_contributing_evidence="N" calc_neutral_pep_mass="1905.8978">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="57" probability="0.0000">
+      <protein protein_name="IPI:IPI00294879.1|SWISS-PROT:P46060|REFSEQ:NP_002874" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="VIAKALEK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00411570.2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="VIAKALEK" charge="2" initial_probability="0.1093" nsp_adjusted_probability="0.0161" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.11" is_contributing_evidence="N" calc_neutral_pep_mass="870.5539">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="58" probability="0.0000">
+      <protein protein_name="IPI:IPI00298860.5|SWISS-PROT:P02788|REFSEQ:NP_002334" n_indistinguishable_proteins="4" probability="0.0000" unique_stripped_peptides="YYGYTGAFR" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|Q29443|TRFE_BOVIN 6protmix|Q29443|TRFE_BOVIN 7sensmix|Q29443|TRFE_BOVIN">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00788271.1|REFSEQ:XP_001127175">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00789477.1|VEGA:OTTHUMP00000170970">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00790669.1|VEGA:OTTHUMP00000170968">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="YYGYTGAFR" charge="2" initial_probability="0.9668" nsp_adjusted_probability="0.7953" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.97" is_contributing_evidence="N" calc_neutral_pep_mass="1096.4978">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="59" probability="0.0000">
+      <protein protein_name="IPI:IPI00300860.3|SWISS-PROT:Q76G19|REFSEQ:NP_115901" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="KFGLQGDALQSR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="KFGLQGDALQSR" charge="2" initial_probability="0.0543" nsp_adjusted_probability="0.0076" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.05" is_contributing_evidence="N" calc_neutral_pep_mass="1318.6993">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="60" probability="0.0000">
+      <protein protein_name="IPI:IPI00307829.6|REFSEQ:NP_116255" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="TSTLELQNQLDEYK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="TSTLELQNQLDEYK" charge="2" initial_probability="0.0529" nsp_adjusted_probability="0.0074" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.05" is_contributing_evidence="N" calc_neutral_pep_mass="1680.8206">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="61" probability="0.0000">
+      <protein protein_name="IPI:IPI00328216.7|SWISS-PROT:P49796-4|REFSEQ:NP_570613" n_indistinguishable_proteins="5" probability="0.0000" unique_stripped_peptides="TVQTMK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00385923.2|SWISS-PROT:P49796-5|REFSEQ:NP_060260">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00418780.1|SWISS-PROT:P49796-3|REFSEQ:NP_652759">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00604741.1|SWISS-PROT:P49796-6">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00645434.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="TVQTMK" charge="1" initial_probability="0.5218" nsp_adjusted_probability="0.1269" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.52" is_contributing_evidence="N" calc_neutral_pep_mass="706.3684">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="62" probability="0.0000">
+      <protein protein_name="IPI:IPI00329251.4|REFSEQ:NP_689997" n_indistinguishable_proteins="3" probability="0.0000" unique_stripped_peptides="ENYVSCHDPNNNAPLR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00640134.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00744673.1|ENSEMBL:ENSP00000310546">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="ENYVSCHDPNNNAPLR" charge="2" initial_probability="0.5556" nsp_adjusted_probability="0.1428" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.56" is_contributing_evidence="N" calc_neutral_pep_mass="1823.8009">
+<modification_info modified_peptide="E[111]NYVSCHDPNNNAPLR">
+<mod_aminoacid_mass position="1" mass="111.031993"/>
+</modification_info>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="63" probability="0.0000">
+      <protein protein_name="IPI:IPI00329790.1|SWISS-PROT:Q16635-5|REFSEQ:NP_851829" n_indistinguishable_proteins="6" probability="0.0000" unique_stripped_peptides="HMPGAGKR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00446998.1|SWISS-PROT:Q16635-1|REFSEQ:NP_000107">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00470369.2|SWISS-PROT:Q16635-2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00470562.1|SWISS-PROT:Q16635-4">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00470564.1|SWISS-PROT:Q16635-6">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00642200.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="HMPGAGKR" charge="2" initial_probability="0.1168" nsp_adjusted_probability="0.0173" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.12" is_contributing_evidence="N" calc_neutral_pep_mass="852.4388">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="64" probability="0.0000">
+      <protein protein_name="IPI:IPI00375793.4" n_indistinguishable_proteins="5" probability="0.0000" unique_stripped_peptides="YVASVQGSAPSPR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00400950.5|REFSEQ:XP_939206">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00478214.2|REFSEQ:XP_939211">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00736337.1|REFSEQ:XP_935024">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00740507.1|REFSEQ:XP_939208">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="YVASVQGSAPSPR" charge="2" initial_probability="0.0620" nsp_adjusted_probability="0.0087" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="1317.6677">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="65" probability="0.0000">
+      <protein protein_name="IPI:IPI00382716.1|ENSEMBL:ENSP00000334247" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="MIFAGIK" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|P00006|CYC_BOVIN">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="MIFAGIK" charge="1" initial_probability="0.0582" nsp_adjusted_probability="0.0082" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="778.4411">
+            <peptide_parent_protein protein_name="18protmix|P00006|CYC_BOVIN"/>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="66" probability="0.0000">
+      <protein protein_name="IPI:IPI00394834.3" n_indistinguishable_proteins="3" probability="0.0000" unique_stripped_peptides="NNGISVLVVGVGPVLSEGLR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00645921.1|REFSEQ:NP_940898">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00827672.1|TREMBL:A1A5D4">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="NNGISVLVVGVGPVLSEGLR" charge="3" initial_probability="0.0597" nsp_adjusted_probability="0.0084" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="1978.1211">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="67" probability="0.0000">
+      <protein protein_name="IPI:IPI00395878.2|SWISS-PROT:Q8NDV7-1|REFSEQ:NP_055309" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="GPVSSTSDSSTNCK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GPVSSTSDSSTNCK" charge="2" initial_probability="0.0512" nsp_adjusted_probability="0.0071" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.05" is_contributing_evidence="N" calc_neutral_pep_mass="1368.5827">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="68" probability="0.0000">
+      <protein protein_name="IPI:IPI00398491.3" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="QDPLQAFSK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="QDPLQAFSK" charge="2" initial_probability="0.0510" nsp_adjusted_probability="0.0071" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.05" is_contributing_evidence="N" calc_neutral_pep_mass="1015.4975">
+<modification_info modified_peptide="Q[111]DPLQAFSK">
+<mod_aminoacid_mass position="1" mass="111.032078"/>
+</modification_info>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="69" probability="0.0000">
+      <protein protein_name="IPI:IPI00398973.4|REFSEQ:XP_370711;XP_944972" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="QEALCSDGGR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="QEALCSDGGR" charge="2" initial_probability="0.0713" nsp_adjusted_probability="0.0101" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.07" is_contributing_evidence="N" calc_neutral_pep_mass="1017.4186">
+<modification_info modified_peptide="Q[111]EALCSDGGR">
+<mod_aminoacid_mass position="1" mass="111.032078"/>
+</modification_info>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="70" probability="0.0000">
+      <protein protein_name="IPI:IPI00399411.3|SWISS-PROT:P84550" n_indistinguishable_proteins="5" probability="0.0000" unique_stripped_peptides="AGAMPISSRR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00657761.1|TREMBL:Q2VWA5">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00658068.1|REFSEQ:NP_001032891">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00746265.1|ENSEMBL:ENSP00000343200">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00783918.1|REFSEQ:NP_001026977">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="AGAMPISSRR" charge="2" initial_probability="0.1738" nsp_adjusted_probability="0.0273" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.17" is_contributing_evidence="N" calc_neutral_pep_mass="1044.5498">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="71" probability="0.0000">
+      <protein protein_name="IPI:IPI00410572.4|REFSEQ:NP_997397" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="YLALMVSRPVLR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="YLALMVSRPVLR" charge="2" initial_probability="0.1681" nsp_adjusted_probability="0.0262" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.17" is_contributing_evidence="N" calc_neutral_pep_mass="1416.8275">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="72" probability="0.0000">
+      <protein protein_name="IPI:IPI00411656.4|SWISS-PROT:Q9Y6V0-1|REFSEQ:XP_935039" n_indistinguishable_proteins="5" probability="0.0000" unique_stripped_peptides="MEGLPSGTPQSLPK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00736329.2|ENSEMBL:ENSP00000374127">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00740420.2|SWISS-PROT:Q9Y6V0-2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00740863.2|REFSEQ:XP_945898">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00741460.2|REFSEQ:XP_940803">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="MEGLPSGTPQSLPK" charge="3" initial_probability="0.3727" nsp_adjusted_probability="0.0734" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.37" is_contributing_evidence="N" calc_neutral_pep_mass="1440.7283">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="73" probability="0.0000">
+      <protein protein_name="IPI:IPI00413272.3|SWISS-PROT:Q9ULK4-3|REFSEQ:NP_057063" n_indistinguishable_proteins="5" probability="0.0000" unique_stripped_peptides="MSLIHSIATR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00472333.1|SWISS-PROT:Q9ULK4-2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00477404.1|SWISS-PROT:Q9ULK4-1|REFSEQ:NP_004821">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00479534.3">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <indistinguishable_protein protein_name="IPI:IPI00646226.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="MSLIHSIATR" charge="2" initial_probability="0.1723" nsp_adjusted_probability="0.0270" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.17" is_contributing_evidence="N" calc_neutral_pep_mass="1127.6121">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="74" probability="0.0000">
+      <protein protein_name="IPI:IPI00418421.3|SWISS-PROT:Q6ZMS7|REFSEQ:NP_001004302" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="QQQDSEAR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="QQQDSEAR" charge="2" initial_probability="0.1039" nsp_adjusted_probability="0.0152" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.10" is_contributing_evidence="N" calc_neutral_pep_mass="960.4261">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="75" probability="0.0000">
+      <protein protein_name="IPI:IPI00432278.1|SWISS-PROT:Q96N46-2|REFSEQ:NP_001036066" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="KALALDETFK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00550503.2|SWISS-PROT:Q96N46-1|REFSEQ:NP_597719">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="KALALDETFK" charge="2" initial_probability="0.1309" nsp_adjusted_probability="0.0197" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.13" is_contributing_evidence="N" calc_neutral_pep_mass="1134.6285">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="76" probability="0.0000">
+      <protein protein_name="IPI:IPI00455733.3|REFSEQ:XP_496826;XP_946900" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="TPPSAASSR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="TPPSAASSR" charge="2" initial_probability="0.2680" nsp_adjusted_probability="0.0465" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.27" is_contributing_evidence="N" calc_neutral_pep_mass="872.4352">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="77" probability="0.0000">
+      <protein protein_name="IPI:IPI00465315.6|SWISS-PROT:P99999|REFSEQ:NP_061820" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="TGPNLHGLFGR" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|P00006|CYC_BOVIN">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="TGPNLHGLFGR" charge="2" initial_probability="0.9974" nsp_adjusted_probability="0.9808" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1167.6149">
+            <peptide_parent_protein protein_name="18protmix|P00006|CYC_BOVIN"/>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="78" probability="0.0000">
+      <protein protein_name="IPI:IPI00470597.3|REFSEQ:NP_569733;NP_904324" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="NQTAALISGFR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00798412.1">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="NQTAALISGFR" charge="2" initial_probability="0.0629" nsp_adjusted_probability="0.0089" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="1176.6251">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="79" probability="0.0000">
+      <protein protein_name="IPI:IPI00479548.3|SWISS-PROT:Q58F21-1|REFSEQ:NP_001717;NP_997072" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="KHLEQNTK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00759691.1|SWISS-PROT:Q58F21-2">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="KHLEQNTK" charge="2" initial_probability="0.1999" nsp_adjusted_probability="0.0322" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.20" is_contributing_evidence="N" calc_neutral_pep_mass="996.5352">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="80" probability="0.0000">
+      <protein protein_name="IPI:IPI00646012.1" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="SAFAPVLRPPSSPPQACPR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="SAFAPVLRPPSSPPQACPR" charge="2" initial_probability="0.0515" nsp_adjusted_probability="0.0072" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.05" is_contributing_evidence="N" calc_neutral_pep_mass="1977.0255">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="81" probability="0.0000">
+      <protein protein_name="IPI:IPI00739940.4|SWISS-PROT:O94915-1|REFSEQ:NP_055845" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="LLIHLPLDK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00787681.1|ENSEMBL:ENSP00000264319">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="LLIHLPLDK" charge="2" initial_probability="0.0939" nsp_adjusted_probability="0.0136" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.09" is_contributing_evidence="N" calc_neutral_pep_mass="1060.6645">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="82" probability="0.0000">
+      <protein protein_name="IPI:IPI00743310.1|H-INV:HIT000327955" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="SQDCLGLLAXLASAAEVFSTAPVSGK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="SQDCLGLLAXLASAAEVFSTAPVSGK" charge="3" initial_probability="0.6234" nsp_adjusted_probability="0.1807" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.62" is_contributing_evidence="N" calc_neutral_pep_mass="2545.3014">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="83" probability="0.0000">
+      <protein protein_name="IPI:IPI00748407.1|H-INV:HIT000095063" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="KLTQNCSTTWK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="KLTQNCSTTWK" charge="3" initial_probability="0.3132" nsp_adjusted_probability="0.0573" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.31" is_contributing_evidence="N" calc_neutral_pep_mass="1308.6496">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="84" probability="0.0000">
+      <protein protein_name="IPI:IPI00787285.1|SWISS-PROT:Q9BZE9-3" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="CLLSSVITPPK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="CLLSSVITPPK" charge="2" initial_probability="0.1468" nsp_adjusted_probability="0.0224" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.15" is_contributing_evidence="N" calc_neutral_pep_mass="1156.6526">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="85" probability="0.0000">
+      <protein protein_name="IPI:IPI00788164.1|REFSEQ:XP_001132691" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="RAKPGVPSPGVVR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="RAKPGVPSPGVVR" charge="2" initial_probability="0.0761" nsp_adjusted_probability="0.0109" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.08" is_contributing_evidence="N" calc_neutral_pep_mass="1318.7834">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="86" probability="0.0000">
+      <protein protein_name="IPI:IPI00788981.1|VEGA:OTTHUMP00000182591" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="EAEAELEPQAQAR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="EAEAELEPQAQAR" charge="3" initial_probability="0.0581" nsp_adjusted_probability="0.0082" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.06" is_contributing_evidence="N" calc_neutral_pep_mass="1440.6845">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="87" probability="0.0000">
+      <protein protein_name="IPI:IPI00789266.1|REFSEQ:NP_001026918" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="LDVAIQCDLISK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00795582.1|VEGA:OTTHUMP00000164935">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="LDVAIQCDLISK" charge="2" initial_probability="0.0672" nsp_adjusted_probability="0.0095" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.07" is_contributing_evidence="N" calc_neutral_pep_mass="1316.7010">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="88" probability="0.0000">
+      <protein protein_name="IPI:IPI00792353.1" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="EINFHSAAPACRR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="EINFHSAAPACRR" charge="2" initial_probability="0.3628" nsp_adjusted_probability="0.0705" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.36" is_contributing_evidence="N" calc_neutral_pep_mass="1470.7150">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="89" probability="0.0000">
+      <protein protein_name="IPI:IPI00794407.1|VEGA:OTTHUMP00000169834" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="IASHNSTATVK" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="IASHNSTATVK" charge="2" initial_probability="0.2818" nsp_adjusted_probability="0.0497" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.28" is_contributing_evidence="N" calc_neutral_pep_mass="1127.5935">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="90" probability="0.0000">
+      <protein protein_name="IPI:IPI00798214.1|REFSEQ:XP_001134418;XP_001134426" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="SSHVR" group_sibling_id="a" total_number_peptides="0">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="SSHVR" charge="1" initial_probability="0.1311" nsp_adjusted_probability="0.0197" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.13" is_contributing_evidence="N" calc_neutral_pep_mass="584.3031">
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="91" pseudo_name="3" probability="0.0000">
+      <protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="VLYPNDNFFEGK+YEFGIFNQK+YGNPWEK" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|P00489|PHS2_RABIT">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="YEFGIFNQK" charge="2" initial_probability="0.9985" nsp_adjusted_probability="0.9889" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1144.5553">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="YGNPWEK" charge="2" initial_probability="0.9796" nsp_adjusted_probability="0.8649" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="N" calc_neutral_pep_mass="892.4079">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+            <peptide_parent_protein protein_name="IPI:IPI00787186.1|TREMBL:Q6P1L4"/>
+         </peptide>
+         <peptide peptide_sequence="VLYPNDNFFEGK" charge="2" initial_probability="0.9388" nsp_adjusted_probability="0.6713" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.94" is_contributing_evidence="N" calc_neutral_pep_mass="1441.6878">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="EIWGVEPSR+FAAYLER+GLAGVENVTELK+GLAGVENVTELKK+MSLVEEGAVK+VAAAFPGDVDR+VIPAADLSEQISTAGTEASGTGNMK+VLYPNDNFFEGK+YEFGIFNQK+YGNPWEK" group_sibling_id="b" total_number_peptides="0" subsuming_protein_entry="18protmix|P00489|PHS2_RABIT">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GLAGVENVTELK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9925" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1228.6663">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="MSLVEEGAVK" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9918" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1061.5427">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="VIPAADLSEQISTAGTEASGTGNMK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9911" peptide_group_designator="a" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="2447.1850">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="YEFGIFNQK" charge="2" initial_probability="0.9985" nsp_adjusted_probability="0.9889" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1144.5553">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+         </peptide>
+         <peptide peptide_sequence="EIWGVEPSR" charge="2" initial_probability="0.9981" nsp_adjusted_probability="0.9859" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1071.5349">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="VIPAADLSEQISTAGTEASGTGNMK" charge="3" initial_probability="0.9977" nsp_adjusted_probability="0.9830" peptide_group_designator="a" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="2447.1850">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="FAAYLER" charge="2" initial_probability="0.9953" nsp_adjusted_probability="0.9658" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="868.4443">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="VAAAFPGDVDR" charge="2" initial_probability="0.9881" nsp_adjusted_probability="0.9172" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="N" calc_neutral_pep_mass="1116.5564">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+         <peptide peptide_sequence="YGNPWEK" charge="2" initial_probability="0.9796" nsp_adjusted_probability="0.8649" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="N" calc_neutral_pep_mass="892.4079">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+            <peptide_parent_protein protein_name="IPI:IPI00787186.1|TREMBL:Q6P1L4"/>
+         </peptide>
+         <peptide peptide_sequence="VLYPNDNFFEGK" charge="2" initial_probability="0.9388" nsp_adjusted_probability="0.6713" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.94" is_contributing_evidence="N" calc_neutral_pep_mass="1441.6878">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+         </peptide>
+         <peptide peptide_sequence="GLAGVENVTELKK" charge="2" initial_probability="0.9229" nsp_adjusted_probability="0.6146" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.92" is_contributing_evidence="N" calc_neutral_pep_mass="1356.7613">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854" n_indistinguishable_proteins="2" probability="0.0000" unique_stripped_peptides="VLYPNDNFFEGK+YGNPWEK" group_sibling_id="c" total_number_peptides="0" subsuming_protein_entry="18protmix|P00489|PHS2_RABIT">
+         <annotation protein_description=""/>
+         <indistinguishable_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392">
+            <annotation protein_description=""/>
+         </indistinguishable_protein>
+         <peptide peptide_sequence="YGNPWEK" charge="2" initial_probability="0.9796" nsp_adjusted_probability="0.8649" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="N" calc_neutral_pep_mass="892.4079">
+         </peptide>
+         <peptide peptide_sequence="VLYPNDNFFEGK" charge="2" initial_probability="0.9388" nsp_adjusted_probability="0.6713" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.94" is_contributing_evidence="N" calc_neutral_pep_mass="1441.6878">
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00657751.1" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="EIWGVEPSR+FAAYLER+GLAGVENVTELK+GLAGVENVTELKK+MSLVEEGAVK+VAAAFPGDVDR+VIPAADLSEQISTAGTEASGTGNMK+VLYPNDNFFEGK+YGNPWEK" group_sibling_id="d" total_number_peptides="0" subsuming_protein_entry="18protmix|P00489|PHS2_RABIT">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GLAGVENVTELK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9925" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1228.6663">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="MSLVEEGAVK" charge="2" initial_probability="0.9989" nsp_adjusted_probability="0.9918" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1061.5427">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="VIPAADLSEQISTAGTEASGTGNMK" charge="2" initial_probability="0.9988" nsp_adjusted_probability="0.9911" peptide_group_designator="a" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="2447.1850">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="EIWGVEPSR" charge="2" initial_probability="0.9981" nsp_adjusted_probability="0.9859" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="1071.5349">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="VIPAADLSEQISTAGTEASGTGNMK" charge="3" initial_probability="0.9977" nsp_adjusted_probability="0.9830" peptide_group_designator="a" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="2447.1850">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="FAAYLER" charge="2" initial_probability="0.9953" nsp_adjusted_probability="0.9658" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="868.4443">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="VAAAFPGDVDR" charge="2" initial_probability="0.9881" nsp_adjusted_probability="0.9172" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.99" is_contributing_evidence="N" calc_neutral_pep_mass="1116.5564">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+         <peptide peptide_sequence="YGNPWEK" charge="2" initial_probability="0.9796" nsp_adjusted_probability="0.8649" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="N" calc_neutral_pep_mass="892.4079">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+            <peptide_parent_protein protein_name="IPI:IPI00787186.1|TREMBL:Q6P1L4"/>
+         </peptide>
+         <peptide peptide_sequence="VLYPNDNFFEGK" charge="2" initial_probability="0.9388" nsp_adjusted_probability="0.6713" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.94" is_contributing_evidence="N" calc_neutral_pep_mass="1441.6878">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+         </peptide>
+         <peptide peptide_sequence="GLAGVENVTELKK" charge="2" initial_probability="0.9229" nsp_adjusted_probability="0.6146" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.92" is_contributing_evidence="N" calc_neutral_pep_mass="1356.7613">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00787186.1|TREMBL:Q6P1L4" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="YGNPWEK" group_sibling_id="e" total_number_peptides="0" subsuming_protein_entry="18protmix|P00489|PHS2_RABIT">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="YGNPWEK" charge="2" initial_probability="0.9796" nsp_adjusted_probability="0.8649" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="N" calc_neutral_pep_mass="892.4079">
+            <peptide_parent_protein protein_name="18protmix|P00489|PHS2_RABIT"/>
+            <peptide_parent_protein protein_name="IPI:IPI00004358.4|SWISS-PROT:P11216|REFSEQ:NP_002853"/>
+            <peptide_parent_protein protein_name="IPI:IPI00218130.3|SWISS-PROT:P11217|REFSEQ:NP_005600"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00470525.5|SWISS-PROT:P06737|REFSEQ:NP_002854"/>
+            <peptide_parent_protein protein_name="IPI:IPI00657751.1"/>
+            <peptide_parent_protein protein_name="IPI:IPI00783313.1|ENSEMBL:ENSP00000216392"/>
+         </peptide>
+      </protein>
+</protein_group>
+<protein_group group_number="92" pseudo_name="4" probability="0.0000">
+      <protein protein_name="IPI:IPI00465436.4|SWISS-PROT:P04040|REFSEQ:NP_001743" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="GPLLVQDVVFTDEMAHFDR+LFAYPDTHR+NLSVEDAAR" group_sibling_id="a" total_number_peptides="0" subsuming_protein_entry="18protmix|P00432|CATA_BOVIN 6protmix|P00432|CATA_BOVIN">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="GPLLVQDVVFTDEMAHFDR" charge="3" initial_probability="0.9988" nsp_adjusted_probability="0.9911" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="2188.0623">
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="6protmix|P00432|CATA_BOVIN"/>
+         </peptide>
+         <peptide peptide_sequence="NLSVEDAAR" charge="2" initial_probability="0.9965" nsp_adjusted_probability="0.9743" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="973.4829">
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="6protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="IPI:IPI00794372.1|VEGA:OTTHUMP00000042526"/>
+         </peptide>
+         <peptide peptide_sequence="LFAYPDTHR" charge="2" initial_probability="0.9841" nsp_adjusted_probability="0.8919" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="N" calc_neutral_pep_mass="1118.5509">
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="6protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="IPI:IPI00797319.1|VEGA:OTTHUMP00000042527"/>
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00794372.1|VEGA:OTTHUMP00000042526" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="NLSVEDAAR" group_sibling_id="b" total_number_peptides="0" subsuming_protein_entry="18protmix|P00432|CATA_BOVIN 6protmix|P00432|CATA_BOVIN">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="NLSVEDAAR" charge="2" initial_probability="0.9965" nsp_adjusted_probability="0.9743" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="1.00" is_contributing_evidence="N" calc_neutral_pep_mass="973.4829">
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="6protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="IPI:IPI00465436.4|SWISS-PROT:P04040|REFSEQ:NP_001743"/>
+         </peptide>
+      </protein>
+      <protein protein_name="IPI:IPI00797319.1|VEGA:OTTHUMP00000042527" n_indistinguishable_proteins="1" probability="0.0000" unique_stripped_peptides="LFAYPDTHR" group_sibling_id="c" total_number_peptides="0" subsuming_protein_entry="18protmix|P00432|CATA_BOVIN 6protmix|P00432|CATA_BOVIN">
+         <annotation protein_description=""/>
+         <peptide peptide_sequence="LFAYPDTHR" charge="2" initial_probability="0.9841" nsp_adjusted_probability="0.8919" weight="0.00" is_nondegenerate_evidence="N" n_enzymatic_termini="2" n_sibling_peptides="0.00" n_sibling_peptides_bin="0" n_instances="1" exp_tot_instances="0.98" is_contributing_evidence="N" calc_neutral_pep_mass="1118.5509">
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="18protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="6protmix|P00432|CATA_BOVIN"/>
+            <peptide_parent_protein protein_name="IPI:IPI00465436.4|SWISS-PROT:P04040|REFSEQ:NP_001743"/>
+         </peptide>
+      </protein>
+</protein_group>
+</protein_summary>

@@ -1,0 +1,67 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="geriatrics" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <columnTitle>TB Date</columnTitle>
+                    </column>
+                    <column columnName="groupName">
+                        <columnTitle>Group Name</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>geriatricGroups</fkTable>
+                            <fkColumnName>name</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="dead">
+                        <columnTitle>Dead?</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>general_obs_types</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="cl_comment">
+                        <columnTitle>CL Comment</columnTitle>
+                    </column>
+                    <column columnName="rank">
+                        <columnTitle>Rank Description</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>geriatric_ranking</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>Description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="rankDate">
+                        <columnTitle>Rank Date</columnTitle>
+                    </column>
+                    <column columnName="cbcDate">
+                        <columnTitle>CBC Date</columnTitle>
+                    </column>
+                    <column columnName="chemDate">
+                        <columnTitle>Chem Date</columnTitle>
+                    </column>
+                    <column columnName="uaDate">
+                        <columnTitle>UA Date</columnTitle>
+                    </column>
+                    <column columnName="addedDate">
+                        <columnTitle>Added Date</columnTitle>
+                    </column>
+                    <column columnName="foDate">
+                        <columnTitle>FO Date</columnTitle>
+                    </column>
+                    <column columnName="bodyCondition">
+                        <columnTitle>Body Condition</columnTitle>
+                    </column>
+                    <column columnName="abdominalScore">
+                        <columnTitle>Abdominal Score</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

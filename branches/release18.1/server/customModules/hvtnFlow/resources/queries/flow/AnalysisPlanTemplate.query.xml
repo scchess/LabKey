@@ -1,0 +1,115 @@
+<query xmlns="http://labkey.org/data/xml/query" hidden="true">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="SCHARP" tableDbType="NOT_IN_DB">
+                <columns>
+
+                    <column columnName="PROTOCOL">
+                        <formatString>000.###</formatString>
+                    </column>
+
+                    <column columnName="VISITNO">
+                        <formatString>0.0</formatString>
+                    </column>
+
+                    <column columnName="PREFZCT">
+                        <formatString>0.0</formatString>
+                    </column>
+
+                    <column columnName="DRAWDT">
+                        <formatString>MM/dd/yyyy</formatString>
+                    </column>
+
+                    <column columnName="TESTDT">
+                        <formatString>MM/dd/yyyy</formatString>
+                    </column>
+
+                    <column columnName="MODDT">
+                        <formatString>MM/dd/yyyy</formatString>
+                    </column>
+
+                    <column columnName="PLT_TEMPLATE">
+                        <columnTitle>PLT_TEMPLATE</columnTitle>
+                    </column>
+
+                    <column columnName="STDY_DESC">
+                        <columnTitle>STDY_DESC</columnTitle>
+                    </column>
+
+                    <column columnName="SAMP_ORD">
+                        <columnTitle>SAMP_ORD</columnTitle>
+                    </column>
+
+                    <column columnName="WELL_ID">
+                        <columnTitle>WELL_ID</columnTitle>
+                    </column>
+
+                    <column columnName="ANALYSIS_PLAN_ID">
+                        <columnTitle>ANALYSIS_PLAN_ID</columnTitle>
+                    </column>
+
+                    <column columnName="EXP_ASSAY_ID">
+                        <columnTitle>EXP_ASSAY_ID</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET1_NUM">
+                        <columnTitle>SUBSET1_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET2_NUM">
+                        <columnTitle>SUBSET2_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET3_NUM">
+                        <columnTitle>SUBSET3_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET4_NUM">
+                        <columnTitle>SUBSET4_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET5_NUM">
+                        <columnTitle>SUBSET5_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET6_NUM">
+                        <columnTitle>SUBSET6_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET7_NUM">
+                        <columnTitle>SUBSET7_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET8_NUM">
+                        <columnTitle>SUBSET8_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET9_NUM">
+                        <columnTitle>SUBSET9_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="SUBSET10_NUM">
+                        <columnTitle>SUBSET10_NUM</columnTitle>
+                    </column>
+
+                    <column columnName="VIAL1_ID">
+                        <columnTitle>VIAL1_ID</columnTitle>
+                    </column>
+
+                    <column columnName="VIAL2_ID">
+                        <columnTitle>VIAL2_ID</columnTitle>
+                    </column>
+
+                    <column columnName="VIAL3_ID">
+                        <columnTitle>VIAL3_ID</columnTitle>
+                    </column>
+
+                    <column columnName="VIAL4_ID">
+                        <columnTitle>VIAL4_ID</columnTitle>
+                    </column>
+
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

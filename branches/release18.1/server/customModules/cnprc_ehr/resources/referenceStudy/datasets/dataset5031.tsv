@@ -1,0 +1,5 @@
+"id"	"snoPk"	"date"	"infoQualifier"	"snoFk"	"foreignSeq"	"snoSeq"	"timeQualifier"	"syntacticLink"	"subjectType"	"QCStateLabel"	"objectId"
+"TEST3804589"	"12350"	"2015-04-21 00:00"	"CT"	""	"1"	"1"	"DY3"	""	"A"	"Completed"	"dbe961b9-b7ba-102d-8c2a-9926f351b9ae"
+"TEST2312318"	"12351"	"2012-07-17 00:00"	"NF"	""	"1"	"1"	"DY3"	""	"A"	"Completed"	"dbee90d4-b9ba-102d-8c2a-9926f351b9ae"
+"TEST2"	"12352"	"2012-05-01 00:00"	"NG"	""	"0"	"1"	""	""	"A"	"Completed"	"e1bbef52-70ae-102e-8c2a-9926f351b9ae"
+"TEST6390238"	"12353"	"2012-05-01 00:00"	"CT"	""	"0"	"1"	""	""	"A"	"Completed"	"e1bbef53-70ae-102e-8c2a-9926f351b9ae"

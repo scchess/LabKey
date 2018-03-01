@@ -1,0 +1,46 @@
+<ap:domain xmlns:exp="http://cpas.fhcrc.org/exp/xml" xmlns:ap="http://labkey.org/study/assay/xml">
+  <exp:Description>Assay results</exp:Description>
+  <exp:PropertyDescriptor>
+    <exp:PropertyURI></exp:PropertyURI>
+    <exp:Name>ParticipantID</exp:Name>
+    <exp:Description>The Animal Id</exp:Description>
+    <exp:RangeURI>http://www.w3.org/2001/XMLSchema#string</exp:RangeURI>
+    <exp:Label>Animal Id</exp:Label>
+  </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>Date</exp:Name>
+      <exp:Description>Used with ParticipantID to identify subject and timepoint for assay.</exp:Description>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#dateTime</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>Titer</exp:Name>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#int</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>TiterOORIndicator</exp:Name>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#string</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>SampleIndex</exp:Name>
+      <exp:Description>Sample number on the plate</exp:Description>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#int</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>Status</exp:Name>
+      <exp:Description>Is this result approved or rejected</exp:Description>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#string</exp:RangeURI>
+    </exp:PropertyDescriptor>
+    <exp:PropertyDescriptor>
+      <exp:PropertyURI></exp:PropertyURI>
+      <exp:Name>Note</exp:Name>
+      <exp:Description>Comment on this result</exp:Description>
+      <exp:RangeURI>http://www.w3.org/2001/XMLSchema#string</exp:RangeURI>
+    </exp:PropertyDescriptor>
+
+</ap:domain>
+

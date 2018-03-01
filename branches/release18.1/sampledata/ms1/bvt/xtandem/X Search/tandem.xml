@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bioml>
+  <!-- Override default parameters here. -->
+  <note label="pipeline, protocol name" type="input">X Search</note>
+  <note label="pipeline, protocol description" type="input"/>
+  <note label="pipeline, database" type="input">ipi_human_plus.fasta</note>
+  <note label="pipeline, email address" type="input">daves@labkey.com</note>
+  <note label="pipeline, load folder" type="input">/PipelineTest</note>
+</bioml>

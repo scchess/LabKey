@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+    <name>Pathology Inventory Checkout</name>
+    <description>Record of samples checked out and to whom</description>
+    <transforms>
+        <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+            <description>Copy to target</description>
+            <source schemaName="cnprcSrc" queryName="q_path_inv_checkout"/>
+            <destination schemaName="cnprc_ehr" queryName="path_inv_checkout" bulkLoad="true" targetOption="merge">
+                <alternateKeys>
+                    <column name="objectid"/>
+                </alternateKeys>
+            </destination>
+        </transform>
+    </transforms>
+    <incrementalFilter className="ModifiedSinceFilterStrategy" timestampColumnName="date_time">
+        <deletedRowsSource schemaName="cnprcSrc_aud" queryName="q_path_inv_checkout_delete" timestampColumnName="date_time" deletedSourceKeyColumnName="objectid" targetKeyColumnName="objectid"/>
+    </incrementalFilter>
+    <schedule>
+        <poll interval="60m" />
+    </schedule>
+</etl>

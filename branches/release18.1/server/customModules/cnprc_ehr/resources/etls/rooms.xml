@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etl xmlns="http://labkey.org/etl/xml">
+<name>Rooms</name>
+<description>Rooms Lookup</description>
+<transforms>
+    <transform id="step1" type="org.labkey.di.pipeline.TransformTask">
+        <description>Copy to target</description>
+        <source schemaName="cnprcSrc" queryName="q_rooms"/>
+        <destination schemaName="ehr_lookups" queryName="rooms" bulkLoad="true" targetOption="truncate"/>
+    </transform>
+    <transform id="step2" type="org.labkey.di.pipeline.TransformTask">
+        <description>Copy to target</description>
+        <source schemaName="cnprcSrc" queryName="q_room_enclosure"/>
+        <destination schemaName="cnprc_ehr" queryName="room_enclosure" bulkLoad="true" targetOption="truncate"/>
+    </transform>
+</transforms>
+<schedule>
+    <poll interval="60m" />
+</schedule>
+</etl>

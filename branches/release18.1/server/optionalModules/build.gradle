@@ -1,0 +1,13 @@
+import org.labkey.gradle.util.ModuleFinder
+
+subprojects { Project p ->
+    // HACK!  hutch_abstraction is a container for modules, so we shouldn't apply the plugins there.
+    if (p.projectDir.exists() && ModuleFinder.isPotentialModule(p) && !p.name.equals('hutch_abstraction'))
+    {
+        apply plugin: 'java'
+        if (p.file("src").exists())
+            apply plugin: 'org.labkey.module'
+        else
+            apply plugin: 'org.labkey.fileModule'
+    }
+}

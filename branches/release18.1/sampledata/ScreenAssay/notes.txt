@@ -1,0 +1,5 @@
+From Jing Li at Duke, on 4/2/2007:
+
+As a follow-up of last conference call, I am sending this email to provide you some information about current screen assay tool. Since you have worked on the similar project for us before, this time I think that it will be easy and self-explaining to send you the tool and some raw data files. And compared to neutralization assay tool for five samples per plate, data analysis for this assay is quite simple and straightforward.
+
+Please check the attachments for Excel Macro (LucScreen1p03.xlt) and one raw data file (W20041008; 752.xls).  You can find the calculation formula in the Excel spreadsheet.  Experiment results will be shown in the range (G21:I46) of the spreadsheet.  User usually click “Get Data” button and locate the raw data file, enter the experiment information highlighted using blue font color in the spreadsheet. Then user save the reports on the server here (this function is not included in this macro) and print the data reports, sign it and give to PI to review.  Attached also includes assay template for screening 1 post immunization samples against a single pre-bleed.

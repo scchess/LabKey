@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+ * Copyright (c) 2016-2017 LabKey Corporation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+
+ -->
+<tables xsi:schemaLocation="http://labkey.org/data/xml ..\..\..\..\schemas\tableInfo.xsd" xmlns="http://labkey.org/data/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <table tableName="protocol_exceptions" tableDbType="TABLE">
+        <columns>
+            <column columnName="id"/>
+            <column columnName="protocol"/>
+            <column columnName="animalId"/>
+            <column columnName="exceptionCode"/>
+            <column columnName="comments"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="spf_status" tableDbType="TABLE">
+        <columns>
+            <column columnName="id"/>
+            <column columnName="name"/>
+            <column columnName="status"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="breedingRoster" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="animalId"/>
+            <column columnName="book"/>
+            <column columnName="maleEnemy1"/>
+            <column columnName="maleEnemy2"/>
+            <column columnName="maleEnemy3"/>
+            <column columnName="maleEnemy4"/>
+            <column columnName="maleEnemy5"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="geriatricGroups" tableDbType="TABLE">
+        <columns>
+            <column columnName="id"/>
+            <column columnName="name"/>
+            <column columnName="next_pedate"/>
+            <column columnName="comment"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="cage_observations" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="date"/>
+            <column columnName="fulldate"/>
+            <column columnName="room"/>
+            <column columnName="cage"/>
+            <column columnName="area"/>
+            <column columnName="sequence"/>
+            <column columnName="remark"/>
+            <column columnName="observation"/>
+            <column columnName="fileNum"/>
+            <column columnName="recordType"/>
+            <column columnName="recordStatus"/>
+            <column columnName="obsCode1"/>
+            <column columnName="obsCode2"/>
+            <column columnName="obsCode3"/>
+            <column columnName="obsCode4"/>
+            <column columnName="technician"/>
+            <column columnName="attendant"/>
+            <column columnName="userid"/>
+            <column columnName="taskid"/>
+            <column columnName="parentid"/>
+            <column columnName="qcstate"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="observation_types" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="obsCode"/>
+            <column columnName="snomedCode"/>
+            <column columnName="pregnancyDisplayFlag"/>
+            <column columnName="visualSignsOnlyFlag"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+
+    <table tableName="protocol" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="protocol"/>
+            <column columnName="originalProtocol"/>
+            <column columnName="ciPersonId"/>
+            <column columnName="title"/>
+            <column columnName="approved"/>
+            <column columnName="committeeResponseDate"/>
+            <column columnName="sp1Code"/>
+            <column columnName="sp1InitialAllowed"/>
+            <column columnName="sp1TotalAllowed"/>
+            <column columnName="sp2Code"/>
+            <column columnName="sp2InitialAllowed"/>
+            <column columnName="sp2TotalAllowed"/>
+            <column columnName="animalAlertThreshold"/>
+            <column columnName="aidsRelated"/>
+            <column columnName="phsRelated"/>
+            <column columnName="primateProject"/>
+            <column columnName="protocolPainCategory"/>
+            <column columnName="pairingExemption"/>
+            <column columnName="studyComment"/>
+            <column columnName="foodExemption"/>
+            <column columnName="renewProtocol"/>
+            <column columnName="protocolNumberYear"/>
+            <column columnName="piPersonId"/>
+            <column columnName="protocolBeginDate"/>
+            <column columnName="protocolEndDate"/>
+            <column columnName="projectType"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+
+    <table tableName="protocol_amendments" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="protocolamendmentid"/>
+            <column columnName="protocol"/>
+            <column columnName="committeeResponseDate"/>
+            <column columnName="approved"/>
+            <column columnName="sp1AdditionalAllowed"/>
+            <column columnName="sp2AdditionalAllowed"/>
+            <column columnName="amendmentComments"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="formula_control" tableDbType="TABLE">
+        <columns>
+            <column columnName="formula_control_id"/>
+            <column columnName="active"/>
+            <column columnName="concentration_units"/>
+            <column columnName="dose_units"/>
+            <column columnName="dose_by_weight"/>
+            <column columnName="total_dose_units"/>
+            <column columnName="treatment_volume_units"/>
+            <column columnName="scaling_multiplier"/>
+            <column columnName="fc_comments"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="formulary_dosing" tableDbType="TABLE">
+        <columns>
+            <column columnName="formulary_dosing_id"/>
+            <column columnName="formulary_name_fk"/>
+            <column columnName="dosing_record_active"/>
+            <column columnName="formulary_data_complete"/>
+            <column columnName="drug_format_description"/>
+            <column columnName="concentration_units"/>
+            <column columnName="concentration_per_unit"/>
+            <column columnName="dose_units"/>
+            <column columnName="dose_per_unit"/>
+            <column columnName="dose_per_unit_min"/>
+            <column columnName="dose_per_unit_max"/>
+            <column columnName="route"/>
+            <column columnName="frequency"/>
+            <column columnName="days_duration"/>
+            <column columnName="treatment_volume_units"/>
+            <column columnName="dose_specific_comment"/>
+            <column columnName="weight_range_lower_limit"/>
+            <column columnName="weight_range_upper_limit"/>
+            <column columnName="billing_item_code"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="formulary_name" tableDbType="TABLE">
+        <columns>
+            <column columnName="formulary_name_id"/>
+            <column columnName="active"/>
+            <column columnName="generic_name"/>
+            <column columnName="trade_name"/>
+            <column columnName="name_qualifier"/>
+            <column columnName="category"/>
+            <column columnName="usage_comment"/>
+            <column columnName="concentration_comment"/>
+            <column columnName="dose_comment"/>
+            <column columnName="frequency_comment"/>
+            <column columnName="rx_type_c_clinical_prescrip"/>
+            <column columnName="rx_type_l_clinical_longterm"/>
+            <column columnName="rx_type_n_clinical_nonsched"/>
+            <column columnName="rx_type_s_supplement"/>
+            <column columnName="rx_type_v_vitamin"/>
+            <column columnName="rx_type_x_experimental"/>
+            <column columnName="rx_type_i_clinical_solitary"/>
+            <column columnName="wide_range_therapeutic_drug"/>
+            <column columnName="default_dose_units"/>
+            <column columnName="default_dose_per_unit_min"/>
+            <column columnName="default_dose_per_unit_max"/>
+            <column columnName="sort_order_within_category"/>
+            <column columnName="snomed_component_1"/>
+            <column columnName="snomed_component_2"/>
+            <column columnName="snomed_component_3"/>
+            <column columnName="snomed_component_4"/>
+            <column columnName="default_billing_item_code"/>
+            <column columnName="include_in_formulary_book"/>
+            <column columnName="formulary_book_comment"/>
+            <column columnName="formulary_book_routes"/>
+            <column columnName="formulary_book_frequencies"/>
+            <column columnName="rx_type_h_clin_supplements"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="treatment_term" tableDbType="TABLE">
+        <columns>
+            <column columnName="treatment_term_id"/>
+            <column columnName="term_type"/>
+            <column columnName="treatment_term"/>
+            <column columnName="definition"/>
+            <column columnName="snomed_component"/>
+            <column columnName="term_comment"/>
+            <column columnName="active"/>
+            <column columnName="sort_order"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="rd_lung_lobe_vol" tableDbType="TABLE">
+        <columns>
+            <column columnName="id"/>
+            <column columnName="animalId"/>
+            <column columnName="project_code"/>
+            <column columnName="rt_mid_lobe_vol"/>
+            <column columnName="rt_mid_lobe_fix"/>
+            <column columnName="rt_cra_lobe_vol"/>
+            <column columnName="rt_cra_lobe_fix"/>
+            <column columnName="lt_cra_lobe_vol"/>
+            <column columnName="lt_cra_lobe_fix"/>
+            <column columnName="llv_comments"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="rd_master" tableDbType="TABLE">
+        <columns>
+            <column columnName="id"/>
+            <column columnName="an_id"/>
+            <column columnName="species"/>
+            <column columnName="animalId"/>
+            <column columnName="proj_code_1"/>
+            <column columnName="proj_code_2"/>
+            <column columnName="treatment"/>
+            <column columnName="stagger_group"/>
+            <column columnName="age_category"/>
+            <column columnName="birthdate"/>
+            <column columnName="death_date"/>
+            <column columnName="necropsy_wt_kg"/>
+            <column columnName="gender"/>
+            <column columnName="birthplace"/>
+            <column columnName="dam"/>
+            <column columnName="dam_genetics_verify"/>
+            <column columnName="sire"/>
+            <column columnName="sire_genetics_verify"/>
+            <column columnName="genetics_comment"/>
+            <column columnName="comments"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="rd_project_category" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="projectCode"/>
+            <column columnName="timeframe"/>
+            <column columnName="comment1"/>
+            <column columnName="comment2"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="rd_protocol_procedure" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="project_code"/>
+            <column columnName="protocol_definition_type"/>
+            <column columnName="sort_order"/>
+            <column columnName="study_week"/>
+            <column columnName="pp_group"/>
+            <column columnName="pp_text"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="image_capture_device" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="device_modality"/>
+            <column columnName="device_type"/>
+            <column columnName="device_name"/>
+            <column columnName="description"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="image_format" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="name"/>
+            <column columnName="extension"/>
+            <column columnName="mime_type"/>
+            <column columnName="description"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="image" tableDbType="TABLE">
+        <columns>
+            <column columnName="Id"/>
+            <column columnName="owner_type"/>
+            <column columnName="owner_name"/>
+            <column columnName="create_unit"/>
+            <column columnName="modality"/>
+            <column columnName="device_type"/>
+            <column columnName="device_name"/>
+            <column columnName="subject_type"/>
+            <column columnName="subject_name"/>
+            <column columnName="subject_location"/>
+            <column columnName="subject_species"/>
+            <column columnName="subject_organ"/>
+            <column columnName="original_filename"/>
+            <column columnName="original_format_name"/>
+            <column columnName="original_format_extension"/>
+            <column columnName="original_width_pixels"/>
+            <column columnName="original_height_pixels"/>
+            <column columnName="original_size_bytes"/>
+            <column columnName="upload_by"/>
+            <column columnName="upload_timestamp"/>
+            <column columnName="upload_comment"/>
+            <column columnName="description"/>
+            <column columnName="is_public"/>
+            <column columnName="image_repository"/>
+            <column columnName="is_stock"/>
+            <column columnName="is_stock_approved"/>
+            <column columnName="stock_approved_by"/>
+            <column columnName="stock_approved_timestamp"/>
+            <column columnName="is_release_approved"/>
+            <column columnName="release_approved_by"/>
+            <column columnName="release_approved_timestamp"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="image_snomed" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="id"/>
+            <column columnName="snomed_pk"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="image_pathology" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="Id"/>
+            <column columnName="prm_pk"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="path_inv_frozen" tableDbType="TABLE">
+        <columns>
+            <column columnName="path_inv_frozen_pk"/>
+            <column columnName="anseq_fk"/>
+            <column columnName="shelf"/>
+            <column columnName="drawer"/>
+            <column columnName="box"/>
+            <column columnName="tissue"/>
+            <column columnName="comments"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="path_inv_fixed" tableDbType="TABLE">
+        <columns>
+            <column columnName="path_inv_fixed_pk"/>
+            <column columnName="anseq_fk"/>
+            <column columnName="cabinet"/>
+            <column columnName="bin"/>
+            <column columnName="comments"/>
+            <column columnName="check_seq_fk"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="path_inv_blocks" tableDbType="TABLE">
+        <columns>
+            <column columnName="path_inv_blocks_pk"/>
+            <column columnName="anseq_fk"/>
+            <column columnName="cabinet"/>
+            <column columnName="drawer"/>
+            <column columnName="tray"/>
+            <column columnName="tissue"/>
+            <column columnName="comments"/>
+            <column columnName="objectid"/>
+            <column columnName="check_seq_fk"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="department" tableDbType="TABLE">
+        <columns>
+            <column columnName="department_pk"/>
+            <column columnName="name"/>
+            <column columnName="reports_to"/>
+            <column columnName="comment"/>
+            <column columnName="institution"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+    </columns>
+    </table>
+    <table tableName="key_name" tableDbType="TABLE">
+        <columns>
+            <column columnName="key_name_pk"/>
+            <column columnName="name"/>
+            <column columnName="comment"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+    </columns>
+    </table>
+    <table tableName="keys" tableDbType="TABLE">
+        <columns>
+            <column columnName="key_pk"/>
+            <column columnName="key_number"/>
+            <column columnName="copy_number"/>
+            <column columnName="current_owner"/>
+            <column columnName="status"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="key_assignments" tableDbType="TABLE">
+        <columns>
+            <column columnName="key_assignment_pk"/>
+            <column columnName="key_fk"/>
+            <column columnName="person_fk"/>
+            <column columnName="date_issued"/>
+            <column columnName="date_returned"/>
+            <column columnName="status"/>
+            <column columnName="objectid"/>
+            <column columnName="comments"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="path_inv_checkout" tableDbType="TABLE">
+        <columns>
+            <column columnName="path_inv_checkout_pk"/>
+            <column columnName="anseq_fk"/>
+            <column columnName="media"/>
+            <column columnName="checkDate"/>
+            <column columnName="investigator"/>
+            <column columnName="comments"/>
+            <column columnName="objectid"/>
+            <column columnName="returnDate"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="fdb_sample_checkout" tableDbType="TABLE">
+        <columns>
+            <column columnName="fdb_sample_checkout_pk"/>
+            <column columnName="unit"/>
+            <column columnName="sample_fk"/>
+            <column columnName="thawed_date"/>
+            <column columnName="vials_thawed"/>
+            <column columnName="ship_location"/>
+            <column columnName="technician"/>
+            <column columnName="comments"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="fdb_box_prefs" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="unit"/>
+            <column columnName="tank"/>
+            <column columnName="cane"/>
+            <column columnName="box"/>
+            <column columnName="max_box_row"/>
+            <column columnName="max_box_col"/>
+            <column columnName="max_box_size"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="fdb_unit_sample_type" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="unit"/>
+            <column columnName="sample_type"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="fdb_tissue_harvest" tableDbType="TABLE">
+        <columns>
+            <column columnName="fdb_tissue_harvest_pk"/>
+            <column columnName="unit"/>
+            <column columnName="sample_fk"/>
+            <column columnName="tissue"/>
+            <column columnName="approach"/>
+            <column columnName="column1"/>
+            <column columnName="column2"/>
+            <column columnName="column3"/>
+            <column columnName="column4"/>
+            <column columnName="comments"/>
+            <column columnName="notes"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="fdb_samples_no_id" tableDbType="TABLE">
+        <columns>
+            <column columnName="fdb_samples_pk"/>
+            <column columnName="unit"/>
+            <column columnName="sample_identifier"/>
+            <column columnName="sample_type"/>
+            <column columnName="strain"/>
+            <column columnName="years"/>
+            <column columnName="months"/>
+            <column columnName="days"/>
+            <column columnName="gestational_age"/>
+            <column columnName="project"/>
+            <column columnName="cell_type"/>
+            <column columnName="sample_group"/>
+            <column columnName="age_group"/>
+            <column columnName="collection_date"/>
+            <column columnName="technician"/>
+            <column columnName="storage_type"/>
+            <column columnName="tank"/>
+            <column columnName="cane"/>
+            <column columnName="box"/>
+            <column columnName="location_start"/>
+            <column columnName="location_end"/>
+            <column columnName="vials"/>
+            <column columnName="vials_remaining"/>
+            <column columnName="concentration"/>
+            <column columnName="sample_volume"/>
+            <column columnName="comments"/>
+            <column columnName="old_pk"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="mh_file" tableDbType="TABLE">
+        <columns>
+            <column columnName="fileNo"/>
+            <column columnName="fileName"/>
+            <column columnName="postTimestamp"/>
+            <column columnName="postUser"/>
+            <column columnName="readerBeginTimestamp"/>
+            <column columnName="readerNumber"/>
+            <column columnName="readerAttendant"/>
+            <column columnName="readerHeader_1"/>
+            <column columnName="readerHeader_2"/>
+            <column columnName="headerRecs"/>
+            <column columnName="dataRecs"/>
+            <column columnName="trailerRecs"/>
+            <column columnName="readerValidation"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="mh_dump" tableDbType="TABLE">
+        <columns>
+            <column columnName="mh_pk"/>
+            <column columnName="mhDate"/>
+            <column columnName="mhData"/>
+            <column columnName="computerName"/>
+            <column columnName="ipAddress"/>
+            <column columnName="login"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="center_unit" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="center_unit_seqpk"/>
+            <column columnName="center_unit_code"/>
+            <column columnName="center_unit_title"/>
+            <column columnName="center_unit_department"/>
+            <column columnName="center_unit_comment"/>
+            <column columnName="center_unit_active"/>
+            <column columnName="center_unit_key"/>
+            <column columnName="center_unit_record_class"/>
+            <column columnName="general_reports_sort_order"/>
+            <column columnName="grant_reports_sort_order"/>
+            <column columnName="fin_rpts_routed_to_cp_fk"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="cage_location_history" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="location"/>
+            <column columnName="room"/>
+            <column columnName="cage"/>
+            <column columnName="location_history_pk"/>
+            <column columnName="cage_size"/>
+            <column columnName="cage_size_number"/>
+            <column columnName="rate_class"/>
+            <column columnName="from_date"/>
+            <column columnName="to_date"/>
+            <column columnName="file_status"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="room_enclosure" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="room"/>
+            <column columnName="file_status"/>
+            <column columnName="indoorOutdoorFlag"/>
+            <column columnName="management_type"/>
+            <column columnName="supervisor"/>
+            <column columnName="weight_sheet_frequency"/>
+            <column columnName="food_id"/>
+            <column columnName="supplemental_diet"/>
+            <column columnName="remark"/>
+            <column columnName="isMhRoom"/>
+            <column columnName="mh_group"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="conceptions" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="Id"/>
+            <column columnName="femaleSpecies"/>
+            <column columnName="sire"/>
+            <column columnName="maleSpecies"/>
+            <column columnName="offspringId"/>
+            <column columnName="offspringSpecies"/>
+            <column columnName="birthViability"/>
+            <column columnName="deathType"/>
+            <column columnName="necropsyPerformed"/>
+            <column columnName="pathologist"/>
+            <column columnName="birthPlace"/>
+            <column columnName="gender"/>
+            <column columnName="deliveryMode"/>
+            <column columnName="pgFlag"/>
+            <column columnName="conNum"/>
+            <column columnName="conception"/>
+            <column columnName="conceptionDateStatus"/>
+            <column columnName="con_accession_date"/>
+            <column columnName="brType"/>
+            <column columnName="colonyCode"/>
+            <column columnName="prCode"/>
+            <column columnName="pgComment"/>
+            <column columnName="termDate"/>
+            <column columnName="termDateStatus"/>
+            <column columnName="termComment"/>
+            <column columnName="birthPlacePrefix"/>
+            <column columnName="pgType"/>
+            <column columnName="femaleGeneticsVerify"/>
+            <column columnName="maleGeneticsVerify"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="project" tableDbType="TABLE">
+        <columns>
+            <column columnName="rowid"/>
+            <column columnName="project_tracking_id"/>
+            <column columnName="an_requested_per_year"/>
+            <column columnName="an_used_assigned"/>
+            <column columnName="protocol"/>
+            <column columnName="unitCode"/>
+            <column columnName="date_protocol_sub_aucaac"/>
+            <column columnName="direct_amt_received"/>
+            <column columnName="direct_amt_requested_1"/>
+            <column columnName="direct_amt_requested_2"/>
+            <column columnName="funding_agency_1"/>
+            <column columnName="funding_agency_2"/>
+            <column columnName="grant_contract_id"/>
+            <column columnName="oi_department"/>
+            <column columnName="oi_name"/>
+            <column columnName="pi_department"/>
+            <column columnName="pi_name"/>
+            <column columnName="attributes"/>
+            <column columnName="startdate"/>
+            <column columnName="projectCode"/>
+            <column columnName="comments"/>
+            <column columnName="enddate"/>
+            <column columnName="tb_exempt_flag"/>
+            <column columnName="title"/>
+            <column columnName="tracking_status"/>
+            <column columnName="proposed_end_date"/>
+            <column columnName="proposed_start_date"/>
+            <column columnName="protocol_end_date"/>
+            <column columnName="protocol_response_date"/>
+            <column columnName="sp_requested"/>
+            <column columnName="total_animals"/>
+            <column columnName="visual_signs_auto_rpt_flag"/>
+            <column columnName="is_prpt_recognized"/>
+            <column columnName="pi_affiliation"/>
+            <column columnName="oi_affiliation"/>
+            <column columnName="is_tissue_avail"/>
+            <column columnName="pi_person_fk"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+    <table tableName="project_protocol" tableDbType="TABLE">
+        <columns>
+            <column columnName="pp_pk"/>
+            <column columnName="projectCode"/>
+            <column columnName="protocol_number"/>
+            <column columnName="pp_assignment_date"/>
+            <column columnName="pp_release_date"/>
+            <column columnName="objectid"/>
+            <column columnName="Created"/>
+            <column columnName="CreatedBy"/>
+            <column columnName="Modified"/>
+            <column columnName="ModifiedBy"/>
+            <column columnName="Container"/>
+        </columns>
+    </table>
+</tables>

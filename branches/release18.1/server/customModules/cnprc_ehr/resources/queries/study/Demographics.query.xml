@@ -1,0 +1,191 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="Demographics" tableDbType="TABLE" useColumnOrder="true">
+                <tableUrl />
+                <insertUrl />
+                <importUrl />
+                <updateUrl />
+                <deleteUrl />
+                <columns>
+                    <column columnName="Id"/>
+                    <column columnName="date">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="projectCode">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="gender">
+                        <columnTitle>Sex</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>gender_codes</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="species">
+                        <columnTitle>Species</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>species_codes</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                            <fkDisplayColumnName useRawValue="true"/>
+                        </fk>
+                    </column>
+                    <column columnName="geographic_origin">
+                        <columnTitle>Geographic Origin</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>geographic_origins</fkTable>
+                            <fkColumnName>meaning</fkColumnName>
+                            <fkDisplayColumnName>description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="birth">
+                        <formatString>Date</formatString>
+                        <columnTitle>Birth Date</columnTitle>
+                    </column>
+                    <column columnName="death">
+                        <formatString>Date</formatString>
+                        <columnTitle>Death Date</columnTitle>
+                    </column>
+                    <column columnName="calculated_status">
+                        <shownInInsertView>false</shownInInsertView>
+                        <columnTitle>Status</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>calculated_status_codes</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="remark">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="QCState">
+                        <columnTitle>Record Status</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="dam">
+                        <columnTitle>Dam</columnTitle>
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="sire">
+                        <columnTitle>Sire</columnTitle>
+                        <fk>
+                            <fkDbSchema>study</fkDbSchema>
+                            <fkTable>animal</fkTable>
+                            <fkColumnName>id</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="origin">
+                        <columnTitle>Origin</columnTitle>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>source</fkTable>
+                            <fkColumnName>code</fkColumnName>
+                        </fk>
+                    </column>
+
+                    <!--NOTE: being deprecated-->
+                    <column columnName="arrivedate">
+                        <formatString>Date</formatString>
+                        <isHidden>true</isHidden>
+                        <shownInInsertView>false</shownInInsertView>
+                        <columnTitle>Arrival Date</columnTitle>
+                    </column>
+                    <column columnName="departdate">
+                        <formatString>Date</formatString>
+                        <isHidden>true</isHidden>
+                        <shownInInsertView>false</shownInInsertView>
+                        <columnTitle>Departure Date</columnTitle>
+                    </column>
+                    <column columnName="room">
+                        <isHidden>true</isHidden>
+                        <shownInInsertView>false</shownInInsertView>
+                        <columnTitle>Room</columnTitle>
+                        <url>/ehr/cageDetails.view?
+                            room=${room}&amp;
+                        </url>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>rooms</fkTable>
+                            <fkColumnName>room</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="cage">
+                        <isHidden>true</isHidden>
+                        <shownInInsertView>false</shownInInsertView>
+                        <columnTitle>Cage</columnTitle>
+                        <url>/ehr/cageDetails.view?
+                            room=${room}&amp;
+                            cage=${cage}&amp;
+                        </url>
+                    </column>
+                    <column columnName="weight">
+                        <shownInInsertView>false</shownInInsertView>
+                        <columnTitle>Weight (kg)</columnTitle>
+                    </column>
+                    <column columnName="spf">
+                        <columnTitle>SPF</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>spf_status</fkTable>
+                            <fkColumnName>Id</fkColumnName>
+                            <fkDisplayColumnName useRawValue="true">Id</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="genNum">
+                        <columnTitle>Generation Num</columnTitle>
+                        <isHidden>true</isHidden>
+                        <description>Generation number (matriarchal) of animals born at CNPRC, acquired animals are gen 0</description>
+                    </column>
+                    <column columnName="birthPlaceStatus">
+                        <columnTitle>Birth Place Status</columnTitle>
+                        <isHidden>true</isHidden>
+                        <description>01 - Other institution, 02 - Here/Unknown, 03 - Wild, 04 - Birthplace Unknown</description>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>birthplace_status</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                            <fkDisplayColumnName>description</fkDisplayColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="harvestCode">
+                        <isHidden>true</isHidden>
+                        <columnTitle>Harvest Code</columnTitle>
+                        <description>Information on harvesting animals from the field cages</description>
+                        <fk>
+                            <fkDbSchema>ehr_lookups</fkDbSchema>
+                            <fkTable>harvest_codes</fkTable>
+                            <fkColumnName>value</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="harvestDate">
+                        <isHidden>true</isHidden>
+                        <columnTitle>Harvest Date</columnTitle>
+                        <description>Date the animal is harvested</description>
+                    </column>
+                    <column columnName="taskId">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="requestId">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="performedBy">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="description">
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="isNumericId">
+                        <isHidden>true</isHidden>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

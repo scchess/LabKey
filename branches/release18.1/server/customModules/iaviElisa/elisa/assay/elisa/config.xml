@@ -1,0 +1,4 @@
+<ap:provider xmlns:exp="http://cpas.fhcrc.org/exp/xml" xmlns:ap="http://labkey.org/study/assay/xml">
+    <ap:name>IAVI Elisa</ap:name>
+    <ap:description>The ELISA assay IAVI uses for rabbit experiments. Loads Excel files exported from BioTek or text files exported from SoftMax Pro</ap:description>
+</ap:provider>

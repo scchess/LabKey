@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bioml>
+  <note label="pipeline, mascot username" type="input">mascotuser</note>
+    <note>Specifies the userid for logging in to your Mascot server. 
+          It is mandatory if Mascot security is enabled.</note>
+  <note label="pipeline, mascot password" type="input">mascotuserpassword</note>
+    <note>Specifies the pass pharse to authenticate you to your Mascot server.
+          It is mandatory if Mascot security is enabled.</note>
+</bioml>

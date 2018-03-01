@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    Ext4.onReady(function(){
+        var webpart = <%=webpartContext%>;
+
+        Ext4.get(webpart.wrapperDivId).update('<h3>Click <a href="https://github.com/bbimber/discvr-seq/wiki/Sequence-Management" target="_blank">here</a> for instructions</h3>' +
+                '<p/>' +
+                    'Please note: this import route was originally designed to directly accept the sample sheet from an Illumina run.  It will use the sample number and/or index data to demultiplex the incoming FASTQs and associate them with readets.  While this still can work, if the samples have already been demultiplexed (which is almost always true), it is usually preferable to use the standard import page.  To do this, select the FASTQs from the previous screen (instead of Illumina CSV) and pick "Import Sequence Data" instead of "Import Illumna Data"' +
+                '<p/>' +
+            '<div id="readsetDiv_'+webpart.wrapperDivId+'"/>'
+        );
+
+        Ext4.create('SequenceAnalysis.panel.InstrumentImportPanel', {
+            path : LABKEY.ActionURL.getParameter("path"),
+            fileNames : LABKEY.ActionURL.getParameterArray("file") || [],
+            fileIds : LABKEY.ActionURL.getParameterArray("fileIds") ? LABKEY.ActionURL.getParameterArray("fileIds").join(';').split(';') : []
+        }).render('readsetDiv_'+webpart.wrapperDivId);
+    });
+
+</script>

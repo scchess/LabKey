@@ -1,0 +1,31 @@
+import org.labkey.gradle.task.ModuleDistribution
+import org.labkey.gradle.util.BuildUtils
+import org.labkey.gradle.util.GroupNames
+
+apply plugin: 'org.labkey.distribution'
+
+dist.description="Distribution of base community modules for LabKey Server"
+
+BuildUtils.addModuleDistributionDependencies(project, [":server:internal",
+                                                       ":server:api",
+                                                       ":server:modules:announcements",
+                                                       ":server:modules:audit",
+                                                       ":server:modules:core",
+                                                       ":server:modules:experiment",
+                                                       ":server:modules:filecontent",
+                                                       ":server:modules:pipeline",
+                                                       ":server:modules:query",
+                                                       ":server:modules:wiki"])
+
+project.task(
+        "distribution",
+        group: GroupNames.DISTRIBUTION,
+        type: ModuleDistribution,
+        {ModuleDistribution dist ->
+            dist.subDirName="base"
+            dist.includeWindowsInstaller=true
+            dist.includeZipArchive=true
+            dist.includeTarGZArchive=true
+            dist.extraFileIdentifier='-base'
+        }
+)

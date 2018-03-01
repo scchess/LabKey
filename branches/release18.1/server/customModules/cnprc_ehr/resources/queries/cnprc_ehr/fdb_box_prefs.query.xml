@@ -1,0 +1,36 @@
+<query xmlns="http://labkey.org/data/xml/query">
+    <metadata>
+        <tables xmlns="http://labkey.org/data/xml">
+            <table tableName="fdb_box_prefs" tableDbType="TABLE" useColumnOrder="true">
+                <columns>
+                    <column columnName="unit">
+                        <columnTitle>Unit</columnTitle>
+                        <fk>
+                            <fkDbSchema>cnprc_ehr</fkDbSchema>
+                            <fkTable>fdb_unit_sample_type</fkTable>
+                            <fkColumnName>unit</fkColumnName>
+                        </fk>
+                    </column>
+                    <column columnName="tank">
+                        <columnTitle>Tank</columnTitle>
+                    </column>
+                    <column columnName="cane">
+                        <columnTitle>Cane</columnTitle>
+                    </column>
+                    <column columnName="box">
+                        <columnTitle>Box</columnTitle>
+                    </column>
+                    <column columnName="max_box_row">
+                        <columnTitle>Max Bow Row</columnTitle>
+                    </column>
+                    <column columnName="max_box_col">
+                        <columnTitle>Max Box Col</columnTitle>
+                    </column>
+                    <column columnName="max_box_size">
+                        <columnTitle>Max Box Size</columnTitle>
+                    </column>
+                </columns>
+            </table>
+        </tables>
+    </metadata>
+</query>

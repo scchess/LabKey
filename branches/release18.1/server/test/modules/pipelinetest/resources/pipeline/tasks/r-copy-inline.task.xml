@@ -1,0 +1,44 @@
+<task xmlns="http://labkey.org/pipeline/xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:type="ScriptTaskType"
+      name="r-copy-inline" version="0.0">
+    <!--
+    Implicit files 'input.txt' and 'output.xxx' are added to the task.
+    Implicit parameter 'skip-lines' added to task.
+    -->
+    <script interpreter="r">
+        # reads the input file and prints the contents to stdout
+        lines = readLines(con="${input.txt}")
+
+        # skip-lines parameter. convert to integer if possible
+        skipLines = as.integer("${skip-lines}")
+        if (is.na(skipLines)) {
+          skipLines = 0
+        }
+
+        # lines in the file
+        lineCount = NROW(lines)
+
+        if (skipLines > lineCount) {
+          cat("start index larger than number of lines")
+        } else {
+          # start index
+          start = skipLines + 1
+
+          # print to stdout
+          cat("(stdout) contents of file: ${input.txt}\n")
+          for (i in start:lineCount) {
+            cat(sep="", lines[i], "\n")
+          }
+
+          # print to ${output.xxx}
+          f = file(description="${output.xxx}", open="w")
+          cat(file=f, "(output) contents of file: ${input.txt}\n")
+          for (i in start:lineCount) {
+            cat(file=f, sep="", lines[i], "\n")
+          }
+          flush(con=f)
+          close(con=f)
+        }
+    </script>
+</task>

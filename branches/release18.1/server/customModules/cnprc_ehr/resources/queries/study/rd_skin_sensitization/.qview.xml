@@ -1,0 +1,21 @@
+<customView xmlns="http://labkey.org/data/xml/queryCustomView">
+    <columns>
+        <column name="id"/>
+        <column name="date"/>
+        <column name="skin_sen_pk"/>
+        <column name="projectCode"/>
+        <column name="wheal_positive_control"/>
+        <column name="wheal_negative_control"/>
+        <column name="wheal_dust_mite"/>
+        <column name="wheal_cockroach"/>
+        <column name="wheal_mold"/>
+        <column name="wheal_trees"/>
+        <column name="wheal_weeds"/>
+        <column name="wheal_grasses"/>
+        <column name="wheal_ascarid"/>
+        <column name="wheal_offspring_comment"/>
+    </columns>
+    <sorts>
+        <sort column="date" descending="true"/>
+    </sorts>
+</customView>

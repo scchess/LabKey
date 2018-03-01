@@ -1,0 +1,34 @@
+<div class="ehr-nav-menu-panel"></div>
+
+<script type="text/javascript">
+
+    Ext4.onReady(function(){
+        Ext4.QuickTips.init();
+
+        var webpart = <%=webpartContext%>;
+        var div = Ext4.get(webpart.wrapperDivId).down('.ehr-nav-menu-panel');
+
+        var cnprcMenu = Ext4.create('EHR.panel.NavigationMenuPanel', {
+            renderTo: div.id,
+            items: [{
+                xtype: 'panel',
+                title: 'Reports',
+                itemId: 'reportLinks',
+                items: [{
+                    xtype: 'text',
+                    text: 'Placeholder for Report Links',
+                    itemid: 'placeholderReportLinks'
+                }]
+            },{
+                title: 'Other Links',
+                itemId: 'other',
+                items: [{
+                    xtype: 'text',
+                    text: 'Placeholder for Other Links',
+                    itemid: 'placeholderOtherLinks'
+                }]
+            }]
+        });
+    });
+
+</script>
