@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-           xmlns:mp="http://labkey.org/moduleProperties/xml/"
-           xmlns:vw="http://labkey.org/data/xml/view"
-           xmlns:dat="http://labkey.org/data/xml"
-           targetNamespace="http://labkey.org/moduleProperties/xml/"
-           elementFormDefault="qualified"
-           attributeFormDefault="unqualified">
+            xmlns:mp="http://labkey.org/moduleProperties/xml/"
+            xmlns:dat="http://labkey.org/data/xml"
+            xmlns:cl="http://labkey.org/clientLibrary/xml/"
+            targetNamespace="http://labkey.org/moduleProperties/xml/"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
 	<xsd:annotation>
 
     <xsd:documentation xml:lang="en">
@@ -80,12 +80,8 @@
 
     <xsd:complexType name="dependenciesType">
         <xsd:sequence minOccurs="0" maxOccurs="unbounded">
-            <xsd:element name="dependency" type="mp:dependencyType"/>
+            <xsd:element name="dependency" type="cl:dependencyType"/>
         </xsd:sequence>
-    </xsd:complexType>
-
-    <xsd:complexType name="dependencyType">
-        <xsd:attribute name="path" type="xsd:string"/>
     </xsd:complexType>
 
     <xsd:complexType name="moduleContextType">

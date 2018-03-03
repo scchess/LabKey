@@ -3,6 +3,7 @@
            xmlns="http://labkey.org/query/xml"
            xmlns:props="http://labkey.org/data/xml/reportProps"
            xmlns:ra="http://labkey.org/security/xml/roleAssignment"
+           xmlns:cl="http://labkey.org/clientLibrary/xml/"
            targetNamespace="http://labkey.org/query/xml"
            elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:annotation>
@@ -59,12 +60,8 @@
 
     <xs:complexType name="dependenciesType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="dependency" type="dependencyType"/>
+            <xs:element name="dependency" type="cl:dependencyType"/>
         </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="dependencyType">
-        <xs:attribute name="path" type="xs:string"/>
     </xs:complexType>
 
     <xs:complexType name="functionsType">
