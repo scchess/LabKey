@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:cl="http://labkey.org/clientLibrary/xml/"
             xmlns:vw="http://labkey.org/data/xml/view"
             targetNamespace="http://labkey.org/data/xml/view"
         elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -23,12 +24,8 @@
 
     <xsd:complexType name="dependenciesType">
         <xsd:sequence minOccurs="0" maxOccurs="unbounded">
-            <xsd:element name="dependency" type="vw:dependencyType"/>
+            <xsd:element name="dependency" type="cl:dependencyType"/>
         </xsd:sequence>
-    </xsd:complexType>
-
-    <xsd:complexType name="dependencyType">
-        <xsd:attribute name="path" type="xsd:string"/>
     </xsd:complexType>
 
     <xsd:complexType name="permissionsListType">

@@ -24,12 +24,12 @@
 
     <xsd:complexType name="libraryType">
         <xsd:sequence minOccurs="0" maxOccurs="unbounded">
-            <xsd:element name="script" type="lib:scriptType"/>
+            <xsd:element name="script" type="lib:dependencyType"/>
         </xsd:sequence>
         <xsd:attribute name="compileInProductionMode" type="xsd:boolean"/>
     </xsd:complexType>
 
-    <xsd:complexType name="scriptType">
+    <xsd:complexType name="dependencyType">
         <xsd:attribute name="path" type="xsd:string" use="required"/>
         <xsd:attribute name="mode" type="lib:modeTypeEnum" use="optional"/>
     </xsd:complexType>
@@ -48,7 +48,7 @@
 
     <xsd:complexType name="dependenciesType">
         <xsd:sequence minOccurs="0" maxOccurs="unbounded">
-            <xsd:element name="dependency" type="lib:scriptType"/>
+            <xsd:element name="dependency" type="lib:dependencyType"/>
         </xsd:sequence>
     </xsd:complexType>
 
