@@ -16,7 +16,6 @@
 package org.labkey.api.compliance;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.labkey.api.data.Activity;
 import org.labkey.api.data.Container;
 import org.labkey.api.data.PHI;
@@ -28,8 +27,6 @@ import org.labkey.api.view.ViewContext;
 
 /**
  * Created by davebradlee on 7/27/17.
- *
- * ComplianceService: ALL METHODS MUST CHECK IF ComplianceModule is enabled in container (if appropriate); callers don't check
  *
  */
 public interface ComplianceService
@@ -48,10 +45,21 @@ public interface ComplianceService
         ServiceRegistry.get().registerService(ComplianceService.class, instance);
     }
 
-    String getModuleName();
-    ActionURL urlFor(Container container, QueryAction action, ActionURL queryBasedUrl);
-    boolean hasElecSignPermission(@NotNull Container container, @NotNull User user);
-    boolean hasViewSignedSnapshotsPermission(@NotNull Container container, @NotNull User user);
+    default ActionURL urlFor(Container container, QueryAction action, ActionURL queryBasedUrl)
+    {
+        return null;
+    }
+
+    default boolean hasElecSignPermission(@NotNull Container container, @NotNull User user)
+    {
+        return false;
+    }
+
+    default boolean hasViewSignedSnapshotsPermission(@NotNull Container container, @NotNull User user)
+    {
+        return false;
+    }
+
     default @NotNull PHI getMaxAllowedPhi(@NotNull Container container, @NotNull User user)
     {
         return PHI.Restricted;
@@ -67,33 +75,5 @@ public interface ComplianceService
 
     class DefaultComplianceService implements ComplianceService
     {
-        public String getModuleName()
-        {
-            return ComplianceService.class.getName();
-        }
-        public ActionURL urlFor(Container container, QueryAction action, ActionURL queryBasedUrl)
-        {
-            return null;
-        }
-        public boolean hasElecSignPermission(@NotNull Container container, @NotNull User user)
-        {
-            return false;
-        }
-        public boolean hasViewSignedSnapshotsPermission(@NotNull Container container, @NotNull User user)
-        {
-            return false;
-        }
-        @NotNull public PHI getMaxAllowedPhi(@NotNull Container container, @NotNull User user)
-        {
-            return PHI.Restricted;
-        }
-        public Activity getCurrentActivity(ViewContext viewContext)
-        {
-            return null;
-        }
-        public String getPHIBanner(ViewContext viewContext)
-        {
-            return null;
-        }
     }
 }
