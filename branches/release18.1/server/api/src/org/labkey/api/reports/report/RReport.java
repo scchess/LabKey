@@ -863,8 +863,8 @@ public class RReport extends ExternalScriptEngineReport
     @Override
     public boolean allowShareButton(User user, Container container)
     {
-        // allow sharing if this R report is a DB report and the use canShare
-        return !getDescriptorType().equals(ModuleRReportDescriptor.TYPE) && canShare(user, container);
+        // allow sharing if this R report is a DB report and the user canShare
+        return !getDescriptor().isModuleBased() && canShare(user, container);
     }
 
     public static class TestCase extends Assert
