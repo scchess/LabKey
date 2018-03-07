@@ -11,14 +11,7 @@ var Ext = require("Ext").Ext;
 
 function doTest()
 {
-    var userEmail = "messagetest@validation.test";
-    // need a user to send email to/from
-    LABKEY.Security.createNewUser({
-        email: userEmail,
-        sendEmail: false,
-        containerPath: "/Shared/_junit"
-    });
-
+    var userEmail = LABKEY.user.email;
     var msg = LABKEY.Message.createMsgContent(LABKEY.Message.msgType.plain, "Hello World");
     var recipient = LABKEY.Message.createRecipient(LABKEY.Message.recipientType.to, userEmail);
     var response = LABKEY.Message.sendMessage({
