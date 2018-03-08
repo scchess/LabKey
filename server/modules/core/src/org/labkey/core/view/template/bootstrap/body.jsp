@@ -107,7 +107,7 @@
                     <span class="lk-body-title-folder-outer">
                         <i class="fa fa-folder-o"></i>
                         <%-- Note: pageConfig.getAppBar() returns a URL pointing to the current non-workbook container (i.e. parent if current container is a workbook --%>
-                        <a class="lk-body-title-folder" href="<%= h(pageConfig.getAppBar().getHref()) %>"><%= h(getContainer().getParent().getTitle()) %></a>
+                        <a class="lk-body-title-folder" href="<%= h(pageConfig.getAppBar().getHref()) %>"><%= h(getContainer().getSelfOrWorkbookParent().getTitle()) %></a>
                         <% if (getContainer().isWorkbook()) { %>
                          / <a class="lk-body-title-folder" href="<%= h(getContainer().getStartURL(getUser()))%>"><%= h(getContainer().getDisplayTitle()) %></a>
                         <% } %>
