@@ -10,7 +10,7 @@
                 <property name="columnTitle" value="Animal ID"/>
             </properties>
         </column>
-        <column name="Id/demographics/gender">
+        <column name="Id/demographics/gender/code">
             <properties>
                 <property name="columnTitle" value="Sex"/>
             </properties>
